@@ -1,5 +1,4 @@
 import { CtaBanner } from "@/components/sections/cta-banner";
-import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -65,7 +64,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ProcessTimeline />
       <CtaBanner />
     </>
   );

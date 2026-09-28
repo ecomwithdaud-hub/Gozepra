@@ -1,6 +1,5 @@
 import { ContactSection } from "@/components/sections/contact-section";
 import { HomeHero } from "@/components/sections/home-hero";
-import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TheShiftSection } from "@/components/sections/TheShiftSection";
 import { WhyUs } from "@/components/sections/why-us";
@@ -33,7 +32,6 @@ export default function HomePage() {
       <HomeHero />
       <TheShiftSection />
       <WhyUs />
-      <ProcessTimeline />
       <TestimonialsSection />
       <ContactSection />
     </>
