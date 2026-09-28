@@ -1,82 +1,80 @@
-import { CheckCircle2, ShieldCheck, Sparkles, Workflow } from "lucide-react";
+import { motion } from "framer-motion";
+import { Check, Layers3, LockKeyhole, TrendingUp } from "lucide-react";
 
-import { SectionHeading } from "@/components/shared/section-heading";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { reasons } from "@/lib/site";
+const pillars = [
+  {
+    title: "Unified Delivery Stack",
+    description:
+      "Websites, Shopify e-commerce, AI automation, and graphic design under one roof.",
+    icon: Layers3,
+  },
+  {
+    title: "Secure & Scalable Systems",
+    description:
+      "Enterprise-grade performance, robust infrastructure, and data security built for stability.",
+    icon: LockKeyhole,
+  },
+  {
+    title: "Growth-Focused Execution",
+    description:
+      "Digital marketing, conversion optimization, and clear communication designed to move business forward.",
+    icon: TrendingUp,
+  },
+];
 
 export function WhyUs() {
   return (
-    <section className="section-shell bg-slate-950 text-white">
+    <section className="section-shell bg-[#0B0F17] text-white">
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <SectionHeading
-              eyebrow="Why Choose Us"
-              title="A multi-service agency built to earn trust and handle complex digital work."
-              
-              className="[&_h2]:text-white [&_.muted-copy]:text-slate-300"
-            />
-
-            <div className="mt-8 glass-panel p-6">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-cyan-300">
-                  <Workflow className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="font-display text-2xl font-semibold text-white">
-                    One partner, full delivery stack
-                  </div>
-                  <p className="mt-2 text-sm leading-7 text-slate-300">
-                    We bring together modern web builds, AI automation, digital
-                    growth, and ongoing support so each client engagement stays
-                    aligned from planning through execution.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <TrustChip icon={<ShieldCheck className="h-5 w-5" />} label="Reliable communication" />
-                <TrustChip icon={<Sparkles className="h-5 w-5" />} label="Premium visual execution" />
-                <TrustChip icon={<CheckCircle2 className="h-5 w-5" />} label="Scalable technical systems" />
-                <TrustChip icon={<Workflow className="h-5 w-5" />} label="Structured business process" />
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          className="mx-auto max-w-5xl"
+        >
+          <div className="mb-8 text-center">
+            <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-teal-300">
+              WHY CHOOSE US
             </div>
+            <h2 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-[3rem]">
+              Built for trust, speed, and real business outcomes.
+            </h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {reasons.map((reason, index) => (
-              <Card
-                key={reason}
-                className={`border-white/10 text-white shadow-none ${
-                  index % 2 === 0 ? "bg-white/[0.06]" : "bg-white/[0.09]"
-                }`}
-              >
-                <CardHeader className="gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-cyan-300">
-                    <span className="font-display text-lg font-semibold">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+          <div className="grid gap-5 md:grid-cols-3">
+            {pillars.map((pillar, index) => {
+              const Icon = pillar.icon;
+
+              return (
+                <motion.article
+                  key={pillar.title}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_16px_40px_rgba(0,0,0,0.2)]"
+                >
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1b3a36] text-teal-300 ring-1 ring-white/10">
+                    <Icon className="h-5 w-5" />
                   </div>
-                  <CardTitle className="text-xl text-white">{reason}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm leading-7 text-slate-300">
-                  Stronger digital credibility, cleaner execution, and a more
-                  dependable client experience are built into how we work.
-                </CardContent>
-              </Card>
-            ))}
+
+                  <div className="mb-3 flex items-center gap-2">
+                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-teal-500/15 text-teal-300">
+                      <Check className="h-3.5 w-3.5" strokeWidth={2.8} />
+                    </span>
+                    <h3 className="font-display text-xl font-semibold text-white">
+                      {pillar.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-sm leading-7 text-slate-300">{pillar.description}</p>
+                </motion.article>
+              );
+            })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
-  );
-}
-
-function TrustChip({ icon, label }) {
-  return (
-    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200">
-      <div className="text-cyan-300">{icon}</div>
-      <span>{label}</span>
-    </div>
   );
 }
