@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Check, Layers3, LockKeyhole, TrendingUp } from "lucide-react";
 
 const pillars = [
@@ -26,13 +25,7 @@ export function WhyUs() {
   return (
     <section className="section-shell bg-[#0B0F17] text-white">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
-          className="mx-auto max-w-5xl"
-        >
+        <div className="mx-auto max-w-5xl">
           <div className="mb-8 text-center">
             <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-teal-300">
               WHY CHOOSE US
@@ -47,13 +40,10 @@ export function WhyUs() {
               const Icon = pillar.icon;
 
               return (
-                <motion.article
+                <article
                   key={pillar.title}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_16px_40px_rgba(0,0,0,0.2)]"
+                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_16px_40px_rgba(0,0,0,0.2)] opacity-0 animate-[fadeInUp_0.6s_ease-out_forwards]"
+                  style={{ animationDelay: `${index * 120}ms` }}
                 >
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1b3a36] text-teal-300 ring-1 ring-white/10">
                     <Icon className="h-5 w-5" />
@@ -69,11 +59,11 @@ export function WhyUs() {
                   </div>
 
                   <p className="text-sm leading-7 text-slate-300">{pillar.description}</p>
-                </motion.article>
+                </article>
               );
             })}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
