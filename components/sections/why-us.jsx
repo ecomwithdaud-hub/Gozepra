@@ -23,10 +23,10 @@ const pillars = [
 
 export function WhyUs() {
   return (
-    <section className="section-shell bg-[#0B0F17] text-white">
+    <section className="relative overflow-hidden bg-[#0B0F17] py-20 text-white">
       <div className="container">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-8 text-center">
+          <div className="mb-10 text-center">
             <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-teal-300">
               WHY CHOOSE US
             </div>
@@ -42,10 +42,10 @@ export function WhyUs() {
               return (
                 <article
                   key={pillar.title}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_16px_40px_rgba(0,0,0,0.2)] opacity-0 animate-[fadeInUp_0.6s_ease-out_forwards]"
+                  className="rounded-[28px] border border-white/10 bg-slate-900/60 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1 hover:border-teal-400/40 hover:bg-slate-900/80"
                   style={{ animationDelay: `${index * 120}ms` }}
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1b3a36] text-teal-300 ring-1 ring-white/10">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#163b39] text-teal-300 ring-1 ring-white/10">
                     <Icon className="h-5 w-5" />
                   </div>
 
