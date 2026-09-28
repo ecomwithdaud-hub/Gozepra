@@ -51,11 +51,6 @@ export function SiteFooter() {
             <h3 className="font-display text-lg font-semibold text-white">Connect</h3>
             <ul className="mt-5 space-y-3 text-sm text-slate-300">
               <li>
-                <Link href="/team" className="hover:text-white">
-                  Leadership & Departments
-                </Link>
-              </li>
-              <li>
                 <Link href="/website-development" className="hover:text-white">
                   Website Development
                 </Link>

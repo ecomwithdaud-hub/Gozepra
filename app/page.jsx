@@ -2,6 +2,7 @@ import { ContactSection } from "@/components/sections/contact-section";
 import { HomeHero } from "@/components/sections/home-hero";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { TheShiftSection } from "@/components/sections/TheShiftSection";
 import { WhyUs } from "@/components/sections/why-us";
 import { siteMeta } from "@/lib/site";
 
@@ -30,6 +31,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <HomeHero />
+      <TheShiftSection />
       <WhyUs />
       <ProcessTimeline />
       <TestimonialsSection />
