@@ -6,6 +6,7 @@ import { LanguageProvider } from "@/components/providers/language-provider";
 import { QuickConnectDock } from "@/components/ui/QuickConnectDock";
 import { TechCursor } from "@/components/ui/TechCursor";
 import { AcousticHaptics } from "@/components/ui/AcousticHaptics";
+import { PortalAuthProvider } from "@/components/providers/portal-auth-provider";
 import { siteMeta } from "@/lib/site";
 
 import "./globals.css";
@@ -57,15 +58,17 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${bodyFont.variable} ${displayFont.variable} font-sans`}>
         <LanguageProvider>
-          <TechCursor />
-          <QuickConnectDock />
-          <AcousticHaptics />
-          <div className="relative min-h-screen overflow-x-clip">
-            <SiteHeader />
-            <div aria-hidden="true" className="h-24" />
-            <main>{children}</main>
-            <SiteFooter />
-          </div>
+          <PortalAuthProvider>
+            <TechCursor />
+            <QuickConnectDock />
+            <AcousticHaptics />
+            <div className="relative min-h-screen overflow-x-clip">
+              <SiteHeader />
+              <div aria-hidden="true" className="h-24" />
+              <main>{children}</main>
+              <SiteFooter />
+            </div>
+          </PortalAuthProvider>
         </LanguageProvider>
       </body>
     </html>

@@ -37,6 +37,7 @@ const navTranslationKeys = {
   "/roi-estimator": "nav.roiEstimator",
   "/case-studies": "nav.caseStudies",
   "/contact": "nav.contact",
+  "/portal": "nav.portal",
 };
 
 const projectTranslationKeys = {

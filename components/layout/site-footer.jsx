@@ -76,7 +76,7 @@ const navigationGroups = [
       { label: "Portfolio & Case Studies", href: "/portfolio" },
       { label: "Careers", href: "/contact" },
       { label: "Contact Us", href: "/contact" },
-      { label: "Partner Program", href: "/contact" },
+      { label: "Internal Portal (Agency OS)", href: "/portal" },
     ],
   },
 ];
