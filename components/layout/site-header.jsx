@@ -233,9 +233,9 @@ export function SiteHeader() {
                       />
                     </button>
                     <div className="invisible absolute left-0 top-full z-[9999] isolate w-[min(460px,94vw)] translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                      <div className="relative isolate z-[9999] rounded-2xl border border-white/15 bg-[#060e1d]/98 p-3.5 shadow-2xl backdrop-blur-2xl">
+                      <div className="relative isolate z-[9999] rounded-2xl border border-cyan-500/30 bg-[#030712] p-3.5 shadow-[0_25px_80px_rgba(0,0,0,0.98)]">
                         {isServicesMenu && (
-                          <div className="mb-2.5 flex items-center justify-between border-b border-white/10 px-3 pb-2 pt-1">
+                          <div className="mb-2.5 flex items-center justify-between rounded-xl border border-white/10 bg-[#081226] px-3.5 py-2">
                             <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-300">
                               All Services ({item.children.length})
                             </span>
@@ -248,7 +248,7 @@ export function SiteHeader() {
                             </Link>
                           </div>
                         )}
-                        <div className="max-h-[min(460px,65vh)] space-y-1 overflow-y-auto pr-1.5 scrollbar-thin overscroll-contain">
+                        <div className="max-h-[min(460px,65vh)] space-y-2 overflow-y-auto pr-1.5 scrollbar-thin overscroll-contain">
                           {item.children.map((child) => {
                             const title = isServicesMenu
                               ? translatedServices?.[child.index]?.title ?? child.label
@@ -262,17 +262,17 @@ export function SiteHeader() {
                                 key={child.href}
                                 href={child.href}
                                 className={cn(
-                                  "group/item relative flex items-start gap-3 rounded-xl border border-transparent px-3 py-2.5 text-white transition-colors duration-200 hover:border-white/10 hover:bg-white/[0.07]",
+                                  "group/item relative flex items-start gap-3 rounded-xl border border-white/10 bg-[#071126] px-3.5 py-2.5 text-white shadow-sm transition-all duration-200 hover:border-cyan-400/50 hover:bg-[#0d1d3d] hover:shadow-[0_0_15px_rgba(56,198,255,0.15)]",
                                 )}
                               >
                                 {isServicesMenu
                                   ? <ServiceIconBadge icon={child.icon} />
                                   : <ProjectIconBadge href={child.href} />}
                                 <span className="block min-w-0 flex-1">
-                                  <span className="block text-sm font-semibold text-white">
+                                  <span className="block text-sm font-bold text-white group-hover/item:text-cyan-300">
                                     {title}
                                   </span>
-                                  <span className="mt-1 block truncate text-xs leading-5 text-slate-300">
+                                  <span className="mt-0.5 block truncate text-xs leading-5 text-slate-300 group-hover/item:text-slate-200">
                                     {description}
                                   </span>
                                 </span>
