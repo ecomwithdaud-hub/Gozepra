@@ -3,6 +3,7 @@ import { ContactSection } from "@/components/sections/contact-section";
 import { DevCrafterHomeExperience } from "@/components/sections/devcrafter-home-experience";
 import { HomeHero } from "@/components/sections/home-hero";
 import { HumanBusinessBridge } from "@/components/sections/human-business-bridge";
+import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TheShiftSection } from "@/components/sections/TheShiftSection";
 import { WhyUs } from "@/components/sections/why-us";
@@ -46,6 +47,7 @@ function DesktopHome() {
     <>
       <HomeHero />
       <HumanBusinessBridge />
+      <InteractiveServiceDemos />
       <DevCrafterHomeExperience />
       <TheShiftSection />
       <WhyUs />

@@ -5,6 +5,7 @@ import { ArrowRight, Check, CheckCircle2, ChevronRight, Cpu, Sparkles } from "lu
 import { AeoStructuredAnswers } from "@/components/sections/aeo-structured-answers";
 import { ContactSection } from "@/components/sections/contact-section";
 import { UsaDemoShowcase } from "@/components/sections/usa-demo-showcase";
+import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
 import { serviceIconMap } from "@/components/shared/service-card";
 import { CyberCircuitBackground } from "@/components/ui/CyberCircuitBackground";
 import { TiltCard } from "@/components/ui/TiltCard";
@@ -228,6 +229,13 @@ export default async function ServiceDetailPage({ params }) {
 
       {slug === "web-development" ? (
         <UsaDemoShowcase initialLimit={12} showViewAllLink={true} />
+      ) : null}
+
+      {slug === "ai-agents-bots" ||
+      slug === "search-engine-optimization-seo" ||
+      slug === "ecommerce-solutions" ||
+      slug === "social-media-marketing" ? (
+        <InteractiveServiceDemos />
       ) : null}
 
       <section className="section-shell bg-slate-950 text-white border-t border-white/10">

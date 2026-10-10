@@ -234,6 +234,17 @@ export function HomeHero() {
               <span>View Portfolio & Case Studies</span>
               <ArrowUpRight className="h-4 w-4 text-cyan-300" />
             </Link>
+
+            <div className="hidden h-7 w-px bg-white/15 sm:block" />
+
+            <Link
+              href="#interactive-service-demos"
+              data-cursor="TEST AI"
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 text-xs font-bold uppercase tracking-[0.15em] text-cyan-300 transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950 sm:h-12 sm:px-6 sm:text-sm"
+            >
+              <Bot className="h-4 w-4" />
+              <span>Test Live AI Bots</span>
+            </Link>
           </div>
 
           {/* Trust Checkmarks */}

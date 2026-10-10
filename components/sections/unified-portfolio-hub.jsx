@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
+  Bot,
   FileText,
   Globe,
   Image as ImageIcon,
@@ -19,6 +20,7 @@ import { UsaDemoShowcase } from "@/components/sections/usa-demo-showcase";
 import { WikiRgShowcase } from "@/components/sections/wiki-rg-showcase";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { AiGrowthDominance } from "@/components/sections/ai-growth-dominance";
+import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
 
 const hubTabs = [
   {
@@ -29,9 +31,15 @@ const hubTabs = [
   },
   {
     id: "web-demos",
-    label: "Web Development (24 Live Demos)",
-    badge: "24 Live",
+    label: "Web Development (28 Live Demos)",
+    badge: "28 Live",
     icon: Globe,
+  },
+  {
+    id: "interactive-labs",
+    label: "Interactive AI, Bots & SEO Demos",
+    badge: "Live Labs",
+    icon: Bot,
   },
   {
     id: "case-studies",
@@ -57,6 +65,8 @@ export function UnifiedPortfolioHub() {
   const [activeTab, setActiveTab] = useState("all");
 
   const showWebDemos = activeTab === "all" || activeTab === "web-demos";
+  const showInteractiveLabs =
+    activeTab === "all" || activeTab === "interactive-labs";
   const showCaseStudies = activeTab === "all" || activeTab === "case-studies";
   const showClientWebsites =
     activeTab === "all" || activeTab === "client-websites";
@@ -131,10 +141,17 @@ export function UnifiedPortfolioHub() {
         </div>
       </section>
 
-      {/* Section 1: 24 Live USA Demo Websites (Web Development) */}
+      {/* Section 1: 28 Live USA Demo Websites (Web Development) */}
       {showWebDemos ? (
         <div id="web-development">
-          <UsaDemoShowcase initialLimit={24} showViewAllLink={false} />
+          <UsaDemoShowcase initialLimit={28} showViewAllLink={false} />
+        </div>
+      ) : null}
+
+      {/* Section 1B: Interactive AI Agents, Bots, SEO & CRM Labs */}
+      {showInteractiveLabs ? (
+        <div id="interactive-labs-section" className="border-t border-white/10">
+          <InteractiveServiceDemos />
         </div>
       ) : null}
 

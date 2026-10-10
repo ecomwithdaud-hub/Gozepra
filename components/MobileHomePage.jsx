@@ -2,6 +2,7 @@ import { AeoStructuredAnswers } from "@/components/sections/aeo-structured-answe
 import { DevCrafterHomeExperience } from "@/components/sections/devcrafter-home-experience";
 import { HomeHero } from "@/components/sections/home-hero";
 import { HumanBusinessBridge } from "@/components/sections/human-business-bridge";
+import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
 import { MobileContact } from "@/components/sections/mobile-contact";
 import {
   MobileAISection,
@@ -15,6 +16,7 @@ export default function MobileHomePage() {
     <div className="mobile-home-layout md:hidden">
       <HomeHero />
       <HumanBusinessBridge />
+      <InteractiveServiceDemos />
       <DevCrafterHomeExperience />
       <MobileAISection />
       <WhyUs />
