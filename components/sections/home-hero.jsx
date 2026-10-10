@@ -134,7 +134,7 @@ export function HomeHero() {
 
           {/* Floating Right 3D Engineering Card (Desktop) */}
           <div
-            className="pointer-events-auto absolute -right-4 bottom-12 z-20 hidden xl:block"
+            className="pointer-events-auto absolute right-0 top-12 z-10 hidden xl:block"
             style={{
               transform: `translate3d(${parallax.x * 55}px, ${parallax.y * 45}px, 0) rotate(4deg)`,
               transition: "transform 220ms ease-out",
@@ -173,9 +173,9 @@ export function HomeHero() {
           >
             <TiltCard className="flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/35 bg-white/[0.04] p-2 text-center shadow-2xl backdrop-blur-md">
               <span className="text-[10px] font-extrabold uppercase leading-tight tracking-widest text-cyan-300">
-                24+ Live
+                28+ Live
                 <br />
-                US Demos
+                Demos
               </span>
             </TiltCard>
           </div>
@@ -214,7 +214,7 @@ export function HomeHero() {
           </p>
 
           {/* DevCrafter-Inspired Floating Glass Pill CTA Bar */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5 rounded-full border border-white/15 bg-slate-950/75 p-2.5 shadow-[0_25px_70px_rgba(0,0,0,0.65)] backdrop-blur-2xl sm:gap-4 sm:px-5 sm:py-3">
+          <div className="relative z-30 mt-8 flex flex-wrap items-center justify-center gap-2.5 rounded-full border border-white/15 bg-slate-950/75 p-2.5 shadow-[0_25px_70px_rgba(0,0,0,0.65)] backdrop-blur-2xl sm:gap-4 sm:px-5 sm:py-3">
             <Link
               href="/contact"
               data-cursor="LET'S GO"
@@ -234,16 +234,18 @@ export function HomeHero() {
               <span>View Portfolio & Case Studies</span>
               <ArrowUpRight className="h-4 w-4 text-cyan-300" />
             </Link>
+          </div>
 
-            <div className="hidden h-7 w-px bg-white/15 sm:block" />
-
+          {/* Dedicated AI Bots Simulator Action Pill (Moved clearly below) */}
+          <div className="relative z-30 mt-4 flex items-center justify-center">
             <Link
               href="#interactive-service-demos"
               data-cursor="TEST AI"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 text-xs font-bold uppercase tracking-[0.15em] text-cyan-300 transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950 sm:h-12 sm:px-6 sm:text-sm"
+              className="group inline-flex items-center gap-2.5 rounded-full border border-cyan-400/35 bg-cyan-400/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.15em] text-cyan-300 shadow-[0_0_20px_rgba(56,198,255,0.2)] backdrop-blur-xl transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-400 hover:text-slate-950 hover:scale-105"
             >
-              <Bot className="h-4 w-4" />
-              <span>Test Live AI Bots</span>
+              <Bot className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-12" />
+              <span>Test Live AI Bots & Simulator (Interactive Labs)</span>
+              <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 

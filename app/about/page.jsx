@@ -1,6 +1,5 @@
 import { OurStory } from "@/components/sections/our-story";
 import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
-import { ProjectRoiEstimator } from "@/components/ui/ProjectRoiEstimator";
 import { DisqualificationManifesto } from "@/components/sections/disqualification-manifesto";
 import { AeoStructuredAnswers } from "@/components/sections/aeo-structured-answers";
 import { ContactSection } from "@/components/sections/contact-section";
@@ -20,8 +19,28 @@ export default function AboutPage() {
       {/* Interactive Transformation Benchmark Slider */}
       <BeforeAfterSlider />
 
-      {/* Interactive Project Scope, Timeline & Cost Calculator */}
-      <ProjectRoiEstimator />
+      {/* Scope, Timeline & ROI Estimator Dedicated Page Link */}
+      <section className="border-t border-white/10 bg-[#060c1d] py-14">
+        <div className="container mx-auto max-w-5xl px-4 text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+            Interactive Cost &amp; Timeline Calculator
+          </p>
+          <h2 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+            Want to Calculate Your Project Scope &amp; ROI?
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300">
+            Configure your target platform, compute infrastructure, and delivery velocity on our dedicated calculator page with transparent timelines and fixed sprint pricing.
+          </p>
+          <div className="mt-6">
+            <a
+              href="/roi-estimator"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-lg hover:scale-105 transition-all"
+            >
+              <span>Launch Dedicated ROI &amp; Scope Calculator</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Disqualification Manifesto & Written Guarantees */}
       <DisqualificationManifesto />
