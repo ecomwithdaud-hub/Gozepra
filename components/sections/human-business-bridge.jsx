@@ -51,7 +51,7 @@ const INDUSTRY_PROFILES = [
       "Tap-to-Call emergency buttons on every mobile screen",
       "Instant estimate & zip code service area checkers",
       "Google Maps local optimization (#1 in your service radius)",
-      "Automated lead alerts sent straight to your phone & WhatsApp",
+      "Automated lead alerts sent straight to your phone & SMS",
     ],
     liveDemos: [
       { name: "Summit Commercial Roofing", demoUrl: "https://summit-commercial-roofing.vercel.app/" },
@@ -77,7 +77,7 @@ const INDUSTRY_PROFILES = [
       "HIPAA/privacy-conscious online consultation booking",
       "Interactive before-and-after treatment visual galleries",
       "Patient reviews & doctor credential trust cards",
-      "24/7 automated WhatsApp bot for booking inquiries",
+      "24/7 automated instant assistant for booking inquiries",
     ],
     liveDemos: [
       { name: "Glow Aesthetics & MedSpa", demoUrl: "https://glow-medspa.vercel.app/" },
@@ -102,7 +102,7 @@ const INDUSTRY_PROFILES = [
       "Digital swatch & high-res fabric product catalogs",
       "Factory machinery, GSM specifications & compliance certifications",
       "International RFQ (Request For Quotation) inquiry portal",
-      "Direct WhatsApp & email communication for wholesale buyers",
+      "Direct priority phone & email communication for wholesale buyers",
     ],
     liveDemos: [
       { name: "Silk & Cotton Mills Portal", demoUrl: "/portfolio#client-websites" },
@@ -122,10 +122,10 @@ const INDUSTRY_PROFILES = [
     accent: "text-pink-400",
     headline: "A fast, stylish store with a smart assistant that takes orders while you sleep.",
     plainExplanation:
-      "Slow shopping websites lose 50% of shoppers before they even see a product. We build lightning-fast online stores with smooth checkouts and automated WhatsApp assistants that answer customer questions about sizing, delivery, and payments instantly.",
+      "Slow shopping websites lose 50% of shoppers before they even see a product. We build lightning-fast online stores with smooth checkouts and automated digital assistants that answer customer questions about sizing, delivery, and payments instantly.",
     whatWeDeliver: [
       "Sub-second load times that keep mobile shoppers buying",
-      "Automated WhatsApp order notifications & status tracking",
+      "Automated instant order notifications & status tracking",
       "Cash on Delivery (COD) & card payment integrations",
       "Abandoned cart recovery systems that bring back lost sales",
     ],
@@ -208,7 +208,7 @@ const PLAIN_ENGLISH_SOLUTIONS = [
     icon: Bot,
     badge: "Never Miss A Lead",
     description:
-      "A smart digital assistant on your WhatsApp and website. When customers message at midnight, on weekends, or while you're busy on a job, it answers them in 5 seconds and books the lead.",
+      "A smart digital assistant on your website. When customers inquire at midnight, on weekends, or while you're busy on a job, it answers them in 5 seconds and books the lead.",
     bullets: [
       "Answers common pricing, timing, and service questions",
       "Collects customer phone numbers and job details",
@@ -239,7 +239,7 @@ const PLAIN_ENGLISH_SOLUTIONS = [
       "You run your business. We handle all hosting, domain renewals, security, speed updates, and technical maintenance. You never have to write code or worry about your site crashing.",
     bullets: [
       "100% managed hosting and security encryption",
-      "Direct WhatsApp access to Mr. Daud Lashari & senior developers",
+      "Direct phone and email access to Mr. Daud Lashari & senior developers",
       "Free updates and changes whenever your services grow",
     ],
   },
@@ -252,7 +252,7 @@ const HOW_IT_WORKS_STEPS = [
     title: "15-Minute Friendly Chat",
     duration: "Day 1",
     description:
-      "No tech jargon or confusing buzzwords. Tell us on a call or via WhatsApp what your business does, who your customers are, and what results you want.",
+      "No tech jargon or confusing buzzwords. Tell us on a call or via inquiry what your business does, who your customers are, and what results you want.",
     icon: PhoneCall,
   },
   {
@@ -260,7 +260,7 @@ const HOW_IT_WORKS_STEPS = [
     title: "We Build Everything 100% Done-For-You",
     duration: "Days 2 - 12",
     description:
-      "Our team writes the text, designs the visuals, tests on all mobile devices, and connects your WhatsApp and phone. You review progress without any stress.",
+      "Our team writes the text, designs the visuals, tests on all mobile devices, and connects your contact channels and phone. You review progress without any stress.",
     icon: Layers,
   },
   {

@@ -31,7 +31,7 @@ const TIERS = [
     features: [
       "Custom Next.js 15 SSR Architecture (No templates)",
       "Bespoke High-Conversion UI/UX designed in Figma",
-      "Instant WhatsApp CRM & Webhook Lead Routing",
+      "Instant CRM Webhook Lead Routing & Real-Time Alerts",
       "95+ Lighthouse Score & Technical Local Schema",
       "Multi-device Responsive & Retina Optimization",
       "Full Code Ownership (100% IP transferred to you)",
@@ -82,7 +82,7 @@ const TIERS = [
       "SOC-2 Type II Compliant Data Pipelines & Security Audits",
       "Custom Enterprise Database & Stripe/Payment Gateway Architecture",
       "60-Day Post-Launch Conversion Optimization & A/B Testing",
-      "Direct Phone & WhatsApp Escalation Line to Founder Daud",
+      "Direct Priority Phone Escalation Line to Founder Daud",
       "Unconditional Executive Board Sign-off Guarantee",
     ],
     guarantee: "Unlimited post-launch sprint iterations until your executive KPI is met.",

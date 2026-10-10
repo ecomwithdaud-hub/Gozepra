@@ -8,7 +8,7 @@ import {
   Globe2,
   LockKeyhole,
   Mail,
-  MessageCircle,
+  Phone,
 } from "lucide-react";
 
 import { ContactForm } from "@/components/shared/contact-form";
@@ -76,24 +76,19 @@ export function ContactSection({ showHeader = true }) {
                   value={siteMeta.email}
                 />
                 <InfoRow
-                  icon={<MessageCircle className="h-5 w-5" />}
-                  label={t("contact.whatsapp")}
-                  href={siteMeta.whatsappLink}
-                  value={siteMeta.whatsappNumber}
-                  external
+                  icon={<Phone className="h-5 w-5" />}
+                  label="Direct Line"
+                  href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}
+                  value={siteMeta.phone || "+1 (302) 208-9675"}
                 />
               </div>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <Button asChild size="lg" className="w-full bg-cyan-400 text-slate-950 font-bold hover:bg-cyan-300">
-                  <Link
-                    href={siteMeta.whatsappLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <MessageCircle className="h-4 w-4 mr-1.5" />
-                    {t("contact.chatWhatsapp")}
-                  </Link>
+                  <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
+                    <Phone className="h-4 w-4 mr-1.5" />
+                    Call Direct Line
+                  </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="w-full border-slate-700 bg-slate-950/60 text-white hover:bg-slate-800">
                   <Link href={`mailto:${siteMeta.email}`}>
@@ -125,10 +120,8 @@ export function ContactSection({ showHeader = true }) {
                 <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
                   {t("contact.scheduleCall")}
                 </h3>
-                <Link
-                  href={`${siteMeta.whatsappLink}?text=${encodeURIComponent(t("contact.bookingMessage"))}`}
-                  target="_blank"
-                  rel="noreferrer"
+                <a
+                  href={`mailto:${siteMeta.email}?subject=${encodeURIComponent("Discovery Call Request")}&body=${encodeURIComponent("Hi Daud & Zepra Team, I would like to schedule a 15-minute discovery call.")}`}
                   className="group flex cursor-pointer items-center justify-between gap-4 rounded-2xl border border-white/15 bg-primary/90 p-4 text-white shadow-sm transition-all duration-300 hover:bg-primary hover:shadow-md"
                 >
                   <span className="flex min-w-0 items-center gap-3">
@@ -148,7 +141,7 @@ export function ContactSection({ showHeader = true }) {
                     {t("contact.scheduleNow")}
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
-                </Link>
+                </a>
               </div>
 
               {/* Founder Video Teardown Hook */}
@@ -161,16 +154,14 @@ export function ContactSection({ showHeader = true }) {
                   Request Founder Daud's 5-Minute Video Teardown
                 </h4>
                 <p className="mt-1 text-xs text-slate-300 leading-relaxed">
-                  Send your current website URL via WhatsApp. Daud will record an unfiltered screen video exposing your conversion leaks and Core Web Vitals bottlenecks. 100% Free.
+                  Send your current website URL via inquiry form or direct email. Daud will record an unfiltered screen video exposing your conversion leaks and Core Web Vitals bottlenecks. 100% Free.
                 </p>
-                <Link
-                  href={`${siteMeta.whatsappLink}?text=${encodeURIComponent("Hi Daud, I'd like to request a 5-minute video teardown of my website. Here is my URL: ")}`}
-                  target="_blank"
-                  rel="noreferrer"
+                <a
+                  href={`mailto:${siteMeta.email}?subject=${encodeURIComponent("Request 5-Minute Video Teardown")}&body=${encodeURIComponent("Hi Daud, I would like to request a 5-minute video teardown of my website. Here is my URL: ")}`}
                   className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-cyan-300 hover:text-cyan-200 transition-colors"
                 >
                   Request Free Video Teardown <ArrowUpRight className="h-3.5 w-3.5" />
-                </Link>
+                </a>
               </div>
             </div>
 

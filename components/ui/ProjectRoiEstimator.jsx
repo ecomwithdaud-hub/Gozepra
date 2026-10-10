@@ -390,16 +390,14 @@ export function ProjectRoiEstimator() {
 
               {/* 1-Click Action Buttons */}
               <div className="mt-8 space-y-3">
-                <a
-                  href={`https://wa.me/923204154156?text=${prefillMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/contact"
                   data-cursor="LET'S GO"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-brand-blue to-brand-cyan py-4 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_30px_rgba(56,198,255,0.45)] transition-all hover:brightness-110 sm:text-sm"
                 >
                   <span>Lock In This Sprint Roadmap</span>
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </Link>
 
                 <Link
                   href="/contact#contact"

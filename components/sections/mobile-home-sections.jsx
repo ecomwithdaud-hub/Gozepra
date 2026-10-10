@@ -21,7 +21,6 @@ const socialIcons = {
   Instagram,
   Facebook,
   X,
-  WhatsApp: MessageCircle,
 };
 
 export function MobileAISection() {
@@ -121,10 +120,7 @@ export function MobileTestimonials() {
 
 export function MobileFooter() {
   const { t } = useLanguage();
-  const footerSocials = [
-    ...socialLinks,
-    { label: "WhatsApp", href: siteMeta.whatsappLink },
-  ];
+  const footerSocials = [...socialLinks];
   const legalLinks = [
     { label: t("nav.caseStudies") || "Case Studies", href: "/case-studies" },
     { label: t("nav.websiteDevelopment") || "Websites", href: "/website-development" },

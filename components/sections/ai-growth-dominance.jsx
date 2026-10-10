@@ -211,12 +211,12 @@ const CASE_STUDIES = [
     challenge:
       "Targeting ultra-high-net-worth buyers ($2M–$15M properties) through generic portals like Zillow with saturated competition and low-intent leads.",
     solution:
-      "Produced cinematic architectural 4K video ads for Instagram and TikTok, backed by strict Meta VIP net-worth qualification forms and instant WhatsApp concierge routing.",
+      "Produced cinematic architectural 4K video ads for Instagram and TikTok, backed by strict Meta VIP net-worth qualification forms and instant concierge CRM routing.",
     results: [
       { metric: "48", label: "Ultra-HNW Verified Buyers" },
       { metric: "$14.2M", label: "Closed Property Volume" },
       { metric: "-48%", label: "Cost Per Qualified VIP Lead" },
-      { metric: "< 2 Mins", label: "Lead-to-WhatsApp Response" },
+      { metric: "< 2 Mins", label: "Lead-to-Agent Response" },
     ],
     verifiedBadge: "High-Ticket Real Estate Record",
   },
@@ -374,7 +374,7 @@ export function AiGrowthDominance() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
-                  <span><strong>Instant VIP Inquiries:</strong> Automated WhatsApp & calendar routing.</span>
+                  <span><strong>Instant VIP Inquiries:</strong> Automated lead qualification & calendar routing.</span>
                 </li>
               </ul>
             </div>
@@ -550,10 +550,10 @@ export function AiGrowthDominance() {
               size="lg"
               className="bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-slate-950 shadow-lg shadow-cyan-500/25 hover:brightness-110"
             >
-              <Link href={siteMeta.whatsappLink} target="_blank" rel="noreferrer">
-                <MessageCircle className="mr-2 h-4 w-4" />
-                Get 1-on-1 Growth Blueprint via WhatsApp
-              </Link>
+              <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
+                <TrendingUp className="mr-2 h-4 w-4" />
+                Call Direct: {siteMeta.phone || "+1 (302) 208-9675"}
+              </a>
             </Button>
             <Button
               asChild

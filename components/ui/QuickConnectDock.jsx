@@ -17,12 +17,12 @@ export function QuickConnectDock() {
 
   const actions = [
     {
-      label: "WhatsApp Instant Chat",
-      sub: siteMeta.whatsappNumber || "+92 320 4154156",
-      href: siteMeta.whatsappLink || "https://wa.me/923204154156",
-      icon: MessageCircle,
+      label: "Direct Voice Call",
+      sub: siteMeta.phone || "+1 (302) 208-9675",
+      href: `tel:${siteMeta.phoneRaw || "+13022089675"}`,
+      icon: Phone,
       external: true,
-      accent: "from-emerald-500 to-teal-400 text-slate-950",
+      accent: "from-emerald-400 to-teal-400 text-slate-950",
     },
     {
       label: "Book a Strategy Call",
@@ -39,14 +39,6 @@ export function QuickConnectDock() {
       icon: Mail,
       external: true,
       accent: "from-sky-500 to-cyan-400 text-slate-950",
-    },
-    {
-      label: "Direct Voice Call",
-      sub: siteMeta.whatsappNumber || "+92 320 4154156",
-      href: "tel:+923204154156",
-      icon: Phone,
-      external: true,
-      accent: "from-amber-400 to-orange-400 text-slate-950",
     },
   ];
 
@@ -136,15 +128,13 @@ export function QuickConnectDock() {
       {/* Floating Pill Trigger */}
       <div className="flex items-center gap-2">
         <a
-          href={siteMeta.whatsappLink || "https://wa.me/923204154156"}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}
           data-cursor="LET'S GO"
-          aria-label="Chat on WhatsApp"
-          className="hidden items-center gap-2 rounded-full border border-emerald-400/40 bg-slate-950/90 px-4 py-2.5 text-xs font-bold text-emerald-300 shadow-lg backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-emerald-400 hover:bg-slate-900 sm:inline-flex"
+          aria-label="Call Direct Line"
+          className="hidden items-center gap-2 rounded-full border border-cyan-400/40 bg-slate-950/90 px-4 py-2.5 text-xs font-bold text-cyan-300 shadow-lg backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-cyan-400 hover:bg-slate-900 sm:inline-flex"
         >
-          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-          <span>WhatsApp</span>
+          <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-400" />
+          <span>Call: {siteMeta.phone || "+1 (302) 208-9675"}</span>
         </a>
 
         <button
@@ -159,7 +149,7 @@ export function QuickConnectDock() {
             {open ? (
               <X className="h-4 w-4" />
             ) : (
-              <MessageCircle className="h-4 w-4" />
+              <Phone className="h-4 w-4" />
             )}
           </span>
           <span className="pr-1">Quick Connect</span>

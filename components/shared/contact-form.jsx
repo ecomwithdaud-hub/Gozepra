@@ -71,7 +71,7 @@ export function ContactForm() {
       `Full Name: ${name}`,
       `Company: ${company}`,
       `Work Email: ${email}`,
-      `Phone / WhatsApp: ${phone}`,
+      `Phone: ${phone}`,
       `Service Needed: ${service}`,
       `Estimated Budget: ${budget}`,
       `Preferred Timeline: ${timeline}`,

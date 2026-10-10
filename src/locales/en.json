@@ -116,8 +116,7 @@
     "businessInquiry": "Business inquiry",
     "optionsTitle": "Clear contact options for local and international clients.",
     "email": "Email",
-    "whatsapp": "WhatsApp",
-    "chatWhatsapp": "Chat on WhatsApp",
+    "directLine": "Direct Phone Line",
     "sendEmail": "Send an Email",
     "socialPresence": "Social presence",
     "scheduleCall": "Schedule a direct call",
@@ -135,7 +134,7 @@
     "fullName": "Full Name",
     "companyName": "Company Name",
     "workEmail": "Work Email",
-    "phoneWhatsapp": "Phone / WhatsApp",
+    "phoneWhatsapp": "Direct Phone Number",
     "serviceNeeded": "Service Needed",
     "estimatedBudget": "Estimated Budget",
     "preferredTimeline": "Preferred Timeline",
@@ -143,7 +142,7 @@
     "namePlaceholder": "Your full name",
     "companyPlaceholder": "Company or brand",
     "emailPlaceholder": "name@company.com",
-    "phonePlaceholder": "+92...",
+    "phonePlaceholder": "+1 (302) 208-9675",
     "selectService": "Select a service",
     "selectBudget": "Select a range",
     "selectTimeline": "Choose a timeline",
@@ -154,14 +153,14 @@
       "name": "Please enter your full name.",
       "company": "Please enter your company name.",
       "email": "Please enter a valid work email.",
-      "phone": "Please enter your phone or WhatsApp number.",
+      "phone": "Please enter your phone number.",
       "service": "Please choose a service.",
       "budget": "Please select an estimated budget.",
       "timeline": "Please choose a preferred timeline.",
       "messageMin": "Please share a little more about your project.",
       "messageMax": "Please keep the message under 2000 characters."
     },
-    "emailOpening": "Your email app is opening with the inquiry details. You can also use the WhatsApp button if you prefer a faster response.",
+    "emailOpening": "Your email app is opening with the inquiry details.",
     "budgetOptions": [
       ",000 – ,000 (Local Market Dominator)",
       ",000 – ,000 (Enterprise Growth & AI Platform)",
@@ -313,16 +312,16 @@
     "locations": [
       {
         "name": "USA",
-        "detail": "San Jose, CA / Delaware",
+        "detail": "Middletown, Delaware",
         "note": "US Recognized Tech Agency"
       },
       {
         "name": "Pakistan (HQ)",
-        "detail": "D Tower, Plot B, 281 Ghazi Rd, Khuda Buksh Colony KB Society, Lahore, Punjab"
+        "detail": "Corporate Office DHA Phase 8, Broadway Commercial, Lahore Pakistan"
       },
       {
-        "name": "UAE / Global Services",
-        "detail": "Serving clients worldwide across the US, UK, Middle East, and Asia-Pacific."
+        "name": "Remote Offshore Operations",
+        "detail": "Remote engineering and client delivery across Middle East, Europe & Canada."
       },
       {
         "name": "Global Reach",

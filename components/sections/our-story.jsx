@@ -14,7 +14,7 @@ import {
   Award,
   Globe2,
   Cpu,
-  MessageCircle,
+  Phone,
 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { Button } from "@/components/ui/button";
@@ -118,10 +118,10 @@ export function OurStory() {
 
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-slate-950 shadow-lg shadow-cyan-500/20 hover:brightness-110">
-                      <Link href={siteMeta.whatsappLink} target="_blank" rel="noreferrer">
-                        <MessageCircle className="mr-2 h-4 w-4" />
-                        Direct WhatsApp With Daud
-                      </Link>
+                      <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
+                        <Phone className="mr-2 h-4 w-4" />
+                        Call Direct Line ({siteMeta.phone || "+1 (302) 208-9675"})
+                      </a>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="border-slate-700 bg-slate-900/60 text-white hover:bg-slate-800">
                       <Link href="/contact">
@@ -151,7 +151,7 @@ export function OurStory() {
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
-                        <span><strong>Direct Escalation Line:</strong> Enterprise partners receive a private WhatsApp & Slack communication channel.</span>
+                        <span><strong>Direct Escalation Line:</strong> Enterprise partners receive a private dedicated direct escalation line and client portal.</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />

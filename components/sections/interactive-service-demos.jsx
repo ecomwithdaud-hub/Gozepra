@@ -358,9 +358,9 @@ const STICKY_STACKED_CARDS = [
     title: "Turnkey Peace of Mind Under Mr. Daud Lashari",
     subtitle: "You Run Your Business — We Handle All Technology",
     description:
-      "No technical headaches, no confusing code, no disappearing freelancers. Every deployment is personally reviewed by Founder & CEO Mr. Daud Lashari, with 100% managed hosting, 24/7 uptime monitoring, regular updates, and direct WhatsApp priority support.",
+      "No technical headaches, no confusing code, no disappearing freelancers. Every deployment is personally reviewed by Founder & CEO Mr. Daud Lashari, with 100% managed hosting, 24/7 uptime monitoring, regular updates, and direct phone & escalation support.",
     deliverables: [
-      "Direct WhatsApp access to Mr. Daud Lashari & senior leads",
+      "Direct phone and executive access to Mr. Daud Lashari & senior leads",
       "100% turnkey copywriting, graphic design & programming",
       "Bank-grade SSL security & automated daily backups",
       "Free updates whenever your business services expand",
@@ -370,7 +370,7 @@ const STICKY_STACKED_CARDS = [
     color: "from-amber-500/20 to-orange-500/20",
     border: "border-amber-500/40",
     accent: "text-amber-400",
-    linkText: "Chat With Mr. Daud Lashari",
+    linkText: "Schedule Call With Mr. Daud Lashari",
     linkHref: "/contact",
   },
 ];

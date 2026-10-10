@@ -6,7 +6,7 @@ import {
   Instagram,
   Linkedin,
   Mail,
-  MessageCircle,
+  Phone,
 } from "lucide-react";
 
 import { Logo } from "@/components/shared/logo";
@@ -27,7 +27,6 @@ const socialIcons = {
   Instagram: Instagram,
   Facebook: Facebook,
   X: XIcon,
-  WhatsApp: MessageCircle,
 };
 
 const navigationGroups = [
@@ -94,20 +93,20 @@ const defaultLocations = [
   {
     flag: "🇺🇸",
     name: "USA",
-    detail: "San Jose, CA / Delaware",
+    detail: "Middletown, Delaware",
     note: "US Recognized Tech Agency",
   },
   {
     flag: "🇵🇰",
     name: "Pakistan (HQ)",
     detail:
-      "D Tower, Plot B, 281 Ghazi Rd, Khuda Buksh Colony KB Society, Lahore, Punjab",
+      "Corporate Office DHA Phase 8, Broadway Commercial, Lahore Pakistan",
   },
   {
-    flag: "🇦🇪",
-    name: "UAE / Global Services",
+    flag: "🌍",
+    name: "Remote Offshore Operations",
     detail:
-      "Serving clients worldwide across the US, UK, Middle East, and Asia-Pacific.",
+      "Remote engineering and client delivery across Middle East, Europe & Canada.",
   },
   {
     flag: "🌐",
@@ -121,7 +120,6 @@ const footerSocialLinks = [
     ...social,
     label: social.label === "X" ? "X / Twitter" : social.label,
   })),
-  { label: "WhatsApp", href: siteMeta.whatsappLink },
 ];
 
 const contactIconWrap =
@@ -198,15 +196,13 @@ export function SiteFooter() {
               {siteMeta.email}
             </a>
             <a
-              href={siteMeta.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}
               className="group inline-flex items-center gap-3 transition-colors duration-200 hover:text-cyan-400"
             >
               <span className={contactIconWrap}>
-                <MessageCircle className="h-4 w-4" />
+                <Phone className="h-4 w-4" />
               </span>
-              {siteMeta.whatsappNumber}
+              {siteMeta.phone || "+1 (302) 208-9675"}
             </a>
           </div>
         </div>
