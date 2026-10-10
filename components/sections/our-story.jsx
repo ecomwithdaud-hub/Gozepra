@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { Button } from "@/components/ui/button";
-import { teamMembers, siteMeta } from "@/lib/site";
+import { siteMeta } from "@/lib/site";
 
 const leadershipPillars = [
   {
@@ -55,10 +55,6 @@ const impactStats = [
 ];
 
 export function OurStory() {
-  const leadershipMember = teamMembers.find((m) => m.department === "Leadership") || teamMembers[0];
-  const engineeringLeads = teamMembers.filter((m) => m.department === "Engineering").slice(0, 4);
-  const growthLeads = teamMembers.filter((m) => m.department.includes("Growth") || m.department.includes("AI")).slice(0, 3);
-
   return (
     <section className="relative isolate overflow-hidden bg-slate-950 pt-28 pb-20 text-white sm:pt-36 sm:pb-28">
       {/* Background ambient lighting */}
@@ -82,7 +78,7 @@ export function OurStory() {
           <h1 className="mt-6 font-display text-4xl font-black tracking-tight text-white sm:text-6xl sm:leading-[1.15]">
             Engineered For Market Dominance.{" "}
             <span className="bg-gradient-to-r from-cyan-300 via-sky-200 to-indigo-400 bg-clip-text text-transparent">
-              Led By Mr. Daud Lashari & Team.
+              Led By Mr. Daud Lashari.
             </span>
           </h1>
 
@@ -226,51 +222,6 @@ export function OurStory() {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* The Elite Core Team Matrix */}
-        <div className="mt-24">
-          <div className="flex flex-col justify-between gap-4 border-b border-slate-800 pb-6 sm:flex-row sm:items-end">
-            <div>
-              <div className="text-xs font-bold uppercase tracking-widest text-cyan-400">
-                Engineering & Execution Force
-              </div>
-              <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
-                The Specialists Behind Every Deployment
-              </h3>
-            </div>
-            <p className="text-xs text-slate-400 sm:max-w-md">
-              A synchronized powerhouse of full-stack engineers, AI researchers, project managers, and growth strategists under unified command.
-            </p>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {teamMembers.map((member, idx) => (
-              <div
-                key={idx}
-                className="group relative rounded-2xl border border-slate-800/80 bg-slate-900/40 p-6 transition-all hover:border-cyan-500/40 hover:bg-slate-900/80"
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h4 className="font-display text-lg font-bold text-white group-hover:text-cyan-300">
-                      {member.name}
-                    </h4>
-                    <p className="text-xs font-semibold text-cyan-400">{member.role}</p>
-                  </div>
-                  <span className="rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-[10px] font-medium text-slate-300">
-                    {member.department}
-                  </span>
-                </div>
-                <p className="mt-3 text-xs leading-relaxed text-slate-400">
-                  {member.bio}
-                </p>
-                <div className="mt-4 flex items-center gap-1.5 text-[11px] font-semibold text-slate-500">
-                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
-                  <span>{member.accent}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
