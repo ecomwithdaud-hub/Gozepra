@@ -1,5 +1,4 @@
 import { CtaBanner } from "@/components/sections/cta-banner";
-import { ServiceLanes } from "@/components/sections/localized-page-sections";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { PricingTiers } from "@/components/sections/pricing-tiers";
 import { ProjectRoiEstimator } from "@/components/ui/ProjectRoiEstimator";
@@ -15,7 +14,6 @@ export default function ServicesPage() {
   return (
     <>
       <ServicesGrid showCta={false} />
-      <ServiceLanes />
       <PricingTiers />
       <ProjectRoiEstimator />
       <DisqualificationManifesto />
