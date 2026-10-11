@@ -359,8 +359,8 @@ export function SiteHeader() {
         </div>
 
         {isOpen ? (
-          <div className="pointer-events-auto mt-3 rounded-3xl border border-white/15 bg-slate-950/95 p-5 text-white shadow-2xl backdrop-blur-2xl lg:hidden">
-            <nav className="flex flex-col gap-2">
+          <div className="pointer-events-auto mt-3 max-h-[82vh] overflow-y-auto rounded-3xl border border-white/15 bg-slate-950/95 p-4 text-white shadow-2xl backdrop-blur-2xl sm:p-5 lg:hidden">
+            <nav className="flex flex-col gap-1.5">
               {navItems.map((item) => {
                 const isActive = isItemActive(item, pathname);
 
@@ -374,44 +374,52 @@ export function SiteHeader() {
                         type="button"
                         onDoubleClick={(e) => {
                           e.preventDefault();
-                          if (isServicesMenu) {
-                            router.push("/services");
+                          if (item.href) {
+                            router.push(item.href);
                             setIsOpen(false);
                           }
                         }}
                         className={cn(
-                          "flex w-full items-center justify-between rounded-2xl px-4 py-3 text-left text-sm font-medium text-slate-200 transition-all duration-300 hover:bg-white/10 hover:text-white",
+                          "flex w-full items-center justify-between rounded-2xl px-4 py-3 text-left text-sm font-semibold text-slate-200 transition-all duration-300 hover:bg-white/10 hover:text-white",
                           isActive && "border border-cyan-400/30 bg-cyan-500/15 text-cyan-300",
                         )}
-                        aria-haspopup={isServicesMenu ? undefined : "menu"}
-                        aria-expanded={isServicesMenu ? isExpanded : isActive}
-                        onClick={isServicesMenu
-                          ? () => setExpandedNavItem(isExpanded ? null : item.label)
-                          : undefined}
+                        aria-expanded={isExpanded}
+                        onClick={() => setExpandedNavItem(isExpanded ? null : item.label)}
                       >
                         <span>{isServicesMenu ? t("nav.services") : t("nav.projects")}</span>
-                        <ChevronDown className={cn("h-4 w-4 transition-transform duration-300", isExpanded && "rotate-180")} />
+                        <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform duration-300", isExpanded && "rotate-180")} />
                       </button>
                       <div className={cn(
-                        "mt-2 grid max-h-[50vh] gap-2 overflow-y-auto pl-2 pr-1 scrollbar-thin",
-                        isServicesMenu && !isExpanded && "hidden",
+                        "mt-2 grid max-h-[42vh] gap-2 overflow-y-auto pl-2 pr-1 scrollbar-thin",
+                        !isExpanded && "hidden",
                       )}>
+                        {item.href && (
+                          <Link
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className="flex items-center justify-between rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-cyan-300"
+                          >
+                            <span>Open All {isServicesMenu ? "Services" : "Portfolio & Case Studies"}</span>
+                            <ChevronRight className="h-4 w-4" />
+                          </Link>
+                        )}
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="group/item flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white transition-colors duration-200 hover:border-cyan-400/40 hover:bg-slate-900"
+                            onClick={() => setIsOpen(false)}
+                            className="group/item flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-900/80 px-3.5 py-2.5 text-white transition-colors duration-200 hover:border-cyan-400/40 hover:bg-slate-900"
                           >
                             {isServicesMenu
                               ? <ServiceIconBadge icon={child.icon} />
                               : <ProjectIconBadge href={child.href} />}
-                            <span className="block">
+                            <span className="block min-w-0 flex-1">
                               <span className="block text-sm font-semibold text-white">
                                 {isServicesMenu
                                   ? translatedServices?.[child.index]?.title ?? child.label
                                   : t(projectTranslationKeys[child.href] ?? "nav.projects")}
                               </span>
-                              <span className="mt-1 block text-xs leading-5 text-slate-400">
+                              <span className="mt-0.5 line-clamp-2 text-xs leading-5 text-slate-400">
                                 {isServicesMenu
                                   ? translatedServices?.[child.index]?.summary ?? child.description
                                   : t(`${projectTranslationKeys[child.href]}Description`)}
@@ -428,8 +436,9 @@ export function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={() => setIsOpen(false)}
                     className={cn(
-                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium text-slate-200 transition-all duration-300 hover:bg-white/10 hover:text-white",
+                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-200 transition-all duration-300 hover:bg-white/10 hover:text-white",
                       isActive && "border border-cyan-400/30 bg-cyan-500/15 text-cyan-300",
                     )}
                   >
@@ -438,12 +447,12 @@ export function SiteHeader() {
                 );
               })}
             </nav>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
               <Button asChild variant="outline" className="w-full border-slate-700 bg-slate-900 text-white hover:bg-slate-800">
-                <Link href="/services">{t("nav.viewServices")}</Link>
+                <Link href="/services" onClick={() => setIsOpen(false)}>{t("nav.viewServices")}</Link>
               </Button>
-              <Button asChild className="w-full bg-cyan-400 text-slate-950 hover:bg-cyan-300 font-bold">
-                <Link href="/contact">{t("nav.bookConsultation")}</Link>
+              <Button asChild className="w-full bg-cyan-400 font-bold text-slate-950 hover:bg-cyan-300">
+                <Link href="/contact" onClick={() => setIsOpen(false)}>{t("nav.bookConsultation")}</Link>
               </Button>
             </div>
           </div>

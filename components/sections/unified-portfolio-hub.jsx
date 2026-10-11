@@ -108,7 +108,7 @@ export function UnifiedPortfolioHub() {
           </div>
 
           {/* Interactive Hub Section Switcher */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5 rounded-3xl border border-white/12 bg-slate-900/80 p-3 shadow-2xl backdrop-blur-xl">
+          <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-white/12 bg-slate-900/80 p-2.5 shadow-2xl backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-2.5 sm:rounded-3xl sm:p-3">
             {hubTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -117,16 +117,16 @@ export function UnifiedPortfolioHub() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-4 py-2.5 text-xs font-bold transition-all duration-300 sm:text-sm ${
+                  className={`inline-flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all duration-300 sm:gap-2 sm:rounded-full sm:px-4 sm:text-sm ${
                     isActive
                       ? "bg-gradient-to-r from-brand-blue to-brand-cyan text-slate-950 shadow-[0_0_25px_rgba(56,198,255,0.45)]"
                       : "border border-white/10 bg-white/[0.04] text-slate-300 hover:border-cyan-400/40 hover:bg-white/[0.08] hover:text-white"
                   }`}
                 >
-                  <Icon className="h-4 w-4 shrink-0" />
-                  <span>{tab.label}</span>
+                  <Icon className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
+                  <span className="truncate">{tab.label}</span>
                   <span
-                    className={`rounded-full px-2 py-0.5 text-[10px] font-extrabold uppercase ${
+                    className={`hidden rounded-full px-2 py-0.5 text-[10px] font-extrabold uppercase md:inline-block ${
                       isActive
                         ? "bg-slate-950/20 text-slate-950"
                         : "bg-cyan-400/15 text-cyan-300"

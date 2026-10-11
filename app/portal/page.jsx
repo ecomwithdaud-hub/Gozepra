@@ -184,19 +184,19 @@ export default function PortalGatePage() {
         </div>
 
         {/* Auth Box */}
-        <div className="mt-8 rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
-          <div className="flex items-center justify-between border-b border-white/10 pb-4">
+        <div className="mt-8 rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-2xl backdrop-blur-xl sm:p-8">
+          <div className="flex flex-col gap-3 border-b border-white/10 pb-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-              <h2 className="font-display text-lg font-bold text-white">
+              <h2 className="font-display text-base font-bold text-white sm:text-lg">
                 {activeTab === "login" ? "Authentication Gate" : "Employee Registration"}
               </h2>
             </div>
-            <div className="flex rounded-xl border border-white/10 bg-slate-950 p-1 text-xs">
+            <div className="grid grid-cols-2 rounded-xl border border-white/10 bg-slate-950 p-1 text-xs sm:flex">
               <button
                 type="button"
                 onClick={() => setActiveTab("login")}
-                className={`rounded-lg px-3 py-1 font-semibold transition ${
+                className={`rounded-lg px-3 py-1.5 font-semibold transition sm:py-1 ${
                   activeTab === "login"
                     ? "bg-cyan-400 text-slate-950 shadow"
                     : "text-slate-400 hover:text-white"
@@ -207,7 +207,7 @@ export default function PortalGatePage() {
               <button
                 type="button"
                 onClick={() => setActiveTab("register")}
-                className={`rounded-lg px-3 py-1 font-semibold transition ${
+                className={`rounded-lg px-3 py-1.5 font-semibold transition sm:py-1 ${
                   activeTab === "register"
                     ? "bg-cyan-400 text-slate-950 shadow"
                     : "text-slate-400 hover:text-white"
@@ -259,19 +259,19 @@ export default function PortalGatePage() {
                 <span className="font-bold text-white">⚡ Instant Executive Pass Active:</span> Click below to enter the selected portal immediately with zero friction.
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center justify-between gap-4 pt-2">
+              <div className="mt-6 flex flex-col gap-3 pt-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                 <div className="flex items-center gap-2 text-xs text-slate-400">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
                   <span>Encrypted 256-bit Session Mesh</span>
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-400 to-blue-500 font-extrabold text-slate-950 shadow-lg hover:brightness-110"
+                  className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 font-extrabold text-slate-950 shadow-lg hover:brightness-110 sm:w-auto"
                 >
                   <span>Authorize &amp; Launch {selectedRole.toUpperCase()} Portal</span>
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 shrink-0" />
                 </Button>
               </div>
             </form>

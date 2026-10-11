@@ -113,16 +113,12 @@
     hyphens: auto;
   }
 
-  :where(button, [role="button"], .eyebrow, .metric-chip, [class*="rounded-full"]) {
-    white-space: nowrap;
-  }
-
-  nav > a,
-  header nav > *,
-  header nav a,
-  header nav button {
-    white-space: nowrap;
-    flex-shrink: 0;
+  @media (min-width: 1024px) {
+    header nav > a,
+    header nav > button {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
   }
 
   svg {
@@ -295,11 +291,6 @@ body{
   }
 }
 
-@media (max-width: 767px) {
-  .relative.min-h-screen:has(.mobile-home-layout) > footer {
-    display: none;
-  }
-}
 
 /* Custom Sleek Scrollbar for Dropdowns and Containers */
 .scrollbar-thin {

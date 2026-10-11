@@ -7,7 +7,6 @@ import { InteractiveServiceDemos } from "@/components/sections/interactive-servi
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TheShiftSection } from "@/components/sections/TheShiftSection";
 import { WhyUs } from "@/components/sections/why-us";
-import MobileHomePage from "@/components/MobileHomePage";
 import { siteMeta } from "@/lib/site";
 
 export default function HomePage() {
@@ -34,17 +33,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="hidden md:block">
-        <DesktopHome />
-      </div>
-      <MobileHomePage />
-    </>
-  );
-}
-
-function DesktopHome() {
-  return (
-    <>
       <HomeHero />
       <HumanBusinessBridge />
       <InteractiveServiceDemos />

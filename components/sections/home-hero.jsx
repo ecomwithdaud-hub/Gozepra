@@ -181,18 +181,18 @@ export function HomeHero() {
           </div>
 
           {/* Top Eyebrow Pill */}
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.32em] text-cyan-300 shadow-[0_0_25px_rgba(56,198,255,0.2)]">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
-            {t("hero.eyebrow")}
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1.5 text-center text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-300 shadow-[0_0_25px_rgba(56,198,255,0.2)] sm:gap-2.5 sm:px-4 sm:text-[11px] sm:tracking-[0.32em]">
+            <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
+            <span>{t("hero.eyebrow")}</span>
           </div>
 
           {/* Massive DevCrafter-Style Dual Stroked Display Headline */}
-          <div className="mt-6 select-none">
-            <div className="font-display text-[clamp(2.9rem,11vw,7.4rem)] font-black uppercase leading-[0.9] tracking-tight text-white drop-shadow-2xl">
+          <div className="mt-5 select-none sm:mt-6">
+            <div className="font-display text-[clamp(2.5rem,11vw,7.4rem)] font-black uppercase leading-[0.9] tracking-tight text-white drop-shadow-2xl">
               DIGITAL
             </div>
             <div
-              className="font-display text-[clamp(2.9rem,11vw,7.4rem)] font-black uppercase leading-[0.92] tracking-tight text-transparent"
+              className="font-display text-[clamp(2.5rem,11vw,7.4rem)] font-black uppercase leading-[0.92] tracking-tight text-transparent"
               style={{
                 WebkitTextStroke: "2px rgba(56, 198, 255, 0.85)",
               }}
@@ -202,26 +202,26 @@ export function HomeHero() {
           </div>
 
           {/* Subtitle Headline & Description */}
-          <h1 className="mt-5 max-w-3xl text-balance font-display text-xl font-semibold leading-snug text-slate-100 sm:text-3xl">
+          <h1 className="mt-4 max-w-3xl text-balance font-display text-lg font-semibold leading-snug text-slate-100 sm:mt-5 sm:text-3xl">
             {t("hero.titleLead")}{" "}
             <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
               {t("hero.titleAccent")}
             </span>
           </h1>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base lg:text-lg">
+          <p className="mx-auto mt-3.5 max-w-2xl text-sm leading-relaxed text-slate-300 sm:mt-4 sm:text-base lg:text-lg">
             {t("hero.description")}
           </p>
 
           {/* DevCrafter-Inspired Floating Glass Pill CTA Bar */}
-          <div className="relative z-30 mt-8 flex flex-wrap items-center justify-center gap-2.5 rounded-full border border-white/15 bg-slate-950/75 p-2.5 shadow-[0_25px_70px_rgba(0,0,0,0.65)] backdrop-blur-2xl sm:gap-4 sm:px-5 sm:py-3">
+          <div className="relative z-30 mt-7 flex w-full max-w-md flex-col items-stretch justify-center gap-2.5 rounded-3xl border border-white/15 bg-slate-950/75 p-3 shadow-[0_25px_70px_rgba(0,0,0,0.65)] backdrop-blur-2xl sm:mt-8 sm:w-auto sm:max-w-none sm:flex-row sm:items-center sm: gap-4 sm:rounded-full sm:px-5 sm:py-3">
             <Link
               href="/contact"
               data-cursor="LET'S GO"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-emerald-400 px-6 text-xs font-extrabold uppercase tracking-[0.15em] text-slate-950 shadow-[0_0_30px_rgba(56,198,255,0.45)] transition-all duration-300 hover:scale-105 sm:h-12 sm:px-8 sm:text-sm"
+              className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-emerald-400 px-5 text-xs font-extrabold uppercase tracking-[0.14em] text-slate-950 shadow-[0_0_30px_rgba(56,198,255,0.45)] transition-all duration-300 hover:scale-105 sm:h-12 sm:w-auto sm:px-8 sm:text-sm"
             >
               <span>{t("hero.projectCta") || "Start a Project"}</span>
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 shrink-0" />
             </Link>
 
             <div className="hidden h-7 w-px bg-white/15 sm:block" />
@@ -229,22 +229,22 @@ export function HomeHero() {
             <Link
               href="/portfolio"
               data-cursor="EXPLORE"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-5 text-xs font-bold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:border-cyan-400/50 hover:bg-white/10 sm:h-12 sm:px-7 sm:text-sm"
+              className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-4 text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:border-cyan-400/50 hover:bg-white/10 sm:h-12 sm:w-auto sm:px-7 sm:text-sm"
             >
               <span>View Portfolio & Case Studies</span>
-              <ArrowUpRight className="h-4 w-4 text-cyan-300" />
+              <ArrowUpRight className="h-4 w-4 shrink-0 text-cyan-300" />
             </Link>
           </div>
 
           {/* Dedicated AI Bots Simulator Action Pill (Moved clearly below) */}
-          <div className="relative z-30 mt-4 flex items-center justify-center">
+          <div className="relative z-30 mt-3.5 flex w-full max-w-md items-center justify-center sm:mt-4 sm:w-auto sm:max-w-none">
             <Link
               href="#interactive-service-demos"
               data-cursor="TEST AI"
-              className="group inline-flex items-center gap-2.5 rounded-full border border-cyan-400/35 bg-cyan-400/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.15em] text-cyan-300 shadow-[0_0_20px_rgba(56,198,255,0.2)] backdrop-blur-xl transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-400 hover:text-slate-950 hover:scale-105"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-400/35 bg-cyan-400/10 px-4 py-2.5 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-cyan-300 shadow-[0_0_20px_rgba(56,198,255,0.2)] backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:bg-cyan-400 hover:text-slate-950 sm:w-auto sm:gap-2.5 sm:px-5 sm:py-2 sm:text-xs sm:tracking-[0.15em]"
             >
               <Bot className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-12" />
-              <span>Test Live AI Bots & Simulator (Interactive Labs)</span>
+              <span>Test Live AI Bots & Simulator</span>
               <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

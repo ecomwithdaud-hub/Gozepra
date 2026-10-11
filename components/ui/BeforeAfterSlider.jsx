@@ -53,51 +53,51 @@ export function BeforeAfterSlider() {
           onMouseUp={() => setIsDragging(false)}
           onMouseLeave={() => setIsDragging(false)}
           onTouchMove={onTouchMove}
-          className="relative mx-auto mt-12 h-[480px] w-full max-w-5xl select-none overflow-hidden rounded-[32px] border border-white/20 bg-slate-900 shadow-2xl sm:h-[540px]"
+          className="relative mx-auto mt-10 h-[560px] w-full max-w-5xl select-none overflow-hidden rounded-[28px] border border-white/20 bg-slate-900 shadow-2xl sm:mt-12 sm:h-[540px] sm:rounded-[32px]"
         >
           {/* Right Layer (After: Zepra Tech Next.js Architecture) */}
-          <div className="absolute inset-0 bg-[#081224] p-6 sm:p-10">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <span className="rounded-full border border-emerald-400/30 bg-emerald-400/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-300">
+          <div className="absolute inset-0 bg-[#081224] p-4 sm:p-10">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-3 sm:pb-4">
+              <span className="rounded-full border border-emerald-400/30 bg-emerald-400/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-emerald-300 sm:px-3 sm:text-xs">
                 After // Zepra Tech Next.js 15
               </span>
-              <span className="font-display text-xl font-bold text-emerald-400 sm:text-2xl">
+              <span className="font-display text-sm font-bold text-emerald-400 sm:text-2xl">
                 99/100 Core Web Vitals
               </span>
             </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-emerald-400/25 bg-emerald-400/10 p-4 text-center">
-                <div className="font-display text-3xl font-bold text-emerald-300">
+            <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
+              <div className="rounded-xl border border-emerald-400/25 bg-emerald-400/10 p-2.5 text-center sm:rounded-2xl sm:p-4">
+                <div className="font-display text-xl font-bold text-emerald-300 sm:text-3xl">
                   0.8s
                 </div>
-                <div className="mt-1 text-xs text-slate-300">Edge Load Time</div>
+                <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Edge Load</div>
               </div>
-              <div className="rounded-2xl border border-cyan-400/25 bg-cyan-400/10 p-4 text-center">
-                <div className="font-display text-3xl font-bold text-cyan-300">
+              <div className="rounded-xl border border-cyan-400/25 bg-cyan-400/10 p-2.5 text-center sm:rounded-2xl sm:p-4">
+                <div className="font-display text-xl font-bold text-cyan-300 sm:text-3xl">
                   +64%
                 </div>
-                <div className="mt-1 text-xs text-slate-300">Form Conversion Lift</div>
+                <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Conversion Lift</div>
               </div>
-              <div className="rounded-2xl border border-amber-400/25 bg-amber-400/10 p-4 text-center">
-                <div className="font-display text-3xl font-bold text-amber-300">
+              <div className="rounded-xl border border-amber-400/25 bg-amber-400/10 p-2.5 text-center sm:rounded-2xl sm:p-4">
+                <div className="font-display text-xl font-bold text-amber-300 sm:text-3xl">
                   Zero
                 </div>
-                <div className="mt-1 text-xs text-slate-300">Cumulative Layout Shift</div>
+                <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Layout Shift</div>
               </div>
             </div>
 
-            <div className="mt-8 space-y-3">
-              <div className="flex items-center gap-3 text-sm text-slate-200">
-                <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0" />
+            <div className="mt-5 space-y-2.5 sm:mt-8 sm:space-y-3">
+              <div className="flex items-start gap-2.5 text-xs text-slate-200 sm:items-center sm:gap-3 sm:text-sm">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400 sm:mt-0 sm:h-5 sm:w-5" />
                 <span>Sub-second mobile-first serverless edge delivery</span>
               </div>
-              <div className="flex items-center gap-3 text-sm text-slate-200">
-                <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0" />
+              <div className="flex items-start gap-2.5 text-xs text-slate-200 sm:items-center sm:gap-3 sm:text-sm">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400 sm:mt-0 sm:h-5 sm:w-5" />
                 <span>Rich LocalBusiness & Service JSON-LD schema for Google & AI search</span>
               </div>
-              <div className="flex items-center gap-3 text-sm text-slate-200">
-                <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0" />
+              <div className="flex items-start gap-2.5 text-xs text-slate-200 sm:items-center sm:gap-3 sm:text-sm">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400 sm:mt-0 sm:h-5 sm:w-5" />
                 <span>Integrated 24/7 lead routing directly into client CRM</span>
               </div>
             </div>
@@ -105,51 +105,51 @@ export function BeforeAfterSlider() {
 
           {/* Left Layer (Before: Slow Outdated Legacy Build) */}
           <div
-            className="absolute inset-y-0 left-0 overflow-hidden bg-[#180a0f] p-6 sm:p-10"
+            className="absolute inset-y-0 left-0 overflow-hidden bg-[#180a0f] p-4 sm:p-10"
             style={{ width: `${sliderPos}%` }}
           >
-            <div className="w-[800px] max-w-full">
-              <div className="flex items-center justify-between border-b border-rose-500/20 pb-4">
-                <span className="rounded-full border border-rose-500/30 bg-rose-500/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-rose-300">
+            <div className="w-[calc(100vw-3rem)] max-w-5xl sm:w-[800px]">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rose-500/20 pb-3 sm:pb-4">
+                <span className="rounded-full border border-rose-500/30 bg-rose-500/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-rose-300 sm:px-3 sm:text-xs">
                   Before // Generic $300 Template
                 </span>
-                <span className="font-display text-xl font-bold text-rose-400 sm:text-2xl">
+                <span className="font-display text-sm font-bold text-rose-400 sm:text-2xl">
                   52/100 Mobile Score
                 </span>
               </div>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-rose-500/25 bg-rose-500/10 p-4 text-center">
-                  <div className="font-display text-3xl font-bold text-rose-400">
+              <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
+                <div className="rounded-xl border border-rose-500/25 bg-rose-500/10 p-2.5 text-center sm:rounded-2xl sm:p-4">
+                  <div className="font-display text-xl font-bold text-rose-400 sm:text-3xl">
                     3.9s
                   </div>
-                  <div className="mt-1 text-xs text-slate-300">Slow Server Lag</div>
+                  <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Slow Server</div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-center">
-                  <div className="font-display text-3xl font-bold text-slate-400">
+                <div className="rounded-xl border border-white/10 bg-white/[0.04] p-2.5 text-center sm:rounded-2xl sm:p-4">
+                  <div className="font-display text-xl font-bold text-slate-400 sm:text-3xl">
                     -48%
                   </div>
-                  <div className="mt-1 text-xs text-slate-300">High Bounce Rate</div>
+                  <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Bounce Rate</div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-center">
-                  <div className="font-display text-3xl font-bold text-amber-400">
-                    42 Plugins
+                <div className="rounded-xl border border-white/10 bg-white/[0.04] p-2.5 text-center sm:rounded-2xl sm:p-4">
+                  <div className="font-display text-xl font-bold text-amber-400 sm:text-3xl">
+                    42+
                   </div>
-                  <div className="mt-1 text-xs text-slate-300">Bloated Codebase</div>
+                  <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Bloated Plugins</div>
                 </div>
               </div>
 
-              <div className="mt-8 space-y-3">
-                <div className="flex items-center gap-3 text-sm text-slate-300">
-                  <XCircle className="h-5 w-5 text-rose-400 shrink-0" />
+              <div className="mt-5 space-y-2.5 sm:mt-8 sm:space-y-3">
+                <div className="flex items-start gap-2.5 text-xs text-slate-300 sm:items-center sm:gap-3 sm:text-sm">
+                  <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-400 sm:mt-0 sm:h-5 sm:w-5" />
                   <span>Uncompressed images crashing mobile browsers</span>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-slate-300">
-                  <XCircle className="h-5 w-5 text-rose-400 shrink-0" />
+                <div className="flex items-start gap-2.5 text-xs text-slate-300 sm:items-center sm:gap-3 sm:text-sm">
+                  <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-400 sm:mt-0 sm:h-5 sm:w-5" />
                   <span>No technical SEO schema, invisible to AI answer engines</span>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-slate-300">
-                  <XCircle className="h-5 w-5 text-rose-400 shrink-0" />
+                <div className="flex items-start gap-2.5 text-xs text-slate-300 sm:items-center sm:gap-3 sm:text-sm">
+                  <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-400 sm:mt-0 sm:h-5 sm:w-5" />
                   <span>Generic cookie-cutter styling ignored by high-paying clients</span>
                 </div>
               </div>

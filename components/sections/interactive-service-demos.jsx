@@ -472,53 +472,53 @@ export function InteractiveServiceDemos() {
           </p>
 
           {/* Growex-Inspired Interactive Tab Switcher */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-white/15 bg-slate-900/90 p-2 shadow-2xl backdrop-blur-xl sm:gap-3 sm:rounded-full sm:p-2.5">
+          <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-white/15 bg-slate-900/90 p-2 shadow-2xl backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:rounded-full sm:p-2.5">
             <button
               onClick={() => setActiveTab("ai-bots")}
-              className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-bold transition-all sm:rounded-full sm:px-5 sm:text-sm ${
+              className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "ai-bots"
                   ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
-              <Bot className="h-4 w-4" />
-              <span>1. AI Agents &amp; Bots Lab</span>
+              <Bot className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
+              <span>1. AI Agents Lab</span>
             </button>
 
             <button
               onClick={() => setActiveTab("aeo-search")}
-              className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-bold transition-all sm:rounded-full sm:px-5 sm:text-sm ${
+              className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "aeo-search"
                   ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
-              <Search className="h-4 w-4" />
-              <span>2. SEO &amp; AI Search Simulator</span>
+              <Search className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
+              <span>2. AI Search Sim</span>
             </button>
 
             <button
               onClick={() => setActiveTab("automation-pipeline")}
-              className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-bold transition-all sm:rounded-full sm:px-5 sm:text-sm ${
+              className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "automation-pipeline"
                   ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
-              <Zap className="h-4 w-4" />
-              <span>3. Autonomous CRM Pipeline</span>
+              <Zap className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
+              <span>3. CRM Pipeline</span>
             </button>
 
             <button
               onClick={() => setActiveTab("sticky-cards")}
-              className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-bold transition-all sm:rounded-full sm:px-5 sm:text-sm ${
+              className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "sticky-cards"
                   ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
-              <Layers className="h-4 w-4" />
-              <span>4. Stacked Architecture Deck</span>
+              <Layers className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
+              <span>4. Architecture</span>
             </button>
           </div>
         </div>
@@ -527,24 +527,24 @@ export function InteractiveServiceDemos() {
         {/* LAB 1: INTERACTIVE NICHE AI BOTS SIMULATOR */}
         {/* ==================================================================== */}
         {activeTab === "ai-bots" && (
-          <div id="ai-bots-lab" className="mt-12 rounded-3xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-6 shadow-2xl backdrop-blur-xl sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-center">
+          <div id="ai-bots-lab" className="mt-10 rounded-3xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-4 shadow-2xl backdrop-blur-xl sm:mt-12 sm:p-10">
+            <div className="flex flex-col items-start justify-between gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:gap-4 sm:pb-6">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
                   Live AI Bot Sandbox
                 </p>
-                <h3 className="mt-1 font-display text-2xl font-bold text-white sm:text-3xl">
+                <h3 className="mt-1 font-display text-xl font-bold text-white sm:text-3xl">
                   Select a Business Niche &amp; Chat Live With The Bot
                 </h3>
               </div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-1 text-xs font-bold text-emerald-300">
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-bold text-emerald-300 sm:px-3.5 sm:text-xs">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 Live Bot Server Online
               </span>
             </div>
 
             {/* Niche Selector Buttons */}
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-5 grid grid-cols-2 gap-2.5 sm:mt-6 sm:grid-cols-4 sm:gap-3">
               {NICHE_BOTS.map((bot) => {
                 const Icon = bot.icon;
                 const isSelected = selectedBot.id === bot.id;
@@ -552,17 +552,17 @@ export function InteractiveServiceDemos() {
                   <button
                     key={bot.id}
                     onClick={() => setSelectedBot(bot)}
-                    className={`flex flex-col items-center justify-center rounded-2xl border p-4 text-center transition-all ${
+                    className={`flex flex-col items-center justify-center rounded-2xl border p-3 text-center transition-all sm:p-4 ${
                       isSelected
                         ? "border-cyan-400 bg-cyan-400/15 shadow-[0_0_20px_rgba(56,198,255,0.25)] ring-1 ring-cyan-400/40"
                         : "border-white/10 bg-slate-950/70 hover:border-white/25 hover:bg-white/5"
                     }`}
                   >
-                    <span className="text-2xl">{bot.botAvatar}</span>
-                    <span className="mt-2 text-xs font-bold text-white sm:text-sm">
+                    <span className="text-xl sm:text-2xl">{bot.botAvatar}</span>
+                    <span className="mt-1.5 text-xs font-bold leading-snug text-white sm:mt-2 sm:text-sm">
                       {bot.name}
                     </span>
-                    <span className="mt-1 text-[11px] text-slate-400">
+                    <span className="mt-1 hidden text-[11px] text-slate-400 sm:block">
                       {bot.niche}
                     </span>
                   </button>
@@ -571,10 +571,10 @@ export function InteractiveServiceDemos() {
             </div>
 
             {/* Bot Interactive Chat Window & Live Performance Stats */}
-            <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:gap-8 lg:grid-cols-12">
               {/* Chat Interface Column */}
               <div className="lg:col-span-8">
-                <div className="flex h-[520px] flex-col rounded-2xl border border-white/15 bg-slate-950/90 shadow-2xl">
+                <div className="flex h-[460px] flex-col rounded-2xl border border-white/15 bg-slate-950/90 shadow-2xl sm:h-[520px]">
                   {/* Chat Header */}
                   <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] p-4">
                     <div className="flex items-center gap-3">
@@ -935,14 +935,13 @@ export function InteractiveServiceDemos() {
             </div>
 
             {/* Stacked Cards */}
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {STICKY_STACKED_CARDS.map((card, idx) => (
                 <div
                   key={card.number}
-                  className="sticky top-28 rounded-3xl border border-white/15 bg-gradient-to-br from-[#070e22] via-[#050a18] to-slate-950 p-7 sm:p-10 shadow-2xl backdrop-blur-2xl transition-all"
-                  style={{ top: `${110 + idx * 20}px` }}
+                  className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#070e22] via-[#050a18] to-slate-950 p-5 shadow-2xl backdrop-blur-2xl transition-all sm:p-10 lg:sticky lg:top-28"
                 >
-                  <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center lg:gap-8">
                     <div className="lg:col-span-8">
                       <div className="flex items-center gap-3">
                         <span className="font-mono text-xs font-black uppercase tracking-widest text-cyan-400">
@@ -950,18 +949,18 @@ export function InteractiveServiceDemos() {
                         </span>
                       </div>
 
-                      <h4 className="mt-3 font-display text-2xl font-bold text-white sm:text-3xl">
+                      <h4 className="mt-2.5 font-display text-xl font-bold text-white sm:mt-3 sm:text-3xl">
                         {card.title}
                       </h4>
-                      <p className="text-sm font-semibold text-cyan-300 mt-1">
+                      <p className="mt-1 text-xs font-semibold text-cyan-300 sm:text-sm">
                         {card.subtitle}
                       </p>
 
-                      <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                      <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:mt-4 sm:text-sm">
                         {card.description}
                       </p>
 
-                      <div className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                      <div className="mt-5 grid grid-cols-1 gap-2 sm:mt-6 sm:grid-cols-2 sm:gap-2.5">
                         {card.deliverables.map((del, dIdx) => (
                           <div
                             key={dIdx}
@@ -974,8 +973,8 @@ export function InteractiveServiceDemos() {
                       </div>
                     </div>
 
-                    <div className="lg:col-span-4 flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/[0.02] p-8 text-center">
-                      <p className="font-mono text-5xl font-black text-transparent bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text">
+                    <div className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center sm:p-8 lg:col-span-4">
+                      <p className="bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text font-mono text-4xl font-black text-transparent sm:text-5xl">
                         {card.metricValue}
                       </p>
                       <p className="mt-2 text-xs font-bold uppercase tracking-wider text-slate-400">
@@ -983,7 +982,7 @@ export function InteractiveServiceDemos() {
                       </p>
                       <Link
                         href={card.linkHref}
-                        className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-cyan-400 hover:text-slate-950"
+                        className="mt-5 inline-flex items-center gap-2 rounded-xl bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-cyan-400 hover:text-slate-950 sm:mt-6"
                       >
                         <span>{card.linkText}</span>
                         <ArrowUpRight className="h-4 w-4" />

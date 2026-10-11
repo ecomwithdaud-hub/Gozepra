@@ -104,7 +104,7 @@ export function PortalNavbar({ currentPortal = "ceo" }) {
         </div>
 
         {/* Portal Quick Navigation Switches */}
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="flex flex-wrap items-center gap-1 sm:gap-2">
           {visibleLinks.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
@@ -112,23 +112,24 @@ export function PortalNavbar({ currentPortal = "ceo" }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative flex items-center gap-2 rounded-xl px-3 py-1.5 text-xs font-semibold transition-all ${
+                className={`relative flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 text-xs font-semibold transition-all sm:gap-2 sm:px-3 ${
                   isActive
                     ? "border border-cyan-400/40 bg-gradient-to-r from-slate-900 to-slate-800 text-cyan-300 shadow-sm"
                     : "border border-transparent text-slate-400 hover:border-white/10 hover:bg-white/5 hover:text-white"
                 }`}
               >
-                <Icon className={`h-3.5 w-3.5 ${isActive ? "text-cyan-400" : "text-slate-400"}`} />
-                <span>{item.label}</span>
+                <Icon className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-cyan-400" : "text-slate-400"}`} />
+                <span className="hidden md:inline">{item.label}</span>
+                <span className="md:hidden">{item.badge}</span>
               </Link>
             );
           })}
         </nav>
 
         {/* User Role Switcher & Back to Website */}
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {/* Quick Demo Switcher dropdown / buttons */}
-          <div className="flex items-center gap-1 rounded-xl border border-white/10 bg-slate-900/80 p-1 text-[11px]">
+          <div className="flex items-center gap-1 rounded-xl border border-white/10 bg-slate-900/80 p-1 text-[10px] sm:text-[11px]">
             <span className="hidden xl:inline px-2 text-slate-400 font-medium">Switch Persona:</span>
             <button
               type="button"
@@ -150,7 +151,7 @@ export function PortalNavbar({ currentPortal = "ceo" }) {
                   : "text-slate-300 hover:bg-white/10"
               }`}
             >
-              Dev/Admin
+              Admin
             </button>
             <button
               type="button"
@@ -167,10 +168,11 @@ export function PortalNavbar({ currentPortal = "ceo" }) {
 
           <Link
             href="/"
-            className="flex items-center gap-1.5 rounded-xl border border-slate-800 bg-slate-900 px-3 py-1.5 text-xs font-semibold text-slate-300 transition hover:border-cyan-400 hover:text-white"
+            className="flex items-center gap-1.5 rounded-xl border border-slate-800 bg-slate-900 px-2.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:border-cyan-400 hover:text-white sm:px-3"
           >
-            <span>Public Site</span>
-            <ExternalLink className="h-3 w-3" />
+            <span className="hidden sm:inline">Public Site</span>
+            <span className="sm:hidden">Site</span>
+            <ExternalLink className="h-3 w-3 shrink-0" />
           </Link>
         </div>
       </div>
