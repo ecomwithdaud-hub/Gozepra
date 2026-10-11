@@ -18,6 +18,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { PortalNavbar } from "@/components/layout/portal-navbar";
+import { AttendanceTracker } from "@/components/portal/attendance-tracker";
 import { EMPLOYEE_TASKS, INTERNAL_ANNOUNCEMENTS } from "@/lib/portal-data";
 import { usePortalAuth } from "@/components/providers/portal-auth-provider";
 import { Button } from "@/components/ui/button";
@@ -104,6 +105,11 @@ export default function EmployeesWorkspacePage() {
               <span className="text-[11px] text-slate-400 shrink-0">{ann.date}</span>
             </div>
           ))}
+        </div>
+
+        {/* Attendance, Shift Clock In/Out & Working Hours Calculator */}
+        <div className="mt-8">
+          <AttendanceTracker currentUser={currentUser} />
         </div>
 
         {/* Main Grid: Sprint Taskboard & Asynchronous Standup */}

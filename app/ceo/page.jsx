@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Crown,
@@ -22,6 +22,7 @@ import {
   PhoneCall,
 } from "lucide-react";
 import { PortalNavbar } from "@/components/layout/portal-navbar";
+import { usePortalAuth } from "@/components/providers/portal-auth-provider";
 import {
   CEO_FINANCIAL_SUMMARY,
   ACTIVE_CLIENT_PROJECTS,
@@ -31,10 +32,45 @@ import {
 import { Button } from "@/components/ui/button";
 
 export default function CeoDeckPage() {
+  const { currentUser, loginAs } = usePortalAuth();
   const [projects, setProjects] = useState(ACTIVE_CLIENT_PROJECTS);
   const [leads, setLeads] = useState(RECENT_CLIENT_LEADS);
   const [selectedLead, setSelectedLead] = useState(null);
   const [approvedProjects, setApprovedProjects] = useState([]);
+  const [attendanceLogs, setAttendanceLogs] = useState([]);
+
+  // Load live attendance telemetry
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("zepra_attendance_logs");
+      if (saved) {
+        setAttendanceLogs(JSON.parse(saved));
+      } else {
+        setAttendanceLogs([
+          {
+            id: "att-101",
+            employeeName: "Hamza Tariq",
+            role: "employee",
+            date: "Today",
+            checkIn: "09:02 AM",
+            checkOut: null,
+            duration: "Working Now (5h 12m)",
+            status: "active",
+          },
+          {
+            id: "att-102",
+            employeeName: "Zainab Raza",
+            role: "employee",
+            date: "Today",
+            checkIn: "08:50 AM",
+            checkOut: null,
+            duration: "Working Now (5h 24m)",
+            status: "active",
+          },
+        ]);
+      }
+    } catch (e) {}
+  }, []);
 
   const toggleApproval = (id) => {
     if (approvedProjects.includes(id)) {
@@ -43,6 +79,44 @@ export default function CeoDeckPage() {
       setApprovedProjects([...approvedProjects, id]);
     }
   };
+
+  // RBAC Access Control Guard: Only CEO can access /ceo
+  if (currentUser && currentUser.role !== "ceo") {
+    return (
+      <div className="min-h-screen bg-slate-950 text-white">
+        <PortalNavbar currentPortal="ceo" />
+        <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-4 py-24 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400">
+            <AlertTriangle className="h-8 w-8" />
+          </div>
+          <span className="mt-4 rounded-full bg-rose-500/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-rose-300">
+            Clearance Level 5 Required
+          </span>
+          <h1 className="mt-4 font-display text-2xl sm:text-3xl font-black text-white">
+            Access Restricted: Executive Portal Only
+          </h1>
+          <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+            You are logged in as <strong className="text-white">{currentUser.name}</strong> ({currentUser.role}). 
+            Only the CEO (Mr. Daud Lashari) is authorized to view company financials, revenue pipelines, and client contracts.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href={currentUser.role === "admin" ? "/admin" : "/employees"}
+              className="rounded-xl bg-cyan-500 px-5 py-2.5 text-xs font-bold text-slate-950 hover:bg-cyan-400 transition"
+            >
+              Go to Your {currentUser.role === "admin" ? "Admin CMS" : "Employee Workspace"}
+            </Link>
+            <button
+              onClick={() => loginAs("ceo")}
+              className="rounded-xl border border-amber-400/40 bg-amber-400/10 px-5 py-2.5 text-xs font-bold text-amber-300 hover:bg-amber-400/20 transition"
+            >
+              Authenticate as CEO (Demo Mode)
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -134,6 +208,69 @@ export default function CeoDeckPage() {
             <div className="mt-1 text-xs text-amber-300 font-semibold">
               Zero escrow disputes
             </div>
+          </div>
+        </div>
+
+        {/* Live Team Attendance & Working Hours Telemetry for CEO */}
+        <div className="mt-8 rounded-3xl border border-white/10 bg-slate-900/60 p-6 backdrop-blur-xl">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 font-bold text-slate-950 shadow-md">
+                <Clock className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-bold text-white flex items-center gap-2">
+                  Staff Shift Attendance &amp; Working Hours Telemetry
+                  <span className="rounded-full bg-emerald-500/20 border border-emerald-400/30 px-2 py-0.5 text-[10px] font-bold text-emerald-300">
+                    Live Sync
+                  </span>
+                </h3>
+                <p className="text-xs text-slate-400">
+                  Real-time operational visibility into active employee shifts, check-ins, sign-outs, and accumulated hours.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <Link
+                href="/employees"
+                className="rounded-xl border border-white/10 bg-slate-800/80 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-emerald-400 hover:text-white transition"
+              >
+                Open Employee Desk →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {attendanceLogs.slice(0, 6).map((log) => (
+              <div
+                key={log.id}
+                className="rounded-2xl border border-white/5 bg-slate-950/70 p-4 transition hover:border-white/10"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-slate-800 text-xs font-bold text-white">
+                      {log.employeeName?.charAt(0) || "U"}
+                    </span>
+                    <span className="text-xs font-bold text-white">{log.employeeName}</span>
+                  </div>
+                  {log.status === "active" ? (
+                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-bold text-emerald-300">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
+                      Clocked In
+                    </span>
+                  ) : (
+                    <span className="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] font-semibold text-slate-400">
+                      Completed
+                    </span>
+                  )}
+                </div>
+
+                <div className="mt-3 flex items-center justify-between border-t border-white/5 pt-2 text-xs">
+                  <span className="text-slate-400">Check-in: {log.checkIn}</span>
+                  <span className="font-mono font-bold text-emerald-400">{log.duration}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

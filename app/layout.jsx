@@ -1,11 +1,9 @@
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
-
-import { SiteFooter } from "@/components/layout/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
 import { LanguageProvider } from "@/components/providers/language-provider";
 import { QuickConnectDock } from "@/components/ui/QuickConnectDock";
 import { TechCursor } from "@/components/ui/TechCursor";
 import { AcousticHaptics } from "@/components/ui/AcousticHaptics";
+import { SiteShell } from "@/components/layout/site-shell";
 import { PortalAuthProvider } from "@/components/providers/portal-auth-provider";
 import { siteMeta } from "@/lib/site";
 
@@ -62,12 +60,7 @@ export default function RootLayout({ children }) {
             <TechCursor />
             <QuickConnectDock />
             <AcousticHaptics />
-            <div className="relative min-h-screen overflow-x-clip">
-              <SiteHeader />
-              <div aria-hidden="true" className="h-24" />
-              <main>{children}</main>
-              <SiteFooter />
-            </div>
+            <SiteShell>{children}</SiteShell>
           </PortalAuthProvider>
         </LanguageProvider>
       </body>

@@ -18,12 +18,15 @@ import {
   Zap,
   Server,
   FileText,
+  AlertTriangle,
 } from "lucide-react";
 import { PortalNavbar } from "@/components/layout/portal-navbar";
+import { usePortalAuth } from "@/components/providers/portal-auth-provider";
 import { CMS_DEMO_ITEMS } from "@/lib/portal-data";
 import { Button } from "@/components/ui/button";
 
 export default function AdminCmsPage() {
+  const { currentUser, loginAs } = usePortalAuth();
   const [demos, setDemos] = useState(CMS_DEMO_ITEMS);
   const [newTitle, setNewTitle] = useState("");
   const [newCategory, setNewCategory] = useState("Contractors & Home Services");
@@ -35,6 +38,45 @@ export default function AdminCmsPage() {
   const [maintenanceMode, setMaintenanceMode] = useState(false);
   const [edgeCaching, setEdgeCaching] = useState(true);
   const [leadRoutingWebhook, setLeadRoutingWebhook] = useState(true);
+
+  // RBAC Access Control Guard:
+  // Employees cannot access /admin (only "admin" or "ceo" have permission)
+  if (currentUser && currentUser.role === "employee") {
+    return (
+      <div className="min-h-screen bg-slate-950 text-white">
+        <PortalNavbar currentPortal="admin" />
+        <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-4 py-24 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
+            <AlertTriangle className="h-8 w-8" />
+          </div>
+          <span className="mt-4 rounded-full bg-amber-500/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-amber-300">
+            Clearance Level 3 Required
+          </span>
+          <h1 className="mt-4 font-display text-2xl sm:text-3xl font-black text-white">
+            Access Restricted: Dev Ops &amp; Admin Clearance Needed
+          </h1>
+          <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+            You are logged in as <strong className="text-white">{currentUser.name}</strong> (Employee role).
+            Only Dev Team Administrators and the CEO can modify website CMS records, toggle Edge Caching, or configure Webhooks.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="/employees"
+              className="rounded-xl bg-emerald-500 px-5 py-2.5 text-xs font-bold text-slate-950 hover:bg-emerald-400 transition"
+            >
+              Back to Employee Workspace
+            </Link>
+            <button
+              onClick={() => loginAs("admin")}
+              className="rounded-xl border border-cyan-400/40 bg-cyan-400/10 px-5 py-2.5 text-xs font-bold text-cyan-300 hover:bg-cyan-400/20 transition"
+            >
+              Switch to Dev/Admin (Demo Mode)
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const handleAddDemo = (e) => {
     e.preventDefault();
