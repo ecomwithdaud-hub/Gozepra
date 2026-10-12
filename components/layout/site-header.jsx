@@ -181,8 +181,8 @@ export function SiteHeader() {
       <div className="container pointer-events-none">
         <div
           className={cn(
-            "pointer-events-auto relative mx-auto flex max-w-7xl items-center justify-between gap-3 rounded-full border border-white/15 bg-slate-950/85 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.6)] backdrop-blur-xl [backface-visibility:hidden] transition-all duration-300 xl:gap-5 xl:px-6",
-            scrolled ? "py-2.5 shadow-premium" : "py-3.5",
+            "pointer-events-auto relative mx-auto flex max-w-[1380px] items-center justify-between gap-2 rounded-full border border-white/15 bg-slate-950/85 px-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.6)] backdrop-blur-xl [backface-visibility:hidden] transition-all duration-300 xl:gap-3 xl:px-5",
+            scrolled ? "py-2 shadow-premium" : "py-2.5",
           )}
         >
           <Link href="/" aria-label="Zepra Tech home" className="shrink-0">
@@ -191,7 +191,7 @@ export function SiteHeader() {
 
           <nav
             ref={navRef}
-            className="relative hidden shrink-0 items-center gap-1 lg:flex xl:gap-1.5"
+            className="relative hidden shrink-0 items-center gap-0.5 lg:flex xl:gap-1"
             onMouseLeave={hidePill}
             onBlur={(event) => {
               if (!event.currentTarget.contains(event.relatedTarget)) hidePill();
@@ -200,7 +200,7 @@ export function SiteHeader() {
             <span
               aria-hidden="true"
               className={cn(
-                "pointer-events-none absolute top-1/2 h-9 -translate-y-1/2 rounded-full bg-white/10 border border-white/10 motion-reduce:transition-none",
+                "pointer-events-none absolute top-1/2 h-8 -translate-y-1/2 rounded-full bg-white/10 border border-white/10 motion-reduce:transition-none",
                 pill.snap
                   ? "transition-opacity duration-200"
                   : "transition-[left,width,opacity] duration-300 ease-out",
@@ -230,7 +230,7 @@ export function SiteHeader() {
                       }}
                       title={isServicesMenu ? "Double-click to open dedicated Services page" : undefined}
                       className={cn(
-                        "relative z-10 inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium text-slate-300 transition-colors duration-300 hover:text-white xl:px-4",
+                        "relative z-10 inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium text-slate-300 transition-colors duration-300 hover:text-white xl:px-3 xl:text-sm",
                         isActive && "border border-cyan-400/30 bg-cyan-500/15 text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:bg-cyan-500/25 hover:text-white",
                       )}
                       aria-haspopup="menu"
@@ -239,7 +239,7 @@ export function SiteHeader() {
                       <span>{isServicesMenu ? t("nav.services") : t("nav.projects")}</span>
                       <ChevronDown
                         className={cn(
-                          "h-4 w-4 shrink-0 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180",
+                          "h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180",
                           isActive ? "text-cyan-300" : "text-slate-400",
                         )}
                       />
@@ -305,7 +305,7 @@ export function SiteHeader() {
                   onMouseEnter={(event) => movePillTo(event.currentTarget)}
                   onFocus={(event) => movePillTo(event.currentTarget)}
                   className={cn(
-                    "relative z-10 inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium text-slate-300 transition-colors duration-300 hover:text-white xl:px-4",
+                    "relative z-10 inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium text-slate-300 transition-colors duration-300 hover:text-white xl:px-3 xl:text-sm",
                     isActive && "border border-cyan-400/30 bg-cyan-500/15 text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:bg-cyan-500/25 hover:text-white",
                   )}
                 >
@@ -315,15 +315,12 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="flex shrink-0 items-center gap-2.5 xl:gap-3">
-            <div className="hidden items-center gap-2.5 lg:flex">
-              <Button asChild variant="outline" className="hidden shrink-0 whitespace-nowrap 2xl:inline-flex">
-                <Link href="/services">{t("nav.viewServices")}</Link>
-              </Button>
-              <Button asChild className="group shrink-0 whitespace-nowrap">
+          <div className="flex shrink-0 items-center gap-1.5 xl:gap-2">
+            <div className="hidden items-center gap-2 lg:flex">
+              <Button asChild className="group h-9 shrink-0 whitespace-nowrap px-3.5 text-xs font-bold xl:h-10 xl:px-4 xl:text-sm">
                 <Link href="/contact">
                   {t("nav.bookConsultation")}
-                  <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ChevronRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </Button>
             </div>
@@ -334,7 +331,7 @@ export function SiteHeader() {
 
             <button
               type="button"
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 bg-slate-900 text-white shadow-soft transition-colors hover:border-cyan-400/40 hover:text-cyan-300 lg:hidden"
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-slate-900 text-white shadow-soft transition-colors hover:border-cyan-400/40 hover:text-cyan-300 lg:hidden"
               onClick={() => setIsOpen((current) => !current)}
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
