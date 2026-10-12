@@ -448,21 +448,20 @@ export function InteractiveServiceDemos() {
     <section id="interactive-service-demos" className="relative overflow-hidden bg-[#020617] py-20 text-white sm:py-28">
       {/* Background glow effects */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/3 top-10 h-[500px] w-[600px] rounded-full bg-cyan-500/10 blur-[140px]" />
-        <div className="absolute right-10 bottom-10 h-[450px] w-[550px] rounded-full bg-purple-500/10 blur-[130px]" />
+        <div className="absolute left-1/3 top-10 h-[500px] w-[600px] rounded-full bg-sky-500/8 blur-[140px]" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Eyebrow & Title */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-300">
-            <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/90 bg-slate-900/90 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-sky-300">
+            <Sparkles className="h-3.5 w-3.5 text-sky-400" />
             Interactive Technology Labs
           </div>
 
           <h2 className="mt-5 font-display text-3xl font-black tracking-tight text-white sm:text-5xl sm:leading-tight">
             Don&apos;t Just Read About AI &amp; SEO.{" "}
-            <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-slate-100 via-sky-200 to-sky-400 bg-clip-text text-transparent">
               Test Our Live Demos In Real-Time.
             </span>
           </h2>
@@ -472,12 +471,12 @@ export function InteractiveServiceDemos() {
           </p>
 
           {/* Growex-Inspired Interactive Tab Switcher */}
-          <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-white/15 bg-slate-900/90 p-2 shadow-2xl backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:rounded-full sm:p-2.5">
+          <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-slate-800 bg-[#070d19] p-2 shadow-2xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:rounded-full sm:p-2.5">
             <button
               onClick={() => setActiveTab("ai-bots")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "ai-bots"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
+                  ? "bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
@@ -489,7 +488,7 @@ export function InteractiveServiceDemos() {
               onClick={() => setActiveTab("aeo-search")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "aeo-search"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
+                  ? "bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
@@ -501,7 +500,7 @@ export function InteractiveServiceDemos() {
               onClick={() => setActiveTab("automation-pipeline")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "automation-pipeline"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
+                  ? "bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
@@ -513,7 +512,7 @@ export function InteractiveServiceDemos() {
               onClick={() => setActiveTab("sticky-cards")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "sticky-cards"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
+                  ? "bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-950 shadow-lg"
                   : "text-slate-300 hover:text-white"
               }`}
             >
@@ -527,10 +526,11 @@ export function InteractiveServiceDemos() {
         {/* LAB 1: INTERACTIVE NICHE AI BOTS SIMULATOR */}
         {/* ==================================================================== */}
         {activeTab === "ai-bots" && (
-          <div id="ai-bots-lab" className="mt-10 rounded-3xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-4 shadow-2xl backdrop-blur-xl sm:mt-12 sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:gap-4 sm:pb-6">
+          <div id="ai-bots-lab" className="relative mt-10 overflow-hidden rounded-2xl border border-slate-800 bg-[#070d19] p-4 shadow-2xl sm:mt-12 sm:p-10">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/60 to-transparent" />
+            <div className="flex flex-col items-start justify-between gap-3 border-b border-slate-800 pb-5 sm:flex-row sm:items-center sm:gap-4 sm:pb-6">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-sky-400">
                   Live AI Bot Sandbox
                 </p>
                 <h3 className="mt-1 font-display text-xl font-bold text-white sm:text-3xl">
@@ -552,10 +552,10 @@ export function InteractiveServiceDemos() {
                   <button
                     key={bot.id}
                     onClick={() => setSelectedBot(bot)}
-                    className={`flex flex-col items-center justify-center rounded-2xl border p-3 text-center transition-all sm:p-4 ${
+                    className={`flex flex-col items-center justify-center rounded-xl border p-3 text-center transition-all sm:p-4 ${
                       isSelected
-                        ? "border-cyan-400 bg-cyan-400/15 shadow-[0_0_20px_rgba(56,198,255,0.25)] ring-1 ring-cyan-400/40"
-                        : "border-white/10 bg-slate-950/70 hover:border-white/25 hover:bg-white/5"
+                        ? "border-sky-400/80 bg-sky-500/10 shadow-[0_10px_25px_rgba(2,6,23,0.6)] ring-1 ring-sky-400/30"
+                        : "border-slate-800 bg-slate-950/70 hover:border-slate-700 hover:bg-slate-900/60"
                     }`}
                   >
                     <span className="text-xl sm:text-2xl">{bot.botAvatar}</span>
