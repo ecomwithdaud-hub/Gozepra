@@ -56,28 +56,28 @@ const impactStats = [
 
 export function OurStory() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#040812] pt-28 pb-20 text-white sm:pt-36 sm:pb-28">
+    <section className="relative isolate overflow-hidden bg-slate-950 pt-28 pb-20 text-white sm:pt-36 sm:pb-28">
       {/* Background ambient lighting */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[60rem] w-[80rem] -translate-x-1/2 [background:radial-gradient(ellipse_at_center,rgba(56,189,248,0.11),transparent_70%)]"
+        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[60rem] w-[80rem] -translate-x-1/2 [background:radial-gradient(ellipse_at_center,rgba(6,182,212,0.14),transparent_70%)]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 right-0 -z-10 h-[40rem] w-[40rem] [background:radial-gradient(circle,rgba(148,163,184,0.06),transparent_70%)]"
+        className="pointer-events-none absolute top-1/2 right-0 -z-10 h-[40rem] w-[40rem] [background:radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)]"
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-[1600px]">
         {/* Eyebrow & Main Title */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/90 bg-slate-900/90 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-sky-300">
-            <Sparkles className="h-3.5 w-3.5 text-sky-400" />
-            Our Story &amp; Leadership Philosophy
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-300">
+            <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
+            Our Story & Leadership Philosophy
           </div>
 
           <h1 className="mt-6 font-display text-4xl font-black tracking-tight text-white sm:text-6xl sm:leading-[1.15]">
             Engineered For Market Dominance.{" "}
-            <span className="bg-gradient-to-r from-slate-100 via-sky-200 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 via-sky-200 to-indigo-400 bg-clip-text text-transparent">
               Led By Mr. Daud Lashari.
             </span>
           </h1>
@@ -89,14 +89,13 @@ export function OurStory() {
 
         {/* Founder Spotlight Card */}
         <div className="mt-16">
-          <TiltCard cursorLabel="LEADERSHIP" className="rounded-2xl">
-            <div className="relative overflow-hidden rounded-2xl border border-slate-700/80 bg-[#070d19] p-8 shadow-2xl sm:p-12">
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/60 to-transparent" />
+          <TiltCard cursorLabel="LEADERSHIP" className="rounded-3xl">
+            <div className="relative overflow-hidden rounded-3xl border border-cyan-500/30 bg-gradient-to-br from-slate-900 via-[#0a1224] to-slate-950 p-8 shadow-2xl sm:p-12">
               <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
                 {/* Left: Founder Persona & Direct Supervision */}
                 <div className="lg:col-span-7">
-                  <div className="inline-flex items-center gap-2 rounded-md border border-sky-400/25 bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-300">
-                    <Award className="h-3.5 w-3.5 text-sky-400" />
+                  <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/60 px-3.5 py-1 text-xs font-semibold text-cyan-300">
+                    <Award className="h-3.5 w-3.5 text-cyan-400" />
                     Direct Hands-On Supervision
                   </div>
 
@@ -104,8 +103,8 @@ export function OurStory() {
                     Under the Supervision of Mr. Muhammad Daud Ali Lashari
                   </h2>
 
-                  <p className="mt-2 font-mono text-xs font-semibold uppercase tracking-wider text-sky-300 sm:text-sm">
-                    Founder, Chief Executive Officer &amp; Lead Technical Strategist
+                  <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-cyan-400">
+                    Founder, Chief Executive Officer & Lead Technical Strategist
                   </p>
 
                   <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-300 sm:text-base">
@@ -118,7 +117,7 @@ export function OurStory() {
                   </div>
 
                   <div className="mt-8 flex flex-wrap items-center gap-4">
-                    <Button asChild size="lg" className="bg-gradient-to-r from-sky-400 to-cyan-300 font-bold text-slate-950 shadow-md hover:brightness-105">
+                    <Button asChild size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-slate-950 shadow-lg shadow-cyan-500/20 hover:brightness-110">
                       <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
                         <Phone className="mr-2 h-4 w-4" />
                         Call Direct Line ({siteMeta.phone || "+1 (302) 208-9675"})

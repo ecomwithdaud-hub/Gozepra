@@ -151,27 +151,27 @@ export function ProjectRoiEstimator() {
   return (
     <section
       id="roi-estimator"
-      className="relative isolate overflow-hidden bg-[#040812] py-16 text-white sm:py-24"
+      className="relative isolate overflow-hidden bg-slate-950 py-16 text-white sm:py-24"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-48 top-1/4 -z-10 h-96 w-96 rounded-full bg-sky-500/8 blur-[140px]"
+        className="pointer-events-none absolute -left-48 top-1/4 -z-10 h-96 w-96 rounded-full bg-cyan-500/12 blur-[140px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-48 bottom-1/4 -z-10 h-96 w-96 rounded-full bg-blue-600/8 blur-[140px]"
+        className="pointer-events-none absolute -right-48 bottom-1/4 -z-10 h-96 w-96 rounded-full bg-blue-600/12 blur-[140px]"
       />
 
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/90 bg-slate-900/90 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-sky-300 shadow-sm">
-            <Calculator className="h-3.5 w-3.5 text-sky-400" />
-            Interactive Scope &amp; ROI Architecture Estimator
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-300 shadow-[0_0_25px_rgba(56,198,255,0.2)]">
+            <Calculator className="h-3.5 w-3.5" />
+            Interactive Scope & ROI Architecture Estimator
           </div>
 
           <h2 className="mt-5 font-display text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-5xl">
             Configure Your Custom{" "}
-            <span className="bg-gradient-to-r from-slate-100 via-sky-200 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
               Engineering Sprint
             </span>
           </h2>
@@ -186,7 +186,7 @@ export function ProjectRoiEstimator() {
             {/* Step 1: Platform Selection */}
             <div>
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-sky-300">
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-cyan-300">
                   Step 01 // Select Core Platform
                 </span>
                 <span className="text-xs text-slate-400">4 Architecture Options</span>
@@ -202,15 +202,15 @@ export function ProjectRoiEstimator() {
                       onClick={() => setPlatformId(p.id)}
                       className={`group flex items-start gap-3.5 rounded-2xl border p-4 text-left transition-all duration-200 ${
                         isSelected
-                          ? "border-sky-400/70 bg-[#081224] shadow-lg"
-                          : "border-slate-800 bg-[#070d19] hover:border-slate-700 hover:bg-slate-900"
+                          ? "border-cyan-400 bg-cyan-400/15 shadow-[0_0_30px_rgba(56,198,255,0.22)]"
+                          : "border-white/10 bg-slate-900/60 hover:border-white/25 hover:bg-slate-900/90"
                       }`}
                     >
                       <span
                         className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition ${
                           isSelected
-                            ? "bg-sky-400 text-slate-950"
-                            : "border border-slate-800 bg-slate-950 text-slate-300 group-hover:text-sky-300"
+                            ? "bg-cyan-400 text-slate-950"
+                            : "bg-white/5 text-slate-300 group-hover:text-cyan-300"
                         }`}
                       >
                         <Icon className="h-5 w-5" />
@@ -230,8 +230,8 @@ export function ProjectRoiEstimator() {
             {/* Step 2: Scale & Complexity Tier */}
             <div>
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-sky-300">
-                  Step 02 // Business Scale &amp; Reach
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-cyan-300">
+                  Step 02 // Business Scale & Reach
                 </span>
                 <span className="text-xs text-slate-400">Target Market Footprint</span>
               </div>
@@ -245,8 +245,8 @@ export function ProjectRoiEstimator() {
                       onClick={() => setScaleId(scale.id)}
                       className={`flex w-full items-center justify-between rounded-2xl border p-4 text-left transition-all ${
                         isSelected
-                          ? "border-sky-400/70 bg-[#081224] shadow-lg"
-                          : "border-slate-800 bg-[#070d19] hover:border-slate-700 hover:bg-slate-900"
+                          ? "border-emerald-400 bg-emerald-400/15 shadow-[0_0_25px_rgba(52,211,153,0.2)]"
+                          : "border-white/10 bg-slate-900/60 hover:border-white/25 hover:bg-slate-900/90"
                       }`}
                     >
                       <div>
@@ -258,8 +258,8 @@ export function ProjectRoiEstimator() {
                       <span
                         className={`h-4 w-4 shrink-0 rounded-full border transition-all ${
                           isSelected
-                            ? "border-sky-400 bg-sky-400"
-                            : "border-slate-600 bg-transparent"
+                            ? "border-emerald-400 bg-emerald-400"
+                            : "border-white/30 bg-transparent"
                         }`}
                       />
                     </button>
@@ -271,8 +271,8 @@ export function ProjectRoiEstimator() {
             {/* Step 3: High-Conversion Add-Ons */}
             <div>
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-sky-300">
-                  Step 03 // Conversion &amp; Speed Add-Ons
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-cyan-300">
+                  Step 03 // Conversion & Speed Add-Ons
                 </span>
                 <span className="text-xs text-slate-400">Optional Accelerators</span>
               </div>
@@ -287,15 +287,15 @@ export function ProjectRoiEstimator() {
                       onClick={() => toggleAddon(addon.id)}
                       className={`flex items-start gap-3 rounded-2xl border p-3.5 text-left transition-all ${
                         isChecked
-                          ? "border-sky-400/50 bg-[#081224]"
-                          : "border-slate-800 bg-[#070d19] opacity-75 hover:opacity-100"
+                          ? "border-cyan-400/50 bg-white/[0.08]"
+                          : "border-white/10 bg-slate-900/40 opacity-75 hover:opacity-100"
                       }`}
                     >
                       <span
                         className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded border ${
                           isChecked
-                            ? "border-sky-400 bg-sky-400 text-slate-950"
-                            : "border-slate-600"
+                            ? "border-cyan-400 bg-cyan-400 text-slate-950"
+                            : "border-white/30"
                         }`}
                       >
                         {isChecked ? <CheckCircle2 className="h-3 w-3" /> : null}
@@ -313,22 +313,21 @@ export function ProjectRoiEstimator() {
           </div>
 
           {/* Right Column: Live Dynamic Telemetry & Output Card */}
-          <TiltCard cursorLabel="ROADMAP" className="rounded-2xl lg:sticky lg:top-28">
-            <div className="relative overflow-hidden rounded-2xl border border-slate-700/90 bg-[#070d19] p-7 shadow-2xl sm:p-9">
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/60 to-transparent" />
-              <div className="flex items-center justify-between border-b border-slate-800 pb-5">
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-sky-300">
+          <TiltCard cursorLabel="ROADMAP" className="rounded-[32px] lg:sticky lg:top-28">
+            <div className="overflow-hidden rounded-[32px] border border-cyan-400/35 bg-gradient-to-br from-[#0e1f3a] via-[#091428] to-[#050a14] p-7 shadow-[0_30px_90px_rgba(0,0,0,0.7)] sm:p-9">
+              <div className="flex items-center justify-between border-b border-white/10 pb-5">
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">
                   Sprint Telemetry
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-md border border-emerald-500/25 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-300">
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
                   Live Estimate
                 </span>
               </div>
 
               {/* Price Range */}
               <div className="mt-6">
-                <span className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                   Estimated Sprint Investment
                 </span>
                 <div className="mt-1 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
@@ -343,10 +342,10 @@ export function ProjectRoiEstimator() {
               </div>
 
               {/* Specs Grid */}
-              <div className="mt-7 grid grid-cols-2 gap-3 border-y border-slate-800 py-5">
-                <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3.5">
+              <div className="mt-7 grid grid-cols-2 gap-3 border-y border-white/10 py-5">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3.5">
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-400">
-                    <Clock className="h-3.5 w-3.5 text-sky-300" />
+                    <Clock className="h-3.5 w-3.5 text-cyan-300" />
                     Delivery Timeline
                   </div>
                   <div className="mt-1.5 font-display text-xl font-bold text-white">
@@ -355,12 +354,12 @@ export function ProjectRoiEstimator() {
                   <div className="text-[10px] text-slate-400">Weekly Live Demos</div>
                 </div>
 
-                <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3.5">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3.5">
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-400">
                     <Gauge className="h-3.5 w-3.5 text-emerald-400" />
                     Speed Benchmark
                   </div>
-                  <div className="mt-1.5 font-display text-xl font-bold text-emerald-300">
+                  <div className="mt-1.5 font-display text-xl font-bold text-emerald-400">
                     98–100 / 100
                   </div>
                   <div className="text-[10px] text-slate-400">Core Web Vitals SLA</div>
@@ -371,12 +370,12 @@ export function ProjectRoiEstimator() {
               <div className="mt-5 space-y-3">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-slate-400">Recommended Stack:</span>
-                  <span className="font-mono font-semibold text-sky-200">
+                  <span className="font-semibold text-cyan-200">
                     {selectedPlatform.stack}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-slate-400">Code &amp; IP Rights:</span>
+                  <span className="text-slate-400">Code & IP Rights:</span>
                   <span className="font-semibold text-emerald-300">
                     100% Client Ownership
                   </span>
@@ -394,7 +393,7 @@ export function ProjectRoiEstimator() {
                 <Link
                   href="/contact"
                   data-cursor="LET'S GO"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-400 to-cyan-300 py-4 text-xs font-extrabold uppercase tracking-[0.16em] text-slate-950 shadow-md transition-all hover:brightness-105 sm:text-sm"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-brand-blue to-brand-cyan py-4 text-xs font-extrabold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_30px_rgba(56,198,255,0.45)] transition-all hover:brightness-110 sm:text-sm"
                 >
                   <span>Lock In This Sprint Roadmap</span>
                   <ArrowRight className="h-4 w-4" />
@@ -402,7 +401,7 @@ export function ProjectRoiEstimator() {
 
                 <Link
                   href="/contact#contact"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900 py-3 text-xs font-bold uppercase tracking-wider text-slate-200 transition hover:border-sky-400/50 hover:bg-slate-800 hover:text-white"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/5 py-3 text-xs font-bold uppercase tracking-wider text-slate-200 transition hover:border-cyan-400/40 hover:bg-white/10 hover:text-white"
                 >
                   Submit Formal RFP / Proposal
                 </Link>
