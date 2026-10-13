@@ -207,36 +207,47 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Global Edge Telemetry Bar */}
-        <div className="py-6 border-b border-slate-800/80">
+        {/* Global Edge Telemetry Bar (Desktop only) */}
+        <div className="hidden md:block py-6 border-b border-slate-800/80">
           <GlobalEdgeTelemetry />
         </div>
 
-        <nav aria-label="Footer navigation" className="py-8">
-          <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 xl:grid-cols-5">
-            {navigationGroups.map((group) => (
-              <div key={group.title}>
-                <h3 className="font-display text-base font-semibold text-white">
-                  {getTranslation(`footer.${footerGroupKeys[group.title]}`, group.title)}
-                </h3>
-                <ul className="mt-4 space-y-3 text-sm text-slate-300">
-                  {group.links.map((link) => (
-                    <li key={`${group.title}-${link.label}`}>
-                      <Link
-                        href={link.href}
-                        className="transition-colors duration-200 hover:text-cyan-400"
-                      >
-                        {getTranslation(`footer.links.${footerLinkKeys[link.label]}`, link.label)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        <nav aria-label="Footer navigation" className="py-6 sm:py-8">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3 xl:grid-cols-5">
+            {navigationGroups.map((group) => {
+              const isSecondaryOnMobile =
+                group.title === "Solutions" ||
+                group.title === "Products / Tech Stack" ||
+                group.title === "Resources";
+
+              return (
+                <div
+                  key={group.title}
+                  className={isSecondaryOnMobile ? "hidden md:block" : ""}
+                >
+                  <h3 className="font-display text-sm font-semibold text-white sm:text-base">
+                    {getTranslation(`footer.${footerGroupKeys[group.title]}`, group.title)}
+                  </h3>
+                  <ul className="mt-3 space-y-2.5 text-xs text-slate-300 sm:mt-4 sm:space-y-3 sm:text-sm">
+                    {group.links.map((link) => (
+                      <li key={`${group.title}-${link.label}`}>
+                        <Link
+                          href={link.href}
+                          className="transition-colors duration-200 hover:text-cyan-400"
+                        >
+                          {getTranslation(`footer.links.${footerLinkKeys[link.label]}`, link.label)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </nav>
 
-        <div className="border-t border-b border-slate-800 py-6">
+        {/* Technology Partners (Desktop only) */}
+        <div className="hidden md:block border-t border-b border-slate-800 py-6">
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
               {getTranslation("footer.technology", "TECHNOLOGY PARTNERS")}
@@ -265,31 +276,37 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <section aria-labelledby="global-presence-heading" className="py-8">
+        {/* Global Presence (USA & PK HQ on mobile, all 4 on desktop) */}
+        <section aria-labelledby="global-presence-heading" className="py-6 sm:py-8 border-t border-slate-800/60 md:border-t-0">
           <h3
             id="global-presence-heading"
-            className="font-display text-lg font-semibold text-white"
+            className="font-display text-base font-semibold text-white sm:text-lg"
           >
             {getTranslation("footer.globalPresence", "Global Presence")}
           </h3>
-          <div className="mt-5 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-4 grid gap-4 sm:mt-5 sm:gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {defaultLocations.map((location, index) => {
               const translatedLocation = translatedLocations?.[index] ?? location;
+              const isSecondaryLocation = index >= 2;
+
               return (
-                <div key={location.name} className="min-w-0">
+                <div
+                  key={location.name}
+                  className={`min-w-0 ${isSecondaryLocation ? "hidden md:block" : ""}`}
+                >
                   <div className="flex items-center gap-2.5">
-                    <span className="text-xl" aria-hidden="true">
+                    <span className="text-lg sm:text-xl" aria-hidden="true">
                       {location.flag}
                     </span>
-                    <h4 className="text-sm font-semibold text-white">
+                    <h4 className="text-xs font-semibold text-white sm:text-sm">
                       {translatedLocation.name || location.name}
                     </h4>
                   </div>
-                  <p className="mt-3 break-words text-sm leading-6 text-slate-400">
+                  <p className="mt-1.5 break-words text-xs leading-relaxed text-slate-400 sm:mt-3 sm:text-sm sm:leading-6">
                     {translatedLocation.detail || location.detail}
                   </p>
                   {(translatedLocation.note || location.note) ? (
-                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                    <p className="mt-1 text-[11px] leading-4 text-slate-500 sm:text-xs sm:leading-5">
                       {translatedLocation.note || location.note}
                     </p>
                   ) : null}

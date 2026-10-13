@@ -426,8 +426,8 @@ export function DevCrafterHomeExperience() {
         </div>
       </section>
 
-      {/* 4. The Masterpiece Pipeline — Wall of Proof */}
-      <section className="relative overflow-hidden border-t border-white/10 bg-[#030711] py-12 sm:py-20 lg:py-28">
+      {/* 4. The Masterpiece Pipeline — Wall of Proof (Hidden on mobile, preserved on desktop) */}
+      <section className="hidden md:block relative overflow-hidden border-t border-white/10 bg-[#030711] sm:py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(56,198,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(56,198,255,0.03)_1px,transparent_1px)] bg-[size:56px_56px]" />
         <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -479,8 +479,8 @@ export function DevCrafterHomeExperience() {
         </div>
       </section>
 
-      {/* 5. Signature Luxury Product Approach */}
-      <section className="relative overflow-hidden border-t border-white/10 py-20 sm:py-28">
+      {/* 5. Signature Luxury Product Approach (Hidden on mobile, preserved on desktop) */}
+      <section className="hidden md:block relative overflow-hidden border-t border-white/10 sm:py-28">
         <div className="container">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="space-y-6">
