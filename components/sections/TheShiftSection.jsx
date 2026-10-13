@@ -72,7 +72,7 @@ export function TheShiftSection() {
       ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-12 border-t border-white/10">
+    <section className="relative isolate overflow-hidden bg-slate-950 py-6 text-white sm:py-12 border-t border-white/10">
       {/* Background Ambient Glow */}
       <div
         aria-hidden="true"
@@ -82,44 +82,44 @@ export function TheShiftSection() {
       <div className="container relative mx-auto px-4">
         {/* Section Header */}
         <header className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300 shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300 shadow-sm sm:py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70 motion-reduce:animate-none" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
             {content?.eyebrow || "THE AI REVOLUTION IN OPERATIONS"}
           </div>
-          <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-white sm:mt-4 sm:text-4xl lg:text-5xl">
             {content?.title || "Transforming Business Operations with AI + Data Science."}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+          <p className="mx-auto mt-2.5 max-w-2xl text-xs leading-relaxed text-slate-300 line-clamp-3 sm:mt-4 sm:text-base sm:leading-7 sm:line-clamp-none">
             {content?.description || "The shift to AI-native operations means moving away from slow, manual processes. We build custom AI automation, intelligent data pipelines, and bank-grade data security into your business—making it work faster, smarter, and scale effortlessly."}
           </p>
         </header>
 
         {/* Legacy vs AI-Native Comparison Grid */}
-        <div className="mt-8 grid gap-6 lg:grid-cols-2">
+        <div className="mt-6 grid gap-5 sm:mt-8 sm:gap-6 lg:grid-cols-2">
           
           {/* Card 1: Legacy Model */}
           <div className="relative flex flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/80 p-5 shadow-md backdrop-blur-sm sm:p-6 text-white">
             <div>
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-bold tracking-wider text-slate-300 uppercase border border-white/10">
+                <span className="rounded-full bg-white/5 px-3 py-1 text-[10px] font-bold tracking-wider text-slate-300 uppercase border border-white/10 sm:text-xs">
                   {content?.legacyTag || "LEGACY MODEL"}
                 </span>
-                <span className="text-xs font-semibold text-rose-400">{content?.legacyStatus || "Slow & Expensive"}</span>
+                <span className="hidden text-xs font-semibold text-rose-400 sm:inline">{content?.legacyStatus || "Slow & Expensive"}</span>
               </div>
-              <h3 className="mt-4 text-xl font-bold text-white">
+              <h3 className="mt-3 text-lg font-bold text-white sm:mt-4 sm:text-xl">
                 {content?.legacyTitle || "Traditional Manual Business Operations"}
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-slate-400">
+              <p className="mt-1.5 text-xs leading-relaxed text-slate-400 sm:mt-2">
                 {content?.legacyDescription || "Standard operational setups relying on traditional human hours and fragmented tools."}
               </p>
 
-              <ul className="mt-6 space-y-4 text-sm text-slate-300">
+              <ul className="mt-4 space-y-2.5 text-xs text-slate-300 sm:mt-6 sm:space-y-4 sm:text-sm">
                 {legacyPointsList.map((point, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-500/10 text-rose-400 text-xs font-bold">✕</span>
+                  <li key={index} className={`items-start gap-2.5 sm:gap-3 ${index >= 3 ? "hidden sm:flex" : "flex"}`}>
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-rose-500/10 text-rose-400 text-[10px] font-bold sm:h-5 sm:w-5 sm:text-xs">✕</span>
                     <span><strong className="text-white">{point.label}:</strong> {point.description}</span>
                   </li>
                 ))}
@@ -136,23 +136,23 @@ export function TheShiftSection() {
 
             <div className="relative z-10">
               <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-bold tracking-wider text-cyan-300 uppercase shadow-inner">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-[10px] font-bold tracking-wider text-cyan-300 uppercase shadow-inner sm:text-xs">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   {content?.aiTag || "AI-NATIVE REVOLUTION"}
                 </span>
-                <span className="text-xs font-semibold text-cyan-400">{content?.aiStatus || "Fast, Scalable & Secure"}</span>
+                <span className="hidden text-xs font-semibold text-cyan-400 sm:inline">{content?.aiStatus || "Fast, Scalable & Secure"}</span>
               </div>
-              <h3 className="mt-4 text-xl font-bold text-white">
+              <h3 className="mt-3 text-lg font-bold text-white sm:mt-4 sm:text-xl">
                 {content?.aiTitle || "Intelligent AI + Data Science Operations"}
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-slate-300">
+              <p className="mt-1.5 text-xs leading-relaxed text-slate-300 sm:mt-2">
                 {content?.aiDescription || "Modern automated architecture designed to handle complex workflows with 24/7 reliability."}
               </p>
 
-              <ul className="mt-6 space-y-4 text-sm text-slate-200">
+              <ul className="mt-4 space-y-2.5 text-xs text-slate-200 sm:mt-6 sm:space-y-4 sm:text-sm">
                 {aiPointsList.map((point, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">✓</span>
+                  <li key={index} className={`items-start gap-2.5 sm:gap-3 ${index >= 3 ? "hidden sm:flex" : "flex"}`}>
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold border border-emerald-500/30 sm:h-5 sm:w-5 sm:text-xs">✓</span>
                     <span><strong>{point.label}:</strong> {point.description}</span>
                   </li>
                 ))}

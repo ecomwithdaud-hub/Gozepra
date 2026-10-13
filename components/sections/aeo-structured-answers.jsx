@@ -68,56 +68,56 @@ export function AeoStructuredAnswers({
   };
 
   return (
-    <section className="aeo-answers relative isolate overflow-hidden bg-slate-950 py-14 text-white sm:py-20">
+    <section className="aeo-answers relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
       <div className="container relative z-10">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:gap-10">
           {/* Left: DevCrafter-Style AI Extract & Executive Citation Card */}
-          <div className="aeo-answer rounded-[28px] border border-cyan-400/25 bg-gradient-to-br from-[#0e1e38] via-[#091326] to-[#050a14] p-6 shadow-2xl sm:p-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">
+          <div className="aeo-answer rounded-2xl border border-cyan-400/25 bg-gradient-to-br from-[#0e1e38] via-[#091326] to-[#050a14] p-5 shadow-2xl sm:rounded-[28px] sm:p-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-cyan-300 sm:px-3.5 sm:text-[11px] sm:tracking-[0.2em]">
               <Bot className="h-3.5 w-3.5 text-cyan-300" />
               Executive Summary & Verified Scope
             </div>
 
-            <h2 className="mt-4 font-display text-2xl font-bold leading-snug text-white sm:text-3xl">
+            <h2 className="mt-3 font-display text-xl font-bold leading-snug text-white sm:mt-4 sm:text-3xl">
               {aiSummaryTitle}
             </h2>
 
-            <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
+            <p className="mt-2.5 text-xs leading-relaxed text-slate-300 sm:mt-3 sm:text-base sm:leading-7">
               {aiSummaryBody}
             </p>
 
-            <div className="mt-6 grid grid-cols-2 gap-3 border-t border-white/10 pt-5">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3.5">
-                <div className="font-display text-xl font-bold text-cyan-300">
+            <div className="mt-5 grid grid-cols-2 gap-2.5 border-t border-white/10 pt-4 sm:mt-6 sm:gap-3 sm:pt-5">
+              <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3 sm:rounded-2xl sm:p-3.5">
+                <div className="font-display text-lg font-bold text-cyan-300 sm:text-xl">
                   100% Custom
                 </div>
-                <div className="mt-0.5 text-xs text-slate-400">
+                <div className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
                   IP & Code Ownership
                 </div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3.5">
-                <div className="font-display text-xl font-bold text-emerald-400">
+              <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3 sm:rounded-2xl sm:p-3.5">
+                <div className="font-display text-lg font-bold text-emerald-400 sm:text-xl">
                   24h Turnaround
                 </div>
-                <div className="mt-0.5 text-xs text-slate-400">
+                <div className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
                   Architecture Roadmap
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right: Interactive FAQ Accordion */}
-          <div className="space-y-3.5">
-            <div className="mb-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+          {/* Right: Interactive FAQ Accordion (Top 3 essential on mobile, all on desktop) */}
+          <div className="space-y-3 sm:space-y-3.5">
+            <div className="mb-3 sm:mb-4">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300 sm:text-xs sm:tracking-[0.22em]">
                 Frequently Asked Questions
               </p>
-              <h3 className="mt-1 font-display text-2xl font-bold text-white sm:text-3xl">
+              <h3 className="mt-1 font-display text-xl font-bold text-white sm:text-3xl">
                 Clarity on Timelines, Stack & Deliverables
               </h3>
             </div>
@@ -127,15 +127,17 @@ export function AeoStructuredAnswers({
               return (
                 <article
                   key={faq.question}
-                  className="aeo-answer overflow-hidden rounded-2xl border border-white/12 bg-white/[0.03] transition-colors hover:border-cyan-400/35"
+                  className={`aeo-answer overflow-hidden rounded-2xl border border-white/12 bg-white/[0.03] transition-colors hover:border-cyan-400/35 ${
+                    idx >= 3 ? "hidden md:block" : ""
+                  }`}
                 >
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? -1 : idx)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                    className="flex w-full items-center justify-between gap-4 px-4 py-3.5 text-left sm:px-5 sm:py-4"
                   >
-                    <span className="font-display text-sm font-semibold text-white sm:text-base">
+                    <span className="font-display text-xs font-semibold text-white sm:text-base">
                       {faq.question}
                     </span>
                     <ChevronDown

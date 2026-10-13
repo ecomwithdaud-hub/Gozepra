@@ -61,7 +61,7 @@ export function HomeHero() {
       ref={sectionRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative isolate overflow-hidden bg-[#040812] pb-16 pt-12 text-white sm:pb-24 sm:pt-16 lg:pb-28 lg:pt-20"
+      className="relative isolate overflow-hidden bg-[#040812] pb-10 pt-8 text-white sm:pb-24 sm:pt-16 lg:pb-28 lg:pt-20"
     >
       {/* Ambient DevCrafter Multi-Color Radial Glows */}
       <div
@@ -209,12 +209,12 @@ export function HomeHero() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-3.5 max-w-2xl text-sm leading-relaxed text-slate-300 sm:mt-4 sm:text-base lg:text-lg">
+          <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-slate-300 line-clamp-3 sm:mt-4 sm:text-base sm:line-clamp-none lg:text-lg">
             {t("hero.description")}
           </p>
 
           {/* DevCrafter-Inspired Floating Glass Pill CTA Bar */}
-          <div className="relative z-30 mt-7 flex w-full max-w-md flex-col items-stretch justify-center gap-2.5 rounded-3xl border border-white/15 bg-slate-950/75 p-3 shadow-[0_25px_70px_rgba(0,0,0,0.65)] backdrop-blur-2xl sm:mt-8 sm:w-auto sm:max-w-none sm:flex-row sm:items-center sm: gap-4 sm:rounded-full sm:px-5 sm:py-3">
+          <div className="relative z-30 mt-5 flex w-full max-w-md flex-col items-stretch justify-center gap-2.5 rounded-3xl border border-white/15 bg-slate-950/75 p-2.5 shadow-[0_25px_70px_rgba(0,0,0,0.65)] backdrop-blur-2xl sm:mt-8 sm:w-auto sm:max-w-none sm:flex-row sm:items-center sm:gap-4 sm:rounded-full sm:px-5 sm:py-3">
             <Link
               href="/contact"
               data-cursor="LET'S GO"
@@ -229,45 +229,45 @@ export function HomeHero() {
             <Link
               href="/portfolio"
               data-cursor="EXPLORE"
-              className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-4 text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:border-cyan-400/50 hover:bg-white/10 sm:h-12 sm:w-auto sm:px-7 sm:text-sm"
+              className="hidden h-11 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-4 text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:border-cyan-400/50 hover:bg-white/10 sm:inline-flex sm:h-12 sm:w-auto sm:px-7 sm:text-sm"
             >
               <span>View Portfolio & Case Studies</span>
               <ArrowUpRight className="h-4 w-4 shrink-0 text-cyan-300" />
             </Link>
           </div>
 
-          {/* Dedicated AI Bots Simulator Action Pill (Moved clearly below) */}
-          <div className="relative z-30 mt-3.5 flex w-full max-w-md items-center justify-center sm:mt-4 sm:w-auto sm:max-w-none">
+          {/* Dedicated AI Bots Simulator Action Pill */}
+          <div className="relative z-30 mt-3 flex w-full max-w-md items-center justify-center sm:mt-4 sm:w-auto sm:max-w-none">
             <Link
               href="#interactive-service-demos"
               data-cursor="TEST AI"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-400/35 bg-cyan-400/10 px-4 py-2.5 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-cyan-300 shadow-[0_0_20px_rgba(56,198,255,0.2)] backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:bg-cyan-400 hover:text-slate-950 sm:w-auto sm:gap-2.5 sm:px-5 sm:py-2 sm:text-xs sm:tracking-[0.15em]"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-400/35 bg-cyan-400/10 px-4 py-2 text-center text-[10px] font-bold uppercase tracking-[0.1em] text-cyan-300 shadow-[0_0_20px_rgba(56,198,255,0.2)] backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:bg-cyan-400 hover:text-slate-950 sm:w-auto sm:gap-2.5 sm:px-5 sm:py-2 sm:text-xs sm:tracking-[0.15em]"
             >
-              <Bot className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-12" />
+              <Bot className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:rotate-12 sm:h-4 sm:w-4" />
               <span>Test Live AI Bots & Simulator</span>
               <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
           {/* Trust Checkmarks */}
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-semibold uppercase tracking-wider text-slate-300 sm:text-sm">
-            <span className="inline-flex items-center gap-2">
-              <Check className="h-4 w-4 text-emerald-400" />
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-300 sm:mt-7 sm:text-sm">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2">
+              <Check className="h-3.5 w-3.5 text-emerald-400 sm:h-4 sm:w-4" />
               {t("hero.ownership")}
             </span>
-            <span className="inline-flex items-center gap-2">
-              <Check className="h-4 w-4 text-emerald-400" />
+            <span className="inline-flex items-center gap-1.5 sm:gap-2">
+              <Check className="h-3.5 w-3.5 text-emerald-400 sm:h-4 sm:w-4" />
               {t("hero.scale")}
             </span>
-            <span className="inline-flex items-center gap-2">
-              <Check className="h-4 w-4 text-emerald-400" />
+            <span className="inline-flex items-center gap-1.5 sm:gap-2">
+              <Check className="h-3.5 w-3.5 text-emerald-400 sm:h-4 sm:w-4" />
               {t("hero.partner")}
             </span>
           </div>
         </div>
 
         {/* 3 Interactive Hero Highlight Cards Below */}
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
           {heroHighlights.map((item, index) => {
             const Icon = highlightIcons[index] || Globe2;
             const translatedItem = translatedHighlights?.[index] ?? item;

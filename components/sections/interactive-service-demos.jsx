@@ -445,7 +445,7 @@ export function InteractiveServiceDemos() {
   };
 
   return (
-    <section id="interactive-service-demos" className="relative overflow-hidden bg-[#020617] py-20 text-white sm:py-28">
+    <section id="interactive-service-demos" className="relative overflow-hidden bg-[#020617] py-12 text-white sm:py-20 lg:py-28">
       {/* Background glow effects */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/3 top-10 h-[500px] w-[600px] rounded-full bg-cyan-500/10 blur-[140px]" />
@@ -455,24 +455,24 @@ export function InteractiveServiceDemos() {
       <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Eyebrow & Title */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.25em]">
             <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
             Interactive Technology Labs
           </div>
 
-          <h2 className="mt-5 font-display text-3xl font-black tracking-tight text-white sm:text-5xl sm:leading-tight">
+          <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-white sm:mt-5 sm:text-5xl sm:leading-tight">
             Don&apos;t Just Read About AI &amp; SEO.{" "}
             <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
               Test Our Live Demos In Real-Time.
             </span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-300 line-clamp-3 sm:mt-4 sm:text-lg sm:line-clamp-none">
             Legacy 9-year agencies only show you slides and static text. At Zepra Tech, we let you test our actual live AI bots, examine generative search answer simulations, and run automated CRM pipelines before signing a contract.
           </p>
 
           {/* Growex-Inspired Interactive Tab Switcher */}
-          <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-white/15 bg-slate-900/90 p-2 shadow-2xl backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:rounded-full sm:p-2.5">
+          <div className="mt-5 grid grid-cols-2 gap-2 rounded-2xl border border-white/15 bg-slate-900/90 p-2 shadow-2xl backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:rounded-full sm:p-2.5">
             <button
               onClick={() => setActiveTab("ai-bots")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
@@ -527,7 +527,7 @@ export function InteractiveServiceDemos() {
         {/* LAB 1: INTERACTIVE NICHE AI BOTS SIMULATOR */}
         {/* ==================================================================== */}
         {activeTab === "ai-bots" && (
-          <div id="ai-bots-lab" className="mt-10 rounded-3xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-4 shadow-2xl backdrop-blur-xl sm:mt-12 sm:p-10">
+          <div id="ai-bots-lab" className="mt-6 rounded-2xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-4 shadow-2xl backdrop-blur-xl sm:mt-12 sm:rounded-3xl sm:p-10">
             <div className="flex flex-col items-start justify-between gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:gap-4 sm:pb-6">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">

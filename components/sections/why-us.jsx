@@ -101,7 +101,7 @@ export function WhyUs() {
 
           <Link
             href="/#contact"
-            className="group inline-flex w-fit shrink-0 items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_0_0_rgba(34,211,238,0)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-cyan-300/[0.09] hover:shadow-[0_0_30px_rgba(34,211,238,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 motion-reduce:transition-none"
+            className="group hidden w-fit shrink-0 items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_0_0_rgba(34,211,238,0)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-cyan-300/[0.09] hover:shadow-[0_0_30px_rgba(34,211,238,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 motion-reduce:transition-none sm:inline-flex"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60 motion-reduce:animate-none" />
@@ -112,7 +112,7 @@ export function WhyUs() {
           </Link>
         </header>
 
-        <div className="grid grid-cols-2 gap-x-5 gap-y-6 py-6 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-4 py-4 md:grid-cols-4 sm:py-6">
           {metricsList.map((metric, index) => {
             const numericValue = String(metric.value).match(/^(\d+(?:\.\d+)?)(.*)$/);
             const value = numericValue ? (
@@ -127,10 +127,10 @@ export function WhyUs() {
                 key={index}
                 className="min-w-0"
               >
-                <div className="font-display text-2xl font-semibold leading-none text-white sm:text-3xl">
+                <div className="font-display text-xl font-semibold leading-none text-white sm:text-3xl">
                   {value}
                 </div>
-                <p className="mt-2 max-w-[14rem] text-xs leading-5 text-slate-400 sm:text-sm">
+                <p className="mt-1.5 max-w-[14rem] text-[11px] leading-4 text-slate-400 sm:mt-2 sm:text-sm sm:leading-5">
                   {metric.label}
                 </p>
               </div>
@@ -138,28 +138,30 @@ export function WhyUs() {
           })}
         </div>
 
-        <div className="grid gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-3 pt-4 sm:grid-cols-2 sm:gap-4 sm:pt-6 xl:grid-cols-4">
           {pillarsList.map((pillar, index) => {
             const Icon = pillarsIcons[index] || Layers3;
 
             return (
               <article
                 key={index}
-                className="group min-h-[230px] rounded-3xl border border-slate-800/90 bg-slate-900/65 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/50 hover:bg-slate-900/90 hover:shadow-[0_20px_50px_rgba(6,182,212,0.1)] motion-reduce:transition-none"
+                className={`group min-h-[190px] rounded-2xl border border-slate-800/90 bg-slate-900/65 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/50 hover:bg-slate-900/90 hover:shadow-[0_20px_50px_rgba(6,182,212,0.1)] motion-reduce:transition-none sm:min-h-[230px] sm:rounded-3xl sm:p-6 ${
+                  index >= 3 ? "hidden sm:block" : ""
+                }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/15 bg-cyan-400/[0.09] text-cyan-300 transition-colors duration-300 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/[0.14]">
-                    <Icon className="h-5 w-5" />
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/15 bg-cyan-400/[0.09] text-cyan-300 transition-colors duration-300 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/[0.14] sm:h-12 sm:w-12 sm:rounded-2xl">
+                    <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   </span>
                   <span className="text-xs font-semibold tabular-nums text-slate-600">
                     0{index + 1}
                   </span>
                 </div>
 
-                <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-white">
+                <h3 className="mt-3.5 font-display text-base font-semibold leading-snug text-white sm:mt-5 sm:text-lg">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-400">
+                <p className="mt-2 text-xs leading-relaxed text-slate-400 sm:mt-3 sm:text-sm sm:leading-6">
                   {pillar.description}
                 </p>
               </article>

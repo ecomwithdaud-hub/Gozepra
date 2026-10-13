@@ -278,7 +278,7 @@ export function HumanBusinessBridge() {
   const [mode, setMode] = useState("plain"); // 'plain' or 'technical'
 
   return (
-    <section className="relative overflow-hidden bg-[#030712] py-20 text-white sm:py-28">
+    <section className="relative overflow-hidden bg-[#030712] py-12 text-white sm:py-20 lg:py-28">
       {/* Ambient background glow */}
       <div
         aria-hidden="true"
@@ -291,19 +291,19 @@ export function HumanBusinessBridge() {
       <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header: Plain English Promise */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-emerald-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-300 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.25em]">
             <Sparkles className="h-3.5 w-3.5" />
             Simple & Transparent For Business Owners
           </div>
 
-          <h2 className="mt-5 font-display text-3xl font-black tracking-tight text-white sm:text-5xl sm:leading-tight">
+          <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-white sm:mt-5 sm:text-5xl sm:leading-tight">
             No Tech Jargon. Just{" "}
             <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
               Real Results For Your Business.
             </span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-300 line-clamp-3 sm:mt-4 sm:text-lg sm:line-clamp-none">
             Whether you run a roofing company, a dental clinic, a textile factory, or an online boutique—you do not need to understand coding or artificial intelligence.{" "}
             <span className="font-semibold text-white">
               Under the supervision of Mr. Daud Lashari and our specialized team
@@ -312,10 +312,10 @@ export function HumanBusinessBridge() {
           </p>
 
           {/* Mode Switcher Pill */}
-          <div className="mt-7 inline-flex items-center rounded-full border border-white/15 bg-slate-900/90 p-1.5 shadow-xl backdrop-blur-xl">
+          <div className="mt-5 inline-flex items-center rounded-full border border-white/15 bg-slate-900/90 p-1 shadow-xl backdrop-blur-xl sm:mt-7 sm:p-1.5">
             <button
               onClick={() => setMode("plain")}
-              className={`flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold transition-all sm:text-sm ${
+              className={`flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] font-bold transition-all sm:gap-2 sm:px-5 sm:py-2 sm:text-sm ${
                 mode === "plain"
                   ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-md"
                   : "text-slate-300 hover:text-white"
@@ -325,7 +325,7 @@ export function HumanBusinessBridge() {
             </button>
             <button
               onClick={() => setMode("technical")}
-              className={`flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold transition-all sm:text-sm ${
+              className={`flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] font-bold transition-all sm:gap-2 sm:px-5 sm:py-2 sm:text-sm ${
                 mode === "technical"
                   ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-md"
                   : "text-slate-300 hover:text-white"
@@ -339,7 +339,7 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         {/* INTERACTIVE INDUSTRY MATCH MAKER */}
         {/* ============================================================== */}
-        <div className="mt-16 rounded-3xl border border-white/12 bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-6 backdrop-blur-xl sm:p-10">
+        <div className="mt-8 rounded-2xl border border-white/12 bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-4 backdrop-blur-xl sm:mt-16 sm:rounded-3xl sm:p-10">
           <div className="flex flex-col items-start justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
@@ -479,70 +479,72 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         {/* 4 PLAIN ENGLISH CORE SERVICES */}
         {/* ============================================================== */}
-        <div className="mt-24">
+        <div className="mt-10 sm:mt-24">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
               Everything Under One Roof
             </p>
-            <h3 className="mt-2 font-display text-3xl font-black text-white sm:text-4xl">
+            <h3 className="mt-2 font-display text-2xl font-black text-white sm:text-4xl">
               What We Actually Solve For You
             </h3>
-            <p className="mt-3 text-sm text-slate-300 sm:text-base">
+            <p className="mt-2 text-xs text-slate-300 sm:mt-3 sm:text-base">
               You don’t need 5 different agencies for websites, ads, and support. We provide complete turnkey execution.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {PLAIN_ENGLISH_SOLUTIONS.map((sol) => {
+          <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
+            {PLAIN_ENGLISH_SOLUTIONS.map((sol, solIdx) => {
               const Icon = sol.icon;
               return (
-                <TiltCard key={sol.number} cursorLabel="VIEW" className="rounded-3xl">
-                  <div className="group flex h-full flex-col justify-between rounded-3xl border border-white/12 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-7 transition-all hover:border-cyan-400/50">
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-300">
-                          <Icon className="h-6 w-6" />
-                        </span>
-                        <span className="font-mono text-xs font-bold uppercase tracking-widest text-slate-500">
-                          {sol.number} // SERVICE
-                        </span>
-                      </div>
+                <div key={sol.number} className={solIdx >= 3 ? "hidden md:block" : ""}>
+                  <TiltCard cursorLabel="VIEW" className="rounded-2xl sm:rounded-3xl">
+                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-white/12 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-5 transition-all hover:border-cyan-400/50 sm:rounded-3xl sm:p-7">
+                      <div>
+                        <div className="flex items-center justify-between">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 sm:h-12 sm:w-12 sm:rounded-2xl">
+                            <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                          </span>
+                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-slate-500 sm:text-xs">
+                            {sol.number} // SERVICE
+                          </span>
+                        </div>
 
-                      <div className="mt-5">
-                        <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-0.5 text-[11px] font-bold text-cyan-300">
-                          {sol.badge}
-                        </span>
-                        <h4 className="mt-2 font-display text-xl font-bold text-white group-hover:text-cyan-300">
-                          {sol.title}
-                        </h4>
-                        <p className="text-xs font-semibold text-slate-400">
-                          {sol.subtitle}
+                        <div className="mt-4 sm:mt-5">
+                          <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[10px] font-bold text-cyan-300 sm:px-3 sm:text-[11px]">
+                            {sol.badge}
+                          </span>
+                          <h4 className="mt-2 font-display text-lg font-bold text-white group-hover:text-cyan-300 sm:text-xl">
+                            {sol.title}
+                          </h4>
+                          <p className="text-xs font-semibold text-slate-400">
+                            {sol.subtitle}
+                          </p>
+                        </div>
+
+                        <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:mt-4 sm:text-sm">
+                          {sol.description}
                         </p>
+
+                        <ul className="mt-4 space-y-1.5 sm:mt-5 sm:space-y-2">
+                          {sol.bullets.map((b, bIdx) => (
+                            <li
+                              key={bIdx}
+                              className={`flex items-center gap-2 text-xs font-medium text-slate-300 ${bIdx >= 2 ? "hidden sm:flex" : "flex"}`}
+                            >
+                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
+                              <span>{b}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
 
-                      <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                        {sol.description}
-                      </p>
-
-                      <ul className="mt-5 space-y-2">
-                        {sol.bullets.map((b, bIdx) => (
-                          <li
-                            key={bIdx}
-                            className="flex items-center gap-2 text-xs font-medium text-slate-300"
-                          >
-                            <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                            <span>{b}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="mt-5 border-t border-white/10 pt-3.5 flex items-center justify-between text-xs font-bold text-cyan-300 sm:mt-6 sm:pt-4">
+                        <span>100% Done-For-You Delivery</span>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </div>
                     </div>
-
-                    <div className="mt-6 border-t border-white/10 pt-4 flex items-center justify-between text-xs font-bold text-cyan-300">
-                      <span>100% Done-For-You Delivery</span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </div>
-                  </div>
-                </TiltCard>
+                  </TiltCard>
+                </div>
               );
             })}
           </div>
@@ -551,7 +553,7 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         {/* 3-STEP "HOW IT WORKS" ROADMAP (DISPELLING TECH FEAR) */}
         {/* ============================================================== */}
-        <div className="mt-24 rounded-3xl border border-white/12 bg-gradient-to-b from-[#060c1c] via-[#040814] to-slate-950 p-8 sm:p-12">
+        <div className="mt-10 rounded-2xl border border-white/12 bg-gradient-to-b from-[#060c1c] via-[#040814] to-slate-950 p-6 sm:mt-24 sm:rounded-3xl sm:p-12">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-cyan-300">
               <Clock className="h-3.5 w-3.5" />

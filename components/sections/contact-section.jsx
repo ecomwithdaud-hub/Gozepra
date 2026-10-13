@@ -83,7 +83,7 @@ export function ContactSection({ showHeader = true }) {
                 />
               </div>
 
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              <div className="mt-5 hidden gap-3 sm:grid sm:grid-cols-2">
                 <Button asChild size="lg" className="w-full bg-cyan-400 text-slate-950 font-bold hover:bg-cyan-300">
                   <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
                     <Phone className="h-4 w-4 mr-1.5" />
@@ -98,7 +98,7 @@ export function ContactSection({ showHeader = true }) {
                 </Button>
               </div>
 
-              <div className="mt-6 border-t border-white/10 pt-5">
+              <div className="mt-6 hidden border-t border-white/10 pt-5 md:block">
                 <h3 className="text-sm font-semibold text-slate-200">
                   {t("contact.socialPresence")}
                 </h3>

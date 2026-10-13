@@ -135,17 +135,19 @@ export function DevCrafterHomeExperience() {
   return (
     <div className="bg-[#040812] text-white">
       {/* 1. Trusted By Forward-Looking Teams Bar */}
-      <section className="border-y border-white/10 py-14 sm:py-18">
-        <div className="container space-y-8">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.38em] text-slate-400">
+      <section className="border-y border-white/10 py-6 sm:py-14">
+        <div className="container space-y-5 sm:space-y-8">
+          <p className="text-center text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400 sm:text-xs sm:tracking-[0.38em]">
             Trusted by Forward-Looking Teams & Industry Leaders
           </p>
-          <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-6">
-            {trustedBrands.map((brand) => (
+          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6">
+            {trustedBrands.map((brand, idx) => (
               <div
                 key={brand}
                 data-cursor="EXPLORE"
-                className="group cursor-pointer rounded-[20px] border border-white/15 bg-gradient-to-br from-white/[0.07] to-white/[0.02] px-4 py-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:from-cyan-400/15 hover:to-cyan-400/5 hover:text-cyan-300 hover:shadow-[0_15px_40px_rgba(56,198,255,0.15)]"
+                className={`group cursor-pointer rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.07] to-white/[0.02] px-3 py-3 text-center text-[11px] font-bold uppercase tracking-[0.16em] text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:from-cyan-400/15 hover:to-cyan-400/5 hover:text-cyan-300 hover:shadow-[0_15px_40px_rgba(56,198,255,0.15)] sm:rounded-[20px] sm:px-4 sm:py-4 sm:text-xs sm:tracking-[0.2em] ${
+                  idx >= 4 ? "hidden sm:block" : ""
+                }`}
               >
                 {brand}
               </div>
@@ -155,14 +157,14 @@ export function DevCrafterHomeExperience() {
       </section>
 
       {/* 2. Manifesto Statement + Interactive Mission / Vision / Value Tabs */}
-      <section className="relative overflow-hidden py-20 sm:py-28">
+      <section className="relative overflow-hidden py-12 sm:py-20 lg:py-28">
         <div className="container">
           {/* Big Manifesto Quote */}
-          <div className="mb-16 max-w-5xl sm:mb-24">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.38em] text-cyan-300">
+          <div className="mb-8 max-w-5xl sm:mb-24">
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-cyan-300 sm:mb-4 sm:text-xs sm:tracking-[0.38em]">
               Our Engineering Philosophy
             </p>
-            <h2 className="font-display text-[clamp(1.65rem,3.8vw,3.1rem)] font-bold leading-[1.18] tracking-tight text-white/95">
+            <h2 className="font-display text-[clamp(1.4rem,3.8vw,3.1rem)] font-bold leading-[1.2] tracking-tight text-white/95">
               We don&apos;t just build websites. We engineer{" "}
               <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
                 digital prestige
@@ -171,27 +173,27 @@ export function DevCrafterHomeExperience() {
             </h2>
           </div>
 
-          <div className="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-16">
             {/* Left: Grayscale-to-Color Interactive Studio Showcase + Floating 50+ Badge */}
             <div className="relative">
-              <TiltCard cursorLabel="EXPLORE" className="rounded-[32px]">
-                <div className="group relative overflow-hidden rounded-[32px] border border-white/15 bg-slate-950 shadow-2xl">
+              <TiltCard cursorLabel="EXPLORE" className="rounded-2xl sm:rounded-[32px]">
+                <div className="group relative overflow-hidden rounded-2xl border border-white/15 bg-slate-950 shadow-2xl sm:rounded-[32px]">
                   <img
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85"
                     alt="Zepra Tech Engineering Studio"
                     loading="lazy"
-                    className="h-[340px] w-full object-cover contrast-110 grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 sm:h-[460px]"
+                    className="h-[260px] w-full object-cover contrast-110 grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 sm:h-[460px]"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
                 </div>
               </TiltCard>
 
               {/* Floating Glass Metric Badge */}
-              <div className="mt-4 inline-flex items-center gap-4 rounded-[24px] border border-cyan-400/30 bg-slate-950/90 px-6 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.65)] backdrop-blur-xl sm:absolute sm:-bottom-6 sm:right-6 sm:mt-0">
-                <p className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+              <div className="mt-3 inline-flex items-center gap-3 rounded-2xl border border-cyan-400/30 bg-slate-950/90 px-4 py-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.65)] backdrop-blur-xl sm:absolute sm:-bottom-6 sm:right-6 sm:mt-0 sm:rounded-[24px] sm:px-6 sm:py-4">
+                <p className="font-display text-2xl font-extrabold tracking-tight text-white sm:text-5xl">
                   50<span className="text-cyan-300">+</span>
                 </p>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-300 sm:text-xs sm:tracking-[0.2em]">
                   Global Projects
                   <br />
                   Engineered
@@ -200,10 +202,10 @@ export function DevCrafterHomeExperience() {
             </div>
 
             {/* Right: Interactive Mission / Vision / Value Tabs */}
-            <div className="flex flex-col justify-center space-y-8">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col justify-center space-y-6 sm:space-y-8">
+              <div className="flex items-center gap-2.5">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-400 shadow-[0_0_10px_#38c6ff]" />
-                <span className="text-xs font-bold uppercase tracking-[0.4em] text-slate-300">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300 sm:text-xs sm:tracking-[0.4em]">
                   Zepra Tech Standard
                 </span>
               </div>
@@ -216,7 +218,7 @@ export function DevCrafterHomeExperience() {
                       key={tab.id}
                       type="button"
                       onClick={() => setActiveTab(tab.id)}
-                      className={`border-b-2 px-4 py-3 text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 ${
+                      className={`border-b-2 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] transition-all duration-300 sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em] ${
                         isActive
                           ? "border-cyan-400 text-white"
                           : "border-transparent text-slate-400 hover:text-slate-200"
@@ -228,12 +230,12 @@ export function DevCrafterHomeExperience() {
                 })}
               </div>
 
-              <div className="min-h-[130px]">
+              <div className="min-h-[90px] sm:min-h-[130px]">
                 {manifestoTabs.map((tab) =>
                   tab.id === activeTab ? (
                     <p
                       key={tab.id}
-                      className="text-base leading-8 text-slate-300 sm:text-lg"
+                      className="text-sm leading-relaxed text-slate-300 line-clamp-4 sm:text-lg sm:leading-8 sm:line-clamp-none"
                     >
                       {tab.content}
                     </p>
@@ -245,7 +247,7 @@ export function DevCrafterHomeExperience() {
                 <Link
                   href="/portfolio"
                   data-cursor="EXPLORE"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-lg transition hover:brightness-110"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-lg transition hover:brightness-110 sm:w-auto"
                 >
                   <span>Explore Portfolio & 24 Live Demos</span>
                   <ArrowUpRight className="h-4 w-4" />
@@ -253,7 +255,7 @@ export function DevCrafterHomeExperience() {
                 <Link
                   href="/portfolio#case-studies-section"
                   data-cursor="DETAIL"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition hover:border-cyan-400/40 hover:bg-white/10"
+                  className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition hover:border-cyan-400/40 hover:bg-white/10 sm:inline-flex"
                 >
                   <span>Jump to Case Studies</span>
                 </Link>
@@ -264,19 +266,19 @@ export function DevCrafterHomeExperience() {
       </section>
 
       {/* 3. Interactive Sticky Service Capabilities & Live Engine Metrics */}
-      <section className="relative border-t border-white/10 bg-[#02050c] py-20 sm:py-28">
+      <section className="relative border-t border-white/10 bg-[#02050c] py-12 sm:py-20 lg:py-28">
         <div className="container">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
             {/* Left Sticky Live Telemetry Card */}
-            <div className="space-y-8 lg:sticky lg:top-28">
+            <div className="space-y-6 sm:space-y-8 lg:sticky lg:top-28">
               <div>
                 <div className="flex items-center gap-2.5">
                   <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-                  <span className="text-xs font-bold uppercase tracking-[0.38em] text-cyan-300">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-300 sm:text-xs sm:tracking-[0.38em]">
                     Our Capabilities
                   </span>
                 </div>
-                <h2 className="mt-4 font-display text-4xl font-black uppercase leading-[1.02] tracking-tight text-white sm:text-5xl">
+                <h2 className="mt-3 font-display text-3xl font-black uppercase leading-[1.05] tracking-tight text-white sm:mt-4 sm:text-5xl">
                   Premium Digital{" "}
                   <span
                     className="block text-transparent"
@@ -290,27 +292,27 @@ export function DevCrafterHomeExperience() {
               </div>
 
               {/* Active Service Live Telemetry Box */}
-              <div className="overflow-hidden rounded-[28px] border border-cyan-400/25 bg-gradient-to-br from-[#0d1b33] via-[#091224] to-[#050a14] p-7 shadow-2xl">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-cyan-300">
+              <div className="overflow-hidden rounded-2xl border border-cyan-400/25 bg-gradient-to-br from-[#0d1b33] via-[#091224] to-[#050a14] p-5 shadow-2xl sm:rounded-[28px] sm:p-7">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3 sm:pb-4">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-300 sm:text-[11px] sm:tracking-[0.28em]">
                     Service Telemetry // {activeService.number}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-emerald-300">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-emerald-300 sm:px-2.5 sm:text-[10px]">
                     <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
                     Active
                   </span>
                 </div>
 
-                <h3 className="mt-5 font-display text-2xl font-bold uppercase tracking-tight text-white">
+                <h3 className="mt-4 font-display text-xl font-bold uppercase tracking-tight text-white sm:mt-5 sm:text-2xl">
                   {activeService.title}
                 </h3>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-300 sm:text-xs sm:tracking-[0.22em]">
                   Engine: {activeService.engine}
                 </p>
 
-                <div className="mt-6 space-y-4">
+                <div className="mt-4 space-y-3 sm:mt-6 sm:space-y-4">
                   <div>
-                    <div className="flex justify-between text-[11px] font-bold uppercase tracking-[0.2em] text-slate-300">
+                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
                       <span>Scalability</span>
                       <span className="text-cyan-300">
                         {activeService.stats.scalability}%
@@ -325,7 +327,7 @@ export function DevCrafterHomeExperience() {
                   </div>
 
                   <div>
-                    <div className="flex justify-between text-[11px] font-bold uppercase tracking-[0.2em] text-slate-300">
+                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
                       <span>Performance</span>
                       <span className="text-emerald-300">
                         {activeService.stats.performance}%
@@ -340,7 +342,7 @@ export function DevCrafterHomeExperience() {
                   </div>
 
                   <div>
-                    <div className="flex justify-between text-[11px] font-bold uppercase tracking-[0.2em] text-slate-300">
+                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
                       <span>ROI Impact</span>
                       <span className="text-amber-300">
                         {activeService.stats.roi}%
@@ -355,11 +357,11 @@ export function DevCrafterHomeExperience() {
                   </div>
                 </div>
 
-                <div className="mt-7 pt-2">
+                <div className="mt-5 pt-1 sm:mt-7 sm:pt-2">
                   <Link
                     href="/services"
                     data-cursor="EXPLORE"
-                    className="inline-flex h-12 w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.2em] text-white transition hover:border-cyan-400/50 hover:bg-white/10"
+                    className="inline-flex h-11 w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:border-cyan-400/50 hover:bg-white/10 sm:h-12 sm:tracking-[0.2em]"
                   >
                     View All 11 Agency Services
                   </Link>
@@ -367,55 +369,56 @@ export function DevCrafterHomeExperience() {
               </div>
             </div>
 
-            {/* Right Interactive Service Cards Stack */}
-            <div className="space-y-5">
+            {/* Right Interactive Service Cards Stack (Top 3 primary on mobile, all 5 on desktop) */}
+            <div className="space-y-4 sm:space-y-5">
               {signatureServices.map((srv, idx) => {
                 const isSelected = idx === activeServiceIdx;
                 return (
-                  <TiltCard
-                    key={srv.number}
-                    cursorLabel="SCAN"
-                    onMouseEnter={() => setActiveServiceIdx(idx)}
-                    className="rounded-[32px]"
-                  >
-                    <article
-                      className={`group relative overflow-hidden rounded-[32px] border p-7 transition-all duration-300 sm:p-9 ${
-                        isSelected
-                          ? "border-cyan-400/55 bg-gradient-to-br from-[#0e1f3a] via-[#091326] to-[#050a14] shadow-[0_25px_70px_rgba(18,119,255,0.22)]"
-                          : "border-white/10 bg-[#080f1e]/90 hover:border-cyan-400/35"
-                      }`}
+                  <div key={srv.number} className={idx >= 3 ? "hidden md:block" : ""}>
+                    <TiltCard
+                      cursorLabel="SCAN"
+                      onMouseEnter={() => setActiveServiceIdx(idx)}
+                      className="rounded-2xl sm:rounded-[32px]"
                     >
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <span className="font-mono text-xs font-black uppercase tracking-[0.35em] text-slate-400 group-hover:text-cyan-300">
-                          SERVICE // {srv.number}
-                        </span>
-                        <span className="rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-cyan-300">
-                          {srv.engine}
-                        </span>
-                      </div>
-
-                      <h3 className="mt-5 font-display text-2xl font-black uppercase tracking-tight text-white transition-colors group-hover:text-cyan-200 sm:text-3xl">
-                        {srv.title}
-                      </h3>
-
-                      <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
-                        {srv.description}
-                      </p>
-
-                      <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
-                        <Link
-                          href={srv.href}
-                          data-cursor="EXPLORE"
-                          className="inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.25em] text-white transition hover:text-cyan-300"
-                        >
-                          <span>Explore Capability</span>
-                          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/5 transition-all group-hover:border-cyan-400 group-hover:bg-cyan-400 group-hover:text-slate-950">
-                            <ArrowRight className="h-4 w-4" />
+                      <article
+                        className={`group relative overflow-hidden rounded-2xl border p-5 transition-all duration-300 sm:rounded-[32px] sm:p-9 ${
+                          isSelected
+                            ? "border-cyan-400/55 bg-gradient-to-br from-[#0e1f3a] via-[#091326] to-[#050a14] shadow-[0_25px_70px_rgba(18,119,255,0.22)]"
+                            : "border-white/10 bg-[#080f1e]/90 hover:border-cyan-400/35"
+                        }`}
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="font-mono text-[11px] font-black uppercase tracking-[0.25em] text-slate-400 group-hover:text-cyan-300 sm:text-xs sm:tracking-[0.35em]">
+                            SERVICE // {srv.number}
                           </span>
-                        </Link>
-                      </div>
-                    </article>
-                  </TiltCard>
+                          <span className="rounded-full border border-cyan-400/25 bg-cyan-400/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-cyan-300 sm:px-3 sm:py-1 sm:text-[11px]">
+                            {srv.engine}
+                          </span>
+                        </div>
+
+                        <h3 className="mt-3 font-display text-xl font-black uppercase tracking-tight text-white transition-colors group-hover:text-cyan-200 sm:mt-5 sm:text-3xl">
+                          {srv.title}
+                        </h3>
+
+                        <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:mt-3 sm:text-base sm:leading-7">
+                          {srv.description}
+                        </p>
+
+                        <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4 sm:mt-6 sm:pt-5">
+                          <Link
+                            href={srv.href}
+                            data-cursor="EXPLORE"
+                            className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.2em] text-white transition hover:text-cyan-300 sm:gap-3 sm:tracking-[0.25em]"
+                          >
+                            <span>Explore Capability</span>
+                            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 transition-all group-hover:border-cyan-400 group-hover:bg-cyan-400 group-hover:text-slate-950 sm:h-9 sm:w-9">
+                              <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                            </span>
+                          </Link>
+                        </div>
+                      </article>
+                    </TiltCard>
+                  </div>
                 );
               })}
             </div>
@@ -424,7 +427,7 @@ export function DevCrafterHomeExperience() {
       </section>
 
       {/* 4. The Masterpiece Pipeline — Wall of Proof */}
-      <section className="relative overflow-hidden border-t border-white/10 bg-[#030711] py-20 sm:py-28">
+      <section className="relative overflow-hidden border-t border-white/10 bg-[#030711] py-12 sm:py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(56,198,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(56,198,255,0.03)_1px,transparent_1px)] bg-[size:56px_56px]" />
         <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center">
