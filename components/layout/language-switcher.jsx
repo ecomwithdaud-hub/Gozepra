@@ -41,13 +41,13 @@ export function LanguageSwitcher() {
     <div ref={rootRef} className="relative z-50 notranslate">
       <button
         type="button"
-        className="flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-200 bg-white/90 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:border-blue-300 hover:bg-slate-50 hover:text-slate-950"
+        className="flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-800 bg-[#0a1638] px-3 py-1.5 text-xs font-semibold text-slate-200 shadow-sm transition-all duration-200 hover:border-cyan-500/40 hover:bg-slate-800 hover:text-white"
         aria-label={`Language: ${activeLanguage.label}`}
         aria-haspopup="menu"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((open) => !open)}
       >
-        <Globe2 className="h-3.5 w-3.5 text-blue-600" aria-hidden="true" />
+        <Globe2 className="h-3.5 w-3.5 text-cyan-400" aria-hidden="true" />
         <span>{activeLanguage.code}</span>
         <ChevronDown className="h-3 w-3 text-slate-400" aria-hidden="true" />
       </button>
@@ -56,7 +56,7 @@ export function LanguageSwitcher() {
         <div
           role="menu"
           aria-label="Select language"
-          className="absolute right-0 z-50 mt-2 flex w-36 flex-col gap-1 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-xl backdrop-blur-xl"
+          className="absolute right-0 z-50 mt-2 flex w-36 flex-col gap-1 rounded-2xl border border-slate-800 bg-[#070f24] p-1.5 shadow-2xl backdrop-blur-xl"
         >
           {languages.map((language) => (
             <button
@@ -64,7 +64,7 @@ export function LanguageSwitcher() {
               type="button"
               role="menuitemradio"
               aria-checked={activeLanguage.code === language.code}
-              className="flex items-center justify-between rounded-xl px-3 py-1.5 text-left text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500"
+              className="flex items-center justify-between rounded-xl px-3 py-1.5 text-left text-xs font-medium text-slate-200 hover:bg-[#0a1638] hover:text-cyan-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan-500"
               onClick={() => handleLanguageChange(language)}
             >
               <span>{language.label}</span>

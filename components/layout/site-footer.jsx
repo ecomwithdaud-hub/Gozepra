@@ -123,7 +123,7 @@ const footerSocialLinks = [
 ];
 
 const contactIconWrap =
-  "flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 ring-1 ring-blue-100 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white";
+  "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-800 bg-[#0a1638] text-cyan-400 ring-1 ring-slate-800 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white";
 
 const footerGroupKeys = {
   Services: "services",
@@ -170,25 +170,22 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="section-shell-tight relative border-t border-slate-200 bg-white text-slate-900">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+    <footer className="section-shell-tight relative border-t border-slate-800 bg-[#070f24] text-white">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
 
       <div className="w-full px-6 lg:px-12">
-        <div className="flex flex-col gap-6 border-b border-slate-200 pb-8 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-6 border-b border-slate-800 pb-8 md:flex-row md:items-center md:justify-between">
           <div className="max-w-sm">
-            <Logo
-              className="[&_svg]:shadow-soft"
-              textClassName="[&_div:first-child]:text-slate-900 [&_div:last-child]:text-slate-500"
-            />
-            <p className="mt-4 text-sm leading-7 text-slate-600">
+            <Logo dark />
+            <p className="mt-4 text-sm leading-7 text-slate-400">
               {getTranslation("footer.tagline", "Empowering global businesses with high-performance Web Apps, AI Automation, and modern cloud architecture.")}
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 text-sm text-slate-600 sm:flex-row sm:gap-6">
+          <div className="flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:gap-6">
             <a
               href={`mailto:${siteMeta.email}`}
-              className="group inline-flex items-center gap-3 transition-colors duration-200 hover:text-blue-600"
+              className="group inline-flex items-center gap-3 transition-colors duration-200 hover:text-cyan-300"
             >
               <span className={contactIconWrap}>
                 <Mail className="h-4 w-4" />
@@ -197,7 +194,7 @@ export function SiteFooter() {
             </a>
             <a
               href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}
-              className="group inline-flex items-center gap-3 transition-colors duration-200 hover:text-blue-600"
+              className="group inline-flex items-center gap-3 transition-colors duration-200 hover:text-cyan-300"
             >
               <span className={contactIconWrap}>
                 <Phone className="h-4 w-4" />
@@ -208,7 +205,7 @@ export function SiteFooter() {
         </div>
 
         {/* Global Edge Telemetry Bar (Desktop only) */}
-        <div className="hidden md:block py-6 border-b border-slate-200">
+        <div className="hidden md:block py-6 border-b border-slate-800">
           <GlobalEdgeTelemetry />
         </div>
 
@@ -225,15 +222,15 @@ export function SiteFooter() {
                   key={group.title}
                   className={isSecondaryOnMobile ? "hidden md:block" : ""}
                 >
-                  <h3 className="font-display text-sm font-semibold text-slate-900 sm:text-base">
+                  <h3 className="font-display text-sm font-semibold text-white sm:text-base">
                     {getTranslation(`footer.${footerGroupKeys[group.title]}`, group.title)}
                   </h3>
-                  <ul className="mt-3 space-y-2.5 text-xs text-slate-600 sm:mt-4 sm:space-y-3 sm:text-sm">
+                  <ul className="mt-3 space-y-2.5 text-xs text-slate-400 sm:mt-4 sm:space-y-3 sm:text-sm">
                     {group.links.map((link) => (
                       <li key={`${group.title}-${link.label}`}>
                         <Link
                           href={link.href}
-                          className="transition-colors duration-200 hover:text-blue-600"
+                          className="transition-colors duration-200 hover:text-cyan-300"
                         >
                           {getTranslation(`footer.links.${footerLinkKeys[link.label]}`, link.label)}
                         </Link>
@@ -247,16 +244,16 @@ export function SiteFooter() {
         </nav>
 
         {/* Technology Partners (Desktop only) */}
-        <div className="hidden md:block border-t border-b border-slate-200 py-6">
+        <div className="hidden md:block border-t border-b border-slate-800 py-6">
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
               {getTranslation("footer.technology", "TECHNOLOGY PARTNERS")}
             </h3>
             <div className="mt-3 flex flex-wrap items-center gap-3 sm:gap-4">
               {partners.map((partner) => (
                 <div
                   key={partner.mark}
-                  className="flex h-10 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-slate-800 shadow-sm transition-all duration-300 hover:border-blue-300 hover:bg-blue-50/50"
+                  className="flex h-10 items-center justify-center gap-2 rounded-xl border border-slate-800 bg-[#0a1638] px-4 py-2 text-slate-200 shadow-sm transition-all duration-300 hover:border-cyan-500/40 hover:bg-slate-900 hover:text-white"
                 >
                   <PartnerMark mark={partner.mark} />
                   {partner.mark === "shopify" ? (
@@ -277,10 +274,10 @@ export function SiteFooter() {
         </div>
 
         {/* Global Presence (USA & PK HQ on mobile, all 4 on desktop) */}
-        <section aria-labelledby="global-presence-heading" className="py-6 sm:py-8 border-t border-slate-200 md:border-t-0">
+        <section aria-labelledby="global-presence-heading" className="py-6 sm:py-8 border-t border-slate-800 md:border-t-0">
           <h3
             id="global-presence-heading"
-            className="font-display text-base font-semibold text-slate-900 sm:text-lg"
+            className="font-display text-base font-semibold text-white sm:text-lg"
           >
             {getTranslation("footer.globalPresence", "Global Presence")}
           </h3>
@@ -298,15 +295,15 @@ export function SiteFooter() {
                     <span className="text-lg sm:text-xl" aria-hidden="true">
                       {location.flag}
                     </span>
-                    <h4 className="text-xs font-semibold text-slate-900 sm:text-sm">
+                    <h4 className="text-xs font-semibold text-white sm:text-sm">
                       {translatedLocation.name || location.name}
                     </h4>
                   </div>
-                  <p className="mt-1.5 break-words text-xs leading-relaxed text-slate-600 sm:mt-3 sm:text-sm sm:leading-6">
+                  <p className="mt-1.5 break-words text-xs leading-relaxed text-slate-400 sm:mt-3 sm:text-sm sm:leading-6">
                     {translatedLocation.detail || location.detail}
                   </p>
                   {(translatedLocation.note || location.note) ? (
-                    <p className="mt-1 text-[11px] leading-4 text-slate-400 sm:text-xs sm:leading-5">
+                    <p className="mt-1 text-[11px] leading-4 text-slate-500 sm:text-xs sm:leading-5">
                       {translatedLocation.note || location.note}
                     </p>
                   ) : null}
@@ -316,7 +313,7 @@ export function SiteFooter() {
           </div>
         </section>
 
-        <div className="flex flex-col gap-5 border-t border-slate-200 pt-6 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-5 border-t border-slate-800 pt-6 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span>© 2026 Zepra Tech</span>
             <span aria-hidden="true">|</span>
@@ -324,21 +321,21 @@ export function SiteFooter() {
             <span aria-hidden="true">|</span>
             <Link
               href="/privacy-policy"
-              className="transition-colors duration-200 hover:text-blue-600"
+              className="transition-colors duration-200 hover:text-cyan-300"
             >
               {getTranslation("footer.privacy", "Privacy Policy")}
             </Link>
             <span aria-hidden="true">|</span>
             <Link
               href="/terms-of-use"
-              className="transition-colors duration-200 hover:text-blue-600"
+              className="transition-colors duration-200 hover:text-cyan-300"
             >
               {getTranslation("footer.terms", "Terms of Service")}
             </Link>
             <span aria-hidden="true">|</span>
             <Link
               href="/privacy-policy"
-              className="transition-colors duration-200 hover:text-blue-600"
+              className="transition-colors duration-200 hover:text-cyan-300"
             >
               {getTranslation("footer.security", "Security")}
             </Link>
@@ -360,7 +357,7 @@ export function SiteFooter() {
                     {...(isExternal
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
-                    className="inline-flex items-center gap-1.5 transition-colors duration-200 hover:text-blue-600"
+                    className="inline-flex items-center gap-1.5 transition-colors duration-200 hover:text-cyan-300"
                   >
                     <Icon className="h-4 w-4" />
                     <span>{social.label}</span>

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export function Logo({ className = "", textClassName = "", compact = false }) {
+export function Logo({ className = "", textClassName = "", compact = false, dark = false }) {
   return (
     <div className={cn("inline-flex items-center gap-3", className)}>
       <svg
@@ -31,12 +31,13 @@ export function Logo({ className = "", textClassName = "", compact = false }) {
         </defs>
       </svg>
       <div className={cn("leading-none", textClassName)}>
-        <div className="font-display text-lg font-semibold tracking-[0.08em] text-slate-900">
-          Zepra <span className="text-blue-600">Tech</span>
+        <div className={cn("font-display text-lg font-semibold tracking-[0.08em]", dark ? "text-white" : "text-slate-900")}>
+          Zepra <span className={dark ? "text-cyan-400" : "text-blue-600"}>Tech</span>
         </div>
         <div
           className={cn(
-            "mt-1 text-slate-500",
+            "mt-1",
+            dark ? "text-slate-400" : "text-slate-500",
             compact ? "text-[10px] tracking-[0.18em]" : "text-[11px] uppercase tracking-[0.22em]",
           )}
         >

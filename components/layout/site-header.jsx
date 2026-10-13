@@ -75,7 +75,7 @@ function ProjectIconBadge({ href }) {
   if (!Icon) return null;
 
   return (
-    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors duration-200 group-hover/item:bg-blue-600 group-hover/item:text-white">
+    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 text-cyan-400 transition-colors duration-200 group-hover/item:bg-blue-600 group-hover/item:text-white">
       <Icon className="h-4 w-4" />
     </span>
   );
@@ -86,7 +86,7 @@ function ServiceIconBadge({ icon }) {
   if (!Icon) return null;
 
   return (
-    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors duration-200 group-hover/item:bg-blue-600 group-hover/item:text-white">
+    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 text-cyan-400 transition-colors duration-200 group-hover/item:bg-blue-600 group-hover/item:text-white">
       <Icon className="h-4 w-4" />
     </span>
   );
@@ -181,12 +181,12 @@ export function SiteHeader() {
       <div className="container pointer-events-none">
         <div
           className={cn(
-            "pointer-events-auto relative mx-auto flex max-w-[1380px] items-center justify-between gap-2 rounded-full border border-slate-200/90 bg-white/90 px-3.5 shadow-[0_4px_24px_rgba(15,23,42,0.08)] backdrop-blur-xl [backface-visibility:hidden] transition-all duration-300 xl:gap-3 xl:px-5",
-            scrolled ? "py-2 shadow-premium" : "py-2.5",
+            "pointer-events-auto relative mx-auto flex max-w-[1380px] items-center justify-between gap-2 rounded-full border border-slate-800 bg-[#070f24]/95 px-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-xl [backface-visibility:hidden] transition-all duration-300 xl:gap-3 xl:px-5 text-white",
+            scrolled ? "py-2 shadow-2xl border-slate-700/80" : "py-2.5",
           )}
         >
           <Link href="/" aria-label="Zepra Tech home" className="shrink-0">
-            <Logo compact textClassName="text-slate-900" />
+            <Logo compact dark />
           </Link>
 
           <nav
@@ -200,7 +200,7 @@ export function SiteHeader() {
             <span
               aria-hidden="true"
               className={cn(
-                "pointer-events-none absolute top-1/2 h-8 -translate-y-1/2 rounded-full bg-slate-100 border border-slate-200/80 motion-reduce:transition-none",
+                "pointer-events-none absolute top-1/2 h-8 -translate-y-1/2 rounded-full bg-slate-800/80 border border-slate-700/80 motion-reduce:transition-none",
                 pill.snap
                   ? "transition-opacity duration-200"
                   : "transition-[left,width,opacity] duration-300 ease-out",
@@ -230,8 +230,8 @@ export function SiteHeader() {
                       }}
                       title={isServicesMenu ? "Double-click to open dedicated Services page" : undefined}
                       className={cn(
-                        "relative z-10 inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium text-slate-600 transition-colors duration-300 hover:text-slate-950 xl:px-3 xl:text-sm",
-                        isActive && "border border-blue-200 bg-blue-50 text-blue-700 shadow-sm hover:bg-blue-100 hover:text-blue-800",
+                        "relative z-10 inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium text-slate-300 transition-colors duration-300 hover:text-white xl:px-3 xl:text-sm",
+                        isActive && "border border-cyan-500/40 bg-cyan-950/60 text-cyan-300 shadow-sm hover:bg-cyan-900/60 hover:text-cyan-200",
                       )}
                       aria-haspopup="menu"
                       aria-expanded={isActive}
@@ -240,20 +240,20 @@ export function SiteHeader() {
                       <ChevronDown
                         className={cn(
                           "h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180",
-                          isActive ? "text-blue-600" : "text-slate-400",
+                          isActive ? "text-cyan-300" : "text-slate-400 group-hover:text-white",
                         )}
                       />
                     </button>
                     <div className="invisible absolute left-0 top-full z-[9999] isolate w-[min(460px,94vw)] translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                      <div className="relative isolate z-[9999] rounded-2xl border border-slate-200 bg-white p-3.5 shadow-[0_20px_50px_rgba(15,23,42,0.12)]">
+                      <div className="relative isolate z-[9999] rounded-2xl border border-slate-800 bg-[#070f24] p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.6)] text-white">
                         {isServicesMenu && (
-                          <div className="mb-2.5 flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700">
+                          <div className="mb-2.5 flex items-center justify-between rounded-xl border border-slate-800 bg-[#0a1638] px-3.5 py-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400">
                               All Services ({item.children.length})
                             </span>
                             <Link
                               href="/services"
-                              className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 transition-colors hover:text-blue-600"
+                              className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-300 transition-colors hover:text-cyan-300"
                             >
                               <span>Open Services Page</span>
                               <ChevronRight className="h-3 w-3" />
@@ -274,17 +274,17 @@ export function SiteHeader() {
                                 key={child.href}
                                 href={child.href}
                                 className={cn(
-                                  "group/item relative flex items-start gap-3 rounded-xl border border-slate-200/80 bg-slate-50/60 px-3.5 py-2.5 text-slate-900 shadow-sm transition-all duration-200 hover:border-blue-300 hover:bg-blue-50/50 hover:shadow-sm",
+                                  "group/item relative flex items-start gap-3 rounded-xl border border-slate-800/80 bg-[#0a1638]/70 px-3.5 py-2.5 text-white shadow-sm transition-all duration-200 hover:border-cyan-500/50 hover:bg-cyan-950/40 hover:shadow-sm",
                                 )}
                               >
                                 {isServicesMenu
                                   ? <ServiceIconBadge icon={child.icon} />
                                   : <ProjectIconBadge href={child.href} />}
                                 <span className="block min-w-0 flex-1">
-                                  <span className="block text-sm font-bold text-slate-900 group-hover/item:text-blue-600">
+                                  <span className="block text-sm font-bold text-white group-hover/item:text-cyan-300">
                                     {title}
                                   </span>
-                                  <span className="mt-0.5 block truncate text-xs leading-5 text-slate-500 group-hover/item:text-slate-700">
+                                  <span className="mt-0.5 block truncate text-xs leading-5 text-slate-400 group-hover/item:text-slate-200">
                                     {description}
                                   </span>
                                 </span>
@@ -305,8 +305,8 @@ export function SiteHeader() {
                   onMouseEnter={(event) => movePillTo(event.currentTarget)}
                   onFocus={(event) => movePillTo(event.currentTarget)}
                   className={cn(
-                    "relative z-10 inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium text-slate-600 transition-colors duration-300 hover:text-slate-950 xl:px-3 xl:text-sm",
-                    isActive && "border border-blue-200 bg-blue-50 text-blue-700 shadow-sm hover:bg-blue-100 hover:text-blue-800",
+                    "relative z-10 inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium text-slate-300 transition-colors duration-300 hover:text-white xl:px-3 xl:text-sm",
+                    isActive && "border border-cyan-500/40 bg-cyan-950/60 text-cyan-300 shadow-sm hover:bg-cyan-900/60 hover:text-cyan-200",
                   )}
                 >
                   {t(navTranslationKeys[item.href] ?? "nav.contact")}
@@ -317,7 +317,7 @@ export function SiteHeader() {
 
           <div className="flex shrink-0 items-center gap-1.5 xl:gap-2">
             <div className="hidden items-center gap-2 lg:flex">
-              <Button asChild className="group h-9 shrink-0 whitespace-nowrap px-3.5 text-xs font-bold xl:h-10 xl:px-4 xl:text-sm">
+              <Button asChild className="group h-9 shrink-0 whitespace-nowrap bg-blue-600 hover:bg-blue-500 px-3.5 text-xs font-bold text-white shadow-md shadow-blue-500/30 xl:h-10 xl:px-4 xl:text-sm">
                 <Link href="/contact">
                   {t("nav.bookConsultation")}
                   <ChevronRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
@@ -331,7 +331,7 @@ export function SiteHeader() {
 
             <button
               type="button"
-              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-soft transition-colors hover:border-blue-300 hover:text-blue-600 lg:hidden"
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-800 bg-[#0a1638] text-slate-200 shadow-sm transition-colors hover:border-cyan-500/40 hover:text-white lg:hidden"
               onClick={() => setIsOpen((current) => !current)}
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
@@ -356,7 +356,7 @@ export function SiteHeader() {
         </div>
 
         {isOpen ? (
-          <div className="pointer-events-auto mt-3 max-h-[82vh] overflow-y-auto rounded-3xl border border-slate-200 bg-white/95 p-4 text-slate-900 shadow-2xl backdrop-blur-2xl sm:p-5 lg:hidden">
+          <div className="pointer-events-auto mt-3 max-h-[82vh] overflow-y-auto rounded-3xl border border-slate-800 bg-[#070f24]/98 p-4 text-white shadow-2xl backdrop-blur-2xl sm:p-5 lg:hidden">
             <nav className="flex flex-col gap-1.5">
               {navItems.map((item) => {
                 const isActive = isItemActive(item, pathname);
@@ -377,14 +377,14 @@ export function SiteHeader() {
                           }
                         }}
                         className={cn(
-                          "flex w-full items-center justify-between rounded-2xl px-4 py-3 text-left text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-100 hover:text-slate-950",
-                          isActive && "border border-blue-200 bg-blue-50 text-blue-700",
+                          "flex w-full items-center justify-between rounded-2xl px-4 py-3 text-left text-sm font-semibold text-slate-200 transition-all duration-300 hover:bg-[#0a1638] hover:text-white",
+                          isActive && "border border-cyan-500/40 bg-cyan-950/60 text-cyan-300",
                         )}
                         aria-expanded={isExpanded}
                         onClick={() => setExpandedNavItem(isExpanded ? null : item.label)}
                       >
                         <span>{isServicesMenu ? t("nav.services") : t("nav.projects")}</span>
-                        <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform duration-300", isExpanded && "rotate-180")} />
+                        <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform duration-300", isExpanded && "rotate-180 text-cyan-300")} />
                       </button>
                       <div className={cn(
                         "mt-2 grid max-h-[42vh] gap-2 overflow-y-auto pl-2 pr-1 scrollbar-thin",
@@ -394,7 +394,7 @@ export function SiteHeader() {
                           <Link
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className="flex items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-blue-700"
+                            className="flex items-center justify-between rounded-xl border border-cyan-500/40 bg-cyan-950/60 px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-cyan-300"
                           >
                             <span>Open All {isServicesMenu ? "Services" : "Portfolio & Case Studies"}</span>
                             <ChevronRight className="h-4 w-4" />
@@ -405,18 +405,18 @@ export function SiteHeader() {
                             key={child.href}
                             href={child.href}
                             onClick={() => setIsOpen(false)}
-                            className="group/item flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-slate-900 transition-colors duration-200 hover:border-blue-300 hover:bg-blue-50/50"
+                            className="group/item flex items-start gap-3 rounded-2xl border border-slate-800 bg-[#0a1638] px-3.5 py-2.5 text-white transition-colors duration-200 hover:border-cyan-500/40 hover:bg-cyan-950/40"
                           >
                             {isServicesMenu
                               ? <ServiceIconBadge icon={child.icon} />
                               : <ProjectIconBadge href={child.href} />}
                             <span className="block min-w-0 flex-1">
-                              <span className="block text-sm font-semibold text-slate-900">
+                              <span className="block text-sm font-semibold text-white group-hover/item:text-cyan-300">
                                 {isServicesMenu
                                   ? translatedServices?.[child.index]?.title ?? child.label
                                   : t(projectTranslationKeys[child.href] ?? "nav.projects")}
                               </span>
-                              <span className="mt-0.5 line-clamp-2 text-xs leading-5 text-slate-500">
+                              <span className="mt-0.5 line-clamp-2 text-xs leading-5 text-slate-400">
                                 {isServicesMenu
                                   ? translatedServices?.[child.index]?.summary ?? child.description
                                   : t(`${projectTranslationKeys[child.href]}Description`)}
@@ -435,8 +435,8 @@ export function SiteHeader() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-100 hover:text-slate-950",
-                      isActive && "border border-blue-200 bg-blue-50 text-blue-700",
+                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-200 transition-all duration-300 hover:bg-[#0a1638] hover:text-white",
+                      isActive && "border border-cyan-500/40 bg-cyan-950/60 text-cyan-300",
                     )}
                   >
                     <span>{t(navTranslationKeys[item.href] ?? "nav.contact")}</span>
@@ -445,10 +445,10 @@ export function SiteHeader() {
               })}
             </nav>
             <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
-              <Button asChild variant="outline" className="w-full border-slate-200 bg-white text-slate-700 hover:bg-slate-50">
+              <Button asChild variant="outline" className="w-full border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800 hover:text-white">
                 <Link href="/services" onClick={() => setIsOpen(false)}>{t("nav.viewServices")}</Link>
               </Button>
-              <Button asChild className="w-full bg-blue-600 font-bold text-white shadow-soft hover:bg-blue-700">
+              <Button asChild className="w-full bg-blue-600 font-bold text-white shadow-soft hover:bg-blue-500">
                 <Link href="/contact" onClick={() => setIsOpen(false)}>{t("nav.bookConsultation")}</Link>
               </Button>
             </div>
