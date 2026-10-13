@@ -76,39 +76,39 @@ export function UnifiedPortfolioHub() {
     activeTab === "all" || activeTab === "growth-creative" || activeTab === "case-studies";
 
   return (
-    <div className="bg-slate-950 text-white">
+    <div className="bg-white text-slate-900">
       {/* Top Unified Portfolio & Case Studies Hero + Sticky Filter Bar */}
-      <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#040812] pb-10 pt-12 sm:pb-14 sm:pt-16">
+      <section className="relative isolate overflow-hidden border-b border-slate-200 bg-slate-50/70 pb-10 pt-12 sm:pb-14 sm:pt-16">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/4 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/12 blur-[140px]"
+          className="pointer-events-none absolute left-1/4 top-0 -z-10 h-96 w-96 rounded-full bg-blue-400/10 blur-[140px]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-1/4 bottom-0 -z-10 h-96 w-96 rounded-full bg-blue-600/12 blur-[140px]"
+          className="pointer-events-none absolute right-1/4 bottom-0 -z-10 h-96 w-96 rounded-full bg-indigo-300/10 blur-[140px]"
         />
 
         <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-300">
-              <Sparkles className="h-3.5 w-3.5 text-cyan-300" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-blue-700">
+              <Sparkles className="h-3.5 w-3.5 text-blue-600" />
               Unified Portfolio & Case Studies Hub
             </div>
 
-            <h1 className="mt-5 font-display text-4xl font-black uppercase leading-[0.96] tracking-tight text-white sm:text-6xl">
+            <h1 className="mt-5 font-display text-4xl font-black uppercase leading-[0.96] tracking-tight text-slate-900 sm:text-6xl">
               Live Web Builds &{" "}
-              <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent">
                 Verified Case Studies
               </span>
             </h1>
 
-            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
               Explore our complete body of work in one place: 24 interactive US industry demo websites, production client deployments, full-stack architecture case studies, and growth marketing proof.
             </p>
           </div>
 
           {/* Interactive Hub Section Switcher */}
-          <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-white/12 bg-slate-900/80 p-2.5 shadow-2xl backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-2.5 sm:rounded-3xl sm:p-3">
+          <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-slate-200 bg-white p-2.5 shadow-sm sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-2.5 sm:rounded-3xl sm:p-3">
             {hubTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -119,8 +119,8 @@ export function UnifiedPortfolioHub() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`inline-flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all duration-300 sm:gap-2 sm:rounded-full sm:px-4 sm:text-sm ${
                     isActive
-                      ? "bg-gradient-to-r from-brand-blue to-brand-cyan text-slate-950 shadow-[0_0_25px_rgba(56,198,255,0.45)]"
-                      : "border border-white/10 bg-white/[0.04] text-slate-300 hover:border-cyan-400/40 hover:bg-white/[0.08] hover:text-white"
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-500/20"
+                      : "border border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-300 hover:bg-slate-100"
                   }`}
                 >
                   <Icon className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
@@ -128,8 +128,8 @@ export function UnifiedPortfolioHub() {
                   <span
                     className={`hidden rounded-full px-2 py-0.5 text-[10px] font-extrabold uppercase md:inline-block ${
                       isActive
-                        ? "bg-slate-950/20 text-slate-950"
-                        : "bg-cyan-400/15 text-cyan-300"
+                        ? "bg-white/20 text-white"
+                        : "bg-blue-50 text-blue-700"
                     }`}
                   >
                     {tab.badge}
@@ -150,14 +150,14 @@ export function UnifiedPortfolioHub() {
 
       {/* Section 1B: Interactive AI Agents, Bots, SEO & CRM Labs */}
       {showInteractiveLabs ? (
-        <div id="interactive-labs-section" className="border-t border-white/10">
+        <div id="interactive-labs-section" className="border-t border-slate-200">
           <InteractiveServiceDemos />
         </div>
       ) : null}
 
       {/* Section 2: Case Studies & Architecture Breakdowns */}
       {showCaseStudies ? (
-        <div id="case-studies-section" className="border-t border-white/10">
+        <div id="case-studies-section" className="border-t border-slate-200">
           <CaseStudySpotlight />
           <EnterpriseCaseStudies />
           <WikiRgShowcase />
@@ -166,7 +166,7 @@ export function UnifiedPortfolioHub() {
 
       {/* Section 3: Production Client Website Deployments */}
       {showClientWebsites ? (
-        <div id="client-websites" className="border-t border-white/10">
+        <div id="client-websites" className="border-t border-slate-200">
           <PortfolioPreview showCta={false} />
         </div>
       ) : null}
@@ -175,17 +175,17 @@ export function UnifiedPortfolioHub() {
       {showGrowthCreative ? (
         <section
           id="growth-creative"
-          className="relative overflow-hidden border-t border-white/10 bg-[#040812] py-16 sm:py-22"
+          className="relative overflow-hidden border-t border-slate-200 bg-white py-16 sm:py-22"
         >
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.35em] text-cyan-300">
+              <p className="text-xs font-bold uppercase tracking-[0.35em] text-blue-600">
                 Specialized Growth & Creative Galleries
               </p>
-              <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
+              <h2 className="mt-3 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                 Paid Media Proof & Visual Storytelling
               </h2>
-              <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
+              <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
                 Inspect our dedicated campaign reporting dashboards, ad spend proof, and high-CTR YouTube thumbnail design systems.
               </p>
             </div>
@@ -194,21 +194,21 @@ export function UnifiedPortfolioHub() {
               <TiltCard cursorLabel="EXPLORE" className="rounded-[28px]">
                 <Link
                   href="/social-media-marketing"
-                  className="group flex h-full flex-col justify-between rounded-[28px] border border-white/15 bg-gradient-to-br from-[#0e1e38] via-[#091326] to-[#050a14] p-7 transition-all hover:border-cyan-400/50"
+                  className="group flex h-full flex-col justify-between rounded-[28px] border border-slate-200 bg-slate-50/80 p-7 transition-all hover:border-blue-400 hover:shadow-md"
                 >
                   <div>
-                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-xs font-bold text-cyan-300">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold text-blue-700">
                       <Megaphone className="h-3.5 w-3.5" />
                       Performance Marketing & Ad Proof
                     </span>
-                    <h3 className="mt-4 font-display text-2xl font-bold text-white group-hover:text-cyan-300">
+                    <h3 className="mt-4 font-display text-2xl font-bold text-slate-900 group-hover:text-blue-600">
                       Social Media Marketing & Paid Ads Gallery
                     </h3>
-                    <p className="mt-2.5 text-sm leading-7 text-slate-300">
+                    <p className="mt-2.5 text-sm leading-7 text-slate-600">
                       Verified Meta & Google Ads campaign snapshots, ROAS metrics, cost-per-lead reductions, and audience scaling proof.
                     </p>
                   </div>
-                  <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-300">
+                  <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600">
                     <span>Open Marketing Proof Gallery</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
@@ -218,21 +218,21 @@ export function UnifiedPortfolioHub() {
               <TiltCard cursorLabel="EXPLORE" className="rounded-[28px]">
                 <Link
                   href="/thumbnail-designing"
-                  className="group flex h-full flex-col justify-between rounded-[28px] border border-white/15 bg-gradient-to-br from-[#0e1e38] via-[#091326] to-[#050a14] p-7 transition-all hover:border-cyan-400/50"
+                  className="group flex h-full flex-col justify-between rounded-[28px] border border-slate-200 bg-slate-50/80 p-7 transition-all hover:border-emerald-400 hover:shadow-md"
                 >
                   <div>
-                    <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-1 text-xs font-bold text-emerald-300">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1 text-xs font-bold text-emerald-700">
                       <ImageIcon className="h-3.5 w-3.5" />
                       High-CTR Creative Systems
                     </span>
-                    <h3 className="mt-4 font-display text-2xl font-bold text-white group-hover:text-emerald-300">
+                    <h3 className="mt-4 font-display text-2xl font-bold text-slate-900 group-hover:text-emerald-700">
                       Thumbnail Designing & Visual Concepts
                     </h3>
-                    <p className="mt-2.5 text-sm leading-7 text-slate-300">
+                    <p className="mt-2.5 text-sm leading-7 text-slate-600">
                       Before-and-after YouTube thumbnail transformations, creator brand visuals, and high-click-through cover layouts.
                     </p>
                   </div>
-                  <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-300">
+                  <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-700">
                     <span>Open Thumbnail Design Gallery</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
@@ -245,7 +245,7 @@ export function UnifiedPortfolioHub() {
 
       {/* Section 5: AI Growth Engine, SEO/AEO/GEO & Paid Ads Transformation Case Studies */}
       {showGrowthCaseStudies ? (
-        <div id="ai-growth-dominance" className="border-t border-white/10">
+        <div id="ai-growth-dominance" className="border-t border-slate-200">
           <AiGrowthDominance />
         </div>
       ) : null}

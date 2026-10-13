@@ -35,7 +35,7 @@ export function ThumbnailDesignShowcase() {
   const content = t("thumbnailPage");
 
   return (
-    <section className="section-shell relative isolate overflow-hidden bg-slate-950 text-white border-b border-white/10">
+    <section className="section-shell relative isolate overflow-hidden bg-white text-slate-900 border-b border-slate-200">
       <CyberCircuitBackground />
       <div className="container relative z-10">
         <SectionHeading
@@ -53,17 +53,17 @@ export function ThumbnailDesignShowcase() {
             return (
               <Card
                 key={item.title}
-                className={`card-shine border border-white/10 bg-slate-900/85 text-white backdrop-blur-md transition-all duration-300 hover:border-cyan-400/50 hover:bg-slate-900 ${
+                className={`card-shine border border-slate-200 bg-white text-slate-900 shadow-sm transition-all duration-300 hover:border-blue-400 hover:shadow-md ${
                   index === 1 ? "lg:-translate-y-4" : ""
                 }`}
               >
                 <CardHeader className="gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-500/10 text-cyan-300 shadow-glow">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-sm">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <CardTitle className="text-xl font-semibold text-white">{translatedItem.title}</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-slate-900">{translatedItem.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-sm leading-7 text-slate-300">
+                <CardContent className="text-sm leading-7 text-slate-600">
                   {translatedItem.description}
                 </CardContent>
               </Card>
@@ -76,13 +76,13 @@ export function ThumbnailDesignShowcase() {
             const translatedItem = content.items?.[index] ?? item;
             return (
             <div key={item.title} className="mb-6 break-inside-avoid">
-              <Card className="card-shine overflow-hidden border border-white/10 bg-slate-900/85 text-white backdrop-blur-md transition-all duration-300 hover:border-cyan-400/50">
-                <div className="border-b border-white/10 p-5">
-                  <Badge variant="secondary" className="border border-cyan-400/30 bg-cyan-400/10 text-cyan-300">{translatedItem.label}</Badge>
-                  <CardTitle className="mt-4 text-xl text-white">{translatedItem.title}</CardTitle>
+              <Card className="card-shine overflow-hidden border border-slate-200 bg-white text-slate-900 shadow-sm transition-all duration-300 hover:border-blue-400 hover:shadow-md">
+                <div className="border-b border-slate-100 p-5">
+                  <Badge variant="secondary" className="border border-blue-200 bg-blue-50 text-blue-700">{translatedItem.label}</Badge>
+                  <CardTitle className="mt-4 text-xl text-slate-900">{translatedItem.title}</CardTitle>
                 </div>
-                <div className="bg-slate-950/80 p-4">
-                  <div className="overflow-hidden rounded-[22px] border border-white/10 bg-slate-950 shadow-soft">
+                <div className="bg-slate-50 p-4">
+                  <div className="overflow-hidden rounded-[22px] border border-slate-200 bg-white shadow-sm">
                     <img
                       src={item.image}
                       alt={item.title}

@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 
-const TRACE_COLOR = "rgba(1, 174, 165, 0.12)";
-const GLOW_COLOR = "rgba(56, 198, 255, 0.72)";
+const TRACE_COLOR = "rgba(37, 99, 235, 0.07)";
+const GLOW_COLOR = "rgba(37, 99, 235, 0.4)";
 const TELEMETRY = ["+ PING: 1ms", "+ SYS: OK", "+ ETH: 10G"];
 
 function createCircuitPaths(width, height) {
@@ -183,7 +183,7 @@ export function CyberCircuitBackground() {
         context.beginPath();
         context.moveTo(trail.x, trail.y);
         context.lineTo(head.x, head.y);
-        context.strokeStyle = "rgba(56, 198, 255, 0.22)";
+        context.strokeStyle = "rgba(37, 99, 235, 0.15)";
         context.lineWidth = 2;
         context.stroke();
 
@@ -201,17 +201,17 @@ export function CyberCircuitBackground() {
         const radius = 3 + phase * 16;
         context.beginPath();
         context.arc(beacon.x, beacon.y, radius, 0, Math.PI * 2);
-        context.strokeStyle = `rgba(1, 174, 165, ${0.28 * (1 - phase)})`;
+        context.strokeStyle = `rgba(37, 99, 235, ${0.18 * (1 - phase)})`;
         context.lineWidth = 1;
         context.stroke();
         context.beginPath();
         context.arc(beacon.x, beacon.y, 2, 0, Math.PI * 2);
-        context.fillStyle = "rgba(1, 174, 165, 0.42)";
+        context.fillStyle = "rgba(37, 99, 235, 0.25)";
         context.fill();
       });
 
       context.font = "10px ui-monospace, SFMono-Regular, Menlo, monospace";
-      context.fillStyle = "rgba(1, 174, 165, 0.36)";
+      context.fillStyle = "rgba(37, 99, 235, 0.25)";
       telemetry.forEach((item) => {
         const drift = Math.sin(timestamp / 3800 + item.phase) * 12;
         context.fillText(item.label, item.x + drift, item.y);

@@ -72,27 +72,27 @@ export function TheShiftSection() {
       ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 py-6 text-white sm:py-12 border-t border-white/10">
+    <section className="relative isolate overflow-hidden bg-slate-50 py-6 text-slate-900 sm:py-12 border-t border-slate-200">
       {/* Background Ambient Glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-96 w-[min(90vw,1000px)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.15),transparent_70%)] blur-[120px] animate-pulse motion-reduce:animate-none"
+        className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-96 w-[min(90vw,1000px)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.08),transparent_70%)] blur-[120px] animate-pulse motion-reduce:animate-none"
       />
 
       <div className="container relative mx-auto px-4">
         {/* Section Header */}
         <header className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300 shadow-sm sm:py-1.5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-700 shadow-sm sm:py-1.5">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70 motion-reduce:animate-none" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-70 motion-reduce:animate-none" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
             {content?.eyebrow || "THE AI REVOLUTION IN OPERATIONS"}
           </div>
-          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-white sm:mt-4 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-slate-900 sm:mt-4 sm:text-4xl lg:text-5xl">
             {content?.title || "Transforming Business Operations with AI + Data Science."}
           </h2>
-          <p className="mx-auto mt-2.5 max-w-2xl text-xs leading-relaxed text-slate-300 line-clamp-3 sm:mt-4 sm:text-base sm:leading-7 sm:line-clamp-none">
+          <p className="mx-auto mt-2.5 max-w-2xl text-xs leading-relaxed text-slate-600 line-clamp-3 sm:mt-4 sm:text-base sm:leading-7 sm:line-clamp-none">
             {content?.description || "The shift to AI-native operations means moving away from slow, manual processes. We build custom AI automation, intelligent data pipelines, and bank-grade data security into your business—making it work faster, smarter, and scale effortlessly."}
           </p>
         </header>
@@ -101,26 +101,26 @@ export function TheShiftSection() {
         <div className="mt-6 grid gap-5 sm:mt-8 sm:gap-6 lg:grid-cols-2">
           
           {/* Card 1: Legacy Model */}
-          <div className="relative flex flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/80 p-5 shadow-md backdrop-blur-sm sm:p-6 text-white">
+          <div className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm backdrop-blur-sm sm:p-6 text-slate-900">
             <div>
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-white/5 px-3 py-1 text-[10px] font-bold tracking-wider text-slate-300 uppercase border border-white/10 sm:text-xs">
+                <span className="rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold tracking-wider text-slate-700 uppercase border border-slate-200 sm:text-xs">
                   {content?.legacyTag || "LEGACY MODEL"}
                 </span>
-                <span className="hidden text-xs font-semibold text-rose-400 sm:inline">{content?.legacyStatus || "Slow & Expensive"}</span>
+                <span className="hidden text-xs font-semibold text-rose-600 sm:inline">{content?.legacyStatus || "Slow & Expensive"}</span>
               </div>
-              <h3 className="mt-3 text-lg font-bold text-white sm:mt-4 sm:text-xl">
+              <h3 className="mt-3 text-lg font-bold text-slate-900 sm:mt-4 sm:text-xl">
                 {content?.legacyTitle || "Traditional Manual Business Operations"}
               </h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-slate-400 sm:mt-2">
+              <p className="mt-1.5 text-xs leading-relaxed text-slate-500 sm:mt-2">
                 {content?.legacyDescription || "Standard operational setups relying on traditional human hours and fragmented tools."}
               </p>
 
-              <ul className="mt-4 space-y-2.5 text-xs text-slate-300 sm:mt-6 sm:space-y-4 sm:text-sm">
+              <ul className="mt-4 space-y-2.5 text-xs text-slate-600 sm:mt-6 sm:space-y-4 sm:text-sm">
                 {legacyPointsList.map((point, index) => (
                   <li key={index} className={`items-start gap-2.5 sm:gap-3 ${index >= 3 ? "hidden sm:flex" : "flex"}`}>
-                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-rose-500/10 text-rose-400 text-[10px] font-bold sm:h-5 sm:w-5 sm:text-xs">✕</span>
-                    <span><strong className="text-white">{point.label}:</strong> {point.description}</span>
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-600 border border-rose-200 text-[10px] font-bold sm:h-5 sm:w-5 sm:text-xs">✕</span>
+                    <span><strong className="text-slate-900">{point.label}:</strong> {point.description}</span>
                   </li>
                 ))}
               </ul>
@@ -128,32 +128,32 @@ export function TheShiftSection() {
           </div>
 
           {/* Card 2: AI-Native Model */}
-          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-5 shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20 sm:p-6">
+          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-blue-200 bg-blue-50/50 p-5 shadow-sm backdrop-blur-md transition-all duration-300 hover:border-blue-400 sm:p-6 text-slate-900">
             <div 
               aria-hidden="true" 
-              className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-cyan-500/15 blur-3xl transition-all duration-300 group-hover:bg-cyan-400/25" 
+              className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl transition-all duration-300 group-hover:bg-blue-400/20" 
             />
 
             <div className="relative z-10">
               <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-[10px] font-bold tracking-wider text-cyan-300 uppercase shadow-inner sm:text-xs">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-100/70 px-3 py-1 text-[10px] font-bold tracking-wider text-blue-800 uppercase sm:text-xs">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   {content?.aiTag || "AI-NATIVE REVOLUTION"}
                 </span>
-                <span className="hidden text-xs font-semibold text-cyan-400 sm:inline">{content?.aiStatus || "Fast, Scalable & Secure"}</span>
+                <span className="hidden text-xs font-semibold text-blue-700 sm:inline">{content?.aiStatus || "Fast, Scalable & Secure"}</span>
               </div>
-              <h3 className="mt-3 text-lg font-bold text-white sm:mt-4 sm:text-xl">
+              <h3 className="mt-3 text-lg font-bold text-slate-900 sm:mt-4 sm:text-xl">
                 {content?.aiTitle || "Intelligent AI + Data Science Operations"}
               </h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-slate-300 sm:mt-2">
+              <p className="mt-1.5 text-xs leading-relaxed text-slate-600 sm:mt-2">
                 {content?.aiDescription || "Modern automated architecture designed to handle complex workflows with 24/7 reliability."}
               </p>
 
-              <ul className="mt-4 space-y-2.5 text-xs text-slate-200 sm:mt-6 sm:space-y-4 sm:text-sm">
+              <ul className="mt-4 space-y-2.5 text-xs text-slate-700 sm:mt-6 sm:space-y-4 sm:text-sm">
                 {aiPointsList.map((point, index) => (
                   <li key={index} className={`items-start gap-2.5 sm:gap-3 ${index >= 3 ? "hidden sm:flex" : "flex"}`}>
-                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold border border-emerald-500/30 sm:h-5 sm:w-5 sm:text-xs">✓</span>
-                    <span><strong>{point.label}:</strong> {point.description}</span>
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold border border-emerald-200 sm:h-5 sm:w-5 sm:text-xs">✓</span>
+                    <span><strong className="text-slate-900">{point.label}:</strong> {point.description}</span>
                   </li>
                 ))}
               </ul>
@@ -165,12 +165,12 @@ export function TheShiftSection() {
         {/* 3 Core AI Value Pillars Below */}
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {pillarsList.map((pillar, index) => (
-            <CyberCard key={index} className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400/50 hover:shadow-cyan-500/15">
-              <span className="inline-block rounded-lg bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-300 border border-cyan-500/20">
+            <CyberCard key={index} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-soft">
+              <span className="inline-block rounded-lg bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 border border-blue-200">
                 {pillar.category}
               </span>
-              <h4 className="mt-4 text-base font-bold text-white">{pillar.title}</h4>
-              <p className="mt-2 text-xs leading-relaxed text-slate-300">{pillar.description}</p>
+              <h4 className="mt-4 text-base font-bold text-slate-900">{pillar.title}</h4>
+              <p className="mt-2 text-xs leading-relaxed text-slate-600">{pillar.description}</p>
             </CyberCard>
           ))}
         </div>

@@ -24,25 +24,25 @@ export function CaseStudySpotlight({
   const isExternal = primaryHref.startsWith("http");
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 py-16 text-white sm:py-24">
+    <section className="relative isolate overflow-hidden bg-white border-b border-slate-200 py-16 text-slate-900 sm:py-24">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/4 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]"
+        className="pointer-events-none absolute left-1/4 top-0 -z-10 h-96 w-96 rounded-full bg-blue-400/10 blur-[140px]"
       />
       <div className="container relative z-10">
-        <div className="grid gap-12 rounded-[32px] border border-white/12 bg-gradient-to-br from-[#0d1b33] via-[#091224] to-[#050a14] p-6 shadow-[0_25px_90px_rgba(0,0,0,0.55)] sm:p-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-14">
+        <div className="grid gap-12 rounded-[32px] border border-slate-200 bg-slate-50/70 p-6 shadow-xl sm:p-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-14">
           {/* Left Column: Narrative + 3 Glowing Metric Cards */}
           <div className="space-y-7">
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
-              <Sparkles className="h-3.5 w-3.5 text-cyan-300" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
+              <Sparkles className="h-3.5 w-3.5 text-blue-600" />
               {eyebrow}
             </div>
 
-            <h2 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
               {title}
             </h2>
 
-            <p className="text-sm leading-7 text-slate-300 sm:text-base">
+            <p className="text-sm leading-7 text-slate-600 sm:text-base">
               {description}
             </p>
 
@@ -51,12 +51,12 @@ export function CaseStudySpotlight({
               {metrics.map((item) => (
                 <div
                   key={item.label}
-                  className="group rounded-[22px] border border-white/15 bg-gradient-to-br from-white/[0.06] to-white/[0.02] px-5 py-4 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:from-cyan-400/15 hover:to-cyan-400/5"
+                  className="group rounded-[22px] border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
                 >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400 transition duration-300 group-hover:text-cyan-300">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500 transition duration-300 group-hover:text-blue-600">
                     {item.label}
                   </p>
-                  <p className="mt-2 font-display text-2xl font-bold text-white transition duration-300 group-hover:text-cyan-300 sm:text-3xl">
+                  <p className="mt-2 font-display text-2xl font-bold text-slate-900 transition duration-300 group-hover:text-blue-600 sm:text-3xl">
                     {item.value}
                   </p>
                 </div>
@@ -70,7 +70,7 @@ export function CaseStudySpotlight({
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
                 data-cursor="VIEW LIVE"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan px-6 py-3 text-xs font-bold text-slate-950 shadow-lg transition-all hover:brightness-110 sm:text-sm"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 hover:bg-blue-700 px-6 py-3 text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all sm:text-sm"
               >
                 <span>{primaryLabel}</span>
                 {isExternal ? (
@@ -84,7 +84,7 @@ export function CaseStudySpotlight({
                 <Link
                   href={secondaryHref}
                   data-cursor="EXPLORE"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-semibold text-white transition-all hover:border-cyan-400/40 hover:bg-white/10 sm:text-sm"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-xs font-semibold text-slate-800 transition-all hover:bg-slate-50 sm:text-sm"
                 >
                   <span>{secondaryLabel}</span>
                   <ArrowUpRight className="h-4 w-4" />
@@ -95,18 +95,18 @@ export function CaseStudySpotlight({
 
           {/* Right Column: Interactive Grayscale-to-Color Reveal Preview */}
           <TiltCard cursorLabel="EXPLORE" className="rounded-[28px]">
-            <div className="group relative overflow-hidden rounded-[28px] border border-white/15 bg-slate-950 shadow-[0_25px_80px_rgba(0,0,0,0.6)] transition-all duration-300 hover:border-cyan-400/40">
+            <div className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-xl transition-all duration-300 hover:border-blue-300">
               {/* Top Browser Frame */}
-              <div className="flex items-center justify-between border-b border-white/10 bg-slate-900/90 px-4 py-3">
+              <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-4 py-3">
                 <div className="flex items-center gap-1.5">
-                  <span className="h-2.5 w-2.5 rounded-full bg-rose-500" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
                   <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
                 </div>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-0.5 text-[11px] text-slate-300">
+                <span className="rounded-full border border-slate-200 bg-white px-3 py-0.5 text-[11px] text-slate-600">
                   Hover to reveal live color preview
                 </span>
-                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
                   <CheckCircle2 className="h-3.5 w-3.5" />
                   Verified
                 </span>

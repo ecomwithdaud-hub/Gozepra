@@ -31,12 +31,12 @@ export function Logo({ className = "", textClassName = "", compact = false }) {
         </defs>
       </svg>
       <div className={cn("leading-none", textClassName)}>
-        <div className="font-display text-lg font-semibold tracking-[0.08em] text-white">
-          Zepra <span className="text-cyan-400">Tech</span>
+        <div className="font-display text-lg font-semibold tracking-[0.08em] text-slate-900">
+          Zepra <span className="text-blue-600">Tech</span>
         </div>
         <div
           className={cn(
-            "mt-1 text-slate-400",
+            "mt-1 text-slate-500",
             compact ? "text-[10px] tracking-[0.18em]" : "text-[11px] uppercase tracking-[0.22em]",
           )}
         >

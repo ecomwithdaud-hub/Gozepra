@@ -56,12 +56,12 @@ module.exports = {
           foreground: "hsl(var(--popover-foreground))",
         },
         brand: {
-          ink: "#07111f",
-          navy: "#0c2340",
-          blue: "#1277ff",
-          cyan: "#38c6ff",
-          mist: "#e8f0ff",
-          slate: "#6b7a90",
+          ink: "#0f172a",
+          navy: "#1e293b",
+          blue: "#2563eb",
+          cyan: "#0284c7",
+          mist: "#f8fafc",
+          slate: "#64748b",
         },
       },
       fontFamily: {
@@ -76,16 +76,16 @@ module.exports = {
       },
       boxShadow: {
         premium:
-          "0 20px 50px -24px rgba(9, 24, 44, 0.34), 0 20px 80px -40px rgba(18, 119, 255, 0.35)",
-        soft: "0 15px 45px -30px rgba(13, 25, 46, 0.22)",
-        glow: "0 0 0 1px rgba(255,255,255,0.1), 0 18px 60px -24px rgba(56, 198, 255, 0.4)",
-        cyanGlow: "0 0 25px rgba(56, 198, 255, 0.45), 0 0 50px rgba(18, 119, 255, 0.2)",
+          "0 20px 45px -20px rgba(15, 23, 42, 0.12), 0 10px 25px -10px rgba(37, 99, 235, 0.12)",
+        soft: "0 8px 30px -12px rgba(15, 23, 42, 0.08)",
+        glow: "0 0 0 1px rgba(15, 23, 42, 0.06), 0 12px 36px -12px rgba(37, 99, 235, 0.15)",
+        cyanGlow: "0 0 25px rgba(37, 99, 235, 0.2), 0 0 50px rgba(2, 132, 199, 0.1)",
       },
       backgroundImage: {
         "hero-grid":
-          "linear-gradient(to right, rgba(12,35,64,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(12,35,64,0.08) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px)",
         "brand-radial":
-          "radial-gradient(circle at top, rgba(18,119,255,0.18), transparent 42%), radial-gradient(circle at bottom right, rgba(56,198,255,0.16), transparent 38%)",
+          "radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 45%), radial-gradient(circle at bottom right, rgba(2, 132, 199, 0.06), transparent 40%)",
       },
       keyframes: {
         float: {

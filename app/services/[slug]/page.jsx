@@ -89,54 +89,54 @@ export default async function ServiceDetailPage({ params }) {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-slate-950 py-20 text-white sm:py-28">
+      <section className="relative isolate overflow-hidden bg-white py-20 text-slate-900 border-b border-slate-200 sm:py-28">
         <CyberCircuitBackground />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/15 blur-3xl"
+          className="pointer-events-none absolute -right-24 top-0 -z-10 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"
         />
         <div className="container relative z-10">
           <nav
             aria-label="Breadcrumb"
-            className="mb-8 flex items-center gap-2 text-sm text-slate-400"
+            className="mb-8 flex items-center gap-2 text-sm text-slate-500"
           >
             <Link
               href="/services"
-              className="transition-colors hover:text-cyan-300"
+              className="transition-colors hover:text-blue-600"
             >
               Services
             </Link>
             <ChevronRight aria-hidden="true" className="h-4 w-4" />
-            <span aria-current="page" className="text-slate-200">
+            <span aria-current="page" className="text-slate-900 font-medium">
               {service.title}
             </span>
           </nav>
 
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200">
+              <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-sm">
                 {Icon ? <Icon aria-hidden="true" className="h-7 w-7" /> : null}
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold text-cyan-300">
+              <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-700 shadow-sm">
                 <Cpu className="h-3.5 w-3.5" />
                 Engine: {enginePreview}
               </span>
             </div>
 
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
               Zepra Tech Services
             </p>
-            <h1 className="mt-3 font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
               {service.title}
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
               {service.fullDescription}
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/contact#contact"
                 data-cursor="LET'S GO"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-premium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-cyanGlow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-md shadow-blue-500/20 transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 Start Your Project
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
@@ -144,7 +144,7 @@ export default async function ServiceDetailPage({ params }) {
               <Link
                 href="/case-studies"
                 data-cursor="EXPLORE"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-cyan-400/40 hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-6 py-3 text-sm font-semibold text-slate-800 transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
               >
                 View Case Studies
               </Link>
@@ -154,24 +154,24 @@ export default async function ServiceDetailPage({ params }) {
       </section>
 
       {/* Use Cases vs Deliverables + Core Benefits */}
-      <section className="section-shell bg-slate-950 text-white border-t border-white/10">
+      <section className="section-shell bg-slate-50/70 text-slate-900 border-t border-slate-200">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2">
             <TiltCard className="rounded-3xl">
-              <div className="h-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 text-white shadow-soft backdrop-blur-md sm:p-8">
+              <div className="h-full rounded-3xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm backdrop-blur-md sm:p-8">
                 <p className="eyebrow">Use Cases & Capabilities</p>
-                <h2 className="mt-2 font-display text-2xl font-semibold text-white sm:text-3xl">
+                <h2 className="mt-2 font-display text-2xl font-semibold text-slate-900 sm:text-3xl">
                   When to choose our {service.title}
                 </h2>
                 <ul className="mt-6 space-y-4">
                   {service.features.map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-start gap-3 text-slate-300"
+                      className="flex items-start gap-3 text-slate-600"
                     >
                       <Check
                         aria-hidden="true"
-                        className="mt-0.5 h-5 w-5 shrink-0 text-cyan-400"
+                        className="mt-0.5 h-5 w-5 shrink-0 text-blue-600"
                       />
                       <span>{feature}</span>
                     </li>
@@ -181,22 +181,22 @@ export default async function ServiceDetailPage({ params }) {
             </TiltCard>
 
             <TiltCard className="rounded-3xl">
-              <div className="h-full rounded-3xl border border-white/10 bg-slate-900/80 p-6 text-white shadow-soft backdrop-blur-md sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+              <div className="h-full rounded-3xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm backdrop-blur-md sm:p-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
                   Production Deliverables
                 </p>
-                <h2 className="mt-2 font-display text-2xl font-semibold text-white sm:text-3xl">
+                <h2 className="mt-2 font-display text-2xl font-semibold text-slate-900 sm:text-3xl">
                   What you get on delivery
                 </h2>
                 <ul className="mt-6 space-y-3.5">
                   {service.deliverables.map((deliverable) => (
                     <li
                       key={deliverable}
-                      className="flex items-start gap-3 text-sm leading-6 text-slate-300"
+                      className="flex items-start gap-3 text-sm leading-6 text-slate-600"
                     >
                       <CheckCircle2
                         aria-hidden="true"
-                        className="mt-1 h-4 w-4 shrink-0 text-emerald-400"
+                        className="mt-1 h-4 w-4 shrink-0 text-emerald-600"
                       />
                       <span>{deliverable}</span>
                     </li>
@@ -207,18 +207,18 @@ export default async function ServiceDetailPage({ params }) {
           </div>
 
           {/* 8 Core Benefits Grid inspired by DevCrafter */}
-          <div className="mt-12 rounded-3xl border border-white/10 bg-slate-900/80 p-6 text-white shadow-soft backdrop-blur-md sm:p-8">
+          <div className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm backdrop-blur-md sm:p-8">
             <p className="eyebrow">Why Choose Zepra Tech</p>
-            <h3 className="mt-2 font-display text-2xl font-semibold text-white">
+            <h3 className="mt-2 font-display text-2xl font-semibold text-slate-900">
               Engineered for measurable business ROI
             </h3>
             <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {coreBenefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-slate-950/80 p-3.5 text-xs font-semibold text-slate-200 transition-colors hover:border-cyan-400/40 sm:text-sm"
+                  className="flex items-center gap-2.5 rounded-2xl border border-slate-200 bg-slate-50 p-3.5 text-xs font-semibold text-slate-700 transition-colors hover:border-blue-400 sm:text-sm"
                 >
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-cyan-400" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-blue-600" />
                   <span>{benefit}</span>
                 </div>
               ))}
@@ -238,19 +238,19 @@ export default async function ServiceDetailPage({ params }) {
         <InteractiveServiceDemos />
       ) : null}
 
-      <section className="section-shell bg-slate-950 text-white border-t border-white/10">
+      <section className="section-shell bg-white text-slate-900 border-t border-slate-200">
         <div className="container">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
             Technology & Tools
           </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold">
+          <h2 className="mt-3 font-display text-3xl font-semibold text-slate-900">
             Production Stack & Engineering Ecosystem
           </h2>
           <div className="mt-6 flex flex-wrap gap-3">
             {service.technologies.map((technology) => (
               <span
                 key={technology}
-                className="rounded-full border border-cyan-400/25 bg-white/[0.06] px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400 hover:bg-cyan-400/15"
+                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
               >
                 {technology}
               </span>
@@ -260,23 +260,23 @@ export default async function ServiceDetailPage({ params }) {
       </section>
 
       {/* 6-Step Engineering Methodology */}
-      <section className="section-shell bg-slate-950 text-white border-t border-white/10">
+      <section className="section-shell bg-slate-50/70 text-slate-900 border-t border-slate-200">
         <div className="container">
           <p className="eyebrow">Our Process</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold text-white">
+          <h2 className="mt-3 font-display text-3xl font-semibold text-slate-900">
             6-Step Methodology from Discovery to Scale
           </h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((step) => (
               <TiltCard key={step.number} className="rounded-2xl">
-                <article className="h-full rounded-2xl border border-white/10 bg-slate-900/80 p-6 text-white shadow-soft transition-all duration-300 hover:border-cyan-400/50 hover:bg-slate-900">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-500/10 font-mono text-xs font-bold text-cyan-300">
+                <article className="h-full rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm transition-all duration-300 hover:border-blue-400 hover:shadow-md">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 font-mono text-xs font-bold text-blue-700">
                     {step.number}
                   </span>
-                  <h3 className="mt-4 font-display text-lg font-semibold text-white">
+                  <h3 className="mt-4 font-display text-lg font-semibold text-slate-900">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
                     {step.description}
                   </p>
                 </article>

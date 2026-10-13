@@ -139,71 +139,71 @@ export function UsaDemoShowcase({
   return (
     <section
       id="usa-client-demos"
-      className="relative isolate scroll-mt-28 overflow-hidden bg-slate-950 py-14 text-white sm:py-20"
+      className="relative isolate scroll-mt-28 overflow-hidden bg-white border-b border-slate-200 py-14 text-slate-900 sm:py-20"
     >
       {/* Ambient Cyber Glows */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-12 -z-10 h-[460px] w-[460px] rounded-full bg-cyan-500/12 blur-[130px]"
+        className="pointer-events-none absolute -left-40 top-12 -z-10 h-[460px] w-[460px] rounded-full bg-blue-400/10 blur-[130px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 bottom-12 -z-10 h-[460px] w-[460px] rounded-full bg-blue-600/12 blur-[130px]"
+        className="pointer-events-none absolute -right-40 bottom-12 -z-10 h-[460px] w-[460px] rounded-full bg-indigo-300/10 blur-[130px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(56,198,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(56,198,255,0.04)_1px,transparent_1px)] bg-[size:64px_64px]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(37,99,235,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,99,235,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"
       />
 
       <div className="container relative z-10">
         {/* Header */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300 shadow-[0_0_25px_rgba(56,198,255,0.18)]">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
             {eyebrow}
           </div>
 
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
             {title}
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
             {description}
           </p>
 
           {/* Summary KPI Bar */}
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3.5 backdrop-blur-md">
-              <div className="font-display text-2xl font-bold text-cyan-300 sm:text-3xl">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5 shadow-sm">
+              <div className="font-display text-2xl font-bold text-blue-600 sm:text-3xl">
                 24
               </div>
-              <div className="mt-1 text-xs font-medium text-slate-300">
+              <div className="mt-1 text-xs font-medium text-slate-600">
                 Live USA Demo Websites
               </div>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3.5 backdrop-blur-md">
-              <div className="font-display text-2xl font-bold text-emerald-400 sm:text-3xl">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5 shadow-sm">
+              <div className="font-display text-2xl font-bold text-emerald-600 sm:text-3xl">
                 1.1s Avg
               </div>
-              <div className="mt-1 text-xs font-medium text-slate-300">
+              <div className="mt-1 text-xs font-medium text-slate-600">
                 Edge Load Performance
               </div>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3.5 backdrop-blur-md">
-              <div className="font-display text-2xl font-bold text-amber-300 sm:text-3xl">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5 shadow-sm">
+              <div className="font-display text-2xl font-bold text-amber-600 sm:text-3xl">
                 +53% Avg
               </div>
-              <div className="mt-1 text-xs font-medium text-slate-300">
+              <div className="mt-1 text-xs font-medium text-slate-600">
                 Lead Conversion Lift
               </div>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3.5 backdrop-blur-md">
-              <div className="font-display text-2xl font-bold text-sky-300 sm:text-3xl">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5 shadow-sm">
+              <div className="font-display text-2xl font-bold text-indigo-600 sm:text-3xl">
                 99/100
               </div>
-              <div className="mt-1 text-xs font-medium text-slate-300">
+              <div className="mt-1 text-xs font-medium text-slate-600">
                 Mobile UX & SEO Score
               </div>
             </div>
@@ -211,7 +211,7 @@ export function UsaDemoShowcase({
         </div>
 
         {/* Category Filter Pills & Search Bar */}
-        <div className="mt-10 flex flex-col gap-4 rounded-3xl border border-white/10 bg-slate-900/75 p-4 shadow-2xl backdrop-blur-xl lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-10 flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-wrap items-center gap-2">
             {usaDemoCategories.map((cat) => {
               const isActive = activeCategory === cat.id;
@@ -222,16 +222,16 @@ export function UsaDemoShowcase({
                   onClick={() => setActiveCategory(cat.id)}
                   className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold transition-all duration-300 sm:text-sm ${
                     isActive
-                      ? "bg-gradient-to-r from-brand-blue to-brand-cyan text-slate-950 shadow-[0_0_24px_rgba(56,198,255,0.4)]"
-                      : "border border-white/10 bg-white/[0.04] text-slate-300 hover:border-cyan-400/40 hover:bg-white/[0.08] hover:text-white"
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-500/20"
+                      : "border border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-300 hover:bg-slate-100"
                   }`}
                 >
                   <span>{cat.label}</span>
                   <span
                     className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${
                       isActive
-                        ? "bg-slate-950/20 text-slate-950"
-                        : "bg-white/10 text-cyan-300"
+                        ? "bg-white/20 text-white"
+                        : "bg-blue-50 text-blue-700"
                     }`}
                   >
                     {cat.count}
@@ -249,14 +249,14 @@ export function UsaDemoShowcase({
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search business, trade, or US city..."
               aria-label="Search demo websites"
-              className="w-full rounded-full border border-white/15 bg-slate-950/80 py-2.5 pl-10 pr-9 text-xs text-white placeholder:text-slate-400 focus:border-cyan-400 focus:outline-none sm:text-sm"
+              className="w-full rounded-full border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-9 text-xs text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none sm:text-sm"
             />
             {searchQuery ? (
               <button
                 type="button"
                 onClick={() => setSearchQuery("")}
                 aria-label="Clear search"
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -299,15 +299,15 @@ export function UsaDemoShowcase({
                   cursorLabel="EXPLORE"
                   className="rounded-[26px]"
                 >
-                  <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[26px] border border-white/12 bg-gradient-to-b from-[#0f1d35] via-[#0b1528] to-[#070d19] shadow-[0_22px_60px_rgba(0,0,0,0.45)] transition-all duration-300 hover:border-cyan-400/50 hover:shadow-[0_25px_70px_rgba(18,119,255,0.24)]">
+                  <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-md transition-all duration-300 hover:border-blue-400 hover:shadow-xl">
                     {/* Top Browser Mockup Frame + Live Screenshot Preview */}
                     <div>
                       {/* Browser Chrome Bar */}
-                      <div className="flex items-center justify-between gap-2 border-b border-white/10 bg-slate-950/90 px-4 py-2.5">
+                      <div className="flex items-center justify-between gap-2 border-b border-slate-100 bg-slate-50/90 px-4 py-2.5">
                         <div className="flex items-center gap-1.5">
-                          <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
-                          <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
-                          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
                         </div>
 
                         <a
@@ -315,21 +315,21 @@ export function UsaDemoShowcase({
                           target="_blank"
                           rel="noopener noreferrer"
                           data-cursor="VIEW LIVE"
-                          className="flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[11px] font-medium text-slate-300 transition-colors hover:border-cyan-400/40 hover:text-cyan-300"
+                          className="flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-medium text-slate-600 transition-colors hover:border-blue-300 hover:text-blue-600"
                           title={`Open ${project.domain} in new tab`}
                         >
-                          <Globe className="h-3 w-3 shrink-0 text-cyan-400" />
+                          <Globe className="h-3 w-3 shrink-0 text-blue-600" />
                           <span className="truncate">{project.domain}</span>
                         </a>
 
-                        <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
-                          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+                        <span className="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-700">
+                          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
                           Live
                         </span>
                       </div>
 
                       {/* Visual Screenshot Viewport */}
-                      <div className="relative h-56 w-full overflow-hidden bg-slate-950">
+                      <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                         <img
                           src={currentImage}
                           alt={`${project.name} - ${project.trade} website screenshot`}
@@ -339,22 +339,22 @@ export function UsaDemoShowcase({
                         />
 
                         {/* Simulated Website Hero Overlay for Realistic Client Pitch Look */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/55 to-slate-950/15" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent" />
 
                         <div className="absolute inset-x-4 top-3 flex items-center justify-between gap-2">
                           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-slate-950/75 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur-md">
-                            <Wrench className="h-3 w-3 text-cyan-300" />
+                            <Wrench className="h-3 w-3 text-blue-300" />
                             {project.trade}
                           </span>
                           <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-slate-950/75 px-3 py-1 text-[11px] font-medium text-slate-200 backdrop-blur-md">
-                            <MapPin className="h-3 w-3 text-amber-400" />
+                            <MapPin className="h-3 w-3 text-amber-300" />
                             {project.city}
                           </span>
                         </div>
 
                         {/* Simulated Live Hero Typography inside Screenshot */}
                         <div className="absolute inset-x-4 bottom-3">
-                          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-300">
+                          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300">
                             {project.group}
                           </div>
                           <div className="mt-0.5 line-clamp-1 font-display text-sm font-bold text-white drop-shadow">
@@ -368,7 +368,7 @@ export function UsaDemoShowcase({
                             type="button"
                             data-cursor="DETAIL"
                             onClick={() => setSelectedProject(project)}
-                            className="inline-flex items-center gap-1.5 rounded-full bg-cyan-400 px-4 py-2 text-xs font-bold text-slate-950 shadow-lg transition-transform hover:scale-105"
+                            className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-4 py-2 text-xs font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-blue-700"
                           >
                             <Eye className="h-3.5 w-3.5" />
                             Learn More & Preview
@@ -378,7 +378,7 @@ export function UsaDemoShowcase({
                             target="_blank"
                             rel="noopener noreferrer"
                             data-cursor="VIEW LIVE"
-                            className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-slate-900/90 px-4 py-2 text-xs font-bold text-white shadow-lg transition-transform hover:scale-105 hover:border-cyan-300"
+                            className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-slate-900/90 px-4 py-2 text-xs font-bold text-white shadow-lg transition-transform hover:scale-105 hover:border-blue-300"
                           >
                             New Tab
                             <ExternalLink className="h-3.5 w-3.5" />
@@ -388,8 +388,8 @@ export function UsaDemoShowcase({
 
                       {/* Multi-Screenshot Thumbnail Strip */}
                       {project.galleryImages?.length > 1 ? (
-                        <div className="flex items-center justify-between gap-2 border-b border-white/10 bg-slate-950/60 px-4 py-2">
-                          <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                        <div className="flex items-center justify-between gap-2 border-b border-slate-100 bg-slate-50 px-4 py-2">
+                          <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                             Site Visuals:
                           </span>
                           <div className="flex items-center gap-1.5">
@@ -402,8 +402,8 @@ export function UsaDemoShowcase({
                                 aria-label={`Preview screenshot ${idx + 1} for ${project.name}`}
                                 className={`relative h-7 w-11 overflow-hidden rounded-md border transition-all ${
                                   activeImgIdx === idx
-                                    ? "scale-105 border-cyan-400 ring-2 ring-cyan-400/40"
-                                    : "border-white/15 opacity-65 hover:opacity-100"
+                                    ? "scale-105 border-blue-600 ring-2 ring-blue-500/30"
+                                    : "border-slate-200 opacity-65 hover:opacity-100"
                                 }`}
                               >
                                 <img
@@ -422,42 +422,42 @@ export function UsaDemoShowcase({
                       <div className="p-5 sm:p-6">
                         <div className="flex items-start justify-between gap-3">
                           <div>
-                            <span className="text-[11px] font-semibold uppercase tracking-widest text-cyan-400">
+                            <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-600">
                               Project #{String(project.id).padStart(2, "0")} • Web Development
                             </span>
-                            <h3 className="mt-1 font-display text-xl font-bold text-white transition-colors group-hover:text-cyan-200">
+                            <h3 className="mt-1 font-display text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
                               {project.name}
                             </h3>
                           </div>
                         </div>
 
-                        <p className="mt-2.5 line-clamp-2 text-xs leading-6 text-slate-300 sm:text-sm">
+                        <p className="mt-2.5 line-clamp-2 text-xs leading-6 text-slate-600 sm:text-sm">
                           {project.subtitle}
                         </p>
 
                         {/* Dev Crafter-Inspired 3-Column Performance Metrics Strip */}
-                        <div className="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-slate-950/60 p-2.5">
+                        <div className="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-slate-100 bg-slate-50/80 p-2.5">
                           <div className="text-center">
-                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                               Load Speed
                             </div>
-                            <div className="mt-0.5 font-display text-sm font-bold text-cyan-300">
+                            <div className="mt-0.5 font-display text-sm font-bold text-blue-600">
                               {profile.speed}
                             </div>
                           </div>
-                          <div className="border-x border-white/10 text-center">
-                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                          <div className="border-x border-slate-200 text-center">
+                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                               Conversion
                             </div>
-                            <div className="mt-0.5 font-display text-sm font-bold text-emerald-400">
+                            <div className="mt-0.5 font-display text-sm font-bold text-emerald-600">
                               {profile.conversion}
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                               UX Score
                             </div>
-                            <div className="mt-0.5 font-display text-sm font-bold text-amber-300">
+                            <div className="mt-0.5 font-display text-sm font-bold text-amber-600">
                               {profile.satisfaction}
                             </div>
                           </div>
@@ -468,7 +468,7 @@ export function UsaDemoShowcase({
                           {profile.tech.map((techItem) => (
                             <span
                               key={techItem}
-                              className="rounded-md border border-cyan-400/20 bg-cyan-400/10 px-2 py-0.5 text-[10px] font-semibold text-cyan-200"
+                              className="rounded-md border border-blue-200 bg-blue-50 px-2 py-0.5 text-[10px] font-semibold text-blue-700"
                             >
                               {techItem}
                             </span>
@@ -480,22 +480,22 @@ export function UsaDemoShowcase({
                           {project.services.slice(0, 3).map((service) => (
                             <span
                               key={service}
-                              className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium text-slate-200"
+                              className="rounded-lg border border-slate-200 bg-slate-100/70 px-2.5 py-1 text-[11px] font-medium text-slate-700"
                             >
                               {service}
                             </span>
                           ))}
                           {project.services.length > 3 ? (
-                            <span className="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-1 text-[11px] font-semibold text-slate-300">
+                            <span className="rounded-lg border border-slate-200 bg-slate-100/70 px-2.5 py-1 text-[11px] font-semibold text-slate-700">
                               +{project.services.length - 3} more
                             </span>
                           ) : null}
                         </div>
 
                         {/* 1-Line Client Impact Quote */}
-                        <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] italic text-slate-300">
+                        <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 px-3 py-2 text-[11px] italic text-slate-600">
                           &ldquo;{profile.quote}&rdquo;{" "}
-                          <span className="not-italic font-semibold text-cyan-300">
+                          <span className="not-italic font-semibold text-blue-600">
                             — {profile.role}
                           </span>
                         </div>
@@ -503,12 +503,12 @@ export function UsaDemoShowcase({
                     </div>
 
                     {/* Dual Action Footer: Learn More (Modal) + View in New Tab */}
-                    <div className="grid grid-cols-2 gap-2.5 border-t border-white/10 bg-slate-950/50 p-4 sm:px-6">
+                    <div className="grid grid-cols-2 gap-2.5 border-t border-slate-100 bg-slate-50/60 p-4 sm:px-6">
                       <button
                         type="button"
                         data-cursor="DETAIL"
                         onClick={() => setSelectedProject(project)}
-                        className="inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-400/35 bg-cyan-400/10 px-3.5 py-2.5 text-xs font-semibold text-cyan-200 transition-all duration-200 hover:border-cyan-300 hover:bg-cyan-400/20 hover:text-white sm:text-sm"
+                        className="inline-flex items-center justify-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-3.5 py-2.5 text-xs font-semibold text-blue-700 transition-all duration-200 hover:border-blue-300 hover:bg-blue-100 sm:text-sm"
                       >
                         <Eye className="h-4 w-4 shrink-0" />
                         <span>Learn More</span>
@@ -519,7 +519,7 @@ export function UsaDemoShowcase({
                         target="_blank"
                         rel="noopener noreferrer"
                         data-cursor="VIEW LIVE"
-                        className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan px-3.5 py-2.5 text-xs font-semibold text-slate-950 shadow-md transition-all duration-200 hover:brightness-110 sm:text-sm"
+                        className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-700 px-3.5 py-2.5 text-xs font-semibold text-white shadow-md shadow-blue-500/20 transition-all duration-200 sm:text-sm"
                       >
                         <span>View in New Tab</span>
                         <ExternalLink className="h-4 w-4 shrink-0" />
@@ -615,32 +615,32 @@ function ProjectDetailModal({ project, onClose }) {
       onClick={onClose}
     >
       <div
-        className="relative flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-[28px] border border-cyan-400/30 bg-[#081121] text-white shadow-[0_30px_100px_rgba(0,0,0,0.8)]"
+        className="relative flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-[28px] border border-slate-200 bg-white text-slate-900 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Top Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 bg-slate-950/90 px-5 py-4 sm:px-7">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 bg-slate-50 px-5 py-4 sm:px-7">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 font-display text-sm font-bold text-cyan-300">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 font-display text-sm font-bold text-blue-700">
               #{String(project.id).padStart(2, "0")}
             </span>
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <h3
                   id="modal-project-title"
-                  className="font-display text-lg font-bold text-white sm:text-2xl"
+                  className="font-display text-lg font-bold text-slate-900 sm:text-2xl"
                 >
                   {project.name}
                 </h3>
-                <Badge className="border border-cyan-400/30 bg-cyan-500/20 text-cyan-300">
+                <Badge className="border border-blue-200 bg-blue-50 text-blue-700">
                   {project.trade}
                 </Badge>
-                <span className="inline-flex items-center gap-1 text-xs font-medium text-amber-300">
+                <span className="inline-flex items-center gap-1 text-xs font-medium text-amber-600">
                   <MapPin className="h-3.5 w-3.5" />
                   {project.city}
                 </span>
               </div>
-              <p className="mt-0.5 text-xs text-slate-400">
+              <p className="mt-0.5 text-xs text-slate-500">
                 Category: Website Development • {project.group} • {project.domain}
               </p>
             </div>
@@ -648,14 +648,14 @@ function ProjectDetailModal({ project, onClose }) {
 
           <div className="flex flex-wrap items-center gap-2.5">
             {/* Mode Switcher */}
-            <div className="inline-flex rounded-full border border-white/10 bg-slate-900 p-1">
+            <div className="inline-flex rounded-full border border-slate-200 bg-slate-100 p-1">
               <button
                 type="button"
                 onClick={() => setActiveTab("overview")}
                 className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all ${
                   activeTab === "overview"
-                    ? "bg-cyan-400 text-slate-950 shadow"
-                    : "text-slate-300 hover:text-white"
+                    ? "bg-white text-blue-600 shadow-sm"
+                    : "text-slate-600 hover:text-slate-900"
                 }`}
               >
                 Screenshots & Details
@@ -665,11 +665,11 @@ function ProjectDetailModal({ project, onClose }) {
                 onClick={() => setActiveTab("live")}
                 className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all ${
                   activeTab === "live"
-                    ? "bg-cyan-400 text-slate-950 shadow"
-                    : "text-slate-300 hover:text-white"
+                    ? "bg-white text-blue-600 shadow-sm"
+                    : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
                 Interactive Live Preview
               </button>
             </div>
@@ -678,7 +678,7 @@ function ProjectDetailModal({ project, onClose }) {
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan px-4 py-2 text-xs font-bold text-slate-950 shadow hover:brightness-110"
+              className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 hover:bg-blue-700 px-4 py-2 text-xs font-bold text-white shadow-sm"
             >
               <span>Open in New Tab</span>
               <ExternalLink className="h-3.5 w-3.5" />
@@ -688,7 +688,7 @@ function ProjectDetailModal({ project, onClose }) {
               type="button"
               onClick={onClose}
               aria-label="Close modal"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-300 transition-colors hover:border-white/30 hover:bg-white/10 hover:text-white"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-600 transition-colors hover:border-slate-300 hover:bg-slate-200 hover:text-slate-900"
             >
               <X className="h-4 w-4" />
             </button>
@@ -701,20 +701,20 @@ function ProjectDetailModal({ project, onClose }) {
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
               {/* Left Column: Visual Gallery */}
               <div className="space-y-4">
-                <div className="overflow-hidden rounded-2xl border border-white/15 bg-slate-950 shadow-2xl">
-                  <div className="flex items-center justify-between border-b border-white/10 bg-slate-900/90 px-4 py-2.5">
+                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
+                  <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-4 py-2.5">
                     <div className="flex items-center gap-1.5">
-                      <span className="h-2.5 w-2.5 rounded-full bg-rose-500" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
                       <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
                       <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
                     </div>
-                    <span className="text-xs font-medium text-slate-300">
+                    <span className="text-xs font-medium text-slate-600">
                       https://{project.domain}
                     </span>
                     <button
                       type="button"
                       onClick={() => setActiveTab("live")}
-                      className="text-xs font-semibold text-cyan-300 hover:underline"
+                      className="text-xs font-semibold text-blue-600 hover:underline"
                     >
                       Switch to Live Site &rarr;
                     </button>
@@ -726,7 +726,7 @@ function ProjectDetailModal({ project, onClose }) {
                       alt={project.name}
                       className="h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                     <div className="absolute inset-x-6 bottom-5">
                       <span className="inline-block rounded-full border border-amber-400/40 bg-amber-500/20 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-amber-300 backdrop-blur-sm">
                         {project.city} • {project.trade}
@@ -741,13 +741,13 @@ function ProjectDetailModal({ project, onClose }) {
                 {/* 4-Image Gallery Selector */}
                 <div>
                   <div className="mb-2 flex items-center justify-between">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                       Captured Visuals from {project.name} ({project.galleryImages?.length || 1} Images)
                     </span>
                     <button
                       type="button"
                       onClick={() => setActiveTab("live")}
-                      className="text-xs font-semibold text-cyan-400 hover:text-cyan-300"
+                      className="text-xs font-semibold text-blue-600 hover:text-blue-700"
                     >
                       Launch Interactive Live View
                     </button>
@@ -760,8 +760,8 @@ function ProjectDetailModal({ project, onClose }) {
                         onClick={() => setSelectedImage(img)}
                         className={`group relative h-20 overflow-hidden rounded-xl border transition-all ${
                           selectedImage === img
-                            ? "border-cyan-400 ring-2 ring-cyan-400/40"
-                            : "border-white/10 opacity-70 hover:opacity-100"
+                            ? "border-blue-600 ring-2 ring-blue-500/30"
+                            : "border-slate-200 opacity-70 hover:opacity-100"
                         }`}
                       >
                         <img
@@ -780,42 +780,42 @@ function ProjectDetailModal({ project, onClose }) {
                 <div className="space-y-5">
                   {/* Verified Performance Metrics Grid */}
                   <div className="grid grid-cols-3 gap-3">
-                    <div className="rounded-2xl border border-cyan-400/25 bg-cyan-400/10 p-3.5 text-center">
-                      <div className="text-[11px] font-semibold uppercase tracking-wider text-cyan-200">
+                    <div className="rounded-2xl border border-blue-200 bg-blue-50/80 p-3.5 text-center">
+                      <div className="text-[11px] font-semibold uppercase tracking-wider text-blue-700">
                         Load Speed
                       </div>
-                      <div className="mt-1 font-display text-2xl font-bold text-white">
+                      <div className="mt-1 font-display text-2xl font-bold text-slate-900">
                         {profile.speed}
                       </div>
                     </div>
-                    <div className="rounded-2xl border border-emerald-400/25 bg-emerald-400/10 p-3.5 text-center">
-                      <div className="text-[11px] font-semibold uppercase tracking-wider text-emerald-200">
+                    <div className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-3.5 text-center">
+                      <div className="text-[11px] font-semibold uppercase tracking-wider text-emerald-700">
                         Conversion
                       </div>
-                      <div className="mt-1 font-display text-2xl font-bold text-emerald-300">
+                      <div className="mt-1 font-display text-2xl font-bold text-emerald-600">
                         {profile.conversion}
                       </div>
                     </div>
-                    <div className="rounded-2xl border border-amber-400/25 bg-amber-400/10 p-3.5 text-center">
-                      <div className="text-[11px] font-semibold uppercase tracking-wider text-amber-200">
+                    <div className="rounded-2xl border border-amber-200 bg-amber-50/80 p-3.5 text-center">
+                      <div className="text-[11px] font-semibold uppercase tracking-wider text-amber-700">
                         Satisfaction
                       </div>
-                      <div className="mt-1 font-display text-2xl font-bold text-amber-300">
+                      <div className="mt-1 font-display text-2xl font-bold text-amber-600">
                         {profile.satisfaction}
                       </div>
                     </div>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                    <div className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5">
+                    <div className="text-xs font-semibold uppercase tracking-widest text-blue-600">
                       Project Positioning & Pitch Summary
                     </div>
-                    <p className="mt-2.5 text-sm leading-7 text-slate-200">
+                    <p className="mt-2.5 text-sm leading-7 text-slate-600">
                       {project.subtitle}
                     </p>
-                    <div className="mt-3 border-t border-white/10 pt-3 text-xs italic text-slate-300">
+                    <div className="mt-3 border-t border-slate-200 pt-3 text-xs italic text-slate-600">
                       &ldquo;{profile.quote}&rdquo;{" "}
-                      <span className="not-italic font-semibold text-cyan-300">
+                      <span className="not-italic font-semibold text-blue-600">
                         — {profile.role}
                       </span>
                     </div>
@@ -823,16 +823,16 @@ function ProjectDetailModal({ project, onClose }) {
 
                   {/* Conversion & UX Highlights */}
                   <div>
-                    <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+                    <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500">
                       Conversion & Engineering Highlights
                     </h4>
                     <ul className="mt-3 space-y-2.5">
                       {(project.highlights || []).map((item) => (
                         <li
                           key={item}
-                          className="flex items-start gap-2.5 text-sm text-slate-200"
+                          className="flex items-start gap-2.5 text-sm text-slate-600"
                         >
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -841,14 +841,14 @@ function ProjectDetailModal({ project, onClose }) {
 
                   {/* Included Service Modules & Tech Stack */}
                   <div>
-                    <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+                    <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500">
                       Dedicated Service Sections & Tech Stack
                     </h4>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {profile.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-xl border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200"
+                          className="rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700"
                         >
                           {tech}
                         </span>
@@ -856,7 +856,7 @@ function ProjectDetailModal({ project, onClose }) {
                       {project.services.map((service) => (
                         <span
                           key={service}
-                          className="rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-200"
+                          className="rounded-xl border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700"
                         >
                           {service}
                         </span>
@@ -866,13 +866,13 @@ function ProjectDetailModal({ project, onClose }) {
                 </div>
 
                 {/* Modal Action Buttons */}
-                <div className="space-y-3 border-t border-white/10 pt-5">
+                <div className="space-y-3 border-t border-slate-200 pt-5">
                   <div className="grid gap-3 sm:grid-cols-2">
                     <a
                       href={project.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan px-5 py-3.5 text-sm font-bold text-slate-950 shadow-lg transition-all hover:brightness-110"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-700 px-5 py-3.5 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all"
                     >
                       <span>View Live in New Tab</span>
                       <ExternalLink className="h-4 w-4" />
@@ -880,7 +880,7 @@ function ProjectDetailModal({ project, onClose }) {
                     <Link
                       href="/contact"
                       onClick={onClose}
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white transition-all hover:border-cyan-400/50 hover:bg-white/10"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 px-5 py-3.5 text-sm font-semibold text-slate-700 transition-all hover:border-slate-300 hover:text-slate-900"
                     >
                       <span>Request Similar Website</span>
                       <ArrowUpRight className="h-4 w-4" />
@@ -892,9 +892,9 @@ function ProjectDetailModal({ project, onClose }) {
           ) : (
             /* Live Interactive Iframe Preview Tab */
             <div className="space-y-4">
-              <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-slate-900/90 px-4 py-2.5">
-                <div className="flex items-center gap-2 text-xs text-slate-300">
-                  <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+              <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2.5">
+                <div className="flex items-center gap-2 text-xs text-slate-600">
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
                   <span>
                     Interacting live with <strong>{project.domain}</strong>
                   </span>
@@ -906,8 +906,8 @@ function ProjectDetailModal({ project, onClose }) {
                     onClick={() => setViewport("desktop")}
                     className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold ${
                       viewport === "desktop"
-                        ? "bg-cyan-400 text-slate-950"
-                        : "text-slate-300 hover:bg-white/10"
+                        ? "bg-blue-600 text-white"
+                        : "text-slate-600 hover:bg-slate-200"
                     }`}
                   >
                     <Laptop className="h-3.5 w-3.5" />
@@ -918,8 +918,8 @@ function ProjectDetailModal({ project, onClose }) {
                     onClick={() => setViewport("tablet")}
                     className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold ${
                       viewport === "tablet"
-                        ? "bg-cyan-400 text-slate-950"
-                        : "text-slate-300 hover:bg-white/10"
+                        ? "bg-blue-600 text-white"
+                        : "text-slate-600 hover:bg-slate-200"
                     }`}
                   >
                     <Tablet className="h-3.5 w-3.5" />
@@ -930,8 +930,8 @@ function ProjectDetailModal({ project, onClose }) {
                     onClick={() => setViewport("mobile")}
                     className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold ${
                       viewport === "mobile"
-                        ? "bg-cyan-400 text-slate-950"
-                        : "text-slate-300 hover:bg-white/10"
+                        ? "bg-blue-600 text-white"
+                        : "text-slate-600 hover:bg-slate-200"
                     }`}
                   >
                     <Smartphone className="h-3.5 w-3.5" />
@@ -940,7 +940,7 @@ function ProjectDetailModal({ project, onClose }) {
                 </div>
               </div>
 
-              <div className="flex justify-center overflow-hidden rounded-2xl border border-white/15 bg-slate-950 p-2">
+              <div className="flex justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 p-2">
                 <iframe
                   src={project.href}
                   title={`${project.name} Live Website Preview`}

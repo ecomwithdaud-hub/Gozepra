@@ -278,47 +278,47 @@ export function HumanBusinessBridge() {
   const [mode, setMode] = useState("plain"); // 'plain' or 'technical'
 
   return (
-    <section className="relative overflow-hidden bg-[#030712] py-12 text-white sm:py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-slate-50 py-12 text-slate-900 border-t border-slate-200 sm:py-20 lg:py-28">
       {/* Ambient background glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
-        <div className="absolute left-1/2 top-0 h-[450px] w-[700px] -translate-x-1/2 rounded-full bg-gradient-to-b from-cyan-500/15 via-blue-500/5 to-transparent blur-[140px]" />
-        <div className="absolute right-0 top-1/3 h-[400px] w-[400px] rounded-full bg-emerald-500/10 blur-[130px]" />
+        <div className="absolute left-1/2 top-0 h-[450px] w-[700px] -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-500/10 via-indigo-500/5 to-transparent blur-[140px]" />
+        <div className="absolute right-0 top-1/3 h-[400px] w-[400px] rounded-full bg-emerald-500/5 blur-[130px]" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header: Plain English Promise */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-300 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.25em]">
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-50 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-700 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.25em]">
             <Sparkles className="h-3.5 w-3.5" />
             Simple & Transparent For Business Owners
           </div>
 
-          <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-white sm:mt-5 sm:text-5xl sm:leading-tight">
+          <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-slate-900 sm:mt-5 sm:text-5xl sm:leading-tight">
             No Tech Jargon. Just{" "}
-            <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent">
               Real Results For Your Business.
             </span>
           </h2>
 
-          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-300 line-clamp-3 sm:mt-4 sm:text-lg sm:line-clamp-none">
+          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-600 line-clamp-3 sm:mt-4 sm:text-lg sm:line-clamp-none">
             Whether you run a roofing company, a dental clinic, a textile factory, or an online boutique—you do not need to understand coding or artificial intelligence.{" "}
-            <span className="font-semibold text-white">
+            <span className="font-semibold text-slate-900">
               Under the supervision of Mr. Daud Lashari and our specialized team
             </span>
             , we build your website, bring you customers, and handle all the technology from A to Z.
           </p>
 
           {/* Mode Switcher Pill */}
-          <div className="mt-5 inline-flex items-center rounded-full border border-white/15 bg-slate-900/90 p-1 shadow-xl backdrop-blur-xl sm:mt-7 sm:p-1.5">
+          <div className="mt-5 inline-flex items-center rounded-full border border-slate-200 bg-white p-1 shadow-md backdrop-blur-xl sm:mt-7 sm:p-1.5">
             <button
               onClick={() => setMode("plain")}
               className={`flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] font-bold transition-all sm:gap-2 sm:px-5 sm:py-2 sm:text-sm ${
                 mode === "plain"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-md"
-                  : "text-slate-300 hover:text-white"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <span>💡 Plain English (For Business Owners)</span>
@@ -327,8 +327,8 @@ export function HumanBusinessBridge() {
               onClick={() => setMode("technical")}
               className={`flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] font-bold transition-all sm:gap-2 sm:px-5 sm:py-2 sm:text-sm ${
                 mode === "technical"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-md"
-                  : "text-slate-300 hover:text-white"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <span>⚡ Deep Tech & Architecture (For CTOs)</span>
@@ -339,17 +339,17 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         {/* INTERACTIVE INDUSTRY MATCH MAKER */}
         {/* ============================================================== */}
-        <div className="mt-8 rounded-2xl border border-white/12 bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-4 backdrop-blur-xl sm:mt-16 sm:rounded-3xl sm:p-10">
-          <div className="flex flex-col items-start justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-center">
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:mt-16 sm:rounded-3xl sm:p-10">
+          <div className="flex flex-col items-start justify-between gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-center">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
                 Step 1: Choose Your Business Type
               </p>
-              <h3 className="mt-1 font-display text-xl font-bold text-white sm:text-2xl">
+              <h3 className="mt-1 font-display text-xl font-bold text-slate-900 sm:text-2xl">
                 See Exactly What We Build For Your Industry
               </h3>
             </div>
-            <span className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-xs font-medium text-slate-300">
+            <span className="rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1 text-xs font-medium text-slate-600">
               Click any industry to see live solutions
             </span>
           </div>
@@ -366,23 +366,23 @@ export function HumanBusinessBridge() {
                   onClick={() => setSelectedIndustry(ind)}
                   className={`group relative flex w-full min-w-0 flex-col items-center justify-center rounded-2xl border p-3 text-center transition-all !whitespace-normal sm:p-4 ${
                     isSelected
-                      ? "border-cyan-400 bg-cyan-400/15 shadow-[0_0_25px_rgba(56,198,255,0.25)] ring-1 ring-cyan-400/40"
-                      : "border-white/10 bg-slate-950/70 hover:border-white/25 hover:bg-white/[0.04]"
+                      ? "border-blue-600 bg-blue-50/80 shadow-sm ring-1 ring-blue-500/30"
+                      : "border-slate-200 bg-slate-50/80 hover:border-slate-300 hover:bg-slate-100/70"
                   }`}
                 >
                   <span
                     className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-colors ${
                       isSelected
-                        ? "bg-cyan-400 text-slate-950 shadow-md"
-                        : "bg-white/5 text-slate-300 group-hover:text-cyan-300"
+                        ? "bg-blue-600 text-white shadow-sm"
+                        : "bg-white text-slate-600 group-hover:text-blue-600"
                     }`}
                   >
                     <Icon className="h-5 w-5 shrink-0" />
                   </span>
-                  <span className="mt-2.5 block w-full !whitespace-normal break-words text-center text-xs font-bold leading-snug text-white sm:text-sm">
+                  <span className="mt-2.5 block w-full !whitespace-normal break-words text-center text-xs font-bold leading-snug text-slate-900 sm:text-sm">
                     {ind.shortTitle || ind.name}
                   </span>
-                  <span className="mt-1 hidden w-full !whitespace-normal text-center text-[10px] font-medium leading-tight text-slate-400 lg:block">
+                  <span className="mt-1 hidden w-full !whitespace-normal text-center text-[10px] font-medium leading-tight text-slate-500 lg:block">
                     {ind.microTag}
                   </span>
                 </button>
@@ -391,35 +391,35 @@ export function HumanBusinessBridge() {
           </div>
 
           {/* Active Industry Detail Showcase */}
-          <div className="mt-8 rounded-2xl border border-white/15 bg-slate-950/80 p-6 sm:p-8">
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50/60 p-6 sm:p-8">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
               {/* Left Column: Clear Explanation & Deliverables */}
               <div className="lg:col-span-7">
-                <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-xs font-bold text-cyan-300">
-                  <span className="text-white font-extrabold">{selectedIndustry.name}</span>
-                  <span className="text-cyan-400/60">•</span>
+                <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold text-blue-700">
+                  <span className="text-slate-900 font-extrabold">{selectedIndustry.name}</span>
+                  <span className="text-blue-400">•</span>
                   <span>{selectedIndustry.badge}</span>
                 </div>
 
-                <h4 className="mt-4 font-display text-2xl font-bold text-white sm:text-3xl">
+                <h4 className="mt-4 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
                   {selectedIndustry.headline}
                 </h4>
 
-                <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
                   {selectedIndustry.plainExplanation}
                 </p>
 
                 <div className="mt-6 space-y-2.5">
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
                     What we build & set up for you:
                   </p>
                   <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                     {selectedIndustry.whatWeDeliver.map((item, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-2.5 rounded-xl border border-white/8 bg-white/[0.03] p-3 text-xs font-medium text-slate-200 sm:text-sm"
+                        className="flex items-start gap-2.5 rounded-xl border border-slate-200 bg-white p-3 text-xs font-medium text-slate-800 sm:text-sm"
                       >
-                        <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
+                        <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -429,15 +429,15 @@ export function HumanBusinessBridge() {
 
               {/* Right Column: Live Demos & Fast Action */}
               <div className="lg:col-span-5">
-                <div className="rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-[#0a1428] via-[#050c18] to-slate-950 p-6 shadow-xl">
+                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+                    <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
                       Ready-To-Inspect Live Demos
                     </span>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                   </div>
 
-                  <p className="mt-2 text-xs text-slate-300">
+                  <p className="mt-2 text-xs text-slate-600">
                     See working examples we engineered for this exact industry:
                   </p>
 
@@ -448,25 +448,25 @@ export function HumanBusinessBridge() {
                         href={demo.demoUrl}
                         target={demo.demoUrl.startsWith("http") ? "_blank" : "_self"}
                         rel="noreferrer"
-                        className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-3.5 transition-all hover:border-cyan-400 hover:bg-cyan-400/10"
+                        className="group flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 p-3.5 transition-all hover:border-blue-300 hover:bg-blue-50/50"
                       >
-                        <span className="text-xs font-semibold text-white group-hover:text-cyan-300 sm:text-sm">
+                        <span className="text-xs font-semibold text-slate-800 group-hover:text-blue-600 sm:text-sm">
                           {demo.name}
                         </span>
-                        <ArrowUpRight className="h-4 w-4 text-cyan-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        <ArrowUpRight className="h-4 w-4 text-blue-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </a>
                     ))}
                   </div>
 
-                  <div className="mt-6 border-t border-white/10 pt-5 text-center">
+                  <div className="mt-6 border-t border-slate-200 pt-5 text-center">
                     <Link
                       href="/contact"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 py-3 text-xs font-extrabold uppercase tracking-wider text-slate-950 transition-all hover:scale-[1.02] shadow-lg"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-xs font-extrabold uppercase tracking-wider text-white shadow-soft transition-all hover:bg-blue-700"
                     >
                       <span>Get a Website Like This For Your Business</span>
                       <ArrowRight className="h-4 w-4" />
                     </Link>
-                    <p className="mt-2 text-[11px] text-slate-400">
+                    <p className="mt-2 text-[11px] text-slate-500">
                       Free consultation • Direct chat with Mr. Daud Lashari & team
                     </p>
                   </div>
@@ -481,13 +481,13 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         <div className="mt-10 sm:mt-24">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
               Everything Under One Roof
             </p>
-            <h3 className="mt-2 font-display text-2xl font-black text-white sm:text-4xl">
+            <h3 className="mt-2 font-display text-2xl font-black text-slate-900 sm:text-4xl">
               What We Actually Solve For You
             </h3>
-            <p className="mt-2 text-xs text-slate-300 sm:mt-3 sm:text-base">
+            <p className="mt-2 text-xs text-slate-600 sm:mt-3 sm:text-base">
               You don’t need 5 different agencies for websites, ads, and support. We provide complete turnkey execution.
             </p>
           </div>
@@ -498,30 +498,30 @@ export function HumanBusinessBridge() {
               return (
                 <div key={sol.number} className={solIdx >= 3 ? "hidden md:block" : ""}>
                   <TiltCard cursorLabel="VIEW" className="rounded-2xl sm:rounded-3xl">
-                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-white/12 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-5 transition-all hover:border-cyan-400/50 sm:rounded-3xl sm:p-7">
+                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-blue-300 hover:shadow-soft sm:rounded-3xl sm:p-7">
                       <div>
                         <div className="flex items-center justify-between">
-                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 sm:h-12 sm:w-12 sm:rounded-2xl">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-blue-600 sm:h-12 sm:w-12 sm:rounded-2xl">
                             <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                           </span>
-                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-slate-500 sm:text-xs">
+                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-slate-400 sm:text-xs">
                             {sol.number} // SERVICE
                           </span>
                         </div>
 
                         <div className="mt-4 sm:mt-5">
-                          <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[10px] font-bold text-cyan-300 sm:px-3 sm:text-[11px]">
+                          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-blue-700 sm:px-3 sm:text-[11px]">
                             {sol.badge}
                           </span>
-                          <h4 className="mt-2 font-display text-lg font-bold text-white group-hover:text-cyan-300 sm:text-xl">
+                          <h4 className="mt-2 font-display text-lg font-bold text-slate-900 group-hover:text-blue-600 sm:text-xl">
                             {sol.title}
                           </h4>
-                          <p className="text-xs font-semibold text-slate-400">
+                          <p className="text-xs font-semibold text-slate-500">
                             {sol.subtitle}
                           </p>
                         </div>
 
-                        <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:mt-4 sm:text-sm">
+                        <p className="mt-3 text-xs leading-relaxed text-slate-600 sm:mt-4 sm:text-sm">
                           {sol.description}
                         </p>
 
@@ -529,16 +529,16 @@ export function HumanBusinessBridge() {
                           {sol.bullets.map((b, bIdx) => (
                             <li
                               key={bIdx}
-                              className={`flex items-center gap-2 text-xs font-medium text-slate-300 ${bIdx >= 2 ? "hidden sm:flex" : "flex"}`}
+                              className={`flex items-center gap-2 text-xs font-medium text-slate-700 ${bIdx >= 2 ? "hidden sm:flex" : "flex"}`}
                             >
-                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
+                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
                               <span>{b}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="mt-5 border-t border-white/10 pt-3.5 flex items-center justify-between text-xs font-bold text-cyan-300 sm:mt-6 sm:pt-4">
+                      <div className="mt-5 border-t border-slate-200 pt-3.5 flex items-center justify-between text-xs font-bold text-blue-600 sm:mt-6 sm:pt-4">
                         <span>100% Done-For-You Delivery</span>
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </div>
@@ -553,16 +553,16 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         {/* 3-STEP "HOW IT WORKS" ROADMAP (DISPELLING TECH FEAR) */}
         {/* ============================================================== */}
-        <div className="mt-10 rounded-2xl border border-white/12 bg-gradient-to-b from-[#060c1c] via-[#040814] to-slate-950 p-6 sm:mt-24 sm:rounded-3xl sm:p-12">
+        <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-24 sm:rounded-3xl sm:p-12">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-cyan-300">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-blue-700">
               <Clock className="h-3.5 w-3.5" />
               Painless Client Journey
             </span>
-            <h3 className="mt-4 font-display text-3xl font-black text-white sm:text-4xl">
+            <h3 className="mt-4 font-display text-3xl font-black text-slate-900 sm:text-4xl">
               How Easy It Is To Work With Us
             </h3>
-            <p className="mt-3 text-sm text-slate-300 sm:text-base">
+            <p className="mt-3 text-sm text-slate-600 sm:text-base">
               No technical expertise needed on your end. We handle the heavy lifting while you keep running your business.
             </p>
           </div>
@@ -573,21 +573,21 @@ export function HumanBusinessBridge() {
               return (
                 <div
                   key={s.step}
-                  className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md transition-all hover:border-cyan-400/40"
+                  className="relative rounded-2xl border border-slate-200 bg-slate-50/60 p-6 backdrop-blur-md transition-all hover:border-blue-300"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 font-bold">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 border border-blue-200 font-bold">
                       {s.step}
                     </span>
-                    <span className="rounded-full bg-white/5 px-2.5 py-1 text-[11px] font-bold text-slate-400">
+                    <span className="rounded-full bg-white border border-slate-200 px-2.5 py-1 text-[11px] font-bold text-slate-600">
                       {s.duration}
                     </span>
                   </div>
 
-                  <h4 className="mt-4 font-display text-lg font-bold text-white">
+                  <h4 className="mt-4 font-display text-lg font-bold text-slate-900">
                     {s.title}
                   </h4>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:text-sm">
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
                     {s.description}
                   </p>
                 </div>
@@ -596,19 +596,19 @@ export function HumanBusinessBridge() {
           </div>
 
           {/* Leadership & Standards Reassurance Banner */}
-          <div className="mt-12 rounded-2xl border border-emerald-400/30 bg-gradient-to-r from-emerald-950/40 via-cyan-950/30 to-slate-950 p-6 sm:p-8">
+          <div className="mt-12 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-6 sm:p-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
               <div>
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="h-5 w-5 text-emerald-400" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                  <ShieldCheck className="h-5 w-5 text-emerald-600" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
                     Our Standards & Written Guarantees
                   </span>
                 </div>
-                <h4 className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">
+                <h4 className="mt-2 font-display text-xl font-bold text-slate-900 sm:text-2xl">
                   Under Direct Supervision of Mr. Daud Lashari & Core Engineering Leads
                 </h4>
-                <p className="mt-2 max-w-2xl text-xs leading-relaxed text-slate-300 sm:text-sm">
+                <p className="mt-2 max-w-2xl text-xs leading-relaxed text-slate-600 sm:text-sm">
                   Every project is assigned a dedicated project manager and personally reviewed by Mr. Daud Lashari before launch. You get 100% source code ownership, zero hidden fees, and lifetime peace of mind.
                 </p>
               </div>
@@ -616,14 +616,14 @@ export function HumanBusinessBridge() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-400 px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-950 transition-all hover:bg-emerald-300 shadow-lg"
+                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-soft transition-all hover:bg-emerald-700"
                 >
                   <MessageCircle className="h-4 w-4" />
                   <span>Chat With Mr. Daud Lashari</span>
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 transition-all hover:bg-slate-50"
                 >
                   <span>Read Our Standards</span>
                   <ArrowRight className="h-4 w-4" />

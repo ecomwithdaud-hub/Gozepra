@@ -18,21 +18,21 @@ export default function ServicesPage() {
       <PricingTiers />
 
       {/* Scope, Compute & ROI Calculator Link Banner */}
-      <section className="border-t border-white/10 bg-[#060c1d] py-14">
+      <section className="border-t border-slate-200 bg-slate-50 py-14">
         <div className="container mx-auto max-w-5xl px-4 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
             Dedicated Pricing &amp; Timeline Calculator
           </p>
-          <h2 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
             Estimate Your Custom Platform Scope &amp; Compute Budget
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300">
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600">
             Visit our dedicated interactive engineering budget tool to configure platforms, custom features, timeline speeds, and estimated ROI with fixed sprint pricing.
           </p>
           <div className="mt-6">
             <Link
               href="/roi-estimator"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-lg hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-blue-500/20 hover:bg-blue-700 hover:scale-105 transition-all"
             >
               <span>Open Dedicated ROI &amp; Compute Calculator</span>
               <ArrowRight className="h-4 w-4" />

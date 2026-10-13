@@ -57,7 +57,7 @@ export function HeroParticles() {
 
         context.beginPath();
         context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        context.fillStyle = "rgba(18, 119, 255, 0.45)";
+        context.fillStyle = "rgba(37, 99, 235, 0.35)";
         context.fill();
 
         for (let otherIndex = index + 1; otherIndex < particles.length; otherIndex += 1) {
@@ -70,7 +70,7 @@ export function HeroParticles() {
             context.beginPath();
             context.moveTo(particle.x, particle.y);
             context.lineTo(other.x, other.y);
-            context.strokeStyle = `rgba(56, 198, 255, ${0.16 * (1 - distance / 120)})`;
+            context.strokeStyle = `rgba(37, 99, 235, ${0.12 * (1 - distance / 120)})`;
             context.lineWidth = 0.7;
             context.stroke();
           }

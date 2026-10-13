@@ -445,40 +445,40 @@ export function InteractiveServiceDemos() {
   };
 
   return (
-    <section id="interactive-service-demos" className="relative overflow-hidden bg-[#020617] py-12 text-white sm:py-20 lg:py-28">
+    <section id="interactive-service-demos" className="relative overflow-hidden bg-white py-12 text-slate-900 border-t border-slate-200 sm:py-20 lg:py-28">
       {/* Background glow effects */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/3 top-10 h-[500px] w-[600px] rounded-full bg-cyan-500/10 blur-[140px]" />
-        <div className="absolute right-10 bottom-10 h-[450px] w-[550px] rounded-full bg-purple-500/10 blur-[130px]" />
+        <div className="absolute left-1/3 top-10 h-[500px] w-[600px] rounded-full bg-blue-500/5 blur-[140px]" />
+        <div className="absolute right-10 bottom-10 h-[450px] w-[550px] rounded-full bg-indigo-500/5 blur-[130px]" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Eyebrow & Title */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.25em]">
-            <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.25em]">
+            <Sparkles className="h-3.5 w-3.5 text-blue-600" />
             Interactive Technology Labs
           </div>
 
-          <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-white sm:mt-5 sm:text-5xl sm:leading-tight">
+          <h2 className="mt-4 font-display text-2xl font-black tracking-tight text-slate-900 sm:mt-5 sm:text-5xl sm:leading-tight">
             Don&apos;t Just Read About AI &amp; SEO.{" "}
-            <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent">
               Test Our Live Demos In Real-Time.
             </span>
           </h2>
 
-          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-300 line-clamp-3 sm:mt-4 sm:text-lg sm:line-clamp-none">
+          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-600 line-clamp-3 sm:mt-4 sm:text-lg sm:line-clamp-none">
             Legacy 9-year agencies only show you slides and static text. At Zepra Tech, we let you test our actual live AI bots, examine generative search answer simulations, and run automated CRM pipelines before signing a contract.
           </p>
 
-          {/* Growex-Inspired Interactive Tab Switcher */}
-          <div className="mt-5 grid grid-cols-2 gap-2 rounded-2xl border border-white/15 bg-slate-900/90 p-2 shadow-2xl backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:rounded-full sm:p-2.5">
+          {/* Interactive Tab Switcher */}
+          <div className="mt-5 grid grid-cols-2 gap-2 rounded-2xl border border-slate-200 bg-slate-100 p-2 shadow-sm backdrop-blur-xl sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 sm:rounded-full sm:p-2.5">
             <button
               onClick={() => setActiveTab("ai-bots")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "ai-bots"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
-                  : "text-slate-300 hover:text-white"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <Bot className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
@@ -489,8 +489,8 @@ export function InteractiveServiceDemos() {
               onClick={() => setActiveTab("aeo-search")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "aeo-search"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
-                  : "text-slate-300 hover:text-white"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <Search className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
@@ -501,8 +501,8 @@ export function InteractiveServiceDemos() {
               onClick={() => setActiveTab("automation-pipeline")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "automation-pipeline"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
-                  : "text-slate-300 hover:text-white"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <Zap className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
@@ -513,8 +513,8 @@ export function InteractiveServiceDemos() {
               onClick={() => setActiveTab("sticky-cards")}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2.5 py-2.5 text-center text-[11px] font-bold transition-all sm:gap-2 sm:rounded-full sm:px-5 sm:text-sm ${
                 activeTab === "sticky-cards"
-                  ? "bg-gradient-to-r from-cyan-400 to-emerald-400 text-slate-950 shadow-lg"
-                  : "text-slate-300 hover:text-white"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <Layers className="h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4" />
@@ -527,18 +527,18 @@ export function InteractiveServiceDemos() {
         {/* LAB 1: INTERACTIVE NICHE AI BOTS SIMULATOR */}
         {/* ==================================================================== */}
         {activeTab === "ai-bots" && (
-          <div id="ai-bots-lab" className="mt-6 rounded-2xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-4 shadow-2xl backdrop-blur-xl sm:mt-12 sm:rounded-3xl sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:gap-4 sm:pb-6">
+          <div id="ai-bots-lab" className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-4 shadow-sm backdrop-blur-xl sm:mt-12 sm:rounded-3xl sm:p-10">
+            <div className="flex flex-col items-start justify-between gap-3 border-b border-slate-200 pb-5 sm:flex-row sm:items-center sm:gap-4 sm:pb-6">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
                   Live AI Bot Sandbox
                 </p>
-                <h3 className="mt-1 font-display text-xl font-bold text-white sm:text-3xl">
+                <h3 className="mt-1 font-display text-xl font-bold text-slate-900 sm:text-3xl">
                   Select a Business Niche &amp; Chat Live With The Bot
                 </h3>
               </div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-bold text-emerald-300 sm:px-3.5 sm:text-xs">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 text-[11px] font-bold text-emerald-700 sm:px-3.5 sm:text-xs">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 Live Bot Server Online
               </span>
             </div>
@@ -554,15 +554,15 @@ export function InteractiveServiceDemos() {
                     onClick={() => setSelectedBot(bot)}
                     className={`flex flex-col items-center justify-center rounded-2xl border p-3 text-center transition-all sm:p-4 ${
                       isSelected
-                        ? "border-cyan-400 bg-cyan-400/15 shadow-[0_0_20px_rgba(56,198,255,0.25)] ring-1 ring-cyan-400/40"
-                        : "border-white/10 bg-slate-950/70 hover:border-white/25 hover:bg-white/5"
+                        ? "border-blue-600 bg-blue-50/90 shadow-sm ring-1 ring-blue-500/30"
+                        : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
                     }`}
                   >
                     <span className="text-xl sm:text-2xl">{bot.botAvatar}</span>
-                    <span className="mt-1.5 text-xs font-bold leading-snug text-white sm:mt-2 sm:text-sm">
+                    <span className="mt-1.5 text-xs font-bold leading-snug text-slate-900 sm:mt-2 sm:text-sm">
                       {bot.name}
                     </span>
-                    <span className="mt-1 hidden text-[11px] text-slate-400 sm:block">
+                    <span className="mt-1 hidden text-[11px] text-slate-500 sm:block">
                       {bot.niche}
                     </span>
                   </button>
@@ -574,23 +574,23 @@ export function InteractiveServiceDemos() {
             <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:gap-8 lg:grid-cols-12">
               {/* Chat Interface Column */}
               <div className="lg:col-span-8">
-                <div className="flex h-[460px] flex-col rounded-2xl border border-white/15 bg-slate-950/90 shadow-2xl sm:h-[520px]">
+                <div className="flex h-[460px] flex-col rounded-2xl border border-slate-200 bg-white shadow-sm sm:h-[520px]">
                   {/* Chat Header */}
-                  <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] p-4">
+                  <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50/60 p-4">
                     <div className="flex items-center gap-3">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/10 text-xl border border-cyan-400/30">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-xl border border-blue-200">
                         {selectedBot.botAvatar}
                       </span>
                       <div>
                         <div className="flex items-center gap-2">
-                          <h4 className="text-sm font-bold text-white">
+                          <h4 className="text-sm font-bold text-slate-900">
                             {selectedBot.botName}
                           </h4>
-                          <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-bold text-emerald-400">
+                          <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
                             ONLINE 24/7
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400">
+                        <p className="text-xs text-slate-500">
                           Engineered by Zepra Tech for {selectedBot.niche}
                         </p>
                       </div>
@@ -603,7 +603,7 @@ export function InteractiveServiceDemos() {
                         ])
                       }
                       title="Reset Conversation"
-                      className="rounded-lg border border-white/10 p-2 text-slate-400 hover:text-white"
+                      className="rounded-lg border border-slate-200 p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100"
                     >
                       <RotateCcw className="h-4 w-4" />
                     </button>
@@ -621,8 +621,8 @@ export function InteractiveServiceDemos() {
                         <div
                           className={`max-w-[85%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed ${
                             msg.sender === "user"
-                              ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium"
-                              : "border border-white/10 bg-slate-900 text-slate-200"
+                              ? "bg-blue-600 text-white font-medium"
+                              : "border border-slate-200 bg-slate-50 text-slate-800"
                           }`}
                         >
                           <p>{msg.text}</p>
@@ -635,7 +635,7 @@ export function InteractiveServiceDemos() {
 
                     {isTyping && (
                       <div className="flex justify-start">
-                        <div className="rounded-2xl border border-white/10 bg-slate-900 px-4 py-2.5 text-xs text-cyan-300 animate-pulse">
+                        <div className="rounded-2xl border border-blue-200 bg-blue-50 px-4 py-2.5 text-xs text-blue-700 animate-pulse">
                           <span>Bot is typing live response...</span>
                         </div>
                       </div>
@@ -643,8 +643,8 @@ export function InteractiveServiceDemos() {
                   </div>
 
                   {/* Suggested Quick Prompts */}
-                  <div className="border-t border-white/10 bg-white/[0.02] p-3">
-                    <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
+                  <div className="border-t border-slate-200 bg-slate-50/60 p-3">
+                    <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2">
                       💡 Tap a real customer question to test instant reply:
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -652,7 +652,7 @@ export function InteractiveServiceDemos() {
                         <button
                           key={idx}
                           onClick={() => handleSendPrompt(p.q, p.a)}
-                          className="rounded-lg border border-cyan-400/30 bg-cyan-400/10 px-3 py-1.5 text-xs font-semibold text-cyan-300 transition-all hover:bg-cyan-400 hover:text-slate-950 text-left"
+                          className="rounded-lg border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-700 transition-all hover:bg-blue-600 hover:text-white text-left"
                         >
                           {p.q}
                         </button>
@@ -663,18 +663,18 @@ export function InteractiveServiceDemos() {
                   {/* Custom Input Bar */}
                   <form
                     onSubmit={handleCustomSubmit}
-                    className="flex items-center gap-2 border-t border-white/10 p-3"
+                    className="flex items-center gap-2 border-t border-slate-200 p-3"
                   >
                     <input
                       type="text"
                       value={customInput}
                       onChange={(e) => setCustomInput(e.target.value)}
                       placeholder="Type your custom customer question..."
-                      className="flex-1 rounded-xl border border-white/15 bg-slate-900 px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none"
+                      className="flex-1 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
                     />
                     <button
                       type="submit"
-                      className="rounded-xl bg-cyan-400 px-4 py-2.5 text-slate-950 transition-all hover:bg-cyan-300"
+                      className="rounded-xl bg-blue-600 px-4 py-2.5 text-white transition-all hover:bg-blue-700"
                     >
                       <Send className="h-4 w-4" />
                     </button>
@@ -684,57 +684,57 @@ export function InteractiveServiceDemos() {
 
               {/* Bot Business Metrics & Capabilities Column */}
               <div className="lg:col-span-4 flex flex-col justify-between space-y-4">
-                <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-6 backdrop-blur-md">
-                  <h4 className="text-sm font-bold uppercase tracking-wider text-cyan-400">
+                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-blue-600">
                     Verified Bot Performance
                   </h4>
                   <div className="mt-4 grid grid-cols-2 gap-3">
-                    <div className="rounded-xl border border-white/8 bg-slate-950/60 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-cyan-400">
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
+                      <p className="font-mono text-xl font-black text-blue-600">
                         {selectedBot.stats.responseTime}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-400">Response Speed</p>
+                      <p className="mt-1 text-[11px] text-slate-500">Response Speed</p>
                     </div>
-                    <div className="rounded-xl border border-white/8 bg-slate-950/60 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-emerald-400">
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
+                      <p className="font-mono text-xl font-black text-emerald-600">
                         {selectedBot.stats.orderLift || selectedBot.stats.bookingRate || selectedBot.stats.leadCapture || selectedBot.stats.rfqConversion}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-400">Conversion Lift</p>
+                      <p className="mt-1 text-[11px] text-slate-500">Conversion Lift</p>
                     </div>
-                    <div className="rounded-xl border border-white/8 bg-slate-950/60 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-purple-400">
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
+                      <p className="font-mono text-xl font-black text-indigo-600">
                         {selectedBot.stats.ticketDeflection || selectedBot.stats.noShowReduction || selectedBot.stats.dispatchSpeed || selectedBot.stats.intlReach}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-400">Workload Saved</p>
+                      <p className="mt-1 text-[11px] text-slate-500">Workload Saved</p>
                     </div>
-                    <div className="rounded-xl border border-white/8 bg-slate-950/60 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-amber-400">
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
+                      <p className="font-mono text-xl font-black text-amber-600">
                         {selectedBot.stats.availability}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-400">Uptime Reliability</p>
+                      <p className="mt-1 text-[11px] text-slate-500">Uptime Reliability</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-6 backdrop-blur-md">
-                  <h4 className="text-sm font-bold uppercase tracking-wider text-white">
+                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900">
                     Deployment Channels Included:
                   </h4>
-                  <ul className="mt-3 space-y-2 text-xs text-slate-300">
+                  <ul className="mt-3 space-y-2 text-xs text-slate-600">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
                       <span>Official WhatsApp Business Cloud API</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
                       <span>Website Live Chat Widget (Sub-second loading)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
                       <span>Instagram Direct &amp; Facebook Messenger Sync</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
                       <span>Trained on your private documents &amp; catalog</span>
                     </li>
                   </ul>
@@ -742,7 +742,7 @@ export function InteractiveServiceDemos() {
 
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-lg hover:scale-[1.02] transition-all"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-soft hover:bg-blue-700 transition-all"
                 >
                   <span>Build This AI Bot For My Business</span>
                   <ArrowRight className="h-4 w-4" />
@@ -756,17 +756,17 @@ export function InteractiveServiceDemos() {
         {/* LAB 2: LIVE SEO & AEO (ANSWER ENGINE) SIMULATOR */}
         {/* ==================================================================== */}
         {activeTab === "aeo-search" && (
-          <div className="mt-12 rounded-3xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-6 shadow-2xl backdrop-blur-xl sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-center">
+          <div className="mt-12 rounded-3xl border border-slate-200 bg-slate-50/70 p-6 shadow-sm sm:p-10">
+            <div className="flex flex-col items-start justify-between gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-center">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
                   Search Engine Generative Simulator
                 </p>
-                <h3 className="mt-1 font-display text-2xl font-bold text-white sm:text-3xl">
+                <h3 className="mt-1 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
                   Traditional Google 2018 vs. Modern AI Search 2026
                 </h3>
               </div>
-              <span className="rounded-full border border-purple-400/30 bg-purple-400/10 px-3.5 py-1 text-xs font-bold text-purple-300">
+              <span className="rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1 text-xs font-bold text-purple-700">
                 AEO &amp; GEO Engine Active
               </span>
             </div>
@@ -779,8 +779,8 @@ export function InteractiveServiceDemos() {
                   onClick={() => setSelectedAeoScenario(sc)}
                   className={`rounded-xl border px-4 py-2 text-xs font-bold transition-all ${
                     selectedAeoScenario.id === sc.id
-                      ? "border-cyan-400 bg-cyan-400/15 text-white"
-                      : "border-white/10 bg-white/5 text-slate-400 hover:text-white"
+                      ? "border-blue-600 bg-blue-50 text-blue-900 shadow-sm"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
                   }`}
                 >
                   {sc.industry}
@@ -791,53 +791,53 @@ export function InteractiveServiceDemos() {
             {/* Comparison Grid */}
             <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
               {/* Old Google SERP Box */}
-              <div className="rounded-2xl border border-rose-500/30 bg-slate-950/80 p-6">
+              <div className="rounded-2xl border border-rose-200 bg-white p-6 shadow-sm">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-rose-400">
+                  <span className="text-xs font-bold uppercase tracking-wider text-rose-600">
                     ❌ Old 9-Year Agency Approach (Declining)
                   </span>
-                  <span className="text-xs text-slate-400">Traditional SERP</span>
+                  <span className="text-xs text-slate-500">Traditional SERP</span>
                 </div>
-                <h4 className="mt-3 font-display text-lg font-bold text-white">
+                <h4 className="mt-3 font-display text-lg font-bold text-slate-900">
                   Query: &ldquo;{selectedAeoScenario.query}&rdquo;
                 </h4>
 
-                <div className="mt-4 rounded-xl border border-white/8 bg-white/[0.02] p-4 text-xs text-slate-300 space-y-2">
-                  <p className="font-semibold text-rose-300">
+                <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-700 space-y-2">
+                  <p className="font-semibold text-rose-700">
                     {selectedAeoScenario.traditionalGoogle.result}
                   </p>
-                  <p className="text-slate-400">
+                  <p className="text-slate-500">
                     {selectedAeoScenario.traditionalGoogle.status}
                   </p>
                 </div>
 
-                <div className="mt-6 border-t border-white/10 pt-4 text-xs text-slate-400">
+                <div className="mt-6 border-t border-slate-200 pt-4 text-xs text-slate-500">
                   <p>⚠️ Flaw: Over 62% of Google searches now end in &ldquo;Zero-Clicks&rdquo; or AI summaries. Traditional keyword agencies lose clients because their websites never get cited in ChatGPT or Google AI Overviews.</p>
                 </div>
               </div>
 
               {/* Modern Zepra Tech AEO Box */}
-              <div className="rounded-2xl border border-cyan-400/40 bg-gradient-to-br from-[#0c1a36] to-slate-950 p-6 shadow-2xl">
+              <div className="rounded-2xl border border-blue-200 bg-blue-50/50 p-6 shadow-sm">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+                  <span className="text-xs font-bold uppercase tracking-wider text-blue-700">
                     ✅ Zepra Tech AEO/GEO Architecture (Winning)
                   </span>
-                  <span className="rounded-full bg-cyan-400/20 px-2.5 py-0.5 text-[10px] font-bold text-cyan-300">
+                  <span className="rounded-full bg-blue-100 px-2.5 py-0.5 text-[10px] font-bold text-blue-800">
                     {selectedAeoScenario.aiAnswerEngine.engine}
                   </span>
                 </div>
 
-                <h4 className="mt-3 font-display text-lg font-bold text-white">
+                <h4 className="mt-3 font-display text-lg font-bold text-slate-900">
                   Direct AI Citation: {selectedAeoScenario.aiAnswerEngine.citedBrand}
                 </h4>
 
-                <div className="mt-4 rounded-xl border border-cyan-500/30 bg-cyan-950/30 p-4 text-xs sm:text-sm text-slate-100 leading-relaxed font-sans border-l-4 border-l-cyan-400">
+                <div className="mt-4 rounded-xl border border-blue-200 bg-white p-4 text-xs sm:text-sm text-slate-800 leading-relaxed font-sans border-l-4 border-l-blue-600 shadow-sm">
                   <p>&ldquo;{selectedAeoScenario.aiAnswerEngine.citationText}&rdquo;</p>
                 </div>
 
-                <div className="mt-4 rounded-xl border border-white/8 bg-white/[0.03] p-3 text-xs text-emerald-300">
+                <div className="mt-4 rounded-xl border border-slate-200 bg-white p-3 text-xs text-emerald-700">
                   <p className="font-bold">Why the AI picks Zepra Tech builds:</p>
-                  <p className="mt-0.5 text-slate-300">{selectedAeoScenario.aiAnswerEngine.whyItWon}</p>
+                  <p className="mt-0.5 text-slate-600">{selectedAeoScenario.aiAnswerEngine.whyItWon}</p>
                 </div>
               </div>
             </div>
@@ -848,13 +848,13 @@ export function InteractiveServiceDemos() {
         {/* LAB 3: AUTONOMOUS CRM PIPELINE SIMULATOR */}
         {/* ==================================================================== */}
         {activeTab === "automation-pipeline" && (
-          <div className="mt-12 rounded-3xl border border-white/12 bg-gradient-to-b from-[#060c1d] to-[#030611] p-6 shadow-2xl backdrop-blur-xl sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-center">
+          <div className="mt-12 rounded-3xl border border-slate-200 bg-slate-50/70 p-6 shadow-sm sm:p-10">
+            <div className="flex flex-col items-start justify-between gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-center">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
                   Autonomous Execution Flow
                 </p>
-                <h3 className="mt-1 font-display text-2xl font-bold text-white sm:text-3xl">
+                <h3 className="mt-1 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
                   Simulate How Our AI Pipeline Replaces 18 Hours of Weekly Desk Work
                 </h3>
               </div>
@@ -862,7 +862,7 @@ export function InteractiveServiceDemos() {
               <button
                 onClick={triggerPipelineSimulation}
                 disabled={isSimulating}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-950 shadow-lg hover:scale-105 transition-all disabled:opacity-50"
+                className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-soft hover:bg-blue-700 transition-all disabled:opacity-50"
               >
                 <Play className="h-4 w-4" />
                 <span>{isSimulating ? "Simulating Pipeline..." : "▶ Run Live Pipeline Simulation"}</span>
@@ -881,30 +881,30 @@ export function InteractiveServiceDemos() {
                     key={node.id}
                     className={`relative rounded-2xl border p-5 transition-all duration-500 ${
                       isCurrentlyActive
-                        ? "border-cyan-400 bg-cyan-400/20 shadow-[0_0_30px_rgba(56,198,255,0.4)] scale-105"
+                        ? "border-blue-600 bg-blue-50/90 shadow-md scale-105"
                         : isActivated
-                        ? "border-emerald-400/50 bg-emerald-950/20"
-                        : "border-white/10 bg-slate-950/60 opacity-60"
+                        ? "border-emerald-300 bg-emerald-50/70"
+                        : "border-slate-200 bg-white opacity-80"
                     }`}
                   >
                     <div className="flex items-center justify-between">
                       <span className={`flex h-10 w-10 items-center justify-center rounded-xl ${
-                        isActivated ? "bg-emerald-400 text-slate-950" : "bg-white/5 text-slate-400"
+                        isActivated ? "bg-emerald-600 text-white" : "bg-slate-100 text-slate-500"
                       }`}>
                         <Icon className="h-5 w-5" />
                       </span>
-                      <span className="font-mono text-xs font-bold text-cyan-400">
+                      <span className="font-mono text-xs font-bold text-blue-600">
                         {node.time}
                       </span>
                     </div>
 
-                    <h4 className="mt-4 font-display text-sm font-bold text-white">
+                    <h4 className="mt-4 font-display text-sm font-bold text-slate-900">
                       {node.title}
                     </h4>
-                    <p className="mt-1 text-[11px] font-semibold text-cyan-300">
+                    <p className="mt-1 text-[11px] font-semibold text-blue-700">
                       {node.sub}
                     </p>
-                    <p className="mt-2 text-xs text-slate-300 leading-relaxed">
+                    <p className="mt-2 text-xs text-slate-600 leading-relaxed">
                       {node.desc}
                     </p>
                   </div>
@@ -912,9 +912,9 @@ export function InteractiveServiceDemos() {
               })}
             </div>
 
-            <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-center">
-              <p className="text-xs text-slate-300 sm:text-sm">
-                Total Execution Time: <strong className="text-cyan-300">2.1 Seconds</strong> • Human Effort Required: <strong className="text-emerald-300">Zero</strong> • Output: 100% Qualified, Scheduled &amp; Alerted Lead.
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm">
+              <p className="text-xs text-slate-600 sm:text-sm">
+                Total Execution Time: <strong className="text-blue-700">2.1 Seconds</strong> • Human Effort Required: <strong className="text-emerald-700">Zero</strong> • Output: 100% Qualified, Scheduled &amp; Alerted Lead.
               </p>
             </div>
           </div>
@@ -926,10 +926,10 @@ export function InteractiveServiceDemos() {
         {activeTab === "sticky-cards" && (
           <div className="mt-12 space-y-6">
             <div className="mx-auto max-w-3xl text-center mb-8">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
                 Commercial Architecture Deck
               </p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+              <h3 className="mt-2 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
                 4 Core Engineering Pillars Built for Business Scale
               </h3>
             </div>
@@ -939,24 +939,24 @@ export function InteractiveServiceDemos() {
               {STICKY_STACKED_CARDS.map((card, idx) => (
                 <div
                   key={card.number}
-                  className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#070e22] via-[#050a18] to-slate-950 p-5 shadow-2xl backdrop-blur-2xl transition-all sm:p-10 lg:sticky lg:top-28"
+                  className="rounded-3xl border border-slate-200 bg-white p-5 shadow-soft transition-all sm:p-10 lg:sticky lg:top-28"
                 >
                   <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center lg:gap-8">
                     <div className="lg:col-span-8">
                       <div className="flex items-center gap-3">
-                        <span className="font-mono text-xs font-black uppercase tracking-widest text-cyan-400">
+                        <span className="font-mono text-xs font-black uppercase tracking-widest text-blue-600">
                           {card.number} // {card.tag}
                         </span>
                       </div>
 
-                      <h4 className="mt-2.5 font-display text-xl font-bold text-white sm:mt-3 sm:text-3xl">
+                      <h4 className="mt-2.5 font-display text-xl font-bold text-slate-900 sm:mt-3 sm:text-3xl">
                         {card.title}
                       </h4>
-                      <p className="mt-1 text-xs font-semibold text-cyan-300 sm:text-sm">
+                      <p className="mt-1 text-xs font-semibold text-blue-700 sm:text-sm">
                         {card.subtitle}
                       </p>
 
-                      <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:mt-4 sm:text-sm">
+                      <p className="mt-3 text-xs leading-relaxed text-slate-600 sm:mt-4 sm:text-sm">
                         {card.description}
                       </p>
 
@@ -964,25 +964,25 @@ export function InteractiveServiceDemos() {
                         {card.deliverables.map((del, dIdx) => (
                           <div
                             key={dIdx}
-                            className="flex items-center gap-2 text-xs font-medium text-slate-200"
+                            className="flex items-center gap-2 text-xs font-medium text-slate-700"
                           >
-                            <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
                             <span>{del}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center sm:p-8 lg:col-span-4">
-                      <p className="bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text font-mono text-4xl font-black text-transparent sm:text-5xl">
+                    <div className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center sm:p-8 lg:col-span-4">
+                      <p className="font-mono text-4xl font-black text-blue-600 sm:text-5xl">
                         {card.metricValue}
                       </p>
-                      <p className="mt-2 text-xs font-bold uppercase tracking-wider text-slate-400">
+                      <p className="mt-2 text-xs font-bold uppercase tracking-wider text-slate-500">
                         {card.metricLabel}
                       </p>
                       <Link
                         href={card.linkHref}
-                        className="mt-5 inline-flex items-center gap-2 rounded-xl bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-cyan-400 hover:text-slate-950 sm:mt-6"
+                        className="mt-5 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-soft transition-all hover:bg-blue-700 sm:mt-6"
                       >
                         <span>{card.linkText}</span>
                         <ArrowUpRight className="h-4 w-4" />

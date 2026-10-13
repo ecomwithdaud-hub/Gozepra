@@ -65,20 +65,20 @@ export function WhyUs() {
       ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-12">
-      <div className="pointer-events-none absolute -left-32 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-32 top-36 -z-10 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
+    <section className="relative isolate overflow-hidden bg-white py-8 text-slate-900 border-t border-slate-200 sm:py-12">
+      <div className="pointer-events-none absolute -left-32 top-0 -z-10 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 top-36 -z-10 h-96 w-96 rounded-full bg-indigo-600/5 blur-3xl" />
 
       <div className="container relative">
-        <header className="flex flex-col gap-6 border-b border-white/10 pb-6 lg:flex-row lg:items-end lg:justify-between">
+        <header className="flex flex-col gap-6 border-b border-slate-200 pb-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            <div className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-700">
               {content?.eyebrow || "WHY CHOOSE US"}
             </div>
-            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
               {content?.title || "Built for trust, speed, and real business outcomes."}
             </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
               {content?.description || "Proven engineering and digital execution designed to scale your revenue worldwide."}
             </p>
 
@@ -89,9 +89,9 @@ export function WhyUs() {
                 return (
                   <span
                     key={index}
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-slate-300 backdrop-blur-md"
+                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 backdrop-blur-md"
                   >
-                    <Icon className="h-3.5 w-3.5 text-cyan-300" />
+                    <Icon className="h-3.5 w-3.5 text-blue-600" />
                     {label}
                   </span>
                 );
@@ -101,11 +101,11 @@ export function WhyUs() {
 
           <Link
             href="/#contact"
-            className="group hidden w-fit shrink-0 items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_0_0_rgba(34,211,238,0)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-cyan-300/[0.09] hover:shadow-[0_0_30px_rgba(34,211,238,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 motion-reduce:transition-none sm:inline-flex"
+            className="group hidden w-fit shrink-0 items-center gap-2.5 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-slate-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 motion-reduce:transition-none sm:inline-flex"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60 motion-reduce:animate-none" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60 motion-reduce:animate-none" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
             {content?.chat || "Let's chat"}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 motion-reduce:transition-none" />
@@ -127,10 +127,10 @@ export function WhyUs() {
                 key={index}
                 className="min-w-0"
               >
-                <div className="font-display text-xl font-semibold leading-none text-white sm:text-3xl">
+                <div className="font-display text-xl font-semibold leading-none text-slate-900 sm:text-3xl">
                   {value}
                 </div>
-                <p className="mt-1.5 max-w-[14rem] text-[11px] leading-4 text-slate-400 sm:mt-2 sm:text-sm sm:leading-5">
+                <p className="mt-1.5 max-w-[14rem] text-[11px] leading-4 text-slate-500 sm:mt-2 sm:text-sm sm:leading-5">
                   {metric.label}
                 </p>
               </div>
@@ -146,21 +146,21 @@ export function WhyUs() {
             return (
               <article
                 key={index}
-                className="group min-h-[230px] rounded-3xl border border-slate-800/90 bg-slate-900/65 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/50 hover:bg-slate-900/90 hover:shadow-[0_20px_50px_rgba(6,182,212,0.1)] motion-reduce:transition-none"
+                className="group min-h-[230px] rounded-3xl border border-slate-200 bg-slate-50/70 p-6 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:bg-white hover:shadow-soft motion-reduce:transition-none"
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/15 bg-cyan-400/[0.09] text-cyan-300 transition-colors duration-300 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/[0.14]">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-100 bg-blue-50 text-blue-600 transition-colors duration-300 group-hover:border-blue-200 group-hover:bg-blue-100">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <span className="text-xs font-semibold tabular-nums text-slate-600">
+                  <span className="text-xs font-semibold tabular-nums text-slate-400">
                     0{index + 1}
                   </span>
                 </div>
 
-                <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-white">
+                <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-slate-900">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-400">
+                <p className="mt-3 text-sm leading-6 text-slate-600">
                   {pillar.description}
                 </p>
               </article>

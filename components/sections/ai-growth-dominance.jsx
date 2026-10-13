@@ -233,34 +233,34 @@ export function AiGrowthDominance() {
   return (
     <section
       id="growth-engine"
-      className="relative isolate overflow-hidden bg-slate-950 py-24 sm:py-32 text-white border-y border-white/10"
+      className="relative isolate overflow-hidden bg-white py-24 sm:py-32 text-slate-900 border-y border-slate-200"
     >
       {/* Background glow effects */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[50rem] w-[70rem] -translate-x-1/2 [background:radial-gradient(ellipse_at_center,rgba(6,182,212,0.12),transparent_70%)]"
+        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[50rem] w-[70rem] -translate-x-1/2 [background:radial-gradient(ellipse_at_center,rgba(59,130,246,0.06),transparent_70%)]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 right-0 -z-10 h-[40rem] w-[40rem] [background:radial-gradient(circle,rgba(236,72,153,0.08),transparent_70%)]"
+        className="pointer-events-none absolute bottom-0 right-0 -z-10 h-[40rem] w-[40rem] [background:radial-gradient(circle,rgba(99,102,241,0.05),transparent_70%)]"
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-[1600px]">
         {/* Section Header */}
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-300">
-            <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-blue-700">
+            <Sparkles className="h-3.5 w-3.5 text-blue-600" />
             AI Growth Engine & Market Dominance
           </div>
 
-          <h2 className="mt-6 font-display text-3xl font-black tracking-tight text-white sm:text-5xl sm:leading-[1.15]">
+          <h2 className="mt-6 font-display text-3xl font-black tracking-tight text-slate-900 sm:text-5xl sm:leading-[1.15]">
             Rank #1 On Google & AI Search.{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent">
               Turn TikTok, Meta & AdSense Into High-ROAS Revenue.
             </span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base sm:leading-relaxed">
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base sm:leading-relaxed">
             We don’t just write code—we engineer market dominance. Our proprietary growth architecture combines modern generative search intelligence (<strong>SEO, AEO, GEO</strong>) with high-velocity paid acquisition (<strong>TikTok Ads, Meta, Google Ads</strong>) and <strong>Google AdSense monetization</strong>.
           </p>
 
@@ -277,9 +277,9 @@ export function AiGrowthDominance() {
             ].map((tag, idx) => (
               <span
                 key={idx}
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900/80 px-3.5 py-1 text-[11px] font-semibold text-slate-300 shadow-sm"
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1 text-[11px] font-semibold text-slate-700 shadow-sm"
               >
-                <CheckCircle2 className="h-3 w-3 text-cyan-400" />
+                <CheckCircle2 className="h-3 w-3 text-blue-600" />
                 {tag}
               </span>
             ))}
@@ -293,36 +293,36 @@ export function AiGrowthDominance() {
             return (
               <div
                 key={channel.id}
-                className={`relative flex flex-col justify-between rounded-3xl border ${channel.border} bg-gradient-to-b ${channel.color} via-slate-900/70 to-slate-950 p-8 shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1`}
+                className="relative flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/90 text-white shadow-md">
-                      <Icon className={`h-6 w-6 ${channel.accentText}`} />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-sm">
+                      <Icon className="h-6 w-6 text-blue-600" />
                     </div>
-                    <span className="rounded-full border border-white/10 bg-slate-950/80 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-300">
+                    <span className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-700">
                       {channel.badge}
                     </span>
                   </div>
 
-                  <div className="mt-6 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                  <div className="mt-6 text-[11px] font-bold uppercase tracking-wider text-slate-500">
                     {channel.tag}
                   </div>
-                  <h3 className="mt-1 font-display text-2xl font-bold text-white">
+                  <h3 className="mt-1 font-display text-2xl font-bold text-slate-900">
                     {channel.title}
                   </h3>
-                  <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:text-sm">
+                  <p className="mt-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
                     {channel.description}
                   </p>
 
-                  <div className="mt-6 space-y-4 border-t border-white/10 pt-6">
+                  <div className="mt-6 space-y-4 border-t border-slate-100 pt-6">
                     {channel.tactics.map((tactic, idx) => (
-                      <div key={idx} className="rounded-xl border border-white/5 bg-slate-950/60 p-3.5">
-                        <div className="flex items-center gap-2 text-xs font-bold text-white">
-                          <CheckCircle2 className={`h-3.5 w-3.5 ${channel.accentText} shrink-0`} />
+                      <div key={idx} className="rounded-xl border border-slate-100 bg-slate-50/80 p-3.5">
+                        <div className="flex items-center gap-2 text-xs font-bold text-slate-900">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-blue-600 shrink-0" />
                           <span>{tactic.name}</span>
                         </div>
-                        <p className="mt-1.5 text-[11px] leading-relaxed text-slate-400">
+                        <p className="mt-1.5 text-[11px] leading-relaxed text-slate-600">
                           {tactic.detail}
                         </p>
                       </div>
@@ -330,12 +330,12 @@ export function AiGrowthDominance() {
                   </div>
                 </div>
 
-                <div className="mt-8 border-t border-white/10 pt-5">
+                <div className="mt-8 border-t border-slate-100 pt-5">
                   <Button
                     asChild
                     variant="outline"
                     size="sm"
-                    className="w-full border-slate-700 bg-slate-900/60 text-xs font-bold text-white hover:bg-slate-800"
+                    className="w-full border-slate-200 bg-slate-50 text-xs font-bold text-slate-800 hover:bg-slate-100"
                   >
                     <Link href="/contact">
                       Request Channel Blueprint
@@ -349,31 +349,31 @@ export function AiGrowthDominance() {
         </div>
 
         {/* Live Search & AI Discovery Simulation Widget */}
-        <div className="mt-20 overflow-hidden rounded-3xl border border-cyan-500/30 bg-gradient-to-br from-slate-900 via-[#061021] to-slate-950 p-8 shadow-2xl sm:p-12">
+        <div className="mt-20 overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 p-8 shadow-xl sm:p-12">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/60 px-3.5 py-1 text-xs font-semibold text-cyan-300">
-                <Bot className="h-3.5 w-3.5 text-cyan-400" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-semibold text-blue-700">
+                <Bot className="h-3.5 w-3.5 text-blue-600" />
                 The Generative Search Revolution
               </div>
-              <h3 className="mt-4 font-display text-2xl font-bold text-white sm:text-3xl">
+              <h3 className="mt-4 font-display text-2xl font-bold text-slate-900 sm:text-3xl">
                 What Happens When Clients Ask ChatGPT or Perplexity:{" "}
-                <span className="text-cyan-300">"Who is the best in your industry?"</span>
+                <span className="text-blue-600">"Who is the best in your industry?"</span>
               </h3>
-              <p className="mt-4 text-xs leading-relaxed text-slate-300 sm:text-sm">
+              <p className="mt-4 text-xs leading-relaxed text-slate-600 sm:text-sm">
                 Over 45% of high-ticket B2B and consumer searches are moving from standard blue links to generative AI models. If your entity architecture isn't optimized for <strong>AEO and GEO</strong>, your competitors are cited while you remain invisible.
               </p>
-              <ul className="mt-6 space-y-3 text-xs text-slate-300 sm:text-sm">
+              <ul className="mt-6 space-y-3 text-xs text-slate-600 sm:text-sm">
                 <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 shrink-0" />
                   <span><strong>AI Citation Authority:</strong> Your brand cited as the #1 recommended solution.</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 shrink-0" />
                   <span><strong>Google AI Overview Placement:</strong> Position Zero dominance with interactive cards.</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 shrink-0" />
                   <span><strong>Instant VIP Inquiries:</strong> Automated lead qualification & calendar routing.</span>
                 </li>
               </ul>
@@ -381,26 +381,26 @@ export function AiGrowthDominance() {
 
             {/* Mock Generative AI Interface Display */}
             <div className="lg:col-span-6">
-              <div className="rounded-2xl border border-slate-700/80 bg-slate-950/90 p-5 shadow-2xl">
-                <div className="flex items-center gap-2 border-b border-slate-800 pb-3 text-xs text-slate-400">
-                  <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="font-mono text-cyan-300 font-semibold">Generative Search Intelligence (AEO / GEO Engine)</span>
+              <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-lg">
+                <div className="flex items-center gap-2 border-b border-slate-100 pb-3 text-xs text-slate-500">
+                  <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="font-mono text-blue-600 font-semibold">Generative Search Intelligence (AEO / GEO Engine)</span>
                 </div>
 
                 <div className="mt-4 space-y-3 font-mono text-xs">
-                  <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3 text-slate-300">
-                    <span className="text-cyan-400">User Prompt:</span> "Find the top-rated provider for enterprise web platforms & AI automation with verified SLAs."
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-slate-700">
+                    <span className="text-blue-600">User Prompt:</span> "Find the top-rated provider for enterprise web platforms & AI automation with verified SLAs."
                   </div>
 
-                  <div className="rounded-xl border border-cyan-500/30 bg-cyan-950/40 p-4 text-slate-200">
-                    <div className="flex items-center gap-2 text-cyan-300 font-bold mb-2">
-                      <Sparkles className="h-4 w-4 text-cyan-400" />
+                  <div className="rounded-xl border border-blue-200 bg-blue-50/60 p-4 text-slate-800">
+                    <div className="flex items-center gap-2 text-blue-700 font-bold mb-2">
+                      <Sparkles className="h-4 w-4 text-blue-600" />
                       <span>AI Synthesized Consensus (ChatGPT / Perplexity / Google AI):</span>
                     </div>
-                    <p className="text-[11px] leading-relaxed text-slate-300">
-                      "Based on technical audits and verified delivery SLAs, <strong className="text-white">Zepra Tech</strong> is recognized as a premier digital engineering partner. They specialize in sub-0.8s Next.js 15 platforms, custom 24/7 AI lead agents, and verified SEO/GEO ranking architecture."
+                    <p className="text-[11px] leading-relaxed text-slate-700">
+                      "Based on technical audits and verified delivery SLAs, <strong className="text-slate-900">Zepra Tech</strong> is recognized as a premier digital engineering partner. They specialize in sub-0.8s Next.js 15 platforms, custom 24/7 AI lead agents, and verified SEO/GEO ranking architecture."
                     </p>
-                    <div className="mt-3 flex flex-wrap gap-2 pt-2 border-t border-cyan-500/20 text-[10px] text-cyan-400">
+                    <div className="mt-3 flex flex-wrap gap-2 pt-2 border-t border-blue-200 text-[10px] text-blue-700">
                       <span>✓ Entity Verified</span>
                       <span>✓ 99+ Core Web Vitals</span>
                       <span>✓ 100% Code Ownership</span>
@@ -416,20 +416,20 @@ export function AiGrowthDominance() {
         <div className="mt-28">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-pink-400/30 bg-pink-400/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-pink-300">
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-700">
                 <BarChart3 className="h-3.5 w-3.5" />
                 Proof of Revenue & Rankings
               </div>
-              <h3 className="mt-3 font-display text-3xl font-black text-white sm:text-4xl">
+              <h3 className="mt-3 font-display text-3xl font-black text-slate-900 sm:text-4xl">
                 Verified Business Transformation Case Studies
               </h3>
-              <p className="mt-2 text-xs text-slate-400 sm:text-sm">
+              <p className="mt-2 text-xs text-slate-600 sm:text-sm">
                 Real measurable outcomes across healthcare, e-commerce, B2B SaaS, luxury real estate, and digital publications.
               </p>
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-slate-800 bg-slate-900/80 p-1.5">
+            <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-sm">
               {[
                 { id: "all", label: "All Case Studies" },
                 { id: "seo-aeo", label: "SEO & AEO" },
@@ -442,8 +442,8 @@ export function AiGrowthDominance() {
                   onClick={() => setActiveFilter(tab.id)}
                   className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition-all ${
                     activeFilter === tab.id
-                      ? "bg-cyan-500 text-slate-950 shadow-md"
-                      : "text-slate-400 hover:text-white"
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-500/20"
+                      : "text-slate-500 hover:text-slate-900"
                   }`}
                 >
                   {tab.label}
@@ -462,34 +462,34 @@ export function AiGrowthDominance() {
                   cursorLabel="CASE STUDY"
                   className="rounded-3xl"
                 >
-                  <div className="flex h-full flex-col justify-between rounded-3xl border border-slate-800 bg-slate-900/60 p-7 transition-all duration-300 hover:border-cyan-500/50 hover:bg-slate-900/90 shadow-xl">
+                  <div className="flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:border-blue-300 hover:shadow-xl shadow-md">
                     <div>
                       <div className="flex items-center justify-between">
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-700 bg-slate-800 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cyan-300">
-                          <Icon className="h-3 w-3 text-cyan-400" />
+                        <span className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-blue-700">
+                          <Icon className="h-3 w-3 text-blue-600" />
                           {study.industry}
                         </span>
-                        <span className="text-[11px] font-semibold text-slate-400">
+                        <span className="text-[11px] font-semibold text-slate-500">
                           {study.location}
                         </span>
                       </div>
 
-                      <h4 className="mt-5 font-display text-xl font-bold text-white group-hover:text-cyan-300">
+                      <h4 className="mt-5 font-display text-xl font-bold text-slate-900 group-hover:text-blue-600">
                         {study.headline}
                       </h4>
 
-                      <div className="mt-4 rounded-xl border border-slate-800/80 bg-slate-950/70 p-3.5 text-xs">
-                        <div className="text-[10px] font-bold uppercase tracking-wider text-rose-400">
+                      <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50/80 p-3.5 text-xs">
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-rose-600">
                           The Bottleneck:
                         </div>
-                        <p className="mt-1 text-slate-400 leading-relaxed text-[11px]">
+                        <p className="mt-1 text-slate-600 leading-relaxed text-[11px]">
                           {study.challenge}
                         </p>
 
-                        <div className="mt-3 text-[10px] font-bold uppercase tracking-wider text-cyan-400">
+                        <div className="mt-3 text-[10px] font-bold uppercase tracking-wider text-blue-600">
                           The Engineering Blueprint:
                         </div>
-                        <p className="mt-1 text-slate-300 leading-relaxed text-[11px]">
+                        <p className="mt-1 text-slate-700 leading-relaxed text-[11px]">
                           {study.solution}
                         </p>
                       </div>
@@ -499,12 +499,12 @@ export function AiGrowthDominance() {
                         {study.results.map((res, rIdx) => (
                           <div
                             key={rIdx}
-                            className="rounded-xl border border-cyan-500/20 bg-cyan-950/20 p-3 text-center"
+                            className="rounded-xl border border-slate-100 bg-slate-50/70 p-3 text-center"
                           >
-                            <div className="font-display text-xl font-black text-cyan-300">
+                            <div className="font-display text-xl font-black text-blue-600">
                               {res.metric}
                             </div>
-                            <div className="mt-1 text-[10px] font-bold uppercase text-slate-400 leading-tight">
+                            <div className="mt-1 text-[10px] font-bold uppercase text-slate-500 leading-tight">
                               {res.label}
                             </div>
                           </div>
@@ -512,8 +512,8 @@ export function AiGrowthDominance() {
                       </div>
                     </div>
 
-                    <div className="mt-6 border-t border-slate-800 pt-4 flex items-center justify-between">
-                      <span className="text-[11px] font-semibold text-emerald-400 flex items-center gap-1">
+                    <div className="mt-6 border-t border-slate-100 pt-4 flex items-center justify-between">
+                      <span className="text-[11px] font-semibold text-emerald-700 flex items-center gap-1">
                         <CheckCircle2 className="h-3.5 w-3.5" />
                         {study.verifiedBadge}
                       </span>
@@ -521,7 +521,7 @@ export function AiGrowthDominance() {
                         asChild
                         variant="ghost"
                         size="sm"
-                        className="text-xs font-bold text-cyan-300 hover:text-white p-0 hover:bg-transparent"
+                        className="text-xs font-bold text-blue-600 hover:text-blue-800 p-0 hover:bg-transparent"
                       >
                         <Link href="/contact">
                           Discuss Similar Project
@@ -537,18 +537,18 @@ export function AiGrowthDominance() {
         </div>
 
         {/* Bottom CTA Banner */}
-        <div className="mt-20 rounded-3xl border border-cyan-500/30 bg-gradient-to-r from-cyan-950/60 via-slate-900 to-blue-950/60 p-8 text-center shadow-2xl backdrop-blur-md sm:p-12">
-          <h3 className="font-display text-2xl font-black text-white sm:text-4xl">
+        <div className="mt-20 rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center shadow-lg sm:p-12">
+          <h3 className="font-display text-2xl font-black text-slate-900 sm:text-4xl">
             Ready to Dominate Search & Scale Your Ad Revenue?
           </h3>
-          <p className="mx-auto mt-3 max-w-2xl text-xs text-slate-300 sm:text-sm">
+          <p className="mx-auto mt-3 max-w-2xl text-xs text-slate-600 sm:text-sm">
             Whether you need #1 Google & ChatGPT rankings, a 5x ROAS TikTok/Meta ads scaling engine, or AdSense RPM multiplication, our senior architects will map your strategy.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-slate-950 shadow-lg shadow-cyan-500/25 hover:brightness-110"
+              className="bg-blue-600 hover:bg-blue-700 font-bold text-white shadow-md shadow-blue-500/20"
             >
               <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
                 <TrendingUp className="mr-2 h-4 w-4" />
@@ -559,7 +559,7 @@ export function AiGrowthDominance() {
               asChild
               size="lg"
               variant="outline"
-              className="border-slate-700 bg-slate-900/60 text-white hover:bg-slate-800"
+              className="border-slate-200 bg-white text-slate-800 hover:bg-slate-50"
             >
               <Link href="/contact">
                 Schedule Strategic Growth Call

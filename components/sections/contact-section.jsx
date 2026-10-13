@@ -23,7 +23,7 @@ export function ContactSection({ showHeader = true }) {
   return (
     <section
       id="contact"
-      className="section-shell relative isolate overflow-hidden bg-slate-950 text-white border-t border-white/10"
+      className="section-shell relative isolate overflow-hidden bg-slate-50 text-slate-900 border-t border-slate-200"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
         {showHeader ? (
@@ -31,40 +31,40 @@ export function ContactSection({ showHeader = true }) {
             eyebrow={t("contact.eyebrow")}
             title={t("contact.title")}
             description={t("contact.description")}
-            eyebrowClassName="px-5 py-2 text-xs sm:text-sm font-semibold border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
-            titleClassName="text-white"
-            descriptionClassName="text-sm sm:text-base font-medium leading-relaxed text-slate-300"
+            eyebrowClassName="px-5 py-2 text-xs sm:text-sm font-semibold border-blue-200 bg-blue-50 text-blue-700"
+            titleClassName="text-slate-900"
+            descriptionClassName="text-sm sm:text-base font-medium leading-relaxed text-slate-600"
           />
         ) : null}
 
         {/* Velvet Rope Capacity Banner */}
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-cyan-500/20 bg-slate-900/90 px-5 py-3.5 shadow-xl backdrop-blur-md text-white">
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-blue-200 bg-white px-5 py-3.5 shadow-sm text-slate-900">
           <div className="flex items-center gap-3">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
             <div className="text-xs sm:text-sm font-medium">
-              <strong className="text-emerald-400 font-bold">Engineering Capacity: </strong>
-              <span>80% Committed • Accepting only 2 new client deployments for Q2</span>
+              <strong className="text-emerald-700 font-bold">Engineering Capacity: </strong>
+              <span className="text-slate-700">80% Committed • Accepting only 2 new client deployments for Q2</span>
             </div>
           </div>
-          <div className="hidden sm:flex items-center gap-2 text-xs text-slate-300">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-400" />
+          <div className="hidden sm:flex items-center gap-2 text-xs text-slate-600">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-600" />
             <span>Strict NDA Protected</span>
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-400" />
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-600" />
             <span>Sub-2-Hour Direct SLA</span>
           </div>
         </div>
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/90 p-7 shadow-2xl backdrop-blur-xl lg:col-span-5">
+          <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-7 shadow-sm lg:col-span-5 text-slate-900">
             <div>
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-400">
-                <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">
+                <span className="h-2 w-2 rounded-full bg-emerald-500" />
                 {t("contact.businessInquiry")}
               </div>
-              <h2 className="mt-4 font-display text-2xl font-semibold leading-tight text-white">
+              <h2 className="mt-4 font-display text-2xl font-semibold leading-tight text-slate-900">
                 {t("contact.optionsTitle")}
               </h2>
 
@@ -84,13 +84,13 @@ export function ContactSection({ showHeader = true }) {
               </div>
 
               <div className="mt-5 hidden gap-3 sm:grid sm:grid-cols-2">
-                <Button asChild size="lg" className="w-full bg-cyan-400 text-slate-950 font-bold hover:bg-cyan-300">
+                <Button asChild size="lg" className="w-full bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-soft">
                   <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
                     <Phone className="h-4 w-4 mr-1.5" />
                     Call Direct Line
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="w-full border-slate-700 bg-slate-950/60 text-white hover:bg-slate-800">
+                <Button asChild size="lg" variant="outline" className="w-full border-slate-200 bg-white text-slate-800 hover:bg-slate-50">
                   <Link href={`mailto:${siteMeta.email}`}>
                     <Mail className="h-4 w-4 mr-1.5" />
                     {t("contact.sendEmail")}
@@ -98,8 +98,8 @@ export function ContactSection({ showHeader = true }) {
                 </Button>
               </div>
 
-              <div className="mt-6 hidden border-t border-white/10 pt-5 md:block">
-                <h3 className="text-sm font-semibold text-slate-200">
+              <div className="mt-6 hidden border-t border-slate-200 pt-5 md:block">
+                <h3 className="text-sm font-semibold text-slate-800">
                   {t("contact.socialPresence")}
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -107,7 +107,7 @@ export function ContactSection({ showHeader = true }) {
                     <Link
                       key={social.label}
                       href={social.href}
-                      className="inline-flex items-center gap-1 rounded-full border border-slate-800 bg-slate-950/80 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-cyan-400 hover:text-cyan-300"
+                      className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-blue-300 hover:text-blue-600"
                     >
                       {social.label}
                       <ArrowUpRight className="h-3 w-3" />
@@ -117,22 +117,22 @@ export function ContactSection({ showHeader = true }) {
               </div>
 
               <div className="mt-4">
-                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
                   {t("contact.scheduleCall")}
                 </h3>
                 <a
                   href={`mailto:${siteMeta.email}?subject=${encodeURIComponent("Discovery Call Request")}&body=${encodeURIComponent("Hi Daud & Zepra Team, I would like to schedule a 15-minute discovery call.")}`}
-                  className="group flex cursor-pointer items-center justify-between gap-4 rounded-2xl border border-white/15 bg-primary/90 p-4 text-white shadow-sm transition-all duration-300 hover:bg-primary hover:shadow-md"
+                  className="group flex cursor-pointer items-center justify-between gap-4 rounded-2xl border border-blue-600 bg-blue-600 p-4 text-white shadow-soft transition-all duration-300 hover:bg-blue-700"
                 >
                   <span className="flex min-w-0 items-center gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/25">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/20 text-white ring-1 ring-white/30">
                       <CalendarDays className="h-5 w-5" />
                     </span>
                     <span className="min-w-0">
                       <span className="block text-sm font-semibold text-white">
                         {t("contact.bookCall")}
                       </span>
-                      <span className="mt-1 block text-xs leading-5 text-white/85">
+                      <span className="mt-1 block text-xs leading-5 text-white/90">
                         {t("contact.bookCallDescription")}
                       </span>
                     </span>
@@ -145,27 +145,27 @@ export function ContactSection({ showHeader = true }) {
               </div>
 
               {/* Founder Video Teardown Hook */}
-              <div className="mt-4 rounded-2xl border border-dashed border-cyan-500/30 bg-cyan-950/20 p-4">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-300">
-                  <span className="flex h-2 w-2 rounded-full bg-cyan-400" />
+              <div className="mt-4 rounded-2xl border border-dashed border-blue-300 bg-blue-50/60 p-4">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700">
+                  <span className="flex h-2 w-2 rounded-full bg-blue-600" />
                   Not Ready for a Sprint?
                 </div>
-                <h4 className="mt-1 font-display text-sm font-bold text-white">
+                <h4 className="mt-1 font-display text-sm font-bold text-slate-900">
                   Request Founder Daud's 5-Minute Video Teardown
                 </h4>
-                <p className="mt-1 text-xs text-slate-300 leading-relaxed">
+                <p className="mt-1 text-xs text-slate-600 leading-relaxed">
                   Send your current website URL via inquiry form or direct email. Daud will record an unfiltered screen video exposing your conversion leaks and Core Web Vitals bottlenecks. 100% Free.
                 </p>
                 <a
                   href={`mailto:${siteMeta.email}?subject=${encodeURIComponent("Request 5-Minute Video Teardown")}&body=${encodeURIComponent("Hi Daud, I would like to request a 5-minute video teardown of my website. Here is my URL: ")}`}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-cyan-300 hover:text-cyan-200 transition-colors"
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors"
                 >
                   Request Free Video Teardown <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
               </div>
             </div>
 
-            <div className="mt-6 border-t border-white/10 pt-5">
+            <div className="mt-6 border-t border-slate-200 pt-5">
               <ul className="grid gap-3 sm:grid-cols-3">
                 <TrustPoint
                   icon={<LockKeyhole className="h-4 w-4" />}
@@ -186,16 +186,12 @@ export function ContactSection({ showHeader = true }) {
           </div>
 
           <div className="relative flex h-full flex-col justify-between lg:col-span-7">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -inset-4 -z-10 rounded-3xl bg-cyan-500/10 blur-3xl"
-            />
-            <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/95 p-7 shadow-2xl backdrop-blur-xl">
+            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
               <div className="mb-6">
-                <h2 className="font-display text-2xl font-semibold text-white">
+                <h2 className="font-display text-2xl font-semibold text-slate-900">
                   {t("contact.requestConsultation")}
                 </h2>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <p className="mt-2 text-sm leading-6 text-slate-600">
                   {t("contact.formIntro")}
                 </p>
               </div>
@@ -213,16 +209,16 @@ function InfoRow({ icon, label, href, value, external = false }) {
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className="group flex min-w-0 items-center gap-3 transition-colors hover:text-cyan-300"
+      className="group flex min-w-0 items-center gap-3 transition-colors hover:text-blue-600"
     >
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 border border-blue-200">
         {icon}
       </span>
       <span className="min-w-0">
-        <span className="block text-xs font-semibold text-slate-200">
+        <span className="block text-xs font-semibold text-slate-800">
           {label}
         </span>
-        <span className="mt-0.5 block break-words text-sm text-slate-400">
+        <span className="mt-0.5 block break-words text-sm text-slate-600">
           {value}
         </span>
       </span>
@@ -233,15 +229,15 @@ function InfoRow({ icon, label, href, value, external = false }) {
 function TrustPoint({ icon, title, detail }) {
   return (
     <li className="flex min-w-0 items-start gap-2">
-      <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+      <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 border border-blue-200">
         {icon}
       </span>
       <span className="min-w-0">
-        <span className="block text-xs font-semibold leading-5 text-slate-200">
+        <span className="block text-xs font-semibold leading-5 text-slate-800">
           {title}
         </span>
         {detail ? (
-          <span className="block text-[11px] leading-4 text-slate-400">{detail}</span>
+          <span className="block text-[11px] leading-4 text-slate-500">{detail}</span>
         ) : null}
       </span>
     </li>
