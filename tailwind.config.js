@@ -75,6 +75,7 @@ module.exports = {
         sm: "calc(var(--radius) - 0.375rem)",
       },
       boxShadow: {
+        xs: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
         premium:
           "0 20px 45px -20px rgba(15, 23, 42, 0.12), 0 10px 25px -10px rgba(37, 99, 235, 0.12)",
         soft: "0 8px 30px -12px rgba(15, 23, 42, 0.08)",
