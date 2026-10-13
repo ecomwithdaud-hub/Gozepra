@@ -146,21 +146,21 @@ export function WhyUs() {
             return (
               <article
                 key={index}
-                className="group min-h-[230px] rounded-3xl border border-slate-200 bg-slate-50/70 p-6 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:bg-white hover:shadow-soft motion-reduce:transition-none"
+                className="group min-h-[230px] rounded-3xl border border-slate-800 bg-[#070f24] p-6 shadow-xl shadow-slate-950/20 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 motion-reduce:transition-none text-white"
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-100 bg-blue-50 text-blue-600 transition-colors duration-300 group-hover:border-blue-200 group-hover:bg-blue-100">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400 transition-colors duration-300 group-hover:border-cyan-400 group-hover:bg-cyan-900/50">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <span className="text-xs font-semibold tabular-nums text-slate-400">
+                  <span className="text-xs font-semibold font-mono tabular-nums text-cyan-400/70">
                     0{index + 1}
                   </span>
                 </div>
 
-                <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-slate-900">
+                <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-white">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
+                <p className="mt-3 text-sm leading-6 text-slate-300">
                   {pillar.description}
                 </p>
               </article>

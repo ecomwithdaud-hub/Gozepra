@@ -110,7 +110,7 @@ export function HomeHero() {
           >
             <TiltCard
               cursorLabel="DETAIL"
-              className="w-60 overflow-hidden rounded-3xl border border-slate-200 bg-white/95 p-3.5 shadow-xl backdrop-blur-xl"
+              className="w-60 overflow-hidden rounded-3xl border border-slate-800 bg-[#070f24]/95 p-3.5 shadow-2xl backdrop-blur-xl"
             >
               <div className="relative h-28 w-full overflow-hidden rounded-2xl">
                 <img
@@ -118,16 +118,16 @@ export function HomeHero() {
                   alt="Conversion UI/UX Design"
                   className="h-full w-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
-                <span className="absolute bottom-2 left-2.5 rounded-full border border-blue-200 bg-white/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-blue-700 shadow-sm">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-2.5 rounded-full border border-cyan-500/30 bg-[#070f24]/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-300 shadow-sm">
                   1.1s Edge Speed
                 </span>
               </div>
               <div className="mt-3 flex items-center justify-between px-1">
-                <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-700">
+                <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-300">
                   UI/UX Atelier
                 </span>
-                <span className="h-2 w-2 animate-pulse rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
+                <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
               </div>
             </TiltCard>
           </div>
@@ -142,7 +142,7 @@ export function HomeHero() {
           >
             <TiltCard
               cursorLabel="EXPLORE"
-              className="w-64 overflow-hidden rounded-3xl border border-slate-200 bg-white/95 p-3.5 shadow-xl backdrop-blur-xl"
+              className="w-64 overflow-hidden rounded-3xl border border-slate-800 bg-[#070f24]/95 p-3.5 shadow-2xl backdrop-blur-xl"
             >
               <div className="relative h-32 w-full overflow-hidden rounded-2xl">
                 <img
@@ -150,7 +150,7 @@ export function HomeHero() {
                   alt="Full-Stack Engineering"
                   className="h-full w-full object-cover contrast-125 saturate-0 transition-all duration-500 hover:saturate-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 text-left">
                   <p className="text-xs font-bold uppercase tracking-[0.25em] text-white">
                     Engineering
@@ -278,20 +278,20 @@ export function HomeHero() {
                 cursorLabel="EXPLORE"
                 className="rounded-3xl"
               >
-                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-soft">
+                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-800 bg-[#070f24] p-6 shadow-xl shadow-slate-950/20 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-cyan-950/20">
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-100 bg-blue-50 text-blue-600">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400">
                         <Icon className="h-5 w-5" />
                       </span>
-                      <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-slate-400 group-hover:text-blue-600">
+                      <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-cyan-400/70 group-hover:text-cyan-300">
                         0{index + 1} // PILLAR
                       </span>
                     </div>
-                    <h2 className="mt-5 font-display text-lg font-bold text-slate-900 sm:text-xl">
+                    <h2 className="mt-5 font-display text-lg font-bold text-white sm:text-xl">
                       {translatedItem.title}
                     </h2>
-                    <p className="mt-2 text-xs leading-6 text-slate-600 sm:text-sm">
+                    <p className="mt-2 text-xs leading-6 text-slate-300 sm:text-sm">
                       {translatedItem.description}
                     </p>
                   </div>

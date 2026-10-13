@@ -574,23 +574,23 @@ export function InteractiveServiceDemos() {
             <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:gap-8 lg:grid-cols-12">
               {/* Chat Interface Column */}
               <div className="lg:col-span-8">
-                <div className="flex h-[460px] flex-col rounded-2xl border border-slate-200 bg-white shadow-sm sm:h-[520px]">
+                <div className="flex h-[460px] flex-col rounded-2xl border border-slate-800 bg-[#070f24] shadow-2xl sm:h-[520px] text-white">
                   {/* Chat Header */}
-                  <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50/60 p-4">
+                  <div className="flex items-center justify-between border-b border-slate-800 bg-[#050b1d] p-4">
                     <div className="flex items-center gap-3">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-xl border border-blue-200">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-950/60 text-xl border border-cyan-500/30">
                         {selectedBot.botAvatar}
                       </span>
                       <div>
                         <div className="flex items-center gap-2">
-                          <h4 className="text-sm font-bold text-slate-900">
+                          <h4 className="text-sm font-bold text-white">
                             {selectedBot.botName}
                           </h4>
-                          <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                          <span className="rounded-full bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-bold text-emerald-400">
                             ONLINE 24/7
                           </span>
                         </div>
-                        <p className="text-xs text-slate-500">
+                        <p className="text-xs text-slate-400">
                           Engineered by Zepra Tech for {selectedBot.niche}
                         </p>
                       </div>
@@ -603,7 +603,7 @@ export function InteractiveServiceDemos() {
                         ])
                       }
                       title="Reset Conversation"
-                      className="rounded-lg border border-slate-200 p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100"
+                      className="rounded-lg border border-slate-700 p-2 text-slate-400 hover:text-white hover:bg-slate-800"
                     >
                       <RotateCcw className="h-4 w-4" />
                     </button>
@@ -622,7 +622,7 @@ export function InteractiveServiceDemos() {
                           className={`max-w-[85%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed ${
                             msg.sender === "user"
                               ? "bg-blue-600 text-white font-medium"
-                              : "border border-slate-200 bg-slate-50 text-slate-800"
+                              : "border border-slate-800 bg-[#0a1638] text-slate-100"
                           }`}
                         >
                           <p>{msg.text}</p>
@@ -635,7 +635,7 @@ export function InteractiveServiceDemos() {
 
                     {isTyping && (
                       <div className="flex justify-start">
-                        <div className="rounded-2xl border border-blue-200 bg-blue-50 px-4 py-2.5 text-xs text-blue-700 animate-pulse">
+                        <div className="rounded-2xl border border-cyan-500/30 bg-cyan-950/60 px-4 py-2.5 text-xs text-cyan-300 animate-pulse">
                           <span>Bot is typing live response...</span>
                         </div>
                       </div>
@@ -643,8 +643,8 @@ export function InteractiveServiceDemos() {
                   </div>
 
                   {/* Suggested Quick Prompts */}
-                  <div className="border-t border-slate-200 bg-slate-50/60 p-3">
-                    <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2">
+                  <div className="border-t border-slate-800 bg-[#050b1d] p-3">
+                    <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
                       💡 Tap a real customer question to test instant reply:
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -652,7 +652,7 @@ export function InteractiveServiceDemos() {
                         <button
                           key={idx}
                           onClick={() => handleSendPrompt(p.q, p.a)}
-                          className="rounded-lg border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-700 transition-all hover:bg-blue-600 hover:text-white text-left"
+                          className="rounded-lg border border-slate-700 bg-[#0a1638] px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all hover:border-cyan-400 hover:text-white text-left"
                         >
                           {p.q}
                         </button>
@@ -663,14 +663,14 @@ export function InteractiveServiceDemos() {
                   {/* Custom Input Bar */}
                   <form
                     onSubmit={handleCustomSubmit}
-                    className="flex items-center gap-2 border-t border-slate-200 p-3"
+                    className="flex items-center gap-2 border-t border-slate-800 bg-[#050b1d] p-3"
                   >
                     <input
                       type="text"
                       value={customInput}
                       onChange={(e) => setCustomInput(e.target.value)}
                       placeholder="Type your custom customer question..."
-                      className="flex-1 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+                      className="flex-1 rounded-xl border border-slate-700 bg-[#0a1638] px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-400 focus:border-cyan-400 focus:outline-none"
                     />
                     <button
                       type="submit"
@@ -684,57 +684,57 @@ export function InteractiveServiceDemos() {
 
               {/* Bot Business Metrics & Capabilities Column */}
               <div className="lg:col-span-4 flex flex-col justify-between space-y-4">
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <h4 className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <div className="rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl text-white">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-cyan-400">
                     Verified Bot Performance
                   </h4>
                   <div className="mt-4 grid grid-cols-2 gap-3">
-                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-blue-600">
+                    <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 text-center">
+                      <p className="font-mono text-xl font-black text-cyan-400">
                         {selectedBot.stats.responseTime}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-500">Response Speed</p>
+                      <p className="mt-1 text-[11px] text-slate-400">Response Speed</p>
                     </div>
-                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-emerald-600">
+                    <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 text-center">
+                      <p className="font-mono text-xl font-black text-emerald-400">
                         {selectedBot.stats.orderLift || selectedBot.stats.bookingRate || selectedBot.stats.leadCapture || selectedBot.stats.rfqConversion}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-500">Conversion Lift</p>
+                      <p className="mt-1 text-[11px] text-slate-400">Conversion Lift</p>
                     </div>
-                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-indigo-600">
+                    <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 text-center">
+                      <p className="font-mono text-xl font-black text-indigo-300">
                         {selectedBot.stats.ticketDeflection || selectedBot.stats.noShowReduction || selectedBot.stats.dispatchSpeed || selectedBot.stats.intlReach}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-500">Workload Saved</p>
+                      <p className="mt-1 text-[11px] text-slate-400">Workload Saved</p>
                     </div>
-                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
-                      <p className="font-mono text-xl font-black text-amber-600">
+                    <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 text-center">
+                      <p className="font-mono text-xl font-black text-amber-400">
                         {selectedBot.stats.availability}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-500">Uptime Reliability</p>
+                      <p className="mt-1 text-[11px] text-slate-400">Uptime Reliability</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900">
+                <div className="rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl text-white">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-white">
                     Deployment Channels Included:
                   </h4>
-                  <ul className="mt-3 space-y-2 text-xs text-slate-600">
+                  <ul className="mt-3 space-y-2 text-xs text-slate-300">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                       <span>Official WhatsApp Business Cloud API</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                       <span>Website Live Chat Widget (Sub-second loading)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                       <span>Instagram Direct &amp; Facebook Messenger Sync</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                       <span>Trained on your private documents &amp; catalog</span>
                     </li>
                   </ul>

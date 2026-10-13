@@ -106,7 +106,7 @@ export function ContactForm() {
         <Field label={t("contact.fullName")} error={errors.name}>
           <Input
             name="name"
-            className="rounded-xl border-slate-300 bg-white p-3.5 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-1 focus:ring-blue-500 focus-visible:border-blue-500 focus-visible:ring-blue-500"
+            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
             placeholder={t("contact.namePlaceholder")}
             value={formData.name}
             onChange={handleChange}
@@ -116,7 +116,7 @@ export function ContactForm() {
         <Field label={t("contact.companyName")} error={errors.company}>
           <Input
             name="company"
-            className="rounded-xl border-slate-300 bg-white p-3.5 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-1 focus:ring-blue-500 focus-visible:border-blue-500 focus-visible:ring-blue-500"
+            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
             placeholder={t("contact.companyPlaceholder")}
             value={formData.company}
             onChange={handleChange}
@@ -130,7 +130,7 @@ export function ContactForm() {
           <Input
             type="email"
             name="email"
-            className="rounded-xl border-slate-300 bg-white p-3.5 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-1 focus:ring-blue-500 focus-visible:border-blue-500 focus-visible:ring-blue-500"
+            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
             placeholder={t("contact.emailPlaceholder")}
             value={formData.email}
             onChange={handleChange}
@@ -140,7 +140,7 @@ export function ContactForm() {
         <Field label={t("contact.phoneWhatsapp")} error={errors.phone}>
           <Input
             name="phone"
-            className="rounded-xl border-slate-300 bg-white p-3.5 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-1 focus:ring-blue-500 focus-visible:border-blue-500 focus-visible:ring-blue-500"
+            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
             placeholder={t("contact.phonePlaceholder")}
             value={formData.phone}
             onChange={handleChange}
@@ -201,7 +201,7 @@ export function ContactForm() {
         <Textarea
           name="message"
           rows={3}
-          className="min-h-0 rounded-xl border-slate-300 bg-white p-3.5 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-1 focus:ring-blue-500 focus-visible:border-blue-500 focus-visible:ring-blue-500"
+          className="min-h-0 rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
           placeholder={t("contact.messagePlaceholder")}
           value={formData.message}
           onChange={handleChange}
@@ -213,8 +213,8 @@ export function ContactForm() {
           <div
             className={`rounded-2xl border px-4 py-3 text-sm ${
               status.type === "success"
-                ? "border-emerald-500/30 bg-emerald-50 text-emerald-800"
-                : "border-rose-500/30 bg-rose-50 text-rose-800"
+                ? "border-emerald-500/30 bg-emerald-950/60 text-emerald-300"
+                : "border-rose-500/30 bg-rose-950/60 text-rose-300"
             }`}
           >
             {status.message}
@@ -239,9 +239,9 @@ export function ContactForm() {
 function Field({ label, error, children }) {
   return (
     <label className="block space-y-2">
-      <span className="text-sm font-semibold text-slate-800">{label}</span>
+      <span className="text-sm font-semibold text-slate-200">{label}</span>
       {children}
-      {error ? <span className="text-sm text-rose-500">{error}</span> : null}
+      {error ? <span className="text-sm text-rose-400">{error}</span> : null}
     </label>
   );
 }
@@ -249,7 +249,7 @@ function Field({ label, error, children }) {
 function SelectField({ className = "", children, ...props }) {
   return (
     <select
-      className={`flex h-12 w-full rounded-xl border border-slate-300 bg-white p-3.5 text-sm text-slate-900 shadow-sm transition-colors focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus-visible:ring-blue-500 [&_option]:bg-white [&_option]:text-slate-900 ${className}`}
+      className={`flex h-12 w-full rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-sm text-white shadow-sm transition-colors focus:border-cyan-400 focus:bg-[#070e24] focus:outline-none focus:ring-1 focus:ring-cyan-400 focus-visible:ring-cyan-400 [&_option]:bg-[#070f24] [&_option]:text-white ${className}`}
       {...props}
     >
       {children}

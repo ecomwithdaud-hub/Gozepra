@@ -292,65 +292,65 @@ export function DevCrafterHomeExperience() {
               </div>
 
               {/* Active Service Live Telemetry Box */}
-              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-lg sm:rounded-[28px] sm:p-7">
-                <div className="flex items-center justify-between border-b border-slate-200 pb-3 sm:pb-4">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-700 sm:text-[11px] sm:tracking-[0.28em]">
+              <div className="overflow-hidden rounded-2xl border border-slate-800 bg-[#070f24] p-5 shadow-2xl sm:rounded-[28px] sm:p-7 text-white">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-3 sm:pb-4">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400 sm:text-[11px] sm:tracking-[0.28em]">
                     Service Telemetry // {activeService.number}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-emerald-700 sm:px-2.5 sm:text-[10px]">
-                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/60 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-emerald-400 sm:px-2.5 sm:text-[10px]">
+                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
                     Active
                   </span>
                 </div>
 
-                <h3 className="mt-4 font-display text-xl font-bold uppercase tracking-tight text-slate-900 sm:mt-5 sm:text-2xl">
+                <h3 className="mt-4 font-display text-xl font-bold uppercase tracking-tight text-white sm:mt-5 sm:text-2xl">
                   {activeService.title}
                 </h3>
-                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-600 sm:text-xs sm:tracking-[0.22em]">
+                <p className="mt-1 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-300 sm:text-xs sm:tracking-[0.22em]">
                   Engine: {activeService.engine}
                 </p>
 
                 <div className="mt-4 space-y-3 sm:mt-6 sm:space-y-4">
                   <div>
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-700 sm:text-[11px] sm:tracking-[0.2em]">
+                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
                       <span>Scalability</span>
-                      <span className="text-blue-600">
+                      <span className="text-cyan-400">
                         {activeService.stats.scalability}%
                       </span>
                     </div>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-900">
                       <div
-                        className="h-full rounded-full bg-blue-600 transition-all duration-500"
+                        className="h-full rounded-full bg-cyan-400 transition-all duration-500"
                         style={{ width: `${activeService.stats.scalability}%` }}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-700 sm:text-[11px] sm:tracking-[0.2em]">
+                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
                       <span>Performance</span>
-                      <span className="text-emerald-600">
+                      <span className="text-emerald-400">
                         {activeService.stats.performance}%
                       </span>
                     </div>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-900">
                       <div
-                        className="h-full rounded-full bg-emerald-500 transition-all duration-500"
+                        className="h-full rounded-full bg-emerald-400 transition-all duration-500"
                         style={{ width: `${activeService.stats.performance}%` }}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-700 sm:text-[11px] sm:tracking-[0.2em]">
+                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
                       <span>ROI Impact</span>
-                      <span className="text-amber-600">
+                      <span className="text-amber-400">
                         {activeService.stats.roi}%
                       </span>
                     </div>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-900">
                       <div
-                        className="h-full rounded-full bg-amber-500 transition-all duration-500"
+                        className="h-full rounded-full bg-amber-400 transition-all duration-500"
                         style={{ width: `${activeService.stats.roi}%` }}
                       />
                     </div>
@@ -361,7 +361,7 @@ export function DevCrafterHomeExperience() {
                   <Link
                     href="/services"
                     data-cursor="EXPLORE"
-                    className="inline-flex h-11 w-full items-center justify-center rounded-full border border-slate-200 bg-slate-50 px-6 text-xs font-bold uppercase tracking-[0.16em] text-slate-800 transition hover:border-blue-300 hover:bg-white hover:text-blue-600 sm:h-12 sm:tracking-[0.2em]"
+                    className="inline-flex h-11 w-full items-center justify-center rounded-full border border-slate-700 bg-slate-900/90 px-6 text-xs font-bold uppercase tracking-[0.16em] text-slate-200 transition hover:border-cyan-400 hover:bg-slate-800 hover:text-white sm:h-12 sm:tracking-[0.2em]"
                   >
                     View All 11 Agency Services
                   </Link>
@@ -381,37 +381,37 @@ export function DevCrafterHomeExperience() {
                       className="rounded-2xl sm:rounded-[32px]"
                     >
                       <article
-                        className={`group relative overflow-hidden rounded-2xl border p-5 transition-all duration-300 sm:rounded-[32px] sm:p-9 ${
+                        className={`group relative overflow-hidden rounded-2xl border p-5 transition-all duration-300 sm:rounded-[32px] sm:p-9 text-white ${
                           isSelected
-                            ? "border-blue-600 bg-white shadow-md ring-1 ring-blue-500/30"
-                            : "border-slate-200 bg-white/80 hover:border-blue-300 hover:bg-white"
+                            ? "border-cyan-400/80 bg-[#0a1638] shadow-2xl ring-1 ring-cyan-400/30"
+                            : "border-slate-800 bg-[#070f24] hover:border-cyan-400/50 hover:bg-[#0a1638]"
                         }`}
                       >
                         <div className="flex flex-wrap items-center justify-between gap-2">
-                          <span className="font-mono text-[11px] font-black uppercase tracking-[0.25em] text-slate-400 group-hover:text-blue-600 sm:text-xs sm:tracking-[0.35em]">
+                          <span className="font-mono text-[11px] font-black uppercase tracking-[0.25em] text-cyan-400/70 group-hover:text-cyan-300 sm:text-xs sm:tracking-[0.35em]">
                             SERVICE // {srv.number}
                           </span>
-                          <span className="rounded-full border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-blue-700 sm:px-3 sm:py-1 sm:text-[11px]">
+                          <span className="rounded-full border border-cyan-500/30 bg-cyan-950/60 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-cyan-300 sm:px-3 sm:py-1 sm:text-[11px]">
                             {srv.engine}
                           </span>
                         </div>
 
-                        <h3 className="mt-3 font-display text-xl font-black uppercase tracking-tight text-slate-900 transition-colors group-hover:text-blue-600 sm:mt-5 sm:text-3xl">
+                        <h3 className="mt-3 font-display text-xl font-black uppercase tracking-tight text-white transition-colors group-hover:text-cyan-300 sm:mt-5 sm:text-3xl">
                           {srv.title}
                         </h3>
 
-                        <p className="mt-2 text-xs leading-relaxed text-slate-600 sm:mt-3 sm:text-base sm:leading-7">
+                        <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:mt-3 sm:text-base sm:leading-7">
                           {srv.description}
                         </p>
 
-                        <div className="mt-4 flex items-center justify-between border-t border-slate-200 pt-4 sm:mt-6 sm:pt-5">
+                        <div className="mt-4 flex items-center justify-between border-t border-slate-800 pt-4 sm:mt-6 sm:pt-5">
                           <Link
                             href={srv.href}
                             data-cursor="EXPLORE"
-                            className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.2em] text-slate-900 transition hover:text-blue-600 sm:gap-3 sm:tracking-[0.25em]"
+                            className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.2em] text-white transition hover:text-cyan-300 sm:gap-3 sm:tracking-[0.25em]"
                           >
                             <span>Explore Capability</span>
-                            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-slate-50 transition-all group-hover:border-blue-600 group-hover:bg-blue-600 group-hover:text-white sm:h-9 sm:w-9">
+                            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 bg-slate-900 text-cyan-400 transition-all group-hover:border-cyan-400 group-hover:bg-cyan-500 group-hover:text-slate-950 sm:h-9 sm:w-9">
                               <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                             </span>
                           </Link>
@@ -446,17 +446,17 @@ export function DevCrafterHomeExperience() {
                 cursorLabel={`STEP ${step.number}`}
                 className="rounded-[32px]"
               >
-                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[32px] border border-slate-200 bg-slate-50/70 p-7 shadow-sm transition-all duration-300 hover:border-blue-300 hover:bg-white hover:shadow-soft">
-                  <div className="pointer-events-none absolute -right-4 -top-6 select-none font-display text-8xl font-black text-slate-900/[0.04]">
+                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[32px] border border-slate-800 bg-[#070f24] p-7 shadow-xl shadow-slate-950/20 transition-all duration-300 hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 text-white">
+                  <div className="pointer-events-none absolute -right-4 -top-6 select-none font-display text-8xl font-black text-white/[0.04]">
                     {step.number}
                   </div>
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400">
+                      <span className="font-mono text-[11px] font-black uppercase tracking-[0.3em] text-cyan-400/70">
                         STEP {step.number}
                       </span>
                       <span
-                        className="flex h-10 w-10 items-center justify-center rounded-full border text-xs font-black transition-colors group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border text-xs font-black transition-colors group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:border-cyan-400"
                         style={{
                           borderColor: `${step.accent}88`,
                           color: step.accent,
@@ -465,10 +465,10 @@ export function DevCrafterHomeExperience() {
                         {step.number}
                       </span>
                     </div>
-                    <h3 className="mt-6 font-display text-2xl font-black uppercase tracking-tight text-slate-900 group-hover:text-blue-600">
+                    <h3 className="mt-6 font-display text-2xl font-black uppercase tracking-tight text-white group-hover:text-cyan-300">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-600">
+                    <p className="mt-3 text-sm leading-7 text-slate-300">
                       {step.description}
                     </p>
                   </div>

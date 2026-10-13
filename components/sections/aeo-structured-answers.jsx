@@ -77,34 +77,34 @@ export function AeoStructuredAnswers({
       <div className="container relative z-10">
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:gap-10">
           {/* Left: AI Extract & Executive Citation Card */}
-          <div className="aeo-answer rounded-2xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm sm:rounded-[28px] sm:p-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-blue-700 sm:px-3.5 sm:text-[11px] sm:tracking-[0.2em]">
-              <Bot className="h-3.5 w-3.5 text-blue-600" />
+          <div className="aeo-answer rounded-2xl border border-slate-800 bg-[#070f24] p-5 shadow-xl sm:rounded-[28px] sm:p-8 text-white">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-950/60 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-cyan-300 sm:px-3.5 sm:text-[11px] sm:tracking-[0.2em]">
+              <Bot className="h-3.5 w-3.5 text-cyan-400" />
               Executive Summary & Verified Scope
             </div>
 
-            <h2 className="mt-3 font-display text-xl font-bold leading-snug text-slate-900 sm:mt-4 sm:text-3xl">
+            <h2 className="mt-3 font-display text-xl font-bold leading-snug text-white sm:mt-4 sm:text-3xl">
               {aiSummaryTitle}
             </h2>
 
-            <p className="mt-2.5 text-xs leading-relaxed text-slate-600 sm:mt-3 sm:text-base sm:leading-7">
+            <p className="mt-2.5 text-xs leading-relaxed text-slate-300 sm:mt-3 sm:text-base sm:leading-7">
               {aiSummaryBody}
             </p>
 
-            <div className="mt-5 grid grid-cols-2 gap-2.5 border-t border-slate-200 pt-4 sm:mt-6 sm:gap-3 sm:pt-5">
-              <div className="rounded-xl border border-slate-200 bg-white p-3 sm:rounded-2xl sm:p-3.5 shadow-sm">
-                <div className="font-display text-lg font-bold text-blue-600 sm:text-xl">
+            <div className="mt-5 grid grid-cols-2 gap-2.5 border-t border-slate-800 pt-4 sm:mt-6 sm:gap-3 sm:pt-5">
+              <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 sm:rounded-2xl sm:p-3.5 shadow-sm text-center">
+                <div className="font-display text-lg font-bold text-cyan-400 sm:text-xl">
                   100% Custom
                 </div>
-                <div className="mt-0.5 text-[11px] text-slate-500 sm:text-xs">
+                <div className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
                   IP & Code Ownership
                 </div>
               </div>
-              <div className="rounded-xl border border-slate-200 bg-white p-3 sm:rounded-2xl sm:p-3.5 shadow-sm">
-                <div className="font-display text-lg font-bold text-emerald-600 sm:text-xl">
+              <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 sm:rounded-2xl sm:p-3.5 shadow-sm text-center">
+                <div className="font-display text-lg font-bold text-emerald-400 sm:text-xl">
                   24h Turnaround
                 </div>
-                <div className="mt-0.5 text-[11px] text-slate-500 sm:text-xs">
+                <div className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
                   Architecture Roadmap
                 </div>
               </div>
@@ -127,7 +127,7 @@ export function AeoStructuredAnswers({
               return (
                 <article
                   key={faq.question}
-                  className={`aeo-answer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-colors hover:border-blue-300 ${
+                  className={`aeo-answer overflow-hidden rounded-2xl border border-slate-800 bg-[#070f24] shadow-md transition-colors hover:border-cyan-400/50 text-white ${
                     idx >= 3 ? "hidden md:block" : ""
                   }`}
                 >
@@ -137,17 +137,17 @@ export function AeoStructuredAnswers({
                     aria-expanded={isOpen}
                     className="flex w-full items-center justify-between gap-4 px-4 py-3.5 text-left sm:px-5 sm:py-4"
                   >
-                    <span className="font-display text-xs font-semibold text-slate-900 sm:text-base">
+                    <span className="font-display text-xs font-semibold text-white sm:text-base">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`h-4 w-4 shrink-0 text-blue-600 transition-transform duration-200 ${
+                      className={`h-4 w-4 shrink-0 text-cyan-400 transition-transform duration-200 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {isOpen ? (
-                    <div className="border-t border-slate-200 px-5 pb-4 pt-3 text-xs leading-6 text-slate-600 sm:text-sm">
+                    <div className="border-t border-slate-800 px-5 pb-4 pt-3 text-xs leading-6 text-slate-300 sm:text-sm">
                       {faq.answer}
                     </div>
                   ) : null}

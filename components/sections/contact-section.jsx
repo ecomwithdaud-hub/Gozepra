@@ -58,13 +58,13 @@ export function ContactSection({ showHeader = true }) {
         </div>
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-7 shadow-sm lg:col-span-5 text-slate-900">
+          <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-7 shadow-xl lg:col-span-5 text-white">
             <div>
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-400">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" />
                 {t("contact.businessInquiry")}
               </div>
-              <h2 className="mt-4 font-display text-2xl font-semibold leading-tight text-slate-900">
+              <h2 className="mt-4 font-display text-2xl font-semibold leading-tight text-white">
                 {t("contact.optionsTitle")}
               </h2>
 
@@ -90,7 +90,7 @@ export function ContactSection({ showHeader = true }) {
                     Call Direct Line
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="w-full border-slate-200 bg-white text-slate-800 hover:bg-slate-50">
+                <Button asChild size="lg" variant="outline" className="w-full border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-400 hover:text-white hover:bg-slate-800">
                   <Link href={`mailto:${siteMeta.email}`}>
                     <Mail className="h-4 w-4 mr-1.5" />
                     {t("contact.sendEmail")}
@@ -98,8 +98,8 @@ export function ContactSection({ showHeader = true }) {
                 </Button>
               </div>
 
-              <div className="mt-6 hidden border-t border-slate-200 pt-5 md:block">
-                <h3 className="text-sm font-semibold text-slate-800">
+              <div className="mt-6 hidden border-t border-slate-800 pt-5 md:block">
+                <h3 className="text-sm font-semibold text-slate-300">
                   {t("contact.socialPresence")}
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -107,7 +107,7 @@ export function ContactSection({ showHeader = true }) {
                     <Link
                       key={social.label}
                       href={social.href}
-                      className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-blue-300 hover:text-blue-600"
+                      className="inline-flex items-center gap-1 rounded-full border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-cyan-400 hover:text-white"
                     >
                       {social.label}
                       <ArrowUpRight className="h-3 w-3" />
@@ -117,7 +117,7 @@ export function ContactSection({ showHeader = true }) {
               </div>
 
               <div className="mt-4">
-                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
                   {t("contact.scheduleCall")}
                 </h3>
                 <a
@@ -145,27 +145,27 @@ export function ContactSection({ showHeader = true }) {
               </div>
 
               {/* Founder Video Teardown Hook */}
-              <div className="mt-4 rounded-2xl border border-dashed border-blue-300 bg-blue-50/60 p-4">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700">
-                  <span className="flex h-2 w-2 rounded-full bg-blue-600" />
+              <div className="mt-4 rounded-2xl border border-dashed border-cyan-500/40 bg-[#0a1638] p-4 text-white">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-300">
+                  <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
                   Not Ready for a Sprint?
                 </div>
-                <h4 className="mt-1 font-display text-sm font-bold text-slate-900">
+                <h4 className="mt-1 font-display text-sm font-bold text-white">
                   Request Founder Daud's 5-Minute Video Teardown
                 </h4>
-                <p className="mt-1 text-xs text-slate-600 leading-relaxed">
+                <p className="mt-1 text-xs text-slate-300 leading-relaxed">
                   Send your current website URL via inquiry form or direct email. Daud will record an unfiltered screen video exposing your conversion leaks and Core Web Vitals bottlenecks. 100% Free.
                 </p>
                 <a
                   href={`mailto:${siteMeta.email}?subject=${encodeURIComponent("Request 5-Minute Video Teardown")}&body=${encodeURIComponent("Hi Daud, I would like to request a 5-minute video teardown of my website. Here is my URL: ")}`}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   Request Free Video Teardown <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
               </div>
             </div>
 
-            <div className="mt-6 border-t border-slate-200 pt-5">
+            <div className="mt-6 border-t border-slate-800 pt-5">
               <ul className="grid gap-3 sm:grid-cols-3">
                 <TrustPoint
                   icon={<LockKeyhole className="h-4 w-4" />}
@@ -186,12 +186,12 @@ export function ContactSection({ showHeader = true }) {
           </div>
 
           <div className="relative flex h-full flex-col justify-between lg:col-span-7">
-            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-7 shadow-xl text-white">
               <div className="mb-6">
-                <h2 className="font-display text-2xl font-semibold text-slate-900">
+                <h2 className="font-display text-2xl font-semibold text-white">
                   {t("contact.requestConsultation")}
                 </h2>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
+                <p className="mt-2 text-sm leading-6 text-slate-300">
                   {t("contact.formIntro")}
                 </p>
               </div>
@@ -209,16 +209,16 @@ function InfoRow({ icon, label, href, value, external = false }) {
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className="group flex min-w-0 items-center gap-3 transition-colors hover:text-blue-600"
+      className="group flex min-w-0 items-center gap-3 transition-colors hover:text-cyan-300"
     >
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 border border-blue-200">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">
         {icon}
       </span>
       <span className="min-w-0">
-        <span className="block text-xs font-semibold text-slate-800">
+        <span className="block text-xs font-semibold text-slate-400">
           {label}
         </span>
-        <span className="mt-0.5 block break-words text-sm text-slate-600">
+        <span className="mt-0.5 block break-words text-sm text-white font-medium">
           {value}
         </span>
       </span>
@@ -229,15 +229,15 @@ function InfoRow({ icon, label, href, value, external = false }) {
 function TrustPoint({ icon, title, detail }) {
   return (
     <li className="flex min-w-0 items-start gap-2">
-      <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 border border-blue-200">
+      <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">
         {icon}
       </span>
       <span className="min-w-0">
-        <span className="block text-xs font-semibold leading-5 text-slate-800">
+        <span className="block text-xs font-semibold leading-5 text-white">
           {title}
         </span>
         {detail ? (
-          <span className="block text-[11px] leading-4 text-slate-500">{detail}</span>
+          <span className="block text-[11px] leading-4 text-slate-400">{detail}</span>
         ) : null}
       </span>
     </li>

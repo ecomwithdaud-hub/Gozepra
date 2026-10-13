@@ -429,15 +429,15 @@ export function HumanBusinessBridge() {
 
               {/* Right Column: Live Demos & Fast Action */}
               <div className="lg:col-span-5">
-                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
+                <div className="rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl text-white">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
+                    <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
                       Ready-To-Inspect Live Demos
                     </span>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                   </div>
 
-                  <p className="mt-2 text-xs text-slate-600">
+                  <p className="mt-2 text-xs text-slate-300">
                     See working examples we engineered for this exact industry:
                   </p>
 
@@ -448,17 +448,17 @@ export function HumanBusinessBridge() {
                         href={demo.demoUrl}
                         target={demo.demoUrl.startsWith("http") ? "_blank" : "_self"}
                         rel="noreferrer"
-                        className="group flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 p-3.5 transition-all hover:border-blue-300 hover:bg-blue-50/50"
+                        className="group flex items-center justify-between rounded-xl border border-slate-700/80 bg-slate-900/90 p-3.5 transition-all hover:border-cyan-400 hover:bg-slate-800"
                       >
-                        <span className="text-xs font-semibold text-slate-800 group-hover:text-blue-600 sm:text-sm">
+                        <span className="text-xs font-semibold text-white group-hover:text-cyan-300 sm:text-sm">
                           {demo.name}
                         </span>
-                        <ArrowUpRight className="h-4 w-4 text-blue-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        <ArrowUpRight className="h-4 w-4 text-cyan-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </a>
                     ))}
                   </div>
 
-                  <div className="mt-6 border-t border-slate-200 pt-5 text-center">
+                  <div className="mt-6 border-t border-slate-800 pt-5 text-center">
                     <Link
                       href="/contact"
                       className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-xs font-extrabold uppercase tracking-wider text-white shadow-soft transition-all hover:bg-blue-700"
@@ -466,7 +466,7 @@ export function HumanBusinessBridge() {
                       <span>Get a Website Like This For Your Business</span>
                       <ArrowRight className="h-4 w-4" />
                     </Link>
-                    <p className="mt-2 text-[11px] text-slate-500">
+                    <p className="mt-2 text-[11px] text-slate-400">
                       Free consultation • Direct chat with Mr. Daud Lashari & team
                     </p>
                   </div>
@@ -498,30 +498,30 @@ export function HumanBusinessBridge() {
               return (
                 <div key={sol.number} className={solIdx >= 3 ? "hidden md:block" : ""}>
                   <TiltCard cursorLabel="VIEW" className="rounded-2xl sm:rounded-3xl">
-                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-blue-300 hover:shadow-soft sm:rounded-3xl sm:p-7">
+                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-5 shadow-xl shadow-slate-950/20 transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 sm:rounded-3xl sm:p-7 text-white">
                       <div>
                         <div className="flex items-center justify-between">
-                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-blue-600 sm:h-12 sm:w-12 sm:rounded-2xl">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400 sm:h-12 sm:w-12 sm:rounded-2xl">
                             <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                           </span>
-                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-slate-400 sm:text-xs">
+                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-cyan-400/70 sm:text-xs">
                             {sol.number} // SERVICE
                           </span>
                         </div>
 
                         <div className="mt-4 sm:mt-5">
-                          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-2.5 py-0.5 text-[10px] font-bold text-blue-700 sm:px-3 sm:text-[11px]">
+                          <span className="inline-block rounded-full border border-cyan-500/30 bg-cyan-950/60 px-2.5 py-0.5 text-[10px] font-bold text-cyan-300 sm:px-3 sm:text-[11px]">
                             {sol.badge}
                           </span>
-                          <h4 className="mt-2 font-display text-lg font-bold text-slate-900 group-hover:text-blue-600 sm:text-xl">
+                          <h4 className="mt-2 font-display text-lg font-bold text-white group-hover:text-cyan-300 sm:text-xl">
                             {sol.title}
                           </h4>
-                          <p className="text-xs font-semibold text-slate-500">
+                          <p className="text-xs font-semibold text-slate-400">
                             {sol.subtitle}
                           </p>
                         </div>
 
-                        <p className="mt-3 text-xs leading-relaxed text-slate-600 sm:mt-4 sm:text-sm">
+                        <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:mt-4 sm:text-sm">
                           {sol.description}
                         </p>
 
@@ -529,16 +529,16 @@ export function HumanBusinessBridge() {
                           {sol.bullets.map((b, bIdx) => (
                             <li
                               key={bIdx}
-                              className={`flex items-center gap-2 text-xs font-medium text-slate-700 ${bIdx >= 2 ? "hidden sm:flex" : "flex"}`}
+                              className={`flex items-center gap-2 text-xs font-medium text-slate-200 ${bIdx >= 2 ? "hidden sm:flex" : "flex"}`}
                             >
-                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
                               <span>{b}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="mt-5 border-t border-slate-200 pt-3.5 flex items-center justify-between text-xs font-bold text-blue-600 sm:mt-6 sm:pt-4">
+                      <div className="mt-5 border-t border-slate-800 pt-3.5 flex items-center justify-between text-xs font-bold text-cyan-400 sm:mt-6 sm:pt-4">
                         <span>100% Done-For-You Delivery</span>
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </div>
@@ -573,21 +573,21 @@ export function HumanBusinessBridge() {
               return (
                 <div
                   key={s.step}
-                  className="relative rounded-2xl border border-slate-200 bg-slate-50/60 p-6 backdrop-blur-md transition-all hover:border-blue-300"
+                  className="relative rounded-2xl border border-slate-800 bg-[#070f24] p-6 text-white shadow-xl shadow-slate-950/15 backdrop-blur-md transition-all hover:border-cyan-400/50 hover:bg-[#0a1638]"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 border border-blue-200 font-bold">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-950/60 text-cyan-400 border border-cyan-500/30 font-bold">
                       {s.step}
                     </span>
-                    <span className="rounded-full bg-white border border-slate-200 px-2.5 py-1 text-[11px] font-bold text-slate-600">
+                    <span className="rounded-full bg-slate-900 border border-slate-700 px-2.5 py-1 text-[11px] font-bold text-slate-300">
                       {s.duration}
                     </span>
                   </div>
 
-                  <h4 className="mt-4 font-display text-lg font-bold text-slate-900">
+                  <h4 className="mt-4 font-display text-lg font-bold text-white">
                     {s.title}
                   </h4>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                  <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:text-sm">
                     {s.description}
                   </p>
                 </div>

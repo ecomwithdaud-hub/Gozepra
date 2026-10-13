@@ -191,8 +191,8 @@ export function PricingTiers() {
                 key={tier.id}
                 className={`relative flex flex-col justify-between rounded-3xl p-8 transition-all duration-300 ${
                   tier.popular
-                    ? "border-2 border-blue-600 bg-white shadow-xl shadow-blue-500/10 ring-1 ring-blue-600/30 lg:-translate-y-2"
-                    : "border border-slate-200 bg-white hover:border-slate-300 hover:shadow-md"
+                    ? "border-2 border-cyan-400 bg-gradient-to-br from-[#0c1c45] via-[#070f24] to-[#040918] text-white shadow-2xl ring-1 ring-cyan-400/30 lg:-translate-y-2"
+                    : "border border-slate-800 bg-[#070f24] text-white hover:border-cyan-400/50 hover:bg-[#0a1638] shadow-xl"
                 }`}
               >
                 {tier.popular && (
@@ -203,39 +203,39 @@ export function PricingTiers() {
 
                 <div>
                   {!tier.popular && (
-                    <div className="inline-flex rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-700">
+                    <div className="inline-flex rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-300">
                       {tier.badge}
                     </div>
                   )}
 
                   <div className="mt-4 flex items-center justify-between">
-                    <h3 className="font-display text-2xl font-bold text-slate-900">{tier.name}</h3>
+                    <h3 className="font-display text-2xl font-bold text-white">{tier.name}</h3>
                   </div>
 
-                  <p className="mt-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                  <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:text-sm">
                     {tier.tagline}
                   </p>
 
-                  <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
-                    <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                  <div className="mt-6 rounded-2xl border border-slate-800 bg-[#050b1d] p-4">
+                    <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                       Total Investment
                     </div>
                     <div className="mt-1 flex items-baseline gap-2">
-                      <span className="font-display text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                      <span className="font-display text-3xl font-extrabold text-white sm:text-4xl">
                         {tier.price}
                       </span>
                     </div>
-                    <span className="text-[11px] text-blue-600 font-medium">{tier.billingPeriod}</span>
+                    <span className="text-[11px] text-cyan-400 font-medium">{tier.billingPeriod}</span>
                   </div>
 
-                  <div className="mt-6 border-t border-slate-100 pt-6">
-                    <div className="text-xs font-bold uppercase tracking-wider text-slate-800">
+                  <div className="mt-6 border-t border-slate-800 pt-6">
+                    <div className="text-xs font-bold uppercase tracking-wider text-slate-200">
                       What's Included:
                     </div>
                     <ul className="mt-4 space-y-3">
                       {tier.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-600">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+                        <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -243,9 +243,9 @@ export function PricingTiers() {
                   </div>
                 </div>
 
-                <div className="mt-8 border-t border-slate-100 pt-6">
-                  <div className="mb-5 rounded-xl border border-blue-200 bg-blue-50 p-3 text-[11px] text-blue-900">
-                    <span className="font-semibold text-blue-700">Guarantee: </span>
+                <div className="mt-8 border-t border-slate-800 pt-6">
+                  <div className="mb-5 rounded-xl border border-cyan-500/30 bg-cyan-950/40 p-3 text-[11px] text-cyan-200">
+                    <span className="font-semibold text-cyan-400">Guarantee: </span>
                     {tier.guarantee}
                   </div>
 
@@ -255,7 +255,7 @@ export function PricingTiers() {
                     className={`w-full font-bold transition-all ${
                       tier.popular
                         ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/25"
-                        : "border border-slate-200 bg-slate-50 text-slate-800 hover:bg-slate-100 hover:border-slate-300"
+                        : "border border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-400 hover:text-white hover:bg-slate-800"
                     }`}
                   >
                     <Link href={`${tier.href}?tier=${tier.id}`}>
@@ -275,7 +275,7 @@ export function PricingTiers() {
             {RETAINERS.map((ret) => (
               <div
                 key={ret.id}
-                className="relative flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-8 shadow-md hover:border-blue-300 transition-all"
+                className="relative flex flex-col justify-between rounded-3xl border border-slate-800 bg-[#070f24] p-8 shadow-xl text-white hover:border-cyan-400 transition-all"
               >
                 {ret.badge && (
                   <div className="absolute -top-3.5 right-6 rounded-full bg-blue-600 px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-white shadow-sm">
@@ -283,22 +283,22 @@ export function PricingTiers() {
                   </div>
                 )}
                 <div>
-                  <h3 className="font-display text-2xl font-bold text-slate-900">{ret.name}</h3>
-                  <p className="mt-2 text-xs text-slate-600 leading-relaxed">{ret.description}</p>
+                  <h3 className="font-display text-2xl font-bold text-white">{ret.name}</h3>
+                  <p className="mt-2 text-xs text-slate-300 leading-relaxed">{ret.description}</p>
                   
                   <div className="mt-6 flex items-baseline gap-2">
-                    <span className="font-display text-4xl font-extrabold text-slate-900">{ret.price}</span>
-                    <span className="text-sm font-semibold text-slate-500">{ret.period}</span>
+                    <span className="font-display text-4xl font-extrabold text-white">{ret.price}</span>
+                    <span className="text-sm font-semibold text-slate-400">{ret.period}</span>
                   </div>
 
-                  <div className="mt-6 border-t border-slate-100 pt-6">
-                    <div className="text-xs font-bold uppercase tracking-wider text-slate-800">
+                  <div className="mt-6 border-t border-slate-800 pt-6">
+                    <div className="text-xs font-bold uppercase tracking-wider text-slate-200">
                       SLA & Deliverables:
                     </div>
                     <ul className="mt-4 space-y-3">
                       {ret.deliverables.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-600">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+                        <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -306,7 +306,7 @@ export function PricingTiers() {
                   </div>
                 </div>
 
-                <div className="mt-8 border-t border-slate-100 pt-6">
+                <div className="mt-8 border-t border-slate-800 pt-6">
                   <Button asChild size="lg" className="w-full bg-blue-600 text-white hover:bg-blue-700 shadow-md shadow-blue-500/20 font-bold">
                     <Link href={`/contact?retainer=${ret.id}`}>
                       Subscribe to Retainer
@@ -320,34 +320,34 @@ export function PricingTiers() {
         )}
 
         {/* Written SLA & Peace of Mind Banner */}
-        <div className="mt-16 rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
+        <div className="mt-16 rounded-3xl border border-slate-800 bg-[#070f24] p-8 shadow-xl text-white">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3">
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 border border-blue-200">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">
                 <ShieldCheck className="h-6 w-6" />
               </div>
               <div>
-                <div className="font-bold text-slate-900 text-sm">100% Code & Asset Ownership</div>
-                <div className="text-xs text-slate-600 mt-0.5">You own your GitHub repo, hosting, and data. Zero vendor lock-in.</div>
+                <div className="font-bold text-white text-sm">100% Code & Asset Ownership</div>
+                <div className="text-xs text-slate-300 mt-0.5">You own your GitHub repo, hosting, and data. Zero vendor lock-in.</div>
               </div>
             </div>
 
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 border border-blue-200">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">
                 <Clock className="h-6 w-6" />
               </div>
               <div>
-                <div className="font-bold text-slate-900 text-sm">Hard Sprint Delivery SLA</div>
-                <div className="text-xs text-slate-600 mt-0.5">Contractually bound delivery timelines. We ship on time or pay you back.</div>
+                <div className="font-bold text-white text-sm">Hard Sprint Delivery SLA</div>
+                <div className="text-xs text-slate-300 mt-0.5">Contractually bound delivery timelines. We ship on time or pay you back.</div>
               </div>
             </div>
 
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 border border-blue-200">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">
                 <MessageCircle className="h-6 w-6" />
               </div>
               <div>
-                <div className="font-bold text-slate-900 text-sm">Direct Founder Engineering</div>
+                <div className="font-bold text-white text-sm">Direct Founder Engineering</div>
                 <div className="text-xs text-slate-600 mt-0.5">No 19-year-old junior interns. Direct senior guidance by Daud & lead team.</div>
               </div>
             </div>

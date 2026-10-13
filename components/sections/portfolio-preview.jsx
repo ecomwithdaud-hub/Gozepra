@@ -42,19 +42,19 @@ export function PortfolioPreview({
                 return (
                 <Card
                   key={project.href}
-                  className={`card-shine h-full border border-slate-200 bg-white text-slate-900 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-md ${
+                  className={`card-shine h-full border border-slate-800 bg-[#070f24] text-white shadow-xl shadow-slate-950/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-[#0a1638] hover:shadow-cyan-950/20 ${
                     index === 1 || index === 3 ? "md:translate-y-6" : ""
                   }`}
                 >
                   <CardHeader className="gap-4">
                     <div className="flex items-start justify-between gap-4">
                       <div className="space-y-2">
-                        <Badge variant="secondary" className="border border-blue-200 bg-blue-50 text-blue-700">{translatedProject.category}</Badge>
-                        <div className="text-sm font-medium text-blue-600">
+                        <Badge variant="secondary" className="border border-cyan-500/30 bg-cyan-950/60 text-cyan-300">{translatedProject.category}</Badge>
+                        <div className="text-sm font-medium text-cyan-400">
                           {translatedProject.status}
                         </div>
                       </div>
-                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-sm">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/60 text-cyan-400 shadow-sm">
                         {project.category === "Admin Panel" ? (
                           <MonitorSmartphone className="h-5 w-5" />
                         ) : (
@@ -63,24 +63,24 @@ export function PortfolioPreview({
                       </div>
                     </div>
                     <div>
-                      <CardTitle className="text-2xl text-slate-900">{translatedProject.title}</CardTitle>
-                      <div className="mt-2 text-sm font-medium text-slate-500">
+                      <CardTitle className="text-2xl text-white">{translatedProject.title}</CardTitle>
+                      <div className="mt-2 text-sm font-medium text-slate-400 font-mono">
                         {project.domain}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-5">
-                    <p className="text-sm leading-7 text-slate-600">
+                    <p className="text-sm leading-7 text-slate-300">
                       {translatedProject.summary}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {translatedProject.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="border border-slate-200 bg-slate-100 text-slate-700">
+                        <Badge key={tag} variant="secondary" className="border border-slate-700 bg-slate-900 text-slate-300">
                           {tag}
                         </Badge>
                       ))}
                     </div>
-                    <Button asChild variant="outline" className="w-full justify-between">
+                    <Button asChild variant="outline" className="w-full justify-between border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-400 hover:text-white hover:bg-slate-800">
                       <Link href={project.href} target="_blank" rel="noreferrer">
                         {content.visitProject}
                         <ExternalLink className="h-4 w-4" />
@@ -110,14 +110,14 @@ export function PortfolioPreview({
               return (
               <Card
                 key={showcase.title}
-                className={`card-shine overflow-hidden border border-slate-200 bg-white text-slate-900 shadow-sm backdrop-blur-md ${
+                className={`card-shine overflow-hidden border border-slate-800 bg-[#070f24] text-white shadow-xl shadow-slate-950/20 backdrop-blur-md ${
                   index === 1 ? "xl:-translate-x-4" : ""
                 }`}
               >
-                <div className="border-b border-slate-100 p-5">
-                  <Badge variant="secondary" className="border border-blue-200 bg-blue-50 text-blue-700">{translatedShowcase.badge}</Badge>
-                  <CardTitle className="mt-4 text-2xl text-slate-900">{translatedShowcase.title}</CardTitle>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                <div className="border-b border-slate-800 p-5">
+                  <Badge variant="secondary" className="border border-cyan-500/30 bg-cyan-950/60 text-cyan-300">{translatedShowcase.badge}</Badge>
+                  <CardTitle className="mt-4 text-2xl text-white">{translatedShowcase.title}</CardTitle>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">
                     {translatedShowcase.summary}
                   </p>
                 </div>
@@ -126,7 +126,7 @@ export function PortfolioPreview({
                     href={showcase.href ?? showcase.image}
                     target={showcase.href ? "_blank" : undefined}
                     rel={showcase.href ? "noreferrer" : undefined}
-                    className="group block overflow-hidden rounded-[24px] border border-slate-200 bg-slate-100"
+                    className="group block overflow-hidden rounded-[24px] border border-slate-700 bg-slate-900"
                   >
                     {showcase.image ? (
                       <img
@@ -136,31 +136,31 @@ export function PortfolioPreview({
                         className="h-[440px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                       />
                     ) : (
-                      <div className="relative flex h-[440px] flex-col justify-between overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50/50 p-7 text-slate-900 border border-slate-200">
+                      <div className="relative flex h-[440px] flex-col justify-between overflow-hidden bg-gradient-to-br from-[#0c1c45] via-[#070f24] to-[#040918] p-7 text-white border border-slate-800">
                         <div className="absolute inset-0 opacity-40">
-                          <div className="absolute -right-16 top-14 h-40 w-40 rounded-full bg-blue-400/20 blur-3xl" />
-                          <div className="absolute bottom-8 left-0 h-32 w-32 rounded-full bg-indigo-400/20 blur-3xl" />
-                          <div className="absolute inset-x-6 top-24 h-px bg-slate-200" />
-                          <div className="absolute inset-x-6 top-28 h-px bg-slate-100" />
+                          <div className="absolute -right-16 top-14 h-40 w-40 rounded-full bg-cyan-400/20 blur-3xl" />
+                          <div className="absolute bottom-8 left-0 h-32 w-32 rounded-full bg-blue-400/20 blur-3xl" />
+                          <div className="absolute inset-x-6 top-24 h-px bg-slate-800" />
+                          <div className="absolute inset-x-6 top-28 h-px bg-slate-800/60" />
                         </div>
 
                         <div className="relative flex items-center justify-between gap-4">
-                          <div className="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-blue-700">
+                          <div className="rounded-full border border-cyan-500/30 bg-cyan-950/60 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-300">
                             {content.livePortfolio}
                           </div>
-                          <div className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600 shadow-sm">
+                          <div className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs text-slate-300 shadow-sm font-mono">
                             {showcase.domain}
                           </div>
                         </div>
 
                         <div className="relative max-w-md">
-                          <p className="text-xs font-medium uppercase tracking-[0.32em] text-blue-600">
+                          <p className="text-xs font-medium uppercase tracking-[0.32em] text-cyan-400">
                             {content.websitePresentation}
                           </p>
-                          <div className="mt-4 text-4xl font-semibold leading-tight text-slate-900">
+                          <div className="mt-4 text-4xl font-semibold leading-tight text-white">
                             {translatedShowcase.title}
                           </div>
-                          <p className="mt-4 text-sm leading-7 text-slate-600">
+                          <p className="mt-4 text-sm leading-7 text-slate-300">
                             {translatedShowcase.summary}
                           </p>
                         </div>
@@ -169,7 +169,7 @@ export function PortfolioPreview({
                           {(translatedShowcase.previewPoints ?? []).map((point) => (
                             <div
                               key={point}
-                              className="rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm text-slate-700 shadow-sm backdrop-blur-sm"
+                              className="rounded-2xl border border-slate-700 bg-slate-900/90 px-4 py-3 text-sm text-slate-200 shadow-sm backdrop-blur-sm"
                             >
                               {point}
                             </div>
@@ -180,13 +180,13 @@ export function PortfolioPreview({
                   </Link>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {translatedShowcase.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="border border-slate-200 bg-slate-100 text-slate-700">
+                      <Badge key={tag} variant="secondary" className="border border-slate-700 bg-slate-900 text-slate-300">
                         {tag}
                       </Badge>
                     ))}
                   </div>
                   {showcase.href ? (
-                    <Button asChild variant="outline" className="mt-4 w-full justify-between">
+                    <Button asChild variant="outline" className="mt-4 w-full justify-between border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-400 hover:text-white hover:bg-slate-800">
                       <Link
                         href={showcase.href}
                         target="_blank"
@@ -218,7 +218,7 @@ export function PortfolioPreview({
               return (
               <Card
                 key={project.href}
-                className="card-shine overflow-hidden border border-slate-200 bg-white text-slate-900 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-md"
+                className="card-shine overflow-hidden border border-slate-800 bg-[#070f24] text-white shadow-xl shadow-slate-950/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-[#0a1638] hover:shadow-cyan-950/20"
               >
                 <CardContent className="p-0">
                   <Link
@@ -227,7 +227,7 @@ export function PortfolioPreview({
                     rel="noreferrer"
                     className="group block"
                   >
-                    <div className="overflow-hidden border-b border-slate-100 bg-slate-50">
+                    <div className="overflow-hidden border-b border-slate-800 bg-slate-900">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -239,24 +239,24 @@ export function PortfolioPreview({
 
                   <div className="space-y-5 p-5">
                     <div className="space-y-3">
-                      <Badge variant="secondary" className="border border-blue-200 bg-blue-50 text-blue-700">{translatedProject.category}</Badge>
-                      <CardTitle className="text-2xl leading-tight text-slate-900">
+                      <Badge variant="secondary" className="border border-cyan-500/30 bg-cyan-950/60 text-cyan-300">{translatedProject.category}</Badge>
+                      <CardTitle className="text-2xl leading-tight text-white">
                         {translatedProject.title}
                       </CardTitle>
-                      <p className="text-sm leading-7 text-slate-600">
+                      <p className="text-sm leading-7 text-slate-300">
                         {translatedProject.summary}
                       </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2">
                       {translatedProject.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="border border-slate-200 bg-slate-100 text-slate-700">
+                        <Badge key={tag} variant="secondary" className="border border-slate-700 bg-slate-900 text-slate-300">
                           {tag}
                         </Badge>
                       ))}
                     </div>
 
-                    <Button asChild variant="outline" className="w-full justify-between">
+                    <Button asChild variant="outline" className="w-full justify-between border-slate-700 bg-slate-900 text-slate-200 hover:border-cyan-400 hover:text-white hover:bg-slate-800">
                       <Link href={project.href} target="_blank" rel="noreferrer">
                         {content.openProject}
                         <ExternalLink className="h-4 w-4" />

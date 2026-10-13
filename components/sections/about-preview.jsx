@@ -36,26 +36,26 @@ export function AboutPreview({ showCta = true }) {
             />
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-md">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-inner transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+              <div className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/40 hover:shadow-cyan-950/30">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/60 text-cyan-400 shadow-inner transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
                   <Compass className="h-6 w-6" />
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold text-slate-900">
+                <h3 className="mt-4 font-display text-xl font-semibold text-white">
                   {t("about.brandStory")}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
                   {t("about.brandStoryText")}
                 </p>
               </div>
 
-              <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-md">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-inner transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+              <div className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/40 hover:shadow-cyan-950/30">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/60 text-cyan-400 shadow-inner transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
                   <ShieldCheck className="h-6 w-6" />
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold text-slate-900">
+                <h3 className="mt-4 font-display text-xl font-semibold text-white">
                   {t("about.missionDriven")}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
                   {t("about.missionText")}
                 </p>
               </div>
@@ -63,7 +63,7 @@ export function AboutPreview({ showCta = true }) {
 
             {showCta ? (
               <div className="mt-8">
-                <Button asChild variant="outline" size="lg" className="border-slate-200 bg-slate-50 text-slate-800 hover:bg-slate-100 hover:border-slate-300 shadow-sm transition-all duration-300">
+                <Button asChild variant="outline" size="lg" className="border-slate-200 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-300 shadow-sm transition-all duration-300">
                   <Link href="/about" className="inline-flex items-center gap-2 font-medium">
                     {t("about.learnMore")}
                     <ArrowRight className="h-4 w-4 text-blue-600" />
@@ -77,12 +77,12 @@ export function AboutPreview({ showCta = true }) {
             {displayedPillars.map((pillar, index) => (
               <Card
                 key={pillar.title}
-                className={`group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-1 text-slate-900 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md ${
+                className={`group relative overflow-hidden rounded-2xl border border-slate-800 bg-[#070f24] p-1 text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-cyan-950/30 ${
                   index === 1 ? "lg:translate-x-4" : ""
                 }`}
               >
                 <CardHeader className="flex-row items-start gap-4 p-5">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-inner transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/60 text-cyan-400 shadow-inner transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
                     {index === 0 ? (
                       <Building2 className="h-6 w-6" />
                     ) : index === 1 ? (
@@ -92,11 +92,11 @@ export function AboutPreview({ showCta = true }) {
                     )}
                   </div>
                   <div className="flex-1">
-                    <CardTitle className="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
+                    <CardTitle className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
                       {pillar.title}
                     </CardTitle>
                     <CardContent className="px-0 pb-0 pt-2">
-                      <p className="text-sm leading-relaxed text-slate-600">
+                      <p className="text-sm leading-relaxed text-slate-300">
                         {pillar.description}
                       </p>
                     </CardContent>

@@ -4,7 +4,7 @@ function Card({ className, ...props }) {
   return (
     <div
       className={cn(
-        "rounded-[28px] border border-slate-200/90 bg-white text-slate-900 shadow-soft backdrop-blur-md",
+        "rounded-[28px] border border-slate-800 bg-[#070f24] text-white shadow-xl shadow-slate-950/15 backdrop-blur-md transition-all duration-300",
         className,
       )}
       {...props}
@@ -19,14 +19,14 @@ function CardHeader({ className, ...props }) {
 function CardTitle({ className, ...props }) {
   return (
     <h3
-      className={cn("font-display text-xl font-semibold tracking-tight text-slate-900", className)}
+      className={cn("font-display text-xl font-semibold tracking-tight text-white", className)}
       {...props}
     />
   );
 }
 
 function CardDescription({ className, ...props }) {
-  return <p className={cn("text-sm leading-6 text-slate-600", className)} {...props} />;
+  return <p className={cn("text-sm leading-6 text-slate-300", className)} {...props} />;
 }
 
 function CardContent({ className, ...props }) {
