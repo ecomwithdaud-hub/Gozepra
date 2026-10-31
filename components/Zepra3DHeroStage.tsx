@@ -81,7 +81,10 @@ export function Zepra3DHeroStage() {
   return (
     <div className="relative w-full overflow-hidden border-b border-slate-200 bg-gradient-to-b from-slate-50/60 via-white to-blue-50/20">
       {/* 3D Scene Container */}
-      <div className="relative h-[480px] w-full sm:h-[560px] lg:h-[640px]">
+      <div
+        className="relative h-[480px] w-full sm:h-[560px] lg:h-[640px]"
+        style={{ minHeight: "540px", height: "clamp(540px, 60vh, 660px)" }}
+      >
         {/* The 3D Canvas */}
         <div className="absolute inset-0 z-0">
           <Zepra3DExperience activeStationIndex={activeStationIndex} />
