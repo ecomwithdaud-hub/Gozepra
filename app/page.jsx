@@ -1,4 +1,3 @@
-import { Zepra3DHeroStage } from "@/components/Zepra3DHeroStage";
 import { AeoStructuredAnswers } from "@/components/sections/aeo-structured-answers";
 import { ContactSection } from "@/components/sections/contact-section";
 import { DevCrafterHomeExperience } from "@/components/sections/devcrafter-home-experience";
@@ -34,9 +33,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      {/* Immersive 3D Spatial Tech Matrix & HUD Agency Navigator */}
-      <Zepra3DHeroStage />
-
       {/* Original Core Hero & Full Agency Content Preserved */}
       <HomeHero />
       <HumanBusinessBridge />
