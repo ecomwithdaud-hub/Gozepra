@@ -550,9 +550,9 @@ export function AiGrowthDominance() {
               size="lg"
               className="bg-blue-600 hover:bg-blue-500 font-bold text-white shadow-md shadow-blue-500/30"
             >
-              <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
+              <a href={`tel:${siteMeta.phoneRaw || "+13024694003"}`}>
                 <TrendingUp className="mr-2 h-4 w-4" />
-                Call Direct: {siteMeta.phone || "+1 (302) 208-9675"}
+                Call Direct: {siteMeta.phone || "+1 (302) 469-4003"}
               </a>
             </Button>
             <Button

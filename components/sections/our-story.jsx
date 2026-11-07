@@ -118,9 +118,9 @@ export function OurStory() {
 
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 font-bold text-white shadow-md shadow-blue-500/20">
-                      <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
+                      <a href={`tel:${siteMeta.phoneRaw || "+13024694003"}`}>
                         <Phone className="mr-2 h-4 w-4" />
-                        Call Direct Line ({siteMeta.phone || "+1 (302) 208-9675"})
+                        Call Direct Line ({siteMeta.phone || "+1 (302) 469-4003"})
                       </a>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="border-slate-200 bg-white text-slate-800 hover:bg-slate-50">

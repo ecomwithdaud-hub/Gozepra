@@ -229,7 +229,7 @@ export function HomeHero() {
             <Link
               href="/portfolio"
               data-cursor="EXPLORE"
-              className="hidden h-11 w-full items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 text-xs font-bold uppercase tracking-[0.12em] text-slate-800 transition-all duration-300 hover:border-blue-300 hover:bg-slate-50 sm:inline-flex sm:h-12 sm:w-auto sm:px-7 sm:text-sm"
+              className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-5 text-xs font-bold uppercase tracking-[0.12em] text-slate-800 transition-all duration-300 hover:border-blue-300 hover:bg-slate-50 sm:h-12 sm:w-auto sm:px-7 sm:text-sm"
             >
               <span>View Portfolio & Case Studies</span>
               <ArrowUpRight className="h-4 w-4 shrink-0 text-blue-600" />
@@ -278,7 +278,7 @@ export function HomeHero() {
                 cursorLabel="EXPLORE"
                 className="rounded-3xl"
               >
-                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-800 bg-[#070f24] p-6 shadow-xl shadow-slate-950/20 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-cyan-950/20">
+                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-800 bg-[#070f24] p-5 sm:p-6 shadow-xl shadow-slate-950/20 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-cyan-950/20">
                   <div>
                     <div className="flex items-center justify-between">
                       <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400">

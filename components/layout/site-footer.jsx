@@ -76,7 +76,6 @@ const navigationGroups = [
       { label: "Portfolio & Case Studies", href: "/portfolio" },
       { label: "Careers", href: "/contact" },
       { label: "Contact Us", href: "/contact" },
-      { label: "Internal Portal (Agency OS)", href: "/portal" },
     ],
   },
 ];
@@ -193,13 +192,13 @@ export function SiteFooter() {
               {siteMeta.email}
             </a>
             <a
-              href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}
+              href={`tel:${siteMeta.phoneRaw || "+13024694003"}`}
               className="group inline-flex items-center gap-3 transition-colors duration-200 hover:text-cyan-300"
             >
               <span className={contactIconWrap}>
                 <Phone className="h-4 w-4" />
               </span>
-              {siteMeta.phone || "+1 (302) 208-9675"}
+              {siteMeta.phone || "+1 (302) 469-4003"}
             </a>
           </div>
         </div>

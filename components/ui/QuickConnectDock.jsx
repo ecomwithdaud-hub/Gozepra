@@ -18,8 +18,8 @@ export function QuickConnectDock() {
   const actions = [
     {
       label: "Direct Voice Call",
-      sub: siteMeta.phone || "+1 (302) 208-9675",
-      href: `tel:${siteMeta.phoneRaw || "+13022089675"}`,
+      sub: siteMeta.phone || "+1 (302) 469-4003",
+      href: `tel:${siteMeta.phoneRaw || "+13024694003"}`,
       icon: Phone,
       external: true,
       accent: "from-emerald-400 to-teal-400 text-slate-950",
@@ -43,10 +43,10 @@ export function QuickConnectDock() {
   ];
 
   return (
-    <div className="fixed bottom-5 right-5 z-[9990] flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-[9990] flex flex-col items-end gap-3">
       {/* Expanded Multi-Channel Dock */}
       {open ? (
-        <div className="w-72 overflow-hidden rounded-[24px] border border-slate-200 bg-white/95 p-4 text-slate-900 shadow-2xl backdrop-blur-xl sm:w-80">
+        <div className="w-[calc(100vw-32px)] max-w-xs overflow-hidden rounded-[24px] border border-slate-200 bg-white/95 p-4 text-slate-900 shadow-2xl backdrop-blur-xl sm:w-80">
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <div className="flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">

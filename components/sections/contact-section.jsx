@@ -58,7 +58,7 @@ export function ContactSection({ showHeader = true }) {
         </div>
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-7 shadow-xl lg:col-span-5 text-white">
+          <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-5 sm:p-7 shadow-xl lg:col-span-5 text-white">
             <div>
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-400">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
@@ -78,14 +78,14 @@ export function ContactSection({ showHeader = true }) {
                 <InfoRow
                   icon={<Phone className="h-5 w-5" />}
                   label="Direct Line"
-                  href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}
-                  value={siteMeta.phone || "+1 (302) 208-9675"}
+                  href={`tel:${siteMeta.phoneRaw || "+13024694003"}`}
+                  value={siteMeta.phone || "+1 (302) 469-4003"}
                 />
               </div>
 
               <div className="mt-5 hidden gap-3 sm:grid sm:grid-cols-2">
                 <Button asChild size="lg" className="w-full bg-blue-600 text-white font-bold hover:bg-blue-700 shadow-soft">
-                  <a href={`tel:${siteMeta.phoneRaw || "+13022089675"}`}>
+                  <a href={`tel:${siteMeta.phoneRaw || "+13024694003"}`}>
                     <Phone className="h-4 w-4 mr-1.5" />
                     Call Direct Line
                   </a>
@@ -186,7 +186,7 @@ export function ContactSection({ showHeader = true }) {
           </div>
 
           <div className="relative flex h-full flex-col justify-between lg:col-span-7">
-            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-7 shadow-xl text-white">
+            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-5 sm:p-7 shadow-xl text-white">
               <div className="mb-6">
                 <h2 className="font-display text-2xl font-semibold text-white">
                   {t("contact.requestConsultation")}

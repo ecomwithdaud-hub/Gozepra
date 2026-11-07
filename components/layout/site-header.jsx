@@ -37,7 +37,6 @@ const navTranslationKeys = {
   "/roi-estimator": "nav.roiEstimator",
   "/case-studies": "nav.caseStudies",
   "/contact": "nav.contact",
-  "/portal": "nav.portal",
 };
 
 const projectTranslationKeys = {
@@ -166,15 +165,6 @@ export function SiteHeader() {
 
   const hidePill = () => setPill((current) => ({ ...current, visible: false }));
 
-  const isPortalRoute =
-    pathname?.startsWith("/portal") ||
-    pathname?.startsWith("/ceo") ||
-    pathname?.startsWith("/admin") ||
-    pathname?.startsWith("/employees");
-
-  if (isPortalRoute) {
-    return null;
-  }
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-transparent px-3 pt-4 pointer-events-none">
