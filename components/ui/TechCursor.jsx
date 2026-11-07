@@ -23,6 +23,45 @@ export function TechCursor() {
     let frameId = null;
     let hasMoved = false;
 
+    // Cache previous states to avoid triggering React re-renders on raw mousemove
+    let prevLabel = "";
+    let prevClickable = false;
+    let prevTextMode = false;
+    let isRunning = false;
+
+    const animate = () => {
+      const dx = mouseX - ringX;
+      const dy = mouseY - ringY;
+
+      // When settled, stop the RAF loop until next mouse move to save CPU/GPU cycles
+      if (Math.abs(dx) < 0.15 && Math.abs(dy) < 0.15) {
+        ringX = mouseX;
+        ringY = mouseY;
+        if (ringRef.current) {
+          ringRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+        }
+        isRunning = false;
+        frameId = null;
+        return;
+      }
+
+      ringX += dx * 0.28;
+      ringY += dy * 0.28;
+
+      if (ringRef.current) {
+        ringRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+      }
+
+      frameId = window.requestAnimationFrame(animate);
+    };
+
+    const startLoop = () => {
+      if (!isRunning) {
+        isRunning = true;
+        frameId = window.requestAnimationFrame(animate);
+      }
+    };
+
     const onMouseMove = (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
@@ -30,7 +69,6 @@ export function TechCursor() {
       if (!hasMoved) {
         hasMoved = true;
         setIsVisible(true);
-        // Only hide the default OS cursor once custom cursor is verified active
         document.documentElement.classList.add("custom-cursor-active");
       }
 
@@ -39,19 +77,20 @@ export function TechCursor() {
         dotRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
       }
 
+      // Start spring loop if outer ring needs to catch up
+      startLoop();
+
       // Check hovered element
       const target = e.target;
       if (target instanceof Element) {
         const customCursorEl = target.closest("[data-cursor]");
         const customText = customCursorEl?.getAttribute("data-cursor") || "";
-        setCursorLabel(customText);
 
         const isInput = Boolean(
           target.closest(
             'input:not([type="submit"]):not([type="button"]), textarea, [contenteditable="true"]'
           )
         );
-        setIsTextMode(isInput);
 
         const isInteractive = Boolean(
           customText ||
@@ -59,11 +98,34 @@ export function TechCursor() {
               'a, button, [role="button"], input[type="submit"], input[type="button"], label, select, summary, .cursor-pointer, [data-clickable="true"]'
             )
         );
-        setIsClickable(isInteractive && !isInput);
+        const nextClickable = isInteractive && !isInput;
+
+        // ONLY trigger React re-renders when state actually changes!
+        if (customText !== prevLabel) {
+          prevLabel = customText;
+          setCursorLabel(customText);
+        }
+        if (isInput !== prevTextMode) {
+          prevTextMode = isInput;
+          setIsTextMode(isInput);
+        }
+        if (nextClickable !== prevClickable) {
+          prevClickable = nextClickable;
+          setIsClickable(nextClickable);
+        }
       } else {
-        setCursorLabel("");
-        setIsClickable(false);
-        setIsTextMode(false);
+        if (prevLabel !== "") {
+          prevLabel = "";
+          setCursorLabel("");
+        }
+        if (prevClickable) {
+          prevClickable = false;
+          setIsClickable(false);
+        }
+        if (prevTextMode) {
+          prevTextMode = false;
+          setIsTextMode(false);
+        }
       }
     };
 
@@ -79,19 +141,8 @@ export function TechCursor() {
       if (hasMoved) {
         setIsVisible(true);
         document.documentElement.classList.add("custom-cursor-active");
+        startLoop();
       }
-    };
-
-    // Smooth physics loop for the outer circle/frame
-    const animate = () => {
-      ringX += (mouseX - ringX) * 0.28;
-      ringY += (mouseY - ringY) * 0.28;
-
-      if (ringRef.current) {
-        ringRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
-      }
-
-      frameId = window.requestAnimationFrame(animate);
     };
 
     window.addEventListener("mousemove", onMouseMove, { passive: true });
@@ -100,7 +151,7 @@ export function TechCursor() {
     document.addEventListener("mouseleave", onMouseLeave);
     document.addEventListener("mouseenter", onMouseEnter);
 
-    frameId = window.requestAnimationFrame(animate);
+    startLoop();
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);

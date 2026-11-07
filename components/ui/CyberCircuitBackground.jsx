@@ -48,7 +48,7 @@ function createCircuitPaths(width, height) {
           cell * 0.2,
           Math.min(width - cell * 0.2, currentX + direction * cell * 0.6),
         );
-        points.push({ x: currentX, y });
+        points.push({ x, currentX, y });
       }
     }
 
@@ -88,6 +88,7 @@ function pointOnPath(path, distance) {
 }
 
 function strokeCircuit(context, points, radius) {
+  if (!points || points.length === 0) return;
   context.beginPath();
   context.moveTo(points[0].x, points[0].y);
 
@@ -100,17 +101,18 @@ function strokeCircuit(context, points, radius) {
       Math.hypot(corner.x - previous.x, corner.y - previous.y) * 0.28,
       Math.hypot(next.x - corner.x, next.y - corner.y) * 0.28,
     );
+
     const before = {
-      x: corner.x + Math.sign(previous.x - corner.x) * trim,
-      y: corner.y + Math.sign(previous.y - corner.y) * trim,
+      x: corner.x - ((corner.x - previous.x) / (Math.hypot(corner.x - previous.x, corner.y - previous.y) || 1)) * trim,
+      y: corner.y - ((corner.y - previous.y) / (Math.hypot(corner.x - previous.x, corner.y - previous.y) || 1)) * trim,
     };
     const after = {
-      x: corner.x + Math.sign(next.x - corner.x) * trim,
-      y: corner.y + Math.sign(next.y - corner.y) * trim,
+      x: corner.x + ((next.x - corner.x) / (Math.hypot(next.x - corner.x, next.y - corner.y) || 1)) * trim,
+      y: corner.y + ((next.y - corner.y) / (Math.hypot(next.x - corner.x, next.y - corner.y) || 1)) * trim,
     };
 
     context.lineTo(before.x, before.y);
-    context.lineTo(after.x, after.y);
+    context.quadraticCurveTo(corner.x, corner.y, after.x, after.y);
   }
 
   const last = points[points.length - 1];
@@ -126,7 +128,9 @@ export function CyberCircuitBackground() {
     const context = canvas?.getContext("2d");
     const container = canvas?.parentElement;
 
-    if (!canvas || !context || !container) return undefined;
+    if (!canvas || !context || !container) {
+      return;
+    }
 
     let width = 0;
     let height = 0;
@@ -136,6 +140,9 @@ export function CyberCircuitBackground() {
     let frameId = null;
     let isVisible = false;
     let elapsed = 0;
+
+    // Offscreen canvas to pre-render static circuit paths once
+    let offscreenCanvas = null;
 
     const resizeCanvas = () => {
       const bounds = container.getBoundingClientRect();
@@ -164,6 +171,17 @@ export function CyberCircuitBackground() {
         y: height * (0.22 + (index % 2) * 0.54),
         phase: index * 2.1,
       }));
+
+      // Render static background grid to offscreen canvas
+      offscreenCanvas = document.createElement("canvas");
+      offscreenCanvas.width = width;
+      offscreenCanvas.height = height;
+      const offCtx = offscreenCanvas.getContext("2d");
+      if (offCtx) {
+        offCtx.lineWidth = 1;
+        offCtx.strokeStyle = TRACE_COLOR;
+        paths.forEach((path) => strokeCircuit(offCtx, path.points, 10));
+      }
     };
 
     const drawFrame = (timestamp) => {
@@ -171,10 +189,12 @@ export function CyberCircuitBackground() {
       elapsed = timestamp;
       context.clearRect(0, 0, width, height);
 
-      context.lineWidth = 1;
-      context.strokeStyle = TRACE_COLOR;
-      paths.forEach((path) => strokeCircuit(context, path.points, 10));
+      // Blit cached static circuits
+      if (offscreenCanvas) {
+        context.drawImage(offscreenCanvas, 0, 0, width, height);
+      }
 
+      // Draw moving signals
       paths.forEach((path, index) => {
         const travel = (timestamp * (0.025 + (index % 4) * 0.004)) % path.totalLength;
         const head = pointOnPath(path, travel);
@@ -187,13 +207,16 @@ export function CyberCircuitBackground() {
         context.lineWidth = 2;
         context.stroke();
 
+        // High-performance double-arc glow instead of slow shadowBlur
+        context.beginPath();
+        context.arc(head.x, head.y, 4.5, 0, Math.PI * 2);
+        context.fillStyle = "rgba(37, 99, 235, 0.16)";
+        context.fill();
+
         context.beginPath();
         context.arc(head.x, head.y, 2.2, 0, Math.PI * 2);
         context.fillStyle = GLOW_COLOR;
-        context.shadowColor = GLOW_COLOR;
-        context.shadowBlur = 12;
         context.fill();
-        context.shadowBlur = 0;
       });
 
       beacons.forEach((beacon) => {
@@ -266,7 +289,7 @@ export function CyberCircuitBackground() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+      className="pointer-events-none absolute inset-0 z-0 opacity-80"
     />
   );
 }

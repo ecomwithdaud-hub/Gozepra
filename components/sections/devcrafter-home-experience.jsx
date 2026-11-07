@@ -118,21 +118,25 @@ export function DevCrafterHomeExperience() {
   const [activeTab, setActiveTab] = useState("mission");
   const [activeServiceIdx, setActiveServiceIdx] = useState(0);
   const ctaRef = useRef(null);
-  const [ctaGlow, setCtaGlow] = useState({ x: 50, y: 50, active: false });
+  const ctaGlowRef = useRef(null);
 
   const activeService = signatureServices[activeServiceIdx] || signatureServices[0];
 
   const handleCtaMouseMove = (e) => {
-    if (!ctaRef.current) return;
+    if (!ctaRef.current || !ctaGlowRef.current) return;
     const rect = ctaRef.current.getBoundingClientRect();
-    setCtaGlow({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-      active: true,
-    });
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    ctaGlowRef.current.style.opacity = "1";
+    ctaGlowRef.current.style.background = "radial-gradient(650px circle at " + x + "px " + y + "px, rgba(37, 99, 235, 0.10), transparent 75%)";
   };
 
-  return (
+  const handleCtaMouseLeave = () => {
+    if (ctaGlowRef.current) {
+      ctaGlowRef.current.style.opacity = "0.4";
+    }
+  };
+return (
     <div className="bg-white text-slate-900">
       {/* 1. Trusted By Forward-Looking Teams Bar */}
       <section className="border-y border-slate-200 bg-slate-50 py-6 sm:py-14">
@@ -534,15 +538,16 @@ export function DevCrafterHomeExperience() {
       <section
         ref={ctaRef}
         onMouseMove={handleCtaMouseMove}
-        onMouseLeave={() => setCtaGlow((prev) => ({ ...prev, active: false }))}
+        onMouseLeave={handleCtaMouseLeave}
         className="relative overflow-hidden border-y border-slate-200 bg-white py-20 sm:py-28"
       >
         <div
+          ref={ctaGlowRef}
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 transition-opacity duration-300"
           style={{
-            opacity: ctaGlow.active ? 1 : 0.4,
-            background: `radial-gradient(650px circle at ${ctaGlow.x}px ${ctaGlow.y}px, rgba(37, 99, 235, 0.10), transparent 75%)`,
+            opacity: 0.4,
+            background: "radial-gradient(650px circle at 50% 50%, rgba(37, 99, 235, 0.10), transparent 75%)",
           }}
         />
         <div className="container relative z-10 text-center">

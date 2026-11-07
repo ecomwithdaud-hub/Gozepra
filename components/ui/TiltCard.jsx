@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
 export function TiltCard({
@@ -12,10 +12,7 @@ export function TiltCard({
   ...props
 }) {
   const cardRef = useRef(null);
-  const [transformStyle, setTransformStyle] = useState(
-    "perspective(1100px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)"
-  );
-  const [glowPos, setGlowPos] = useState({ x: 50, y: 50, opacity: 0 });
+  const glowRef = useRef(null);
 
   const handleMouseMove = (e) => {
     const el = cardRef.current;
@@ -29,23 +26,30 @@ export function TiltCard({
     const rotateX = ((y - centerY) / centerY) * -maxTilt;
     const rotateY = ((x - centerX) / centerX) * maxTilt;
 
-    setTransformStyle(
-      `perspective(1100px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(
-        2
-      )}deg) scale3d(1.01, 1.01, 1.01)`
-    );
-    setGlowPos({
-      x: (x / rect.width) * 100,
-      y: (y / rect.height) * 100,
-      opacity: 1,
-    });
+    el.style.transform = `perspective(1100px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(
+      2
+    )}deg) scale3d(1.01, 1.01, 1.01)`;
+
+    if (glowRef.current) {
+      glowRef.current.style.opacity = "1";
+      glowRef.current.style.background = `radial-gradient(480px circle at ${(
+        (x / rect.width) *
+        100
+      ).toFixed(1)}% ${((y / rect.height) * 100).toFixed(
+        1
+      )}%, ${glowColor}, transparent 65%)`;
+    }
   };
 
   const handleMouseLeave = () => {
-    setTransformStyle(
-      "perspective(1100px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)"
-    );
-    setGlowPos((prev) => ({ ...prev, opacity: 0 }));
+    const el = cardRef.current;
+    if (el) {
+      el.style.transform =
+        "perspective(1100px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    }
+    if (glowRef.current) {
+      glowRef.current.style.opacity = "0";
+    }
   };
 
   return (
@@ -55,23 +59,22 @@ export function TiltCard({
       onMouseLeave={handleMouseLeave}
       data-cursor={cursorLabel}
       style={{
-        transform: transformStyle,
+        transform:
+          "perspective(1100px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)",
         transformStyle: "preserve-3d",
-        transition:
-          glowPos.opacity === 0
-            ? "transform 400ms cubic-bezier(0.22, 1, 0.36, 1)"
-            : "transform 90ms linear",
+        transition: "transform 240ms cubic-bezier(0.22, 1, 0.36, 1)",
       }}
       className={cn("relative will-change-transform", className)}
       {...props}
     >
       {/* Dynamic Radial Cursor Spotlight */}
       <div
+        ref={glowRef}
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-20 rounded-[inherit] transition-opacity duration-300"
         style={{
-          opacity: glowPos.opacity,
-          background: `radial-gradient(480px circle at ${glowPos.x}% ${glowPos.y}%, ${glowColor}, transparent 65%)`,
+          opacity: 0,
+          background: `radial-gradient(480px circle at 50% 50%, ${glowColor}, transparent 65%)`,
         }}
       />
       {children}

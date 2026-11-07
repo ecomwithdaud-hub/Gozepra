@@ -36,18 +36,36 @@ export function HomeHero() {
   const translatedHighlights = t("hero.highlights");
   const translatedCapabilities = t("hero.capabilities");
   const sectionRef = useRef(null);
-  const [parallax, setParallax] = useState({ x: 0, y: 0 });
+  const cardLeftRef = useRef(null);
+  const cardRightRef = useRef(null);
+  const badgeRef = useRef(null);
+  const rafParallaxRef = useRef(null);
 
   const handleMouseMove = (e) => {
     if (!sectionRef.current) return;
+    if (rafParallaxRef.current) return;
     const rect = sectionRef.current.getBoundingClientRect();
     const normX = (e.clientX - rect.left) / rect.width - 0.5;
     const normY = (e.clientY - rect.top) / rect.height - 0.5;
-    setParallax({ x: normX, y: normY });
+
+    rafParallaxRef.current = requestAnimationFrame(() => {
+      rafParallaxRef.current = null;
+      if (cardLeftRef.current) {
+        cardLeftRef.current.style.transform = "translate3d(" + (normX * -35) + "px, " + (normY * -25) + "px, 0) rotate(-6deg)";
+      }
+      if (cardRightRef.current) {
+        cardRightRef.current.style.transform = "translate3d(" + (normX * 45) + "px, " + (normY * 35) + "px, 0) rotate(4deg)";
+      }
+      if (badgeRef.current) {
+        badgeRef.current.style.transform = "translate3d(" + (normX * -20) + "px, " + (normY * 20) + "px, 0)";
+      }
+    });
   };
 
   const handleMouseLeave = () => {
-    setParallax({ x: 0, y: 0 });
+    if (cardLeftRef.current) cardLeftRef.current.style.transform = "translate3d(0, 0, 0) rotate(-6deg)";
+    if (cardRightRef.current) cardRightRef.current.style.transform = "translate3d(0, 0, 0) rotate(4deg)";
+    if (badgeRef.current) badgeRef.current.style.transform = "translate3d(0, 0, 0)";
   };
 
   const marqueeItems = [
@@ -73,7 +91,7 @@ export function HomeHero() {
           style={{
             background:
               "radial-gradient(circle at center, rgba(37, 99, 235, 0.12) 0%, transparent 70%)",
-            transform: `translate3d(${parallax.x * -40}px, ${parallax.y * -40}px, 0)`,
+            
           }}
         />
         <div
@@ -81,7 +99,7 @@ export function HomeHero() {
           style={{
             background:
               "radial-gradient(circle at center, rgba(16, 185, 129, 0.08) 0%, transparent 70%)",
-            transform: `translate3d(${parallax.x * 55}px, ${parallax.y * 55}px, 0)`,
+            
           }}
         />
         <div
@@ -89,7 +107,7 @@ export function HomeHero() {
           style={{
             background:
               "radial-gradient(circle at center, rgba(59, 130, 246, 0.10) 0%, transparent 70%)",
-            transform: `translate3d(${parallax.x * 35}px, ${parallax.y * -35}px, 0)`,
+            
           }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:64px_64px]" />
@@ -102,10 +120,11 @@ export function HomeHero() {
         <div className="relative mx-auto flex max-w-6xl flex-col items-center text-center">
           {/* Floating Left 3D UX Card (Desktop) */}
           <div
-            className="pointer-events-auto absolute -left-4 top-6 z-20 hidden xl:block"
+            ref={cardLeftRef}
+            className="pointer-events-auto absolute -left-4 top-6 z-20 hidden xl:block will-change-transform"
             style={{
-              transform: `translate3d(${parallax.x * -45}px, ${parallax.y * -35}px, 0) rotate(-6deg)`,
-              transition: "transform 220ms ease-out",
+              transform: "translate3d(0, 0, 0) rotate(-6deg)",
+              transition: "transform 240ms ease-out",
             }}
           >
             <TiltCard
@@ -134,10 +153,11 @@ export function HomeHero() {
 
           {/* Floating Right 3D Engineering Card (Desktop) */}
           <div
-            className="pointer-events-auto absolute right-0 top-12 z-10 hidden xl:block"
+            ref={cardRightRef}
+            className="pointer-events-auto absolute right-0 top-12 z-10 hidden xl:block will-change-transform"
             style={{
-              transform: `translate3d(${parallax.x * 55}px, ${parallax.y * 45}px, 0) rotate(4deg)`,
-              transition: "transform 220ms ease-out",
+              transform: "translate3d(0, 0, 0) rotate(4deg)",
+              transition: "transform 240ms ease-out",
             }}
           >
             <TiltCard
@@ -165,10 +185,11 @@ export function HomeHero() {
 
           {/* Floating Top-Right Badge */}
           <div
-            className="pointer-events-auto absolute right-[14%] top-2 z-20 hidden lg:block"
+            ref={badgeRef}
+            className="pointer-events-auto absolute right-[14%] top-2 z-20 hidden lg:block will-change-transform"
             style={{
-              transform: `translate3d(${parallax.x * -25}px, ${parallax.y * 25}px, 0)`,
-              transition: "transform 220ms ease-out",
+              transform: "translate3d(0, 0, 0)",
+              transition: "transform 240ms ease-out",
             }}
           >
             <TiltCard className="flex h-20 w-20 items-center justify-center rounded-full border border-blue-200 bg-white/90 p-2 text-center shadow-lg backdrop-blur-md">
