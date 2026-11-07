@@ -73,14 +73,14 @@ export function AcousticHaptics() {
         title={soundEnabled ? "Mute UI Acoustic Haptics" : "Enable UI Acoustic Haptics"}
         className={`group flex items-center gap-2 rounded-full border px-3 py-2 text-[11px] font-bold uppercase tracking-wider backdrop-blur-md transition-all ${
           soundEnabled
-            ? "border-cyan-400 bg-cyan-400/20 text-cyan-300 shadow-[0_0_20px_rgba(56,198,255,0.4)]"
-            : "border-white/10 bg-slate-950/70 text-slate-400 hover:border-white/30 hover:text-white"
+            ? "border-blue-500 bg-blue-600 text-white shadow-soft"
+            : "border-slate-200 bg-white/90 text-slate-700 shadow-sm hover:border-slate-300 hover:text-slate-900"
         }`}
       >
         {soundEnabled ? (
-          <Volume2 className="h-3.5 w-3.5 text-cyan-300 animate-pulse" />
+          <Volume2 className="h-3.5 w-3.5 text-white animate-pulse" />
         ) : (
-          <VolumeX className="h-3.5 w-3.5 text-slate-400" />
+          <VolumeX className="h-3.5 w-3.5 text-slate-500" />
         )}
         <span className="hidden md:inline">
           {soundEnabled ? "Haptics: Active" : "Haptics: Off"}

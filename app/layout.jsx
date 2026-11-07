@@ -1,6 +1,8 @@
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
 import { LanguageProvider } from "@/components/providers/language-provider";
 import { QuickConnectDock } from "@/components/ui/QuickConnectDock";
+import { TechCursor } from "@/components/ui/TechCursor";
+import { AcousticHaptics } from "@/components/ui/AcousticHaptics";
 import { SiteShell } from "@/components/layout/site-shell";
 import { siteMeta } from "@/lib/site";
 
@@ -53,6 +55,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${bodyFont.variable} ${displayFont.variable} font-sans`}>
         <LanguageProvider>
+          <TechCursor />
+          <AcousticHaptics />
           <QuickConnectDock />
           <SiteShell>{children}</SiteShell>
         </LanguageProvider>

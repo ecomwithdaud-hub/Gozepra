@@ -14,6 +14,7 @@ export function TechCursor() {
 
   useEffect(() => {
     if (typeof window === "undefined") return undefined;
+    if (window.matchMedia("(pointer: coarse)").matches) return undefined;
 
     let mouseX = -200;
     let mouseY = -200;
