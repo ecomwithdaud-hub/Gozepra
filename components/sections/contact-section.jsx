@@ -103,16 +103,22 @@ export function ContactSection({ showHeader = true }) {
                   {t("contact.socialPresence")}
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {socialLinks.map((social) => (
-                    <Link
-                      key={social.label}
-                      href={social.href}
-                      className="inline-flex items-center gap-1 rounded-full border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-cyan-400 hover:text-white"
-                    >
-                      {social.label}
-                      <ArrowUpRight className="h-3 w-3" />
-                    </Link>
-                  ))}
+                  {socialLinks.map((social) => {
+                    const isExternal = social.href.startsWith("http");
+                    return (
+                      <a
+                        key={social.label}
+                        href={social.href}
+                        {...(isExternal
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                        className="inline-flex items-center gap-1 rounded-full border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-cyan-400 hover:text-white"
+                      >
+                        {social.label}
+                        <ArrowUpRight className="h-3 w-3" />
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
 
