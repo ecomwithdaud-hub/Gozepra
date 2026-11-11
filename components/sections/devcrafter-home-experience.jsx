@@ -81,6 +81,15 @@ const signatureServices = [
     href: "/services/digital-marketing",
     stats: { scalability: 100, performance: 94, roi: 97 },
   },
+  {
+    number: "06",
+    title: "Cold Outreaching & Lead Gen",
+    engine: "Salesforce / Apollo / RingCentral",
+    description:
+      "Precision B2B cold calling, SMS outreach, and high-deliverability email marketing engineered to maximize serious client ratios and sales conversion.",
+    href: "/cold-outreaching",
+    stats: { scalability: 98, performance: 97, roi: 99 },
+  },
 ];
 
 const pipelineSteps = [

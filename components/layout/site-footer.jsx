@@ -35,6 +35,7 @@ const navigationGroups = [
     links: [
       { label: "Web Development", href: "/website-development" },
       { label: "AI Automation", href: "/services#ai-agents-bots" },
+      { label: "Cold Outreaching", href: "/cold-outreaching" },
       { label: "Mobile Apps", href: "/services" },
       { label: "Cloud", href: "/services" },
       { label: "UI/UX", href: "/services#graphic-design" },

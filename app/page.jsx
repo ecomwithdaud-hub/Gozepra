@@ -7,6 +7,7 @@ import { InteractiveServiceDemos } from "@/components/sections/interactive-servi
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TheShiftSection } from "@/components/sections/TheShiftSection";
 import { WhyUs } from "@/components/sections/why-us";
+import { ColdOutreachSection } from "@/components/sections/cold-outreach-section";
 import { siteMeta } from "@/lib/site";
 
 export default function HomePage() {
@@ -38,6 +39,7 @@ export default function HomePage() {
       <HumanBusinessBridge />
       <InteractiveServiceDemos />
       <DevCrafterHomeExperience />
+      <ColdOutreachSection />
       <TheShiftSection />
       <WhyUs />
       <TestimonialsSection />
@@ -45,7 +47,7 @@ export default function HomePage() {
         pageUrl="https://gozepra.tech"
         pageTitle="Zepra Tech | Premium Web, AI & Digital Growth Agency"
         aiSummaryTitle="What is Zepra Tech?"
-        aiSummaryBody="Zepra Tech is a full-service digital engineering agency delivering custom web development, autonomous AI automation, e-commerce platforms, UI/UX design, and performance marketing for ambitious businesses in the US, Pakistan, and worldwide."
+        aiSummaryBody="Zepra Tech is a full-service digital engineering agency delivering custom web development, autonomous AI automation, e-commerce platforms, UI/UX design, performance marketing, and B2B cold outreach pipelines for ambitious businesses in the US, Pakistan, and worldwide."
       />
       <ContactSection />
     </>
