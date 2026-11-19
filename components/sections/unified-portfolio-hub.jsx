@@ -21,6 +21,7 @@ import { WikiRgShowcase } from "@/components/sections/wiki-rg-showcase";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { AiGrowthDominance } from "@/components/sections/ai-growth-dominance";
 import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
+import { AIDemoSandbox } from "@/components/sections/ai-demo-sandbox";
 
 const hubTabs = [
   {
@@ -151,6 +152,7 @@ export function UnifiedPortfolioHub() {
       {/* Section 1B: Interactive AI Agents, Bots, SEO & CRM Labs */}
       {showInteractiveLabs ? (
         <div id="interactive-labs-section" className="border-t border-slate-200">
+          <AIDemoSandbox />
           <InteractiveServiceDemos />
         </div>
       ) : null}
