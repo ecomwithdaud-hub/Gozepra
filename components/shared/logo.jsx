@@ -1,49 +1,22 @@
 import { cn } from "@/lib/utils";
 
-export function Logo({ className = "", textClassName = "", compact = false, dark = false }) {
+export function Logo({ className = "" }) {
   return (
-    <div className={cn("inline-flex items-center gap-3", className)}>
-      <svg
+    <span className={cn("inline-flex items-center gap-2.5", className)}>
+      <span
         aria-hidden="true"
-        className={cn("h-10 w-10 shrink-0", compact && "h-9 w-9")}
-        viewBox="0 0 80 80"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0066FF] text-xl font-bold text-white"
       >
-        <rect width="80" height="80" rx="22" fill="url(#logo-bg)" />
-        <path
-          d="M18 21H56.5L49.5 31H33L60.5 31L19.5 59H57L50 69H18L58 41H18L25 31H44.5L18 31V21Z"
-          fill="#F6F9FF"
-        />
-        <path
-          d="M49.5 12.5C56 12 60.5 15.5 64 20L68 25C70.5 28.5 73 31 78 31C72.5 31 69 34 66.5 38.5L63.5 43.5C60.5 49 55.5 51 49.5 50.5L39.5 49.5L49 35.5H52C56.5 35.5 59.5 34 61.5 30.5L57.5 25C55.5 22.5 52.5 21.5 49.5 21.5H43L49.5 12.5Z"
-          fill="url(#logo-wave)"
-        />
-        <defs>
-          <linearGradient id="logo-bg" x1="12" y1="10" x2="76" y2="72" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#08111F" />
-            <stop offset="1" stopColor="#123A66" />
-          </linearGradient>
-          <linearGradient id="logo-wave" x1="43" y1="15" x2="80" y2="43" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#38C6FF" />
-            <stop offset="1" stopColor="#1277FF" />
-          </linearGradient>
-        </defs>
-      </svg>
-      <div className={cn("leading-none", textClassName)}>
-        <div className={cn("font-display text-lg font-semibold tracking-[0.08em]", dark ? "text-white" : "text-slate-900")}>
-          Zepra <span className={dark ? "text-cyan-400" : "text-blue-600"}>Tech</span>
-        </div>
-        <div
-          className={cn(
-            "mt-1",
-            dark ? "text-slate-400" : "text-slate-500",
-            compact ? "text-[10px] tracking-[0.18em]" : "text-[11px] uppercase tracking-[0.22em]",
-          )}
-        >
-          {compact ? "Since 2025" : "Digital agency"}
-        </div>
-      </div>
-    </div>
+        Z
+      </span>
+      <span className="leading-none">
+        <span className="block text-lg font-semibold tracking-tight text-[#111111]">
+          Zepra Tech
+        </span>
+        <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.18em] text-[#55524B]">
+          Since 2025
+        </span>
+      </span>
+    </span>
   );
 }

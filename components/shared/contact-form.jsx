@@ -1,16 +1,12 @@
 "use client";
 
 import { useState } from "react";
-
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useLanguage } from "@/components/providers/language-provider";
-import {
-  contactSchema,
-} from "@/lib/contact-schema";
+import { budgetOptions, contactSchema, timelineOptions } from "@/lib/contact-schema";
 import { services, siteMeta } from "@/lib/site";
 
 const initialState = {
@@ -24,14 +20,14 @@ const initialState = {
   message: "",
 };
 
+const fieldClass =
+  "rounded-2xl border border-[#E2E8F0] bg-white p-3.5 text-[#111111] placeholder:text-[#9A978F] focus:border-[#0066FF] focus:outline-none focus:ring-2 focus:ring-[#0066FF]/20";
+
 export function ContactForm() {
-  const { t } = useLanguage();
   const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState({
-    type: "",
-    message: "",
-  });
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -39,220 +35,199 @@ export function ContactForm() {
     setErrors((current) => ({ ...current, [name]: "" }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     setStatus({ type: "", message: "" });
 
     const parsed = contactSchema.safeParse(formData);
-
     if (!parsed.success) {
       const nextErrors = {};
       parsed.error.issues.forEach((issue) => {
-        const field = issue.path[0];
-        const messageKey =
-          field === "message"
-            ? issue.code === "too_big"
-              ? "messageMax"
-              : "messageMin"
-            : field;
-        nextErrors[field] = t(`contact.validation.${messageKey}`);
+        nextErrors[issue.path[0]] = issue.message;
       });
       setErrors(nextErrors);
-      setStatus({
-        type: "error",
-        message: t("contact.validationSummary"),
-      });
+      setStatus({ type: "error", message: "Please fill in every field correctly." });
       return;
     }
 
-    const { name, company, email, phone, service, budget, timeline, message } = parsed.data;
-    const subject = `New inquiry from ${name} | ${service}`;
-    const body = [
-      `Full Name: ${name}`,
-      `Company: ${company}`,
-      `Work Email: ${email}`,
-      `Phone: ${phone}`,
-      `Service Needed: ${service}`,
-      `Estimated Budget: ${budget}`,
-      `Preferred Timeline: ${timeline}`,
-      "",
-      "Project Goals:",
-      message,
-    ].join("\n");
+    setSending(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(parsed.data),
+      });
+      const result = await response.json();
 
-    const mailtoUrl = `mailto:${siteMeta.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (!response.ok || !result.ok) {
+        setStatus({
+          type: "error",
+          message:
+            result.message ||
+            `We could not send your message. Please write to ${siteMeta.email} or call ${siteMeta.phone}.`,
+        });
+        return;
+      }
 
-    setFormData(initialState);
-    setErrors({});
-    setStatus({
-      type: "success",
-      message:
-        t("contact.emailOpening"),
-    });
-
-    if (typeof window !== "undefined") {
-      window.location.href = mailtoUrl;
+      setFormData(initialState);
+      setStatus({ type: "success", message: result.message });
+    } catch {
+      setStatus({
+        type: "error",
+        message: `We could not send your message. Please write to ${siteMeta.email} or call ${siteMeta.phone}.`,
+      });
+    } finally {
+      setSending(false);
     }
   }
 
-  const translatedServices = t("services.items");
-  const budgetOptions = t("contact.budgetOptions");
-  const timelineOptions = t("contact.timelineOptions");
-
   return (
-    <form className="flex flex-1 flex-col" onSubmit={handleSubmit}>
-      <div className="space-y-5">
-        <div className="grid gap-5 md:grid-cols-2">
-        <Field label={t("contact.fullName")} error={errors.name}>
+    <form onSubmit={handleSubmit} className="rounded-3xl border border-[#E2E8F0] bg-white p-6 sm:p-8">
+      <div className="grid gap-5 md:grid-cols-2">
+        <Field label="Full name" error={errors.name}>
           <Input
             name="name"
-            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
-            placeholder={t("contact.namePlaceholder")}
+            className={fieldClass}
+            placeholder="Your name"
             value={formData.name}
             onChange={handleChange}
             aria-invalid={Boolean(errors.name)}
           />
         </Field>
-        <Field label={t("contact.companyName")} error={errors.company}>
+        <Field label="Company" error={errors.company}>
           <Input
             name="company"
-            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
-            placeholder={t("contact.companyPlaceholder")}
+            className={fieldClass}
+            placeholder="Your business"
             value={formData.company}
             onChange={handleChange}
             aria-invalid={Boolean(errors.company)}
           />
         </Field>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-        <Field label={t("contact.workEmail")} error={errors.email}>
+        <Field label="Work email" error={errors.email}>
           <Input
             type="email"
             name="email"
-            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
-            placeholder={t("contact.emailPlaceholder")}
+            className={fieldClass}
+            placeholder="you@company.com"
             value={formData.email}
             onChange={handleChange}
             aria-invalid={Boolean(errors.email)}
           />
         </Field>
-        <Field label={t("contact.phoneWhatsapp")} error={errors.phone}>
+        <Field label="Phone" error={errors.phone}>
           <Input
             name="phone"
-            className="rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
-            placeholder={t("contact.phonePlaceholder")}
+            className={fieldClass}
+            placeholder="+1 (___) ___-____"
             value={formData.phone}
             onChange={handleChange}
             aria-invalid={Boolean(errors.phone)}
           />
         </Field>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3">
-        <Field label={t("contact.serviceNeeded")} error={errors.service}>
-          <SelectField
+        <Field label="Service needed" error={errors.service}>
+          <select
             name="service"
             value={formData.service}
             onChange={handleChange}
             aria-invalid={Boolean(errors.service)}
+            className={`${fieldClass} h-[52px] w-full`}
           >
-            <option value="">{t("contact.selectService")}</option>
-            {services.map((service, index) => (
+            <option value="">Select a service</option>
+            {services.map((service) => (
               <option key={service.title} value={service.title}>
-                {translatedServices?.[index]?.title ?? service.title}
+                {service.title}
               </option>
             ))}
-          </SelectField>
+          </select>
         </Field>
-        <Field label={t("contact.estimatedBudget")} error={errors.budget}>
-          <SelectField
+        <Field label="Estimated budget" error={errors.budget}>
+          <select
             name="budget"
             value={formData.budget}
             onChange={handleChange}
             aria-invalid={Boolean(errors.budget)}
+            className={`${fieldClass} h-[52px] w-full`}
           >
-            <option value="">{t("contact.selectBudget")}</option>
+            <option value="">Select a budget</option>
             {budgetOptions.map((budget) => (
               <option key={budget} value={budget}>
                 {budget}
               </option>
             ))}
-          </SelectField>
+          </select>
         </Field>
-        <Field label={t("contact.preferredTimeline")} error={errors.timeline}>
-          <SelectField
+        <Field label="Preferred timeline" error={errors.timeline}>
+          <select
             name="timeline"
             value={formData.timeline}
             onChange={handleChange}
             aria-invalid={Boolean(errors.timeline)}
+            className={`${fieldClass} h-[52px] w-full`}
           >
-            <option value="">{t("contact.selectTimeline")}</option>
+            <option value="">Select a timeline</option>
             {timelineOptions.map((timeline) => (
               <option key={timeline} value={timeline}>
                 {timeline}
               </option>
             ))}
-          </SelectField>
+          </select>
         </Field>
+        <div className="md:col-span-2">
+          <Field label="Project goals" error={errors.message}>
+            <Textarea
+              name="message"
+              rows={4}
+              className={fieldClass}
+              placeholder="What does your business do, and what should the website do?"
+              value={formData.message}
+              onChange={handleChange}
+              aria-invalid={Boolean(errors.message)}
+            />
+          </Field>
         </div>
-
-        <Field label={t("contact.projectGoals")} error={errors.message}>
-        <Textarea
-          name="message"
-          rows={3}
-          className="min-h-0 rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:bg-[#070e24] focus:ring-1 focus:ring-cyan-400 focus-visible:border-cyan-400 focus-visible:ring-cyan-400"
-          placeholder={t("contact.messagePlaceholder")}
-          value={formData.message}
-          onChange={handleChange}
-          aria-invalid={Boolean(errors.message)}
-        />
-        </Field>
-
-        {status.message ? (
-          <div
-            className={`rounded-2xl border px-4 py-3 text-sm ${
-              status.type === "success"
-                ? "border-emerald-500/30 bg-emerald-950/60 text-emerald-300"
-                : "border-rose-500/30 bg-rose-950/60 text-rose-300"
-            }`}
-          >
-            {status.message}
-          </div>
-        ) : null}
       </div>
+
+      {status.message ? (
+        <div
+          role="status"
+          className={`mt-5 rounded-2xl border px-4 py-3 text-sm ${
+            status.type === "success"
+              ? "border-emerald-200 bg-emerald-50 text-emerald-800"
+              : "border-red-200 bg-red-50 text-red-800"
+          }`}
+        >
+          {status.message}
+        </div>
+      ) : null}
 
       <Button
         type="submit"
-        size="xl"
-        className="mt-auto w-full bg-blue-600 hover:bg-blue-700 font-semibold text-white shadow-md shadow-blue-500/20"
+        disabled={sending}
+        className="mt-6 w-full rounded-full bg-[#0066FF] py-3.5 text-base font-semibold text-white hover:bg-[#0052CC] disabled:opacity-60"
       >
-        <>
-          <ArrowRight className="h-4 w-4" />
-          {t("contact.submit")}
-        </>
+        {sending ? (
+          "Sending..."
+        ) : (
+          <>
+            Send inquiry
+            <ArrowRight className="h-4 w-4" />
+          </>
+        )}
       </Button>
+      <p className="mt-3 text-center text-sm text-[#55524B]">
+        Or write to us at {siteMeta.email}. We reply within 24 hours.
+      </p>
     </form>
   );
 }
 
 function Field({ label, error, children }) {
   return (
-    <label className="block space-y-2">
-      <span className="text-sm font-semibold text-slate-200">{label}</span>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-[#111111]">{label}</span>
       {children}
-      {error ? <span className="text-sm text-rose-400">{error}</span> : null}
+      {error ? <span className="mt-1.5 block text-sm text-red-600">{error}</span> : null}
     </label>
-  );
-}
-
-function SelectField({ className = "", children, ...props }) {
-  return (
-    <select
-      className={`flex h-12 w-full rounded-xl border border-slate-700 bg-[#050b1d] p-3.5 text-sm text-white shadow-sm transition-colors focus:border-cyan-400 focus:bg-[#070e24] focus:outline-none focus:ring-1 focus:ring-cyan-400 focus-visible:ring-cyan-400 [&_option]:bg-[#070f24] [&_option]:text-white ${className}`}
-      {...props}
-    >
-      {children}
-    </select>
   );
 }

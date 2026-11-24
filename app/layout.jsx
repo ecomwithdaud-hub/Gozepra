@@ -1,21 +1,13 @@
-import { Plus_Jakarta_Sans, Sora } from "next/font/google";
-import { LanguageProvider } from "@/components/providers/language-provider";
-import { QuickConnectDock } from "@/components/ui/QuickConnectDock";
-import { TechCursor } from "@/components/ui/TechCursor";
-import { AcousticHaptics } from "@/components/ui/AcousticHaptics";
+import { Inter } from "next/font/google";
 import { SiteShell } from "@/components/layout/site-shell";
 import { siteMeta } from "@/lib/site";
 
 import "./globals.css";
 
-const bodyFont = Plus_Jakarta_Sans({
+const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-body",
-});
-
-const displayFont = Sora({
-  subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata = {
@@ -27,12 +19,13 @@ export const metadata = {
   description: siteMeta.description,
   keywords: [
     "Zepra Tech",
-    "digital agency Pakistan",
-    "web development agency",
-    "AI solutions",
-    "SEO services",
-    "digital marketing",
+    "web development agency USA",
+    "small business website",
+    "AI agents for small business",
+    "local SEO services",
+    "digital marketing agency",
     "ecommerce development",
+    "Middletown Delaware web agency",
   ],
   applicationName: siteMeta.name,
   openGraph: {
@@ -40,7 +33,7 @@ export const metadata = {
     description: siteMeta.description,
     url: siteMeta.url,
     siteName: siteMeta.name,
-    locale: "en_PK",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
@@ -50,16 +43,71 @@ export const metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gozepra.tech/#organization",
+      name: "Zepra Tech",
+      url: "https://gozepra.tech",
+      email: "info@gozepra.tech",
+      telephone: "+1-302-469-4003",
+      description: siteMeta.description,
+      foundingDate: "2025",
+      founder: {
+        "@type": "Person",
+        name: "Muhammad Daud Ali Lashari",
+        jobTitle: "Chief Executive Officer",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Middletown",
+        addressRegion: "DE",
+        addressCountry: "US",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "United States",
+      },
+      sameAs: [
+        "https://www.linkedin.com/company/zepra-tech-official",
+        "https://www.instagram.com/zepra_tech/",
+        "https://www.facebook.com/profile.php?id=61579472223082",
+        "https://x.com/zepratech",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://gozepra.tech/#service",
+      name: "Zepra Tech",
+      url: "https://gozepra.tech",
+      email: "info@gozepra.tech",
+      telephone: "+1-302-469-4003",
+      priceRange: "$2,500 - $25,000+",
+      areaServed: {
+        "@type": "Country",
+        name: "United States",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Middletown",
+        addressRegion: "DE",
+        addressCountry: "US",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${bodyFont.variable} ${displayFont.variable} font-sans`}>
-        <LanguageProvider>
-          <TechCursor />
-          <AcousticHaptics />
-          <QuickConnectDock />
-          <SiteShell>{children}</SiteShell>
-        </LanguageProvider>
+    <html lang="en-US" className="scroll-smooth">
+      <body className={`${sans.variable} font-sans`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );
