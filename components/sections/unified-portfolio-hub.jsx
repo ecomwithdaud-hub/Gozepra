@@ -17,7 +17,6 @@ import { CaseStudySpotlight } from "@/components/sections/case-study-spotlight";
 import { EnterpriseCaseStudies } from "@/components/sections/enterprise-case-studies";
 import { PortfolioPreview } from "@/components/sections/portfolio-preview";
 import { UsaDemoShowcase } from "@/components/sections/usa-demo-showcase";
-import { WikiRgShowcase } from "@/components/sections/wiki-rg-showcase";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { AiGrowthDominance } from "@/components/sections/ai-growth-dominance";
 import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
@@ -162,7 +161,6 @@ export function UnifiedPortfolioHub() {
         <div id="case-studies-section" className="border-t border-slate-200">
           <CaseStudySpotlight />
           <EnterpriseCaseStudies />
-          <WikiRgShowcase />
         </div>
       ) : null}
 

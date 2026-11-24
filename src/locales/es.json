@@ -160,18 +160,24 @@
       "email": "Por favor ingresa un correo corporativo válido.",
       "phone": "Por favor ingresa tu número de teléfono o WhatsApp.",
       "service": "Por favor elige un servicio.",
-      "budget": "Por favor selecciona un presupuesto estimado.",
+      "budget": [
+        "Under $2,500 (Subject to Review)",
+        "$2,500 - $5,000 (Small Business Launch)",
+        "$5,000 - $12,000 (Growth + AI)",
+        "$12,000 - $25,000 (Custom Platform)",
+        "$25,000+ (Enterprise)"
+      ],
       "timeline": "Por favor elige un plazo preferido.",
       "messageMin": "Por favor cuéntanos un poco más sobre tu proyecto.",
       "messageMax": "Por favor mantén el mensaje por debajo de 2000 caracteres."
     },
     "emailOpening": "Tu aplicación de correo se abrirá con los detalles. También puedes usar WhatsApp para una respuesta más rápida.",
     "budgetOptions": [
-      ",000 – ,000 (Local Market Dominator)",
-      ",000 – ,000 (Enterprise Growth & AI Platform)",
-      ",000 – ,000 (Custom Flagship Platform)",
-      ",000+ (Multi-Market Enterprise)",
-      "Under ,000 (Subject to Review)"
+      "Under $2,500 (Subject to Review)",
+      "$2,500 - $5,000 (Small Business Launch)",
+      "$5,000 - $12,000 (Growth + AI)",
+      "$12,000 - $25,000 (Custom Platform)",
+      "$25,000+ (Enterprise)"
     ],
     "timelineOptions": [
       "Lo antes posible",

@@ -2,7 +2,6 @@ import { AeoStructuredAnswers } from "@/components/sections/aeo-structured-answe
 import { CaseStudySpotlight } from "@/components/sections/case-study-spotlight";
 import { ContactSection } from "@/components/sections/contact-section";
 import { EnterpriseCaseStudies } from "@/components/sections/enterprise-case-studies";
-import { WikiRgShowcase } from "@/components/sections/wiki-rg-showcase";
 
 export const metadata = {
   title: "Case Studies | Enterprise Web Platforms, AI Systems & E-Commerce",
@@ -29,7 +28,6 @@ export default function CaseStudiesPage() {
         secondaryHref="/contact"
         secondaryLabel="Request Architecture Review"
       />
-      <WikiRgShowcase />
       <AeoStructuredAnswers
         pageUrl="https://gozepra.tech/case-studies"
         pageTitle="Enterprise Engineering Case Studies | Zepra Tech"
