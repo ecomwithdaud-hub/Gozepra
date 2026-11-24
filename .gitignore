@@ -9,3 +9,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Internal build brief, never commit
+DESIGN_BRIEF_V3.md
