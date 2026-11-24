@@ -1,65 +1,9 @@
 import Link from "next/link";
+import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, CheckCircle2, ChevronRight, Cpu, Sparkles } from "lucide-react";
 
-import { AeoStructuredAnswers } from "@/components/sections/aeo-structured-answers";
-import { ContactSection } from "@/components/sections/contact-section";
-import { UsaDemoShowcase } from "@/components/sections/usa-demo-showcase";
-import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
-import { serviceIconMap } from "@/components/shared/service-card";
-import { CyberCircuitBackground } from "@/components/ui/CyberCircuitBackground";
-import { TiltCard } from "@/components/ui/TiltCard";
+import { FinalCta } from "@/components/v3/shared";
 import { services } from "@/lib/site";
-
-const processSteps = [
-  {
-    number: "01",
-    title: "Discovery & Analysis",
-    description:
-      "We analyze your business model, target audience, and technical requirements to create a clear strategic roadmap.",
-  },
-  {
-    number: "02",
-    title: "Architecture & UI/UX Planning",
-    description:
-      "Our team designs the conversion flow, visual system, and technical specifications before writing a single line of code.",
-  },
-  {
-    number: "03",
-    title: "Engineering & Build",
-    description:
-      "Senior engineers build your solution using modern, high-speed frameworks, clean code, and conversion-focused components.",
-  },
-  {
-    number: "04",
-    title: "Testing, QA & Speed Tuning",
-    description:
-      "Rigorous cross-device testing ensures security, mobile responsiveness, and sub-second Core Web Vitals performance.",
-  },
-  {
-    number: "05",
-    title: "Production Deployment",
-    description:
-      "Seamless launch on edge infrastructure with analytics, schema SEO, and team training/documentation.",
-  },
-  {
-    number: "06",
-    title: "Support & Growth Iteration",
-    description:
-      "Ongoing monitoring, updates, and conversion optimization keep your digital asset performing at its peak.",
-  },
-];
-
-const coreBenefits = [
-  "Tailored to Your Exact Business Goals",
-  "Scalable & Future-Proof Architecture",
-  "Sub-Second Mobile & Edge Performance",
-  "100% IP & Source Code Ownership",
-  "Faster Time-to-Market with Weekly Demos",
-  "Seamless CRM, Payment & AI Integrations",
-  "Built-In Technical SEO & Schema Markup",
-  "Dedicated Post-Launch Engineering Support",
-];
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -77,223 +21,124 @@ export async function generateMetadata({ params }) {
     : {};
 }
 
+const steps = [
+  {
+    number: "01",
+    title: "Free 15 minute call",
+    body: "Tell us what your business does and what the service must do.",
+  },
+  {
+    number: "02",
+    title: "Plan and design",
+    body: "We map the scope and the look. You approve it before we build.",
+  },
+  {
+    number: "03",
+    title: "Build and test",
+    body: "We build it, connect your tools, and test it on phones and desktops.",
+  },
+  {
+    number: "04",
+    title: "Launch and support",
+    body: "We launch, show you how it works, and stay on call for changes.",
+  },
+];
+
 export default async function ServiceDetailPage({ params }) {
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
 
   if (!service) notFound();
 
-  const Icon = serviceIconMap[service.icon];
-  const enginePreview =
-    service.technologies?.slice(0, 4).join(" • ") || "Next.js • React • Cloud";
-
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-white py-20 text-slate-900 border-b border-slate-200 sm:py-28">
-        <CyberCircuitBackground />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-24 top-0 -z-10 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"
-        />
-        <div className="container relative z-10">
+      <section className="pt-28 sm:pt-36">
+        <div className="wrap">
           <nav
             aria-label="Breadcrumb"
-            className="mb-8 flex items-center gap-2 text-sm text-slate-500"
+            className="flex items-center gap-2 text-sm text-[#55524B]"
           >
-            <Link
-              href="/services"
-              className="transition-colors hover:text-blue-600"
-            >
+            <Link href="/services" className="transition-colors hover:text-[#0066FF]">
               Services
             </Link>
             <ChevronRight aria-hidden="true" className="h-4 w-4" />
-            <span aria-current="page" className="text-slate-900 font-medium">
+            <span aria-current="page" className="font-medium text-[#111111]">
               {service.title}
             </span>
           </nav>
-
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-blue-600 shadow-sm">
-                {Icon ? <Icon aria-hidden="true" className="h-7 w-7" /> : null}
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-700 shadow-sm">
-                <Cpu className="h-3.5 w-3.5" />
-                Engine: {enginePreview}
-              </span>
-            </div>
-
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
-              Zepra Tech Services
-            </p>
-            <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              {service.title}
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-              {service.fullDescription}
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact#contact"
-                data-cursor="LET'S GO"
-                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-md shadow-blue-500/20 transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-              >
-                Start Your Project
-                <ArrowRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/case-studies"
-                data-cursor="EXPLORE"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-6 py-3 text-sm font-semibold text-slate-800 transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
-              >
-                View Case Studies
-              </Link>
-            </div>
+          <p className="eyebrow mt-8">Zepra Tech Services</p>
+          <h1 className="h-display mt-4 max-w-3xl">{service.title}</h1>
+          <p className="body-copy mt-5 max-w-2xl">{service.fullDescription}</p>
+          <div className="mt-8">
+            <Link href="/contact" className="btn-primary">
+              Book a free consultation
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Use Cases vs Deliverables + Core Benefits */}
-      <section className="section-shell bg-slate-50/70 text-slate-900 border-t border-slate-200">
-        <div className="container">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <TiltCard className="rounded-3xl">
-              <div className="h-full rounded-3xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm backdrop-blur-md sm:p-8">
-                <p className="eyebrow">Use Cases & Capabilities</p>
-                <h2 className="mt-2 font-display text-2xl font-semibold text-slate-900 sm:text-3xl">
-                  When to choose our {service.title}
-                </h2>
-                <ul className="mt-6 space-y-4">
-                  {service.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-start gap-3 text-slate-600"
-                    >
-                      <Check
-                        aria-hidden="true"
-                        className="mt-0.5 h-5 w-5 shrink-0 text-blue-600"
-                      />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </TiltCard>
-
-            <TiltCard className="rounded-3xl">
-              <div className="h-full rounded-3xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm backdrop-blur-md sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
-                  Production Deliverables
-                </p>
-                <h2 className="mt-2 font-display text-2xl font-semibold text-slate-900 sm:text-3xl">
-                  What you get on delivery
-                </h2>
-                <ul className="mt-6 space-y-3.5">
-                  {service.deliverables.map((deliverable) => (
-                    <li
-                      key={deliverable}
-                      className="flex items-start gap-3 text-sm leading-6 text-slate-600"
-                    >
-                      <CheckCircle2
-                        aria-hidden="true"
-                        className="mt-1 h-4 w-4 shrink-0 text-emerald-600"
-                      />
-                      <span>{deliverable}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </TiltCard>
+      <section className="section pt-12">
+        <div className="wrap">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="card">
+              <h2 className="text-2xl font-semibold text-[#111111]">
+                What this covers
+              </h2>
+              <ul className="mt-6 space-y-4">
+                {service.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3 text-[#55524B]">
+                    <Check aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-[#0066FF]" />
+                    <span className="text-base leading-relaxed">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="card">
+              <h2 className="text-2xl font-semibold text-[#111111]">
+                What you get on delivery
+              </h2>
+              <ul className="mt-6 space-y-4">
+                {service.deliverables.map((deliverable) => (
+                  <li key={deliverable} className="flex items-start gap-3 text-[#55524B]">
+                    <Check aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-[#0066FF]" />
+                    <span className="text-base leading-relaxed">{deliverable}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* 8 Core Benefits Grid inspired by DevCrafter */}
-          <div className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm backdrop-blur-md sm:p-8">
-            <p className="eyebrow">Why Choose Zepra Tech</p>
-            <h3 className="mt-2 font-display text-2xl font-semibold text-slate-900">
-              Engineered for measurable business ROI
-            </h3>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {coreBenefits.map((benefit) => (
-                <div
-                  key={benefit}
-                  className="flex items-center gap-2.5 rounded-2xl border border-slate-200 bg-slate-50 p-3.5 text-xs font-semibold text-slate-700 transition-colors hover:border-blue-400 sm:text-sm"
+          <div className="mt-12">
+            <p className="eyebrow">Technology and tools</p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {service.technologies.map((technology) => (
+                <span
+                  key={technology}
+                  className="rounded-full border border-[#E2E8F0] bg-white px-4 py-2 text-sm font-medium text-[#55524B]"
                 >
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-blue-600" />
-                  <span>{benefit}</span>
-                </div>
+                  {technology}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16">
+            <h2 className="h-section">How it works</h2>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {steps.map((step) => (
+                <article key={step.number} className="border-t-2 border-[#0066FF] pt-6">
+                  <p className="text-sm font-semibold text-[#0066FF]">{step.number}</p>
+                  <h3 className="mt-3 text-xl font-semibold text-[#111111]">{step.title}</h3>
+                  <p className="mt-2 text-base leading-relaxed text-[#55524B]">{step.body}</p>
+                </article>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {slug === "web-development" ? (
-        <UsaDemoShowcase initialLimit={12} showViewAllLink={true} />
-      ) : null}
-
-      {slug === "ai-agents-bots" ||
-      slug === "search-engine-optimization-seo" ||
-      slug === "ecommerce-solutions" ||
-      slug === "social-media-marketing" ? (
-        <InteractiveServiceDemos />
-      ) : null}
-
-      <section className="section-shell bg-white text-slate-900 border-t border-slate-200">
-        <div className="container">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
-            Technology & Tools
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold text-slate-900">
-            Production Stack & Engineering Ecosystem
-          </h2>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {service.technologies.map((technology) => (
-              <span
-                key={technology}
-                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6-Step Engineering Methodology */}
-      <section className="section-shell bg-slate-50/70 text-slate-900 border-t border-slate-200">
-        <div className="container">
-          <p className="eyebrow">Our Process</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold text-slate-900">
-            6-Step Methodology from Discovery to Scale
-          </h2>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {processSteps.map((step) => (
-              <TiltCard key={step.number} className="rounded-2xl">
-                <article className="h-full rounded-2xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm transition-all duration-300 hover:border-blue-400 hover:shadow-md">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 font-mono text-xs font-bold text-blue-700">
-                    {step.number}
-                  </span>
-                  <h3 className="mt-4 font-display text-lg font-semibold text-slate-900">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    {step.description}
-                  </p>
-                </article>
-              </TiltCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <AeoStructuredAnswers
-        pageUrl={`https://gozepra.tech/services/${service.slug}`}
-        pageTitle={`${service.title} | Zepra Tech`}
-        aiSummaryTitle={`What is ${service.title} at Zepra Tech?`}
-        aiSummaryBody={service.fullDescription}
-      />
-
-      <ContactSection showHeader={false} />
+      <FinalCta />
     </>
   );
 }
