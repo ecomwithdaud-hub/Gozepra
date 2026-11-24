@@ -13,7 +13,7 @@ const defaultFaqs = [
   {
     question: "Do your websites include mobile optimization, speed tuning, and technical SEO?",
     answer:
-      "Yes. Every website is engineered mobile-first with sub-1.5s edge load times, clean semantic HTML, LocalBusiness/Service JSON-LD schema, and conversion-focused lead capture flows.",
+      "Yes. Every website is engineered mobile-first with fast load times, clean semantic HTML, LocalBusiness/Service JSON-LD schema, and conversion-focused lead capture flows.",
   },
   {
     question: "Can you integrate our website with CRMs, booking engines, and AI automation?",
@@ -23,7 +23,7 @@ const defaultFaqs = [
   {
     question: "Do we get full ownership of the code, design assets, and domain deployment?",
     answer:
-      "Yes—you receive 100% IP and source-code ownership, production deployment on your domain/cloud account, documentation, and optional ongoing maintenance and growth support.",
+      "Yes-you receive 100% IP and source-code ownership, production deployment on your domain/cloud account, documentation, and optional ongoing maintenance and growth support.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function AeoStructuredAnswers({
   pageUrl = "https://gozepra.tech/website-development",
   pageTitle = "Custom Web Development & Conversion Engineering | Zepra Tech",
   aiSummaryTitle = "What is Conversion-Engineered Web Development?",
-  aiSummaryBody = "Conversion-engineered web development combines custom UI/UX architecture, sub-second edge performance, and industry-specific lead funnels instead of generic templates. It aligns brand authority, mobile responsiveness, technical SEO, and automated booking workflows to turn local and global traffic into measurable revenue.",
+  aiSummaryBody = "Conversion-engineered web development combines custom UI/UX architecture, fast edge performance, and industry-specific lead funnels instead of generic templates. It aligns brand authority, mobile responsiveness, technical SEO, and automated booking workflows to turn local and global traffic into measurable revenue.",
   faqs = defaultFaqs,
 }) {
   const [openIndex, setOpenIndex] = useState(0);
@@ -102,10 +102,10 @@ export function AeoStructuredAnswers({
               </div>
               <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 sm:rounded-2xl sm:p-3.5 shadow-sm text-center">
                 <div className="font-display text-lg font-bold text-emerald-400 sm:text-xl">
-                  24h Turnaround
+                  Within 24 Hours
                 </div>
                 <div className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
-                  Architecture Roadmap
+                  First Response
                 </div>
               </div>
             </div>

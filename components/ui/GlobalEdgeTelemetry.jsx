@@ -53,12 +53,12 @@ export function GlobalEdgeTelemetry({ className = "" }) {
         <div className="flex items-center gap-3 text-[11px] text-slate-300">
           <span className="inline-flex items-center gap-1 font-semibold text-emerald-400">
             <ShieldCheck className="h-3.5 w-3.5" />
-            99.99% SLA Uptime
+            Response within 24 hours
           </span>
           <span className="hidden sm:inline-block text-slate-600">•</span>
           <span className="hidden sm:inline-flex items-center gap-1 font-semibold text-cyan-300">
             <Zap className="h-3.5 w-3.5" />
-            99/100 Core Web Vitals
+            Fast Load Times
           </span>
         </div>
       </div>

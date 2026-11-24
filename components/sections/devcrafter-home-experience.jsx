@@ -8,7 +8,6 @@ import { TiltCard } from "@/components/ui/TiltCard";
 const trustedBrands = [
   "ClearFlow USA",
   "Summit Roofing",
-  "Wiki RG Platform",
   "Apex Auto Care",
   "Glow MedSpa",
   "Veloce Bistro",
@@ -25,13 +24,13 @@ const manifestoTabs = [
     id: "vision",
     label: "Our Vision",
     content:
-      "We envision a standard where enterprise engineering and luxury digital design move as one. We build platforms, AI workflows, and brand systems that become the undisputed benchmark in your market—turning traffic into long-term customer equity.",
+      "We envision a standard where enterprise engineering and luxury digital design move as one. We build platforms, AI workflows, and brand systems that become the undisputed benchmark in your market-turning traffic into long-term customer equity.",
   },
   {
     id: "value",
     label: "Our Value",
     content:
-      "Expect elite execution: sub-second load speeds, mobile-first conversion architecture, transparent sprint delivery, and measurable ROI. Our team collaborates directly with founders and operators so your digital presence outpaces every competitor.",
+      "Expect elite execution: fast load speeds, mobile-first conversion architecture, transparent sprint delivery, and clear reporting. Our team collaborates directly with founders and operators so your digital presence outpaces every competitor.",
   },
 ];
 
@@ -111,7 +110,7 @@ const pipelineSteps = [
     number: "03",
     title: "Engineering & Motion",
     description:
-      "Developing scalable, sub-second web and AI architectures with fluid micro-interactions and clean code.",
+      "Developing scalable, fast web and AI architectures with fluid micro-interactions and clean code.",
     accent: "#fbbf24",
   },
   {
@@ -151,7 +150,7 @@ return (
       <section className="border-y border-slate-200 bg-slate-50 py-6 sm:py-14">
         <div className="container space-y-5 sm:space-y-8">
           <p className="text-center text-[10px] font-bold uppercase tracking-[0.25em] text-slate-500 sm:text-xs sm:tracking-[0.38em]">
-            Trusted by Forward-Looking Teams & Industry Leaders
+            Live Demo Websites We Built for US Industries
           </p>
           <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6">
             {trustedBrands.map((brand, idx) => (
@@ -204,7 +203,7 @@ return (
               {/* Floating Metric Badge */}
               <div className="mt-3 inline-flex items-center gap-3 rounded-2xl border border-blue-200 bg-white/95 px-4 py-2.5 shadow-xl backdrop-blur-xl sm:absolute sm:-bottom-6 sm:right-6 sm:mt-0 sm:rounded-[24px] sm:px-6 sm:py-4">
                 <p className="font-display text-2xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-                  50<span className="text-blue-600">+</span>
+                  24
                 </p>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-600 sm:text-xs sm:tracking-[0.2em]">
                   Global Projects
@@ -324,49 +323,23 @@ return (
                 </p>
 
                 <div className="mt-4 space-y-3 sm:mt-6 sm:space-y-4">
-                  <div>
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
-                      <span>Scalability</span>
-                      <span className="text-cyan-400">
-                        {activeService.stats.scalability}%
-                      </span>
-                    </div>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-900">
-                      <div
-                        className="h-full rounded-full bg-cyan-400 transition-all duration-500"
-                        style={{ width: `${activeService.stats.scalability}%` }}
-                      />
-                    </div>
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-3 text-sm">
+                    <span className="font-bold uppercase tracking-[0.18em] text-slate-300 text-[10px] sm:text-[11px]">
+                      Delivery
+                    </span>
+                    <span className="font-semibold text-cyan-400">2 to 3 weeks</span>
                   </div>
-
-                  <div>
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
-                      <span>Performance</span>
-                      <span className="text-emerald-400">
-                        {activeService.stats.performance}%
-                      </span>
-                    </div>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-900">
-                      <div
-                        className="h-full rounded-full bg-emerald-400 transition-all duration-500"
-                        style={{ width: `${activeService.stats.performance}%` }}
-                      />
-                    </div>
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-3 text-sm">
+                    <span className="font-bold uppercase tracking-[0.18em] text-slate-300 text-[10px] sm:text-[11px]">
+                      Code ownership
+                    </span>
+                    <span className="font-semibold text-emerald-400">100% yours</span>
                   </div>
-
-                  <div>
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.18em] text-slate-300 sm:text-[11px] sm:tracking-[0.2em]">
-                      <span>ROI Impact</span>
-                      <span className="text-amber-400">
-                        {activeService.stats.roi}%
-                      </span>
-                    </div>
-                    <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-900">
-                      <div
-                        className="h-full rounded-full bg-amber-400 transition-all duration-500"
-                        style={{ width: `${activeService.stats.roi}%` }}
-                      />
-                    </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="font-bold uppercase tracking-[0.18em] text-slate-300 text-[10px] sm:text-[11px]">
+                      Pricing
+                    </span>
+                    <span className="font-semibold text-amber-400">Fixed, upfront</span>
                   </div>
                 </div>
 
@@ -439,7 +412,7 @@ return (
         </div>
       </section>
 
-      {/* 4. The Masterpiece Pipeline — Wall of Proof */}
+      {/* 4. The Masterpiece Pipeline, Wall of Proof */}
       <section className="hidden md:block relative overflow-hidden border-t border-slate-200 bg-white sm:py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.03)_1px,transparent_1px)] bg-[size:56px_56px]" />
         <div className="container relative z-10">
@@ -508,7 +481,7 @@ return (
                 </span>
               </h2>
               <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-                Strategy, design, and engineering move in perfect sync. Every launch is a composed narrative—crafted from first impression through measurable conversion.
+                Strategy, design, and engineering move in perfect sync. Every launch is a composed narrative-crafted from first impression through measurable conversion.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">
                 <span>Art Direction</span>

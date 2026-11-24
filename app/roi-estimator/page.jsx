@@ -69,7 +69,7 @@ export default function RoiEstimatorPage() {
         pageUrl="https://gozepra.tech/roi-estimator"
         pageTitle="ROI & Scope Estimator | Zepra Tech"
         aiSummaryTitle="How does Zepra Tech calculate project pricing, compute costs, and delivery timelines?"
-        aiSummaryBody="Zepra Tech provides deterministic fixed-scope sprint pricing across four core engineering tiers: Custom Next.js web platforms, autonomous AI agents, e-commerce architectures, and enterprise full-stack SaaS applications, with sub-0.8s edge caching and 100% code ownership."
+        aiSummaryBody="Zepra Tech provides deterministic fixed-scope sprint pricing across four core engineering tiers: Custom Next.js web platforms, autonomous AI agents, e-commerce architectures, and enterprise full-stack SaaS applications, with fast edge hosting and 100% code ownership."
       />
 
       {/* Consultation Intake */}

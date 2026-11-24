@@ -21,32 +21,40 @@ const displayFont = Sora({
 export const metadata = {
   metadataBase: new URL(siteMeta.url),
   title: {
-    default: siteMeta.title,
+    default:
+      "Zepra Tech | Web Development, AI Automation & Digital Marketing for US Small Businesses",
     template: "%s | Zepra Tech",
   },
-  description: siteMeta.description,
+  description:
+    "Zepra Tech is a US based digital engineering and marketing agency for small businesses. Custom websites from $2,500, AI assistants, e-commerce, SEO, and cold outreach. Fixed pricing, launch in 2 to 3 weeks, response within 24 hours.",
   keywords: [
     "Zepra Tech",
-    "digital agency Pakistan",
-    "web development agency",
-    "AI solutions",
-    "SEO services",
-    "digital marketing",
-    "ecommerce development",
+    "web development agency USA",
+    "small business website USA",
+    "AI automation agency USA",
+    "AI chatbot for small business",
+    "ecommerce development USA",
+    "local SEO agency USA",
+    "digital marketing agency Delaware",
+    "website design for roofers",
+    "website design for dentists",
+    "custom software agency USA",
   ],
   applicationName: siteMeta.name,
   openGraph: {
-    title: siteMeta.title,
-    description: siteMeta.description,
+    title: "Zepra Tech | Websites, AI Assistants & Growth for US Small Businesses",
+    description:
+      "Custom websites from $2,500, AI assistants that book leads around the clock, and growth marketing for US small businesses. Fixed pricing, launch in 2 to 3 weeks.",
     url: siteMeta.url,
     siteName: siteMeta.name,
-    locale: "en_PK",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: siteMeta.title,
-    description: siteMeta.description,
+    title: "Zepra Tech | Websites, AI Assistants & Growth for US Small Businesses",
+    description:
+      "Custom websites from $2,500, AI assistants that book leads around the clock, and growth marketing for US small businesses.",
   },
 };
 

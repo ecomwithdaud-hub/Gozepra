@@ -62,20 +62,20 @@ export function BeforeAfterSlider() {
                 After // Zepra Tech Next.js 15
               </span>
               <span className="font-display text-sm font-bold text-emerald-400 sm:text-2xl">
-                99/100 Core Web Vitals
+                Strong Core Web Vitals
               </span>
             </div>
 
             <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
               <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-2.5 text-center sm:rounded-2xl sm:p-4">
                 <div className="font-display text-xl font-bold text-emerald-400 sm:text-3xl">
-                  0.8s
+                  Fast
                 </div>
                 <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Edge Load</div>
               </div>
               <div className="rounded-xl border border-cyan-500/30 bg-cyan-950/40 p-2.5 text-center sm:rounded-2xl sm:p-4">
                 <div className="font-display text-xl font-bold text-cyan-400 sm:text-3xl">
-                  +64%
+                  Clear
                 </div>
                 <div className="mt-0.5 text-[10px] text-slate-300 sm:mt-1 sm:text-xs">Conversion Lift</div>
               </div>
@@ -114,26 +114,26 @@ export function BeforeAfterSlider() {
                   Before // Generic $300 Template
                 </span>
                 <span className="font-display text-sm font-bold text-rose-400 sm:text-2xl">
-                  52/100 Mobile Score
+                  Weak Mobile Score
                 </span>
               </div>
 
               <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
                 <div className="rounded-xl border border-rose-500/30 bg-rose-950/50 p-2.5 text-center sm:rounded-2xl sm:p-4">
                   <div className="font-display text-xl font-bold text-rose-400 sm:text-3xl">
-                    3.9s
+                    Slow
                   </div>
                   <div className="mt-0.5 text-[10px] text-slate-400 sm:mt-1 sm:text-xs">Slow Server</div>
                 </div>
                 <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-2.5 text-center sm:rounded-2xl sm:p-4">
                   <div className="font-display text-xl font-bold text-slate-300 sm:text-3xl">
-                    -48%
+                    High
                   </div>
                   <div className="mt-0.5 text-[10px] text-slate-400 sm:mt-1 sm:text-xs">Bounce Rate</div>
                 </div>
                 <div className="rounded-xl border border-amber-500/30 bg-amber-950/40 p-2.5 text-center sm:rounded-2xl sm:p-4">
                   <div className="font-display text-xl font-bold text-amber-400 sm:text-3xl">
-                    42+
+                    Many
                   </div>
                   <div className="mt-0.5 text-[10px] text-slate-400 sm:mt-1 sm:text-xs">Bloated Plugins</div>
                 </div>

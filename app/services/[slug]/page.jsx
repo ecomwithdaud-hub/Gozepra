@@ -34,7 +34,7 @@ const processSteps = [
     number: "04",
     title: "Testing, QA & Speed Tuning",
     description:
-      "Rigorous cross-device testing ensures security, mobile responsiveness, and sub-second Core Web Vitals performance.",
+      "Rigorous cross-device testing ensures security, mobile responsiveness, and strong Core Web Vitals performance.",
   },
   {
     number: "05",

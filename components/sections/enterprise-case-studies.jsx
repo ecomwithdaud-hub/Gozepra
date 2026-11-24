@@ -58,13 +58,13 @@ export function EnterpriseCaseStudies() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
             <Sparkles className="h-3.5 w-3.5 text-blue-600" />
-            Verified Engineering Outcomes & Client Case Studies
+            Platform Examples and Engineering Work
           </div>
-          <h1 className="mt-5 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Enterprise Case Studies & Architecture Breakdowns.
-          </h1>
+          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            Platform Examples and Architecture Breakdowns.
+          </h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            Explore how Zepra Tech solves real operational, technical, and growth challenges across US industry web rollouts, institutional MERN platforms, high-velocity e-commerce, and autonomous AI pipelines.
+            Explore how Zepra Tech solves real operational, technical, and growth challenges across US industry web rollouts, e-commerce, and autonomous AI pipelines. These are platform examples and demo builds.
           </p>
 
           {/* Category Filter Bar */}

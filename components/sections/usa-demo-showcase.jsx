@@ -31,52 +31,22 @@ import { usaClientDemoWebsites, usaDemoCategories } from "@/lib/site";
 // Deterministic DevCrafter-inspired performance metrics, tech stack & client testimonial per demo build
 const demoPerformanceProfiles = [
   {
-    speed: "1.1s",
-    conversion: "+54%",
-    satisfaction: "99%",
     tech: ["Next.js", "Tailwind CSS", "Local SEO Schema", "Vercel Edge"],
-    quote: "Emergency dispatch calls jumped within the first month of launching the new layout.",
-    role: "Operations Director",
   },
   {
-    speed: "1.2s",
-    conversion: "+48%",
-    satisfaction: "98%",
     tech: ["React", "Tailwind CSS", "Lead Funnel", "Core Web Vitals"],
-    quote: "Customers constantly compliment how fast and easy our online quote request is.",
-    role: "Business Owner",
   },
   {
-    speed: "1.0s",
-    conversion: "+61%",
-    satisfaction: "99%",
     tech: ["Next.js", "Framer Motion", "Booking Engine", "Edge CDN"],
-    quote: "Our local search conversions and high-ticket estimate bookings doubled.",
-    role: "Founder & GM",
   },
   {
-    speed: "1.3s",
-    conversion: "+46%",
-    satisfaction: "97%",
     tech: ["React", "TypeScript", "Conversion UX", "Schema.org"],
-    quote: "The mobile experience turns casual visitors into booked appointments effortlessly.",
-    role: "Managing Partner",
   },
   {
-    speed: "1.1s",
-    conversion: "+57%",
-    satisfaction: "99%",
     tech: ["Next.js", "Tailwind CSS", "CRM Webhook", "Analytics"],
-    quote: "Our brand now looks like the #1 authority in our city—and the leads prove it.",
-    role: "Growth Lead",
   },
   {
-    speed: "1.2s",
-    conversion: "+52%",
-    satisfaction: "98%",
     tech: ["Next.js", "Responsive UI", "Instant Quote", "Local SEO"],
-    quote: "Clean, fast, and built specifically to convert high-intent local traffic.",
-    role: "Service Manager",
   },
 ];
 
@@ -84,12 +54,7 @@ function getProjectProfile(project) {
   const base =
     demoPerformanceProfiles[(project.id - 1) % demoPerformanceProfiles.length];
   return {
-    speed: project.metrics?.speed || base.speed,
-    conversion: project.metrics?.conversion || base.conversion,
-    satisfaction: project.metrics?.satisfaction || base.satisfaction,
     tech: project.tech || base.tech,
-    quote: project.testimonial || base.quote,
-    role: project.clientRole || `${project.trade} ${base.role}`,
   };
 }
 
@@ -97,8 +62,8 @@ export function UsaDemoShowcase({
   initialLimit = 24,
   showViewAllLink = false,
   eyebrow = "Web Development Portfolio • 24 Live USA Demo Builds",
-  title = "Production-Ready US Business Websites Built to Convert Local Traffic.",
-  description = "Explore 24 live, interactive website builds engineered across 5 high-demand US industries. Click 'Learn More' to inspect screenshots, performance metrics, conversion architecture, and live interactive previews—or launch any project directly in a new tab.",
+  title = "Live Demo Websites for US Local Businesses.",
+  description = "Explore 24 live, interactive demo websites built across 5 high-demand US industries. Click 'Learn More' to inspect screenshots and live previews, or open any demo directly in a new tab. These are demo websites, not client work."
 }) {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
@@ -185,26 +150,26 @@ export function UsaDemoShowcase({
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5 shadow-sm">
               <div className="font-display text-2xl font-bold text-emerald-600 sm:text-3xl">
-                1.1s Avg
+                5
               </div>
               <div className="mt-1 text-xs font-medium text-slate-600">
-                Edge Load Performance
+                Industries Covered
               </div>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5 shadow-sm">
               <div className="font-display text-2xl font-bold text-amber-600 sm:text-3xl">
-                +53% Avg
+                3
               </div>
               <div className="mt-1 text-xs font-medium text-slate-600">
-                Lead Conversion Lift
+                Ways to Preview Each Site
               </div>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5 shadow-sm">
               <div className="font-display text-2xl font-bold text-indigo-600 sm:text-3xl">
-                99/100
+                Free
               </div>
               <div className="mt-1 text-xs font-medium text-slate-600">
-                Mobile UX & SEO Score
+                Cost to Inspect
               </div>
             </div>
           </div>
@@ -435,30 +400,30 @@ export function UsaDemoShowcase({
                           {project.subtitle}
                         </p>
 
-                        {/* Dev Crafter-Inspired 3-Column Performance Metrics Strip */}
+                        {/* Live demo status strip */}
                         <div className="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-slate-100 bg-slate-50/80 p-2.5">
                           <div className="text-center">
                             <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
-                              Load Speed
+                              Status
                             </div>
                             <div className="mt-0.5 font-display text-sm font-bold text-blue-600">
-                              {profile.speed}
+                              Live
                             </div>
                           </div>
                           <div className="border-x border-slate-200 text-center">
                             <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
-                              Conversion
+                              Type
                             </div>
                             <div className="mt-0.5 font-display text-sm font-bold text-emerald-600">
-                              {profile.conversion}
+                              Demo
                             </div>
                           </div>
                           <div className="text-center">
                             <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
-                              UX Score
+                              Cost
                             </div>
                             <div className="mt-0.5 font-display text-sm font-bold text-amber-600">
-                              {profile.satisfaction}
+                              Free
                             </div>
                           </div>
                         </div>
@@ -492,13 +457,9 @@ export function UsaDemoShowcase({
                           ) : null}
                         </div>
 
-                        {/* 1-Line Client Impact Quote */}
-                        <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 px-3 py-2 text-[11px] italic text-slate-600">
-                          &ldquo;{profile.quote}&rdquo;{" "}
-                          <span className="not-italic font-semibold text-blue-600">
-                            — {profile.role}
-                          </span>
-                        </div>
+                        <p className="mt-4 text-[11px] text-slate-500">
+                          Live demo website, free to open and inspect.
+                        </p>
                       </div>
                     </div>
 
@@ -778,30 +739,30 @@ function ProjectDetailModal({ project, onClose }) {
               {/* Right Column: Pitch Details, Metrics, Services & Conversion Architecture */}
               <div className="flex flex-col justify-between space-y-6">
                 <div className="space-y-5">
-                  {/* Verified Performance Metrics Grid */}
+                  {/* Demo details */}
                   <div className="grid grid-cols-3 gap-3">
                     <div className="rounded-2xl border border-blue-200 bg-blue-50/80 p-3.5 text-center">
                       <div className="text-[11px] font-semibold uppercase tracking-wider text-blue-700">
-                        Load Speed
+                        Status
                       </div>
                       <div className="mt-1 font-display text-2xl font-bold text-slate-900">
-                        {profile.speed}
+                        Live
                       </div>
                     </div>
                     <div className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-3.5 text-center">
                       <div className="text-[11px] font-semibold uppercase tracking-wider text-emerald-700">
-                        Conversion
+                        Type
                       </div>
                       <div className="mt-1 font-display text-2xl font-bold text-emerald-600">
-                        {profile.conversion}
+                        Demo
                       </div>
                     </div>
                     <div className="rounded-2xl border border-amber-200 bg-amber-50/80 p-3.5 text-center">
                       <div className="text-[11px] font-semibold uppercase tracking-wider text-amber-700">
-                        Satisfaction
+                        Cost
                       </div>
                       <div className="mt-1 font-display text-2xl font-bold text-amber-600">
-                        {profile.satisfaction}
+                        Free
                       </div>
                     </div>
                   </div>
@@ -813,12 +774,10 @@ function ProjectDetailModal({ project, onClose }) {
                     <p className="mt-2.5 text-sm leading-7 text-slate-600">
                       {project.subtitle}
                     </p>
-                    <div className="mt-3 border-t border-slate-200 pt-3 text-xs italic text-slate-600">
-                      &ldquo;{profile.quote}&rdquo;{" "}
-                      <span className="not-italic font-semibold text-blue-600">
-                        — {profile.role}
-                      </span>
-                    </div>
+                    <p className="mt-3 border-t border-slate-200 pt-3 text-xs text-slate-600">
+                      Live demo website. Open it in a new tab and use it like
+                      a customer would.
+                    </p>
                   </div>
 
                   {/* Conversion & UX Highlights */}

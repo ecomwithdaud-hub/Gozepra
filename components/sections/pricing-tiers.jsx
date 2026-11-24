@@ -20,34 +20,34 @@ import { siteMeta } from "@/lib/site";
 const TIERS = [
   {
     id: "local-dominator",
-    name: "Local Market Dominator",
-    tagline: "For high-end local leaders, boutique clinics & premier firms looking to capture 3x local market share.",
-    badge: "14-DAY SPRINT",
+    name: "Launch",
+    tagline: "For a small business that needs a sharp website, fast.",
+    badge: "2 TO 3 WEEK LAUNCH",
     badgeVariant: "slate",
-    price: "$3,500 – $5,000",
+    price: "$2,500 - $5,000",
     billingPeriod: "one-time sprint investment",
     popular: false,
-    highlightMetric: "Sub-0.8s Load Times",
+    highlightMetric: "Fast Mobile Load Times",
     features: [
-      "Custom Next.js 15 SSR Architecture (No templates)",
+      "Custom Next.js 15 website built for your business (no templates)",
       "Bespoke High-Conversion UI/UX designed in Figma",
       "Instant CRM Webhook Lead Routing & Real-Time Alerts",
-      "95+ Lighthouse Score & Technical Local Schema",
+      "Technical local SEO setup and Google Maps listing",
       "Multi-device Responsive & Retina Optimization",
       "Full Code Ownership (100% IP transferred to you)",
-      "14-Day Delivery SLA Guarantee",
+      "Launch in 2 to 3 weeks",
     ],
-    guarantee: "100% Core Web Vitals pass guarantee or we optimize at zero cost.",
-    cta: "Deploy Local Dominator",
+    guarantee: "Fixed price agreed in writing before we start.",
+    cta: "Start With Launch",
     href: "/contact",
   },
   {
     id: "enterprise-growth",
-    name: "Enterprise Growth & AI Platform",
-    tagline: "For scaling B2B companies, high-volume e-commerce & funded startups who demand automated lead capture.",
-    badge: "MOST POPULAR • 2 SLOTS LEFT",
+    name: "Growth",
+    tagline: "For a business that wants the website to also answer and book.",
+    badge: "MOST POPULAR",
     badgeVariant: "cyan",
-    price: "$7,500 – $12,000",
+    price: "$5,000 - $12,000",
     billingPeriod: "one-time sprint investment",
     popular: true,
     highlightMetric: "24/7 AI Qualification Bot",
@@ -61,32 +61,32 @@ const TIERS = [
       "Direct Private Slack Channel with Senior Solutions Architect",
       "21-Day Delivery SLA with Daily Asynchronous Standups",
     ],
-    guarantee: "Guaranteed on-time launch or receive $250 credit per day delayed.",
-    cta: "Claim Sprint Slot",
+    guarantee: "Fixed price agreed in writing before we start.",
+    cta: "Start With Growth",
     href: "/contact",
   },
   {
     id: "flagship-bespoke",
-    name: "Custom Flagship Platform",
-    tagline: "For venture-backed giants, enterprise institutions & mission-critical ecosystems processing high GMV.",
-    badge: "INVITATION & BRIEFING ONLY",
+    name: "Scale",
+    tagline: "For a growing business that needs a custom platform.",
+    badge: "SCOPED PER PROJECT",
     badgeVariant: "purple",
-    price: "$15,000 – $30,000+",
+    price: "$12,000 - $25,000",
     billingPeriod: "one-time sprint investment",
     popular: false,
-    highlightMetric: "Custom Agentic Workflows",
+    highlightMetric: "Custom Platform + AI",
     features: [
-      "Bespoke Microservices & Serverless Edge Architecture",
-      "High-End 3D WebGL / Canvas interactive showmanship",
+      "Custom platform or online store architecture",
+      "Interactive product and service showcases",
       "Autonomous Multi-Agent AI Workflows (Voice + Chat + CRM Sync)",
-      "SOC-2 Type II Compliant Data Pipelines & Security Audits",
+      "Secure data handling and privacy conscious setup",
       "Custom Enterprise Database & Stripe/Payment Gateway Architecture",
-      "60-Day Post-Launch Conversion Optimization & A/B Testing",
+      "60 days of post launch optimization and testing",
       "Direct Priority Phone Escalation Line to Founder Daud",
-      "Unconditional Executive Board Sign-off Guarantee",
+      "Launch review and sign off with your team",
     ],
-    guarantee: "Unlimited post-launch sprint iterations until your executive KPI is met.",
-    cta: "Request Executive Briefing",
+    guarantee: "Fixed price agreed in writing before we start.",
+    cta: "Start With Scale",
     href: "/contact",
   },
 ];
@@ -99,10 +99,10 @@ const RETAINERS = [
     period: "/month",
     description: "24/7 uptime monitoring, security patches, edge cache tuning, and 5 hours of monthly feature requests.",
     deliverables: [
-      "24/7 Global Edge Telemetry monitoring",
+      "Uptime monitoring and security patches",
       "Zero-downtime dependency & framework upgrades",
-      "Instant 2-hour SLA response for critical bugs",
-      "Monthly SEO & conversion telemetry report",
+      "Fast response for critical bugs",
+      "Monthly SEO and performance report",
     ],
   },
   {
@@ -145,13 +145,13 @@ export function PricingTiers() {
             Transparent Value Architecture
           </div>
           <h2 className="mt-6 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl sm:leading-tight">
-            Enterprise Quality. Predictable ROI.{" "}
+            Enterprise Quality. Fixed Prices.{" "}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent">
               Zero Hourly Guesswork.
             </span>
           </h2>
           <p className="mt-4 text-base text-slate-600 sm:text-lg">
-            We don’t bill by the hour like traditional agencies that pad timesheets. Every tier is a fixed-investment, outcome-guaranteed deployment backed by written SLAs.
+            We do not bill by the hour. Every tier is a fixed price deployment with a written quote agreed before we start.
           </p>
 
           {/* Model Switcher Pill */}
@@ -338,7 +338,7 @@ export function PricingTiers() {
               </div>
               <div>
                 <div className="font-bold text-white text-sm">Hard Sprint Delivery SLA</div>
-                <div className="text-xs text-slate-300 mt-0.5">Contractually bound delivery timelines. We ship on time or pay you back.</div>
+                <div className="text-xs text-slate-300 mt-0.5">Delivery dates agreed in writing before we start.</div>
               </div>
             </div>
 
@@ -348,7 +348,7 @@ export function PricingTiers() {
               </div>
               <div>
                 <div className="font-bold text-white text-sm">Direct Founder Engineering</div>
-                <div className="text-xs text-slate-600 mt-0.5">No 19-year-old junior interns. Direct senior guidance by Daud & lead team.</div>
+                <div className="text-xs text-slate-600 mt-0.5">Direct senior guidance by Daud and the lead team.</div>
               </div>
             </div>
           </div>

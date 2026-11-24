@@ -25,18 +25,18 @@ export function WhyUs() {
   const accreditationsList = Array.isArray(content?.accreditations)
     ? content.accreditations
     : [
-        "ISO Certified (Quality Standards)",
-        "FBR Approved (Pakistan)",
-        "Registered LLC (United States)",
+        "US Office, Middletown Delaware",
+        "Pakistan HQ, DHA Phase 8 Lahore",
+        "Founded in 2025",
       ];
 
   const metricsList = Array.isArray(content?.metrics)
     ? content.metrics
     : [
-        { value: "50+", label: "Projects Delivered" },
-        { value: "30+", label: "Websites Launched" },
-        { value: "20+", label: "E-Commerce Stores Scaled" },
-        { value: "PK + Global", label: "Built for Pakistan & International Clients" },
+        { value: "24", label: "Live Demo Websites" },
+        { value: "6", label: "Core Services" },
+        { value: "2", label: "Offices, US and Pakistan" },
+        { value: "2025", label: "Founded" },
       ];
 
   const pillarsList = Array.isArray(content?.pillars)
@@ -50,7 +50,7 @@ export function WhyUs() {
         {
           title: "Secure & Scalable Infrastructure",
           description:
-            "ISO-compliant security, robust performance, and zero downtime, built to support your business as it grows.",
+            "Secure setup, strong performance, and reliable hosting, built to support your business as it grows.",
         },
         {
           title: "Growth-Focused Execution",
@@ -60,7 +60,7 @@ export function WhyUs() {
         {
           title: "Dedicated Client Partnership",
           description:
-            "Direct developer communication, fast sprint cycles, and 24/7 support keep your team moving with confidence.",
+            "Direct developer communication, fast sprint cycles, and support when you need it keep your team moving with confidence.",
         },
       ];
 

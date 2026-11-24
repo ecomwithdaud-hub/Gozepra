@@ -37,7 +37,7 @@ const leadershipPillars = [
     icon: Cpu,
     title: "Autonomous AI-First Architecture",
     description:
-      "Under Mr. Daud Lashari's direction, we don't just build static pages—we embed intelligent 24/7 AI agents and CRM automation pipelines that capture, qualify, and book leads autonomously.",
+      "Under Mr. Daud Lashari's direction, we don't just build static pages-we embed intelligent 24/7 AI agents and CRM automation pipelines that capture, qualify, and book leads autonomously.",
   },
   {
     icon: ShieldCheck,
@@ -48,10 +48,10 @@ const leadershipPillars = [
 ];
 
 const impactStats = [
-  { value: "150+", label: "Enterprise & High-Growth Deployments", sub: "Delivered on-time" },
-  { value: "< 0.8s", label: "Average Global Edge Latency", sub: "99+ Lighthouse Mobile" },
-  { value: "14 Days", label: "Average Sprint Deployment Time", sub: "Contractual SLA" },
-  { value: "99.4%", label: "Client Retention & Satisfaction", sub: "Global US/UK/EU client base" },
+  { value: "24", label: "Live Demo Websites", sub: "Built for US industries" },
+  { value: "2 to 3 Weeks", label: "Typical Website Launch", sub: "From first call to live site" },
+  { value: "100%", label: "Code Ownership", sub: "Yours from day one" },
+  { value: "24 Hours", label: "Response Time", sub: "On every inquiry" },
 ];
 
 export function OurStory() {

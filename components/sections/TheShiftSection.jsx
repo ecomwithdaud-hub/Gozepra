@@ -43,10 +43,10 @@ export function TheShiftSection() {
         },
         {
           label: "Enterprise Data Security",
-          description: "Bank-grade encryption and location-based compliance keeping client data 100% safe.",
+          description: "Encrypted pipelines and careful data handling keep client data safe.",
         },
         {
-          label: "10x Operational Leverage",
+          label: "Strong Operational Leverage",
           description: "Multiply business output and scale revenue without increasing overhead expenses.",
         },
       ];
@@ -93,7 +93,7 @@ export function TheShiftSection() {
             {content?.title || "Transforming Business Operations with AI + Data Science."}
           </h2>
           <p className="mx-auto mt-2.5 max-w-2xl text-xs leading-relaxed text-slate-600 line-clamp-3 sm:mt-4 sm:text-base sm:leading-7 sm:line-clamp-none">
-            {content?.description || "The shift to AI-native operations means moving away from slow, manual processes. We build custom AI automation, intelligent data pipelines, and bank-grade data security into your business—making it work faster, smarter, and scale effortlessly."}
+            {content?.description || "The shift to AI-native operations means moving away from slow, manual processes. We build custom AI automation, intelligent data pipelines, and bank-grade data security into your business-making it work faster, smarter, and scale effortlessly."}
           </p>
         </header>
 

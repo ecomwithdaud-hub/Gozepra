@@ -46,15 +46,15 @@ const INDUSTRY_PROFILES = [
     accent: "text-amber-400",
     headline: "Turn Google searches into emergency calls and booked service jobs.",
     plainExplanation:
-      "When someone's roof leaks or pipe bursts, they don't care about coding languages. They want a phone number they can trust in 3 seconds. We build high-speed mobile websites with tap-to-call buttons, instant quote calculators, and top ranking on Google Maps so local homeowners call you first.",
+      "When someone's roof leaks or pipe bursts, they don't care about coding languages. They want a phone number they can trust in 3 seconds. We build high-speed mobile websites with tap-to-call buttons, instant quote calculators, and Google Maps optimization so local homeowners find you first.",
     whatWeDeliver: [
       "Tap-to-Call emergency buttons on every mobile screen",
       "Instant estimate & zip code service area checkers",
-      "Google Maps local optimization (#1 in your service radius)",
+      "Google Maps local optimization for your service area",
       "Automated lead alerts sent straight to your phone & SMS",
     ],
     liveDemos: [
-      { name: "Summit Commercial Roofing", demoUrl: "https://summit-commercial-roofing.vercel.app/" },
+      { name: "Summit Commercial Roofing", demoUrl: "https://summit-roofing-demo.vercel.app/" },
       { name: "ClearFlow Plumbing & Drain", demoUrl: "https://clearflow-plumbing.vercel.app/" },
       { name: "Apex Precision Auto Care", demoUrl: "https://apex-auto-care.vercel.app/" },
     ],
@@ -74,14 +74,13 @@ const INDUSTRY_PROFILES = [
     plainExplanation:
       "Patients look for clean professionalism, verified credentials, and an effortless way to book a consultation without waiting on hold. We give your practice a medical-grade online image with automated appointment booking and patient intake forms.",
     whatWeDeliver: [
-      "HIPAA/privacy-conscious online consultation booking",
+      "Privacy-conscious online consultation booking",
       "Interactive before-and-after treatment visual galleries",
       "Patient reviews & doctor credential trust cards",
       "24/7 automated instant assistant for booking inquiries",
     ],
     liveDemos: [
       { name: "Glow Aesthetics & MedSpa", demoUrl: "https://glow-medspa.vercel.app/" },
-      { name: "Apex Family Dental Clinic", demoUrl: "https://apex-family-dental.vercel.app/" },
     ],
   },
   {
@@ -122,16 +121,15 @@ const INDUSTRY_PROFILES = [
     accent: "text-pink-400",
     headline: "A fast, stylish store with a smart assistant that takes orders while you sleep.",
     plainExplanation:
-      "Slow shopping websites lose 50% of shoppers before they even see a product. We build lightning-fast online stores with smooth checkouts and automated digital assistants that answer customer questions about sizing, delivery, and payments instantly.",
+      "Slow shopping websites lose shoppers before they even see a product. We build fast online stores with smooth checkouts and automated digital assistants that answer customer questions about sizing, delivery, and payments.",
     whatWeDeliver: [
-      "Sub-second load times that keep mobile shoppers buying",
+      "Fast load times that keep mobile shoppers buying",
       "Automated instant order notifications & status tracking",
       "Cash on Delivery (COD) & card payment integrations",
       "Abandoned cart recovery systems that bring back lost sales",
     ],
     liveDemos: [
       { name: "Moda Lux Apparel Store", demoUrl: "/website-development" },
-      { name: "Wiki RG High-Speed Store", demoUrl: "/portfolio#web-demos" },
     ],
   },
   {
@@ -155,7 +153,7 @@ const INDUSTRY_PROFILES = [
       "Private event & catering inquiry forms",
     ],
     liveDemos: [
-      { name: "Veloce Italian Bistro", demoUrl: "https://veloce-bistro.vercel.app/" },
+      { name: "SmokeStack BBQ Truck", demoUrl: "https://smokestack-bbq-demo.vercel.app/" },
     ],
   },
   {
@@ -171,11 +169,11 @@ const INDUSTRY_PROFILES = [
     accent: "text-indigo-400",
     headline: "Silicon Valley-grade Next.js architecture, AI agents, and custom software.",
     plainExplanation:
-      "If you do understand technology, you will appreciate our craftsmanship: Next.js 15 App Router, React Server Components, sub-0.8s edge caching, custom LLM fine-tuning, autonomous CRM agents, and bank-grade data security.",
+      "If you do understand technology, you will appreciate our craftsmanship: Next.js 15 App Router, React Server Components, fast edge hosting, custom LLM workflows, autonomous CRM agents, and careful data security.",
     whatWeDeliver: [
       "100% bespoke Next.js 15 & Tailwind CSS codebases",
       "Autonomous AI bots & CRM pipeline integrations",
-      "Multi-region edge hosting with 99+ Google Lighthouse scores",
+      "Multi-region edge hosting with strong performance scores",
       "Full GitHub source code ownership with zero proprietary lock-in",
     ],
     liveDemos: [
@@ -196,7 +194,7 @@ const PLAIN_ENGLISH_SOLUTIONS = [
     description:
       "A fast, beautiful website that looks established, works effortlessly on phones, and gives customers the confidence to pick up the phone or place an order.",
     bullets: [
-      "Loads in under 1 second on any mobile network",
+      "Fast load times on mobile networks",
       "Clear contact numbers, service lists & pricing guides",
       "You own 100% of the website forever (no monthly hostage fees)",
     ],
@@ -208,7 +206,7 @@ const PLAIN_ENGLISH_SOLUTIONS = [
     icon: Bot,
     badge: "Never Miss A Lead",
     description:
-      "A smart digital assistant on your website. When customers inquire at midnight, on weekends, or while you're busy on a job, it answers them in 5 seconds and books the lead.",
+      "A smart digital assistant on your website. When customers inquire at midnight, on weekends, or while you're busy on a job, it answers them right away and books the lead.",
     bullets: [
       "Answers common pricing, timing, and service questions",
       "Collects customer phone numbers and job details",
@@ -304,7 +302,7 @@ export function HumanBusinessBridge() {
           </h2>
 
           <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-600 line-clamp-3 sm:mt-4 sm:text-lg sm:line-clamp-none">
-            Whether you run a roofing company, a dental clinic, a textile factory, or an online boutique—you do not need to understand coding or artificial intelligence.{" "}
+            Whether you run a roofing company, a dental clinic, a textile factory, or an online boutique-you do not need to understand coding or artificial intelligence.{" "}
             <span className="font-semibold text-slate-900">
               Under the supervision of Mr. Daud Lashari and our specialized team
             </span>

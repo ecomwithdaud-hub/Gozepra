@@ -14,6 +14,16 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <>
+<section className="border-b border-slate-200 bg-white pt-28 pb-12 sm:pt-36 sm:pb-16">
+        <div className="container mx-auto max-w-5xl px-4 text-center">
+          <h1 className="font-display text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            Services for US Small Businesses
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+            Web development, AI automation, e-commerce, design, and marketing, with fixed pricing and full code ownership.
+          </p>
+        </div>
+      </section>
       <ServicesGrid showCta={false} />
       <PricingTiers />
 

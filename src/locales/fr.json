@@ -167,11 +167,11 @@
     },
     "emailOpening": "Votre application d'e-mail s'ouvre avec les détails. Vous pouvez aussi utiliser WhatsApp pour une réponse plus rapide.",
     "budgetOptions": [
-      ",000 – ,000 (Local Market Dominator)",
-      ",000 – ,000 (Enterprise Growth & AI Platform)",
-      ",000 – ,000 (Custom Flagship Platform)",
-      ",000+ (Multi-Market Enterprise)",
-      "Under ,000 (Subject to Review)"
+      "Under $2,500 (Subject to Review)",
+      "$2,500 - $5,000 (Small Business Launch)",
+      "$5,000 - $12,000 (Growth + AI)",
+      "$12,000 - $25,000 (Custom Platform)",
+      "$25,000+ (Enterprise)"
     ],
     "timelineOptions": [
       "Dès que possible",
@@ -466,10 +466,10 @@
         },
         {
           "label": "Sécurité des Données Entreprise",
-          "description": "Chiffrement bancaire et conformité garantissant la protection totale des données."
+          "description": "Encrypted pipelines and careful data handling keep client data safe."
         },
         {
-          "label": "Levier Opérationnel 10x",
+          "label": "Strong Operational Leverage",
           "description": "Multipliez la production commerciale sans augmenter les coûts fixes."
         }
       ],
@@ -496,16 +496,28 @@
       "title": "Bâti pour la confiance, la rapidité et des résultats réels.",
       "description": "Ingénierie éprouvée et exécution numérique conçues pour développer vos revenus.",
       "accreditations": [
-        "Certifié ISO (Normes de Qualité)",
-        "Approuvé FBR (Pakistan)",
-        "LLC Enregistrée (États-Unis)"
+        "US Office, Middletown Delaware",
+        "Pakistan HQ, DHA Phase 8 Lahore",
+        "Founded in 2025"
       ],
       "chat": "Discutons ensemble",
       "metrics": [
-        "Projets Livrés",
-        "Sites Web Lancés",
-        "Boutiques E-Commerce Développées",
-        "Conçu pour Clients Nationaux & Internationaux"
+        {
+          "value": "24",
+          "label": "Live Demo Websites"
+        },
+        {
+          "value": "6",
+          "label": "Core Services"
+        },
+        {
+          "value": "2",
+          "label": "Offices, US and Pakistan"
+        },
+        {
+          "value": "2025",
+          "label": "Founded"
+        }
       ],
       "pillars": [
         {
@@ -862,37 +874,6 @@
             "UX Jeu",
             "Interactif"
           ]
-        }
-      ]
-    },
-    "wiki": {
-      "eyebrow": "Étude de Cas Vedette",
-      "title": "Wiki RG structuré comme une plateforme complète de recherche et de collaboration.",
-      "screens": [
-        {
-          "title": "Profil du Groupe de Recherche",
-          "label": "Configuration Institution",
-          "summary": "Vue de profil combinant détails institutionnels, galerie et informations publiques."
-        },
-        {
-          "title": "Tableau de Bord Analytics",
-          "label": "Analyses Plateforme",
-          "summary": "Tableau de bord affichant les connexions, membres et activités de la plateforme."
-        },
-        {
-          "title": "Espace de Publication",
-          "label": "Publication de Recherche",
-          "summary": "Espace de travail pour gérer les entrées de recherche et métadonnées."
-        },
-        {
-          "title": "Module de Création d'Événements",
-          "label": "Gestion d'Événements",
-          "summary": "Formulaire d'événement pour la planification, liens et détails des organisateurs."
-        },
-        {
-          "title": "Panneau de Suivi de Projets",
-          "label": "Gestion de Projet",
-          "summary": "Cartes de projets montrant les affectations, statut et suivi interne."
         }
       ]
     }

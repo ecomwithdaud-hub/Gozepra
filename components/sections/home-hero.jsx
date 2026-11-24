@@ -139,7 +139,7 @@ export function HomeHero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
                 <span className="absolute bottom-2 left-2.5 rounded-full border border-cyan-500/30 bg-[#070f24]/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-300 shadow-sm">
-                  1.1s Edge Speed
+                  Fast Edge Speed
                 </span>
               </div>
               <div className="mt-3 flex items-center justify-between px-1">
@@ -176,7 +176,7 @@ export function HomeHero() {
                     Engineering
                   </p>
                   <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
-                    +54% Avg Conversion
+                    24 Live Demo Websites
                   </p>
                 </div>
               </div>

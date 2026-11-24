@@ -642,25 +642,25 @@ export function AIDemoSandbox() {
                 </div>
               </div>
 
-              {/* 3 ROI Metric Pills */}
+              {/* 3 Demo Capability Pills */}
               <div className="mt-4 grid grid-cols-3 gap-2 text-center">
                 <div className="rounded-xl border border-slate-800 bg-[#0a1638] p-2">
                   <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
                     Speed
                   </p>
-                  <p className="font-mono text-xs font-bold text-cyan-300">&lt; 1.2s</p>
+                  <p className="font-mono text-xs font-bold text-cyan-300">Instant</p>
                 </div>
                 <div className="rounded-xl border border-slate-800 bg-[#0a1638] p-2">
                   <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
                     Conv. Rate
                   </p>
-                  <p className="font-mono text-xs font-bold text-emerald-400">+48%</p>
+                  <p className="font-mono text-xs font-bold text-emerald-400">More bookings</p>
                 </div>
                 <div className="rounded-xl border border-slate-800 bg-[#0a1638] p-2">
                   <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
                     After-Hours
                   </p>
-                  <p className="font-mono text-xs font-bold text-blue-400">100% Active</p>
+                  <p className="font-mono text-xs font-bold text-blue-400">Live</p>
                 </div>
               </div>
             </div>

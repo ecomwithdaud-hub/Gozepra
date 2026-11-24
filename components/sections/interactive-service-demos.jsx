@@ -69,10 +69,10 @@ const NICHE_BOTS = [
       },
     ],
     stats: {
-      responseTime: "1.2s",
-      orderLift: "+38%",
-      ticketDeflection: "-72%",
-      availability: "24/7/365",
+      responseTime: "Instant",
+      orderLift: "Books orders",
+      ticketDeflection: "Saves time",
+      availability: "24/7",
     },
   },
   {
@@ -103,10 +103,10 @@ const NICHE_BOTS = [
       },
     ],
     stats: {
-      responseTime: "1.5s",
-      bookingRate: "+54%",
-      noShowReduction: "-45%",
-      availability: "24/7/365",
+      responseTime: "Instant",
+      bookingRate: "Books appointments",
+      noShowReduction: "Sends reminders",
+      availability: "24/7",
     },
   },
   {
@@ -137,10 +137,10 @@ const NICHE_BOTS = [
       },
     ],
     stats: {
-      responseTime: "1.1s",
-      leadCapture: "+65%",
-      dispatchSpeed: "< 15 mins",
-      availability: "24/7/365",
+      responseTime: "Instant",
+      leadCapture: "Captures leads",
+      dispatchSpeed: "Fast dispatch",
+      availability: "24/7",
     },
   },
   {
@@ -171,10 +171,10 @@ const NICHE_BOTS = [
       },
     ],
     stats: {
-      responseTime: "1.8s",
-      rfqConversion: "+42%",
-      intlReach: "28 Countries",
-      availability: "24/7/365",
+      responseTime: "Instant",
+      rfqConversion: "Qualifies RFQs",
+      intlReach: "Global reach",
+      availability: "24/7",
     },
   },
 ];
@@ -194,11 +194,11 @@ const AEO_SIMULATOR_SCENARIOS = [
     aiAnswerEngine: {
       engine: "ChatGPT 4o & Perplexity AI Search",
       citedBrand: "Summit Commercial Roofing (Engineered by Zepra Tech)",
-      confidence: "98% Entity Authority",
+      confidence: "Strong Entity Signals",
       citationText:
-        "Based on verified licensed contractor data, 24/7 rapid dispatch records, and structured schema reviews, Summit Commercial Roofing is the highest-rated emergency repair service in Denver with guaranteed same-day response.",
+        "Based on licensed contractor data, rapid dispatch records, and structured schema, Summit Commercial Roofing is an emergency repair service in Denver with same-day response.",
       whyItWon:
-        "Structured JSON-LD schema, local map pack entity clustering, and sub-0.8s mobile page verification.",
+        "Structured JSON-LD schema, local map pack entity clustering, and fast mobile page performance.",
     },
   },
   {
@@ -212,7 +212,7 @@ const AEO_SIMULATOR_SCENARIOS = [
     aiAnswerEngine: {
       engine: "Google AI Overview & Gemini Search",
       citedBrand: "Apex Family Dental & Glow Aesthetics",
-      confidence: "96% Entity Authority",
+      confidence: "Strong Entity Signals",
       citationText:
         "Apex Dental is prominently cited for cosmetic dentistry in the area, offering verified in-clinic laser whitening and custom veneers with transparent pricing and direct online booking.",
       whyItWon:
@@ -230,7 +230,7 @@ const AEO_SIMULATOR_SCENARIOS = [
     aiAnswerEngine: {
       engine: "Perplexity AI & Claude 3.5 Sonnet",
       citedBrand: "Silk & Cotton Mills Portal",
-      confidence: "94% Entity Authority",
+      confidence: "Strong Entity Signals",
       citationText:
         "Silk & Cotton Mills is cited as a certified organic textile exporter operating out of Faisalabad, featuring OEKO-TEX Standard 100 compliance, 240 GSM combed cotton production, and direct international RFQ intake.",
       whyItWon:
@@ -248,7 +248,7 @@ const PIPELINE_NODES = [
     title: "1. Multi-Channel Lead Ingest",
     sub: "WhatsApp, Website, TikTok Ads",
     icon: MessageSquare,
-    time: "0.2s",
+    time: "Instant",
     desc: "Customer submits form or sends WhatsApp message at midnight.",
   },
   {
@@ -256,7 +256,7 @@ const PIPELINE_NODES = [
     title: "2. AI Intent & Triage Analysis",
     sub: "Filters Spam & Scores High-Ticket",
     icon: Cpu,
-    time: "0.8s",
+    time: "Instant",
     desc: "AI extracts service type, budget readiness, and urgency level.",
   },
   {
@@ -264,7 +264,7 @@ const PIPELINE_NODES = [
     title: "3. Automated Booking & CRM Sync",
     sub: "Google Calendar & HubSpot",
     icon: Clock,
-    time: "0.4s",
+    time: "Instant",
     desc: "Checks real-time calendar availability and reserves consultation slot.",
   },
   {
@@ -272,7 +272,7 @@ const PIPELINE_NODES = [
     title: "4. Quotation & WhatsApp Confirmation",
     sub: "Instant PDF & Payment Link",
     icon: Send,
-    time: "0.6s",
+    time: "Instant",
     desc: "Dispatches personalized greeting, PDF quote, and deposit checkout.",
   },
   {
@@ -280,7 +280,7 @@ const PIPELINE_NODES = [
     title: "5. Real-Time Owner Notification",
     sub: "Instant Telegram / SMS Alert",
     icon: Zap,
-    time: "0.1s",
+    time: "Instant",
     desc: "Sends full qualified lead dossier directly to business owner's phone.",
   },
 ];
@@ -292,22 +292,22 @@ const STICKY_STACKED_CARDS = [
   {
     number: "01",
     tag: "WEB & PERFORMANCE ENGINEERING",
-    title: "Sub-Second Next.js 15 Web Platforms",
+    title: "Fast Next.js 15 Web Platforms",
     subtitle: "Turn Casual Visitors Into Paying Inquiries",
     description:
-      "Unlike slow WordPress themes used by legacy agencies, we engineer bespoke Next.js 15 web applications with sub-0.8s edge loading, verified 95+ Core Web Vitals, and conversion architecture tested across 28 live industry demos.",
+      "Unlike slow WordPress themes used by legacy agencies, we engineer bespoke Next.js 15 web applications with fast edge loading, strong Core Web Vitals, and conversion architecture you can inspect in 24 live demos.",
     deliverables: [
-      "Sub-0.8s Global Edge Caching via Vercel",
+      "Fast Global Edge Caching via Vercel",
       "Tap-to-call mobile lead capture engines",
       "100% Source code ownership (Zero hostage fees)",
-      "28 Working live demo blueprints to inspect",
+      "24 Working live demo blueprints to inspect",
     ],
-    metricValue: "99+",
-    metricLabel: "Google Mobile Score",
+    metricValue: "24",
+    metricLabel: "Live Demo Websites",
     color: "from-cyan-500/20 to-blue-500/20",
     border: "border-cyan-500/40",
     accent: "text-cyan-400",
-    linkText: "Explore 28 Live Demos",
+    linkText: "Explore 24 Live Demos",
     linkHref: "/portfolio#web-demos",
   },
   {
@@ -316,15 +316,15 @@ const STICKY_STACKED_CARDS = [
     title: "24/7 AI Agents & WhatsApp Assistants",
     subtitle: "Never Miss Another High-Ticket Customer",
     description:
-      "We build custom AI chat and voice agents trained specifically on your business pricing, service catalog, and scheduling. When customers message at 11 PM or during busy service hours, the AI answers in 2 seconds, qualifies the lead, and books the job.",
+      "We build custom AI chat and voice agents trained specifically on your business pricing, service catalog, and scheduling. When customers message at 11 PM or during busy service hours, the AI answers right away, qualifies the lead, and books the job.",
     deliverables: [
       "Official WhatsApp Cloud API & Meta verified bots",
       "Automated appointment booking & CRM logging",
       "Multi-niche trained (Clinics, Contractors, E-Com, Mills)",
-      "Reduces manual phone calls and office workload by 70%",
+      "Reduces manual phone calls and office workload",
     ],
-    metricValue: "1.2s",
-    metricLabel: "Average AI Response",
+    metricValue: "Instant",
+    metricLabel: "AI Response Speed",
     color: "from-emerald-500/20 to-teal-500/20",
     border: "border-emerald-500/40",
     accent: "text-emerald-400",
@@ -335,17 +335,17 @@ const STICKY_STACKED_CARDS = [
     number: "03",
     tag: "GENERATIVE SEARCH & PAID ADS",
     title: "AEO, GEO & Search Supremacy",
-    subtitle: "Rank #1 on Google and Inside ChatGPT Answers",
+    subtitle: "Rank Higher on Google and Inside ChatGPT Answers",
     description:
-      "Traditional SEO is obsolete. We optimize your business for the Search Trifecta: Google traditional SERP, Google AI Overviews, and Answer Engines like ChatGPT and Perplexity, combined with high-ROAS Meta and TikTok paid advertising campaigns.",
+      "Traditional SEO is obsolete. We optimize your business for the Search Trifecta: Google traditional SERP, Google AI Overviews, and Answer Engines like ChatGPT and Perplexity, combined with targeted Meta and TikTok paid advertising campaigns.",
     deliverables: [
       "Rich JSON-LD entity schema for AI citations",
       "Local Google Map Pack 3-Pack radius ranking",
       "Meta, TikTok & Google Performance Max ad funnels",
-      "Verified ROAS tracking dashboards and lead attribution",
+      "ROAS tracking dashboards and lead attribution",
     ],
-    metricValue: "4.8x",
-    metricLabel: "Average Client ROAS",
+    metricValue: "Targeted",
+    metricLabel: "Paid Ad Campaigns",
     color: "from-purple-500/20 to-indigo-500/20",
     border: "border-purple-500/40",
     accent: "text-purple-400",
@@ -356,7 +356,7 @@ const STICKY_STACKED_CARDS = [
     number: "04",
     tag: "MANAGED CONCIERGE CARE",
     title: "Turnkey Peace of Mind Under Mr. Daud Lashari",
-    subtitle: "You Run Your Business — We Handle All Technology",
+    subtitle: "You Run Your Business, We Handle All Technology",
     description:
       "No technical headaches, no confusing code, no disappearing freelancers. Every deployment is personally reviewed by Founder & CEO Mr. Daud Lashari, with 100% managed hosting, 24/7 uptime monitoring, regular updates, and direct phone & escalation support.",
     deliverables: [
@@ -366,7 +366,7 @@ const STICKY_STACKED_CARDS = [
       "Free updates whenever your business services expand",
     ],
     metricValue: "100%",
-    metricLabel: "Code Ownership & SLA",
+    metricLabel: "Code Ownership",
     color: "from-amber-500/20 to-orange-500/20",
     border: "border-amber-500/40",
     accent: "text-amber-400",
@@ -686,7 +686,7 @@ export function InteractiveServiceDemos() {
               <div className="lg:col-span-4 flex flex-col justify-between space-y-4">
                 <div className="rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl text-white">
                   <h4 className="text-sm font-bold uppercase tracking-wider text-cyan-400">
-                    Verified Bot Performance
+                    What This Demo Bot Does
                   </h4>
                   <div className="mt-4 grid grid-cols-2 gap-3">
                     <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 text-center">
@@ -699,19 +699,19 @@ export function InteractiveServiceDemos() {
                       <p className="font-mono text-xl font-black text-emerald-400">
                         {selectedBot.stats.orderLift || selectedBot.stats.bookingRate || selectedBot.stats.leadCapture || selectedBot.stats.rfqConversion}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-400">Conversion Lift</p>
+                      <p className="mt-1 text-[11px] text-slate-400">What It Books</p>
                     </div>
                     <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 text-center">
                       <p className="font-mono text-xl font-black text-indigo-300">
                         {selectedBot.stats.ticketDeflection || selectedBot.stats.noShowReduction || selectedBot.stats.dispatchSpeed || selectedBot.stats.intlReach}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-400">Workload Saved</p>
+                      <p className="mt-1 text-[11px] text-slate-400">What It Handles</p>
                     </div>
                     <div className="rounded-xl border border-slate-800 bg-[#050b1d] p-3 text-center">
                       <p className="font-mono text-xl font-black text-amber-400">
                         {selectedBot.stats.availability}
                       </p>
-                      <p className="mt-1 text-[11px] text-slate-400">Uptime Reliability</p>
+                      <p className="mt-1 text-[11px] text-slate-400">Availability</p>
                     </div>
                   </div>
                 </div>
@@ -812,7 +812,7 @@ export function InteractiveServiceDemos() {
                 </div>
 
                 <div className="mt-6 border-t border-slate-200 pt-4 text-xs text-slate-500">
-                  <p>⚠️ Flaw: Over 62% of Google searches now end in &ldquo;Zero-Clicks&rdquo; or AI summaries. Traditional keyword agencies lose clients because their websites never get cited in ChatGPT or Google AI Overviews.</p>
+                  <p>⚠️ Flaw: Many Google searches now end in &ldquo;Zero-Clicks&rdquo; or AI summaries. Traditional keyword agencies lose clients because their websites never get cited in ChatGPT or Google AI Overviews.</p>
                 </div>
               </div>
 
@@ -914,7 +914,7 @@ export function InteractiveServiceDemos() {
 
             <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm">
               <p className="text-xs text-slate-600 sm:text-sm">
-                Total Execution Time: <strong className="text-blue-700">2.1 Seconds</strong> • Human Effort Required: <strong className="text-emerald-700">Zero</strong> • Output: 100% Qualified, Scheduled &amp; Alerted Lead.
+                Total Execution Time: <strong className="text-blue-700">Seconds</strong> • Human Effort Required: <strong className="text-emerald-700">Zero</strong> • Output: 100% Qualified, Scheduled &amp; Alerted Lead.
               </p>
             </div>
           </div>

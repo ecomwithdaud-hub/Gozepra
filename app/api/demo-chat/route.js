@@ -74,7 +74,7 @@ function generateFallbackReply(message, persona, lead) {
       return `Our Signature 5-Year Ceramic Coating package is $899 for sedans and $1,099 for trucks/SUVs, which includes full single-stage paint correction, surface decontamination, and high-gloss 9H quartz protection. Would you like to check available slots for this week? If so, what vehicle year/model do you drive, and what is your Name and Phone number?`;
     }
     if (personaId === "ecommerce") {
-      return `You can use discount code 'WELCOME15' at checkout right now for 15% off your entire first order over $40! Plus, all orders over $65 include free express delivery. Would you like me to email you a direct 15% discount link? Just drop your Name and Email!`;
+      return `Orders over $65 include free express delivery. Would you like me to email you a direct checkout link? Just drop your Name and Email!`;
     }
     if (personaId === "healthcare") {
       return `Our in-office Zoom! Laser Teeth Whitening is currently featured at $349 (includes custom take-home touch-up trays). We also offer a New Patient Special: Comprehensive Exam, Full Mouth X-Rays & Cleaning for $149. Would you like to schedule an appointment? Please share your Name and Phone or Email to check open slots!`;
@@ -114,7 +114,7 @@ function generateFallbackReply(message, persona, lead) {
       return `We offer free standard shipping on orders over $65 (3-5 business days). International delivery is available to over 45 countries via DHL Express. We also offer a 30-day no-questions-asked return policy with free prepaid return labels!`;
     }
     if (lower.includes("gift") || lower.includes("under $50") || lower.includes("recommend")) {
-      return `Top recommendations under $50: 1) The Nova Vegan Leather Desk Mat ($34) — our bestseller, 2) The Aluminum Ergonomic Laptop Stand ($42), or 3) The Matte Ceramic Thermal Travel Mug ($28). All come gift-boxed! Would you like a 15% discount code for these?`;
+      return `Top recommendations under $50: 1) The Nova Vegan Leather Desk Mat ($34), our bestseller, 2) The Aluminum Ergonomic Laptop Stand ($42), or 3) The Matte Ceramic Thermal Travel Mug ($28). All come gift-boxed!`;
     }
   }
 

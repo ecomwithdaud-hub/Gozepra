@@ -17,7 +17,6 @@ import { CaseStudySpotlight } from "@/components/sections/case-study-spotlight";
 import { EnterpriseCaseStudies } from "@/components/sections/enterprise-case-studies";
 import { PortfolioPreview } from "@/components/sections/portfolio-preview";
 import { UsaDemoShowcase } from "@/components/sections/usa-demo-showcase";
-import { WikiRgShowcase } from "@/components/sections/wiki-rg-showcase";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { AiGrowthDominance } from "@/components/sections/ai-growth-dominance";
 import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
@@ -32,8 +31,8 @@ const hubTabs = [
   },
   {
     id: "web-demos",
-    label: "Web Development (28 Live Demos)",
-    badge: "28 Live",
+    label: "Web Development (24 Live Demos)",
+    badge: "24 Live",
     icon: Globe,
   },
   {
@@ -142,10 +141,10 @@ export function UnifiedPortfolioHub() {
         </div>
       </section>
 
-      {/* Section 1: 28 Live USA Demo Websites (Web Development) */}
+      {/* Section 1: 24 Live USA Demo Websites (Web Development) */}
       {showWebDemos ? (
         <div id="web-development">
-          <UsaDemoShowcase initialLimit={28} showViewAllLink={false} />
+          <UsaDemoShowcase initialLimit={24} showViewAllLink={false} />
         </div>
       ) : null}
 
@@ -162,7 +161,6 @@ export function UnifiedPortfolioHub() {
         <div id="case-studies-section" className="border-t border-slate-200">
           <CaseStudySpotlight />
           <EnterpriseCaseStudies />
-          <WikiRgShowcase />
         </div>
       ) : null}
 

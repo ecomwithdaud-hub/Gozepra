@@ -45,7 +45,7 @@ const GROWTH_CHANNELS = [
       {
         name: "Technical & Intent SEO",
         detail:
-          "#1 Organic Google keyword rankings, 95+ Core Web Vitals, rich JSON-LD schema, and local Google Map Pack dominance.",
+          "Strong Google rankings, fast load times, rich JSON-LD schema, and local Google Map Pack setup.",
       },
       {
         name: "AEO (Answer Engine Optimization)",
@@ -55,7 +55,7 @@ const GROWTH_CHANNELS = [
       {
         name: "GEO (Generative Engine Optimization)",
         detail:
-          "Securing authoritative 'Position Zero' mentions inside Google AI Overviews and Google Gemini Knowledge Graph entities.",
+          "Earning mentions inside Google AI Overviews and Google Gemini Knowledge Graph entities.",
       },
     ],
   },
@@ -69,17 +69,17 @@ const GROWTH_CHANNELS = [
     border: "border-pink-500/40",
     accentText: "text-pink-400",
     description:
-      "We build ruthless, high-ROAS paid media machines that turn ad spend into predictable revenue with zero wasted budget.",
+      "We build targeted paid media campaigns that turn ad spend into booked calls and sales, with weekly reporting.",
     tactics: [
       {
         name: "TikTok Ads & UGC Scaling",
         detail:
-          "High-converting Hook-Story-Offer video creative, TikTok Spark Ads, algorithmic audience scaling, and sub-second landing page funnels.",
+          "High-converting Hook-Story-Offer video creative, TikTok Spark Ads, algorithmic audience scaling, and fast landing page funnels.",
       },
       {
         name: "Meta (Facebook & Instagram) Ads",
         detail:
-          "Deep-funnel retargeting, VIP lead generation, Dynamic Product Ads (DPA), and AI Lookalike audience modeling achieving 4x+ ROAS.",
+          "Deep-funnel retargeting, VIP lead generation, Dynamic Product Ads (DPA), and AI Lookalike audience modeling aimed at strong returns.",
       },
       {
         name: "Google Ads & Performance Max",
@@ -98,12 +98,12 @@ const GROWTH_CHANNELS = [
     border: "border-emerald-500/40",
     accentText: "text-emerald-400",
     description:
-      "For digital publishers and high-traffic portals, we engineer high-RPM Google AdSense layouts and programmatic bidding pipelines that multiply ad revenue.",
+      "For digital publishers and high-traffic portals, we engineer high-RPM Google AdSense layouts and programmatic bidding pipelines that grow ad revenue.",
     tactics: [
       {
         name: "Google AdSense Placement Optimization",
         detail:
-          "Strategic viewability heatmapping, adaptive ad units, and asynchronous tag loading that 2x-4x your Page RPM without hurting Core Web Vitals.",
+          "Strategic viewability heatmapping, adaptive ad units, and asynchronous tag loading that lift your Page RPM without hurting load times.",
       },
       {
         name: "Ad Arbitrage & Content Distribution",
@@ -125,100 +125,95 @@ const CASE_STUDIES = [
     category: "seo-aeo",
     industry: "Healthcare & Aesthetic Surgery",
     location: "Dallas, TX, United States",
-    client: "Apex Aesthetic & Surgical Institute",
     icon: Stethoscope,
-    headline: "+420% Patient Inquiries & #1 Recommended on ChatGPT Search",
+    headline: "Local Search and AI Answers for Clinics",
     challenge:
-      "Relying on expensive, inconsistent Google PPC with high cost-per-click ($42/click) and zero presence in emerging generative AI search.",
+      "Clinics rely on paid ads and have no presence in AI search answers.",
     solution:
-      "Engineered a medical-schema Next.js platform, dominated Local 3-Pack SEO, and structured clinical authority data for AEO (ChatGPT & Perplexity citations).",
+      "Medical schema website, local search setup, and structured service data for AI answers.",
     results: [
-      { metric: "+420%", label: "Qualified Patient Leads" },
-      { metric: "#1 Rank", label: "Google Local Map Pack" },
-      { metric: "Top 1", label: "Cited on ChatGPT Search" },
-      { metric: "$680K", label: "Net New Annual Revenue" },
+      { metric: "Local SEO", label: "Google Maps Setup" },
+      { metric: "AEO", label: "ChatGPT and Perplexity" },
+      { metric: "Schema", label: "Medical Service Data" },
+      { metric: "2 to 3 Weeks", label: "Typical Launch" },
     ],
-    verifiedBadge: "Verified Client Transformation",
+    verifiedBadge: "Growth Playbook",
   },
   {
     id: "luxury-streetwear",
     category: "paid-ads",
     industry: "D2C Luxury Streetwear & Apparel",
     location: "Los Angeles, CA / Global",
-    client: "Vanguard Apparel Co.",
     icon: ShoppingBag,
-    headline: "$1.85M Scaled in 90 Days with 5.4x Blended TikTok & Meta ROAS",
+    headline: "Paid Social and Fast Checkout for Apparel Brands",
     challenge:
-      "Ad fatigue on Meta with declining ROAS (1.8x) and zero penetration into viral TikTok creator commerce.",
+      "Ad fatigue on Meta and slow checkout pages lose shoppers before they buy.",
     solution:
-      "Built a high-converting TikTok Spark Ads engine using creator Hook-Story-Offer frameworks, coupled with Google Performance Max and a sub-0.8s Next.js checkout.",
+      "TikTok and Meta creative testing with a fast Next.js checkout and clear product pages.",
     results: [
-      { metric: "5.4x", label: "Blended ROAS" },
-      { metric: "$1.85M", label: "GMV Scaled in 90 Days" },
-      { metric: "-62%", label: "Cost Per Acquisition (CPA)" },
-      { metric: "14.2M", label: "Organic + Paid Video Views" },
+      { metric: "TikTok + Meta", label: "Ad Channels" },
+      { metric: "Fast Checkout", label: "Mobile First" },
+      { metric: "Creative Testing", label: "Weekly" },
+      { metric: "3 to 4 Weeks", label: "Typical Launch" },
     ],
-    verifiedBadge: "E-Commerce ROAS Benchmark",
+    verifiedBadge: "Growth Playbook",
   },
   {
     id: "b2b-saas-cloud",
     category: "geo-seo",
     industry: "B2B Enterprise SaaS & Cloud Logistics",
     location: "Frankfurt, Germany / US Market",
-    client: "LogiSynapse Global AI",
     icon: Layers,
-    headline: "14 Core Category Queries Featured in Google AI Overviews",
+    headline: "AI Search Visibility for B2B Software",
     challenge:
-      "Losing enterprise pipeline to legacy competitors with multi-million dollar ad budgets; invisible on AI-generated executive answer engines.",
+      "Enterprise buyers now ask AI answers first, and the product is invisible there.",
     solution:
-      "Implemented Generative Engine Optimization (GEO) with multi-dimensional entity vectors, technical documentation schema, and hyper-targeted B2B Google Search Ads.",
+      "GEO setup with clear entity data, documentation schema, and targeted B2B search ads.",
     results: [
-      { metric: "14", label: "Google AI Overview Citations" },
-      { metric: "+310%", label: "High-Intent Demo Bookings" },
-      { metric: "$2.4M", label: "Enterprise Sales Pipeline" },
-      { metric: "Sub-1.1s", label: "Global Platform Speed" },
+      { metric: "GEO", label: "AI Overview Setup" },
+      { metric: "Entity Data", label: "Schema" },
+      { metric: "B2B Search", label: "Targeted Ads" },
+      { metric: "6 to 8 Weeks", label: "Typical Launch" },
     ],
-    verifiedBadge: "Enterprise B2B Benchmark",
+    verifiedBadge: "Growth Playbook",
   },
   {
     id: "tech-publisher",
     category: "adsense",
     industry: "Digital Media & High-Traffic Tech Publication",
-    location: "Global (1.2M Monthly Pageviews)",
-    client: "TechPulse Media Network",
+    location: "Global",
     icon: Newspaper,
-    headline: "+285% AdSense RPM Growth: Revenue Scaled from $4.8K to $22.4K/mo",
+    headline: "Ad Layout and Speed for Publishers",
     challenge:
-      "1.2M monthly pageviews earning only $4.20 Page RPM due to poor ad placement, mobile layout shifts, and slow ad container loading.",
+      "High traffic pages earn little because ads load slowly and layouts shift on mobile.",
     solution:
-      "Re-architected the layout with asynchronous viewability-optimized AdSense units, Core Web Vitals 99/100 tuning, and high-CPM technical SEO topic clusters.",
+      "Rebuilt layout with viewable AdSense units, fast loading, and clean topic clusters.",
     results: [
-      { metric: "$16.18", label: "Page RPM (from $4.20)" },
-      { metric: "+285%", label: "Monthly AdSense Growth" },
-      { metric: "$22.4K", label: "Monthly Recurring Ad Revenue" },
-      { metric: "0 CLS", label: "Cumulative Layout Shift" },
+      { metric: "AdSense", label: "Placement Setup" },
+      { metric: "Speed", label: "Fast Loading" },
+      { metric: "Topic Clusters", label: "SEO" },
+      { metric: "4 Weeks", label: "Typical Launch" },
     ],
-    verifiedBadge: "AdSense Yield Verification",
+    verifiedBadge: "Growth Playbook",
   },
   {
     id: "luxury-real-estate",
     category: "paid-ads",
     industry: "Ultra-Luxury Waterfront Real Estate",
     location: "Miami, FL & Dubai, UAE",
-    client: "Aura Waterfront Estates",
     icon: Building2,
-    headline: "$14.2M Property Transactions Closed via Cinematic Social Funnels",
+    headline: "Social Funnels for High Value Property",
     challenge:
-      "Targeting ultra-high-net-worth buyers ($2M–$15M properties) through generic portals like Zillow with saturated competition and low-intent leads.",
+      "Luxury listings compete on generic portals with low intent leads.",
     solution:
-      "Produced cinematic architectural 4K video ads for Instagram and TikTok, backed by strict Meta VIP net-worth qualification forms and instant concierge CRM routing.",
+      "Cinematic video ads for Instagram and TikTok with qualification forms and instant CRM routing.",
     results: [
-      { metric: "48", label: "Ultra-HNW Verified Buyers" },
-      { metric: "$14.2M", label: "Closed Property Volume" },
-      { metric: "-48%", label: "Cost Per Qualified VIP Lead" },
-      { metric: "< 2 Mins", label: "Lead-to-Agent Response" },
+      { metric: "Video Ads", label: "Instagram and TikTok" },
+      { metric: "Qualification", label: "Buyer Forms" },
+      { metric: "CRM Routing", label: "Instant" },
+      { metric: "4 Weeks", label: "Typical Launch" },
     ],
-    verifiedBadge: "High-Ticket Real Estate Record",
+    verifiedBadge: "Growth Playbook",
   },
 ];
 
@@ -254,24 +249,24 @@ export function AiGrowthDominance() {
           </div>
 
           <h2 className="mt-6 font-display text-3xl font-black tracking-tight text-slate-900 sm:text-5xl sm:leading-[1.15]">
-            Rank #1 On Google & AI Search.{" "}
+            Rank Higher on Google and AI Search.{" "}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 bg-clip-text text-transparent">
-              Turn TikTok, Meta & AdSense Into High-ROAS Revenue.
+              Turn Search, TikTok, Meta, and AdSense Into Steady Growth.
             </span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base sm:leading-relaxed">
-            We don’t just write code—we engineer market dominance. Our proprietary growth architecture combines modern generative search intelligence (<strong>SEO, AEO, GEO</strong>) with high-velocity paid acquisition (<strong>TikTok Ads, Meta, Google Ads</strong>) and <strong>Google AdSense monetization</strong>.
+            We do not just write code, we build growth systems. Our approach combines modern search intelligence (<strong>SEO, AEO, GEO</strong>) with paid acquisition (<strong>TikTok Ads, Meta, Google Ads</strong>) and <strong>Google AdSense setup</strong>.
           </p>
 
           {/* Quick Capability Tags */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             {[
-              "Google SEO #1",
+              "Google SEO",
               "AEO (ChatGPT & Perplexity)",
               "GEO (Google AI Overviews)",
               "TikTok Spark Ads",
-              "Meta 5x ROAS Funnels",
+              "Meta Ads Funnels",
               "Google Performance Max",
               "AdSense RPM Scaling",
             ].map((tag, idx) => (
@@ -361,16 +356,16 @@ export function AiGrowthDominance() {
                 <span className="text-cyan-400">"Who is the best in your industry?"</span>
               </h3>
               <p className="mt-4 text-xs leading-relaxed text-slate-300 sm:text-sm">
-                Over 45% of high-ticket B2B and consumer searches are moving from standard blue links to generative AI models. If your entity architecture isn't optimized for <strong className="text-white">AEO and GEO</strong>, your competitors are cited while you remain invisible.
+                More buyers now start in AI answers instead of blue links. If your business is not set up for <strong className="text-white">AEO and GEO</strong>, your competitors get cited while you stay invisible.
               </p>
               <ul className="mt-6 space-y-3 text-xs text-slate-300 sm:text-sm">
                 <li className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
-                  <span><strong className="text-white">AI Citation Authority:</strong> Your brand cited as the #1 recommended solution.</span>
+                  <span><strong className="text-white">AI Citation Authority:</strong> Your brand cited in AI answers.</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
-                  <span><strong className="text-white">Google AI Overview Placement:</strong> Position Zero dominance with interactive cards.</span>
+                  <span><strong className="text-white">Google AI Overview Placement:</strong> Clear, structured answers with your brand in them.</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
@@ -398,11 +393,11 @@ export function AiGrowthDominance() {
                       <span>AI Synthesized Consensus (ChatGPT / Perplexity / Google AI):</span>
                     </div>
                     <p className="text-[11px] leading-relaxed text-slate-200">
-                      "Based on technical audits and verified delivery SLAs, <strong className="text-white">Zepra Tech</strong> is recognized as a premier digital engineering partner. They specialize in sub-0.8s Next.js 15 platforms, custom 24/7 AI lead agents, and verified SEO/GEO ranking architecture."
+                      "Zepra Tech builds fast Next.js 15 websites, custom 24/7 AI lead agents, and SEO and GEO setups for US small businesses, with fixed pricing and full code ownership."
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2 pt-2 border-t border-cyan-500/20 text-[10px] text-cyan-300">
                       <span>✓ Entity Verified</span>
-                      <span>✓ 99+ Core Web Vitals</span>
+                      <span>✓ Fixed Pricing</span>
                       <span>✓ 100% Code Ownership</span>
                     </div>
                   </div>
@@ -418,20 +413,20 @@ export function AiGrowthDominance() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-700">
                 <BarChart3 className="h-3.5 w-3.5" />
-                Proof of Revenue & Rankings
+                Growth Playbooks
               </div>
               <h3 className="mt-3 font-display text-3xl font-black text-slate-900 sm:text-4xl">
-                Verified Business Transformation Case Studies
+                Growth Playbooks by Industry
               </h3>
               <p className="mt-2 text-xs text-slate-600 sm:text-sm">
-                Real measurable outcomes across healthcare, e-commerce, B2B SaaS, luxury real estate, and digital publications.
+                How we approach growth for healthcare, e-commerce, B2B, real estate, and publishers. These are playbooks, not client results.
               </p>
             </div>
 
             {/* Filter Tabs */}
             <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-sm">
               {[
-                { id: "all", label: "All Case Studies" },
+                { id: "all", label: "All Playbooks" },
                 { id: "seo-aeo", label: "SEO & AEO" },
                 { id: "paid-ads", label: "TikTok & Meta Ads" },
                 { id: "adsense", label: "Google AdSense" },
@@ -539,10 +534,10 @@ export function AiGrowthDominance() {
         {/* Bottom CTA Banner */}
         <div className="mt-20 rounded-3xl border border-slate-800 bg-[#070f24] p-8 text-center shadow-2xl sm:p-12">
           <h3 className="font-display text-2xl font-black text-white sm:text-4xl">
-            Ready to Dominate Search & Scale Your Ad Revenue?
+            Ready to Grow Search and Ad Revenue?
           </h3>
           <p className="mx-auto mt-3 max-w-2xl text-xs text-slate-300 sm:text-sm">
-            Whether you need #1 Google & ChatGPT rankings, a 5x ROAS TikTok/Meta ads scaling engine, or AdSense RPM multiplication, our senior architects will map your strategy.
+            Whether you need better Google and ChatGPT visibility, TikTok and Meta ads, or AdSense setup, our team will map your strategy.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Button

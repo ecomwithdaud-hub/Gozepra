@@ -54,7 +54,7 @@ const channels = [
     title: "SMS Outreach Campaigns",
     subtitle: "High-Intent Direct Response & Follow-Up Workflows",
     description:
-      "SMS delivers 98% open rates within 3 minutes. We build targeted, 10DLC-compliant text messaging sequences that initiate authentic conversations, re-engage cold leads, and drive quick appointments for time-sensitive offers.",
+      "SMS is opened quickly and often. We build targeted, 10DLC-compliant text messaging sequences that initiate authentic conversations, re-engage cold leads, and drive quick appointments for time-sensitive offers.",
     highlights: [
       "10DLC brand registration & carrier compliance management",
       "Hyper-personalized 1-on-1 SMS conversation triggers",
@@ -74,7 +74,7 @@ const channels = [
       "Deep personalization by industry, tech stack, and pain points",
       "Salesforce CRM integration for automated lead logging & status tracking",
       "A/B subject line, offer hook, and call-to-action experimentation",
-      "94%+ average inbox placement with zero primary domain risk",
+      "High inbox placement with zero primary domain risk",
     ],
   },
 ];

@@ -28,6 +28,8 @@ export function ContactForm() {
   const { t } = useLanguage();
   const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showMailFallback, setShowMailFallback] = useState(false);
   const [status, setStatus] = useState({
     type: "",
     message: "",
@@ -39,9 +41,10 @@ export function ContactForm() {
     setErrors((current) => ({ ...current, [name]: "" }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     setStatus({ type: "", message: "" });
+    setShowMailFallback(false);
 
     const parsed = contactSchema.safeParse(formData);
 
@@ -65,33 +68,43 @@ export function ContactForm() {
       return;
     }
 
-    const { name, company, email, phone, service, budget, timeline, message } = parsed.data;
-    const subject = `New inquiry from ${name} | ${service}`;
-    const body = [
-      `Full Name: ${name}`,
-      `Company: ${company}`,
-      `Work Email: ${email}`,
-      `Phone: ${phone}`,
-      `Service Needed: ${service}`,
-      `Estimated Budget: ${budget}`,
-      `Preferred Timeline: ${timeline}`,
-      "",
-      "Project Goals:",
-      message,
-    ].join("\n");
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(parsed.data),
+      });
+      const data = await response.json().catch(() => ({}));
 
-    const mailtoUrl = `mailto:${siteMeta.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (response.ok && data?.emailSent) {
+        setFormData(initialState);
+        setErrors({});
+        setStatus({
+          type: "success",
+          message:
+            data.message ||
+            "Thanks, your message was sent to the Zepra Tech team. We reply within 24 hours.",
+        });
+        return;
+      }
 
-    setFormData(initialState);
-    setErrors({});
-    setStatus({
-      type: "success",
-      message:
-        t("contact.emailOpening"),
-    });
-
-    if (typeof window !== "undefined") {
-      window.location.href = mailtoUrl;
+      setStatus({
+        type: "error",
+        message:
+          data?.message ||
+          "We could not send your message right now. Please email info@gozepra.tech or call +1 (302) 469-4003.",
+      });
+      setShowMailFallback(true);
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          "We could not send your message right now. Please email info@gozepra.tech or call +1 (302) 469-4003.",
+      });
+      setShowMailFallback(true);
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -218,6 +231,26 @@ export function ContactForm() {
             }`}
           >
             {status.message}
+            {showMailFallback ? (
+              <span className="mt-2 block">
+                <a
+                  href={`mailto:${siteMeta.email}?subject=${encodeURIComponent(
+                    `New inquiry from ${formData.name || "your website"} | ${formData.service || "Zepra Tech"}`,
+                  )}`}
+                  className="font-semibold underline underline-offset-2 hover:text-white"
+                >
+                  Or send it yourself by email
+                </a>
+                {" "}to {siteMeta.email}, or call{" "}
+                <a
+                  href={`tel:${siteMeta.phoneRaw || "+13024694003"}`}
+                  className="font-semibold underline underline-offset-2 hover:text-white"
+                >
+                  {siteMeta.phone || "+1 (302) 469-4003"}
+                </a>
+                .
+              </span>
+            ) : null}
           </div>
         ) : null}
       </div>
@@ -225,11 +258,12 @@ export function ContactForm() {
       <Button
         type="submit"
         size="xl"
-        className="mt-auto w-full bg-blue-600 hover:bg-blue-700 font-semibold text-white shadow-md shadow-blue-500/20"
+        disabled={isSubmitting}
+        className="mt-auto w-full bg-blue-600 hover:bg-blue-700 font-semibold text-white shadow-md shadow-blue-500/20 disabled:opacity-60"
       >
         <>
           <ArrowRight className="h-4 w-4" />
-          {t("contact.submit")}
+          {isSubmitting ? "Sending..." : t("contact.submit")}
         </>
       </Button>
     </form>

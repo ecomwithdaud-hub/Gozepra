@@ -5,19 +5,19 @@ import { ArrowUpRight, CheckCircle2, ExternalLink, Sparkles } from "lucide-react
 import { TiltCard } from "@/components/ui/TiltCard";
 
 const defaultMetrics = [
-  { label: "Delivery Timeline", value: "6 Weeks" },
-  { label: "Lead Conversion Lift", value: "+54%" },
-  { label: "Process Automation", value: "3.4x Speed" },
+  { label: "Delivery Timeline", value: "2 to 4 Weeks" },
+  { label: "Live Demo Sites", value: "24" },
+  { label: "Core Stack", value: "Next.js + Tailwind" },
 ];
 
 export function CaseStudySpotlight({
   eyebrow = "Featured Case Study Spotlight",
-  title = "US Multi-Vertical Conversion Rollout — 24 Production Web Platforms",
-  description = "We engineered a unified, high-converting Next.js & Tailwind web architecture deployed across 24 US metropolitan service brands—combining sub-1.2s edge load speeds, mobile-first quote funnels, and local schema SEO.",
+  title = "Live Demo Websites for US Local Businesses",
+  description = "We build modern Next.js and Tailwind websites with mobile first quote funnels and local search setup. Open the live demos yourself and use them like a customer would.",
   metrics = defaultMetrics,
   image = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=85",
-  primaryHref = "https://clearflow-plumbing-demo.vercel.app/",
-  primaryLabel = "Launch Live Flagship Demo",
+  primaryHref = "https://clearflow-plumbing.vercel.app/",
+  primaryLabel = "Open a Live Demo",
   secondaryHref = "/case-studies",
   secondaryLabel = "Explore All Case Studies",
 }) {
@@ -108,7 +108,7 @@ export function CaseStudySpotlight({
                 </span>
                 <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
                   <CheckCircle2 className="h-3.5 w-3.5" />
-                  Verified
+                  Live demo
                 </span>
               </div>
 
@@ -126,7 +126,7 @@ export function CaseStudySpotlight({
                       Architecture Spotlight
                     </span>
                     <p className="mt-2 font-display text-lg font-bold text-white sm:text-xl">
-                      Sub-Second Edge Delivery & High-Intent Lead Funnels
+                      Fast, Mobile First Websites With Clear Lead Funnels
                     </p>
                   </div>
                 </div>

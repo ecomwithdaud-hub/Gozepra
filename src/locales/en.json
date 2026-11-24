@@ -167,11 +167,11 @@
     },
     "emailOpening": "Your email app is opening with the inquiry details.",
     "budgetOptions": [
-      ",000 – ,000 (Local Market Dominator)",
-      ",000 – ,000 (Enterprise Growth & AI Platform)",
-      ",000 – ,000 (Custom Flagship Platform)",
-      ",000+ (Multi-Market Enterprise)",
-      "Under ,000 (Subject to Review)"
+      "Under $2,500 (Subject to Review)",
+      "$2,500 - $5,000 (Small Business Launch)",
+      "$5,000 - $12,000 (Growth + AI)",
+      "$12,000 - $25,000 (Custom Platform)",
+      "$25,000+ (Enterprise)"
     ],
     "timelineOptions": [
       "As soon as possible",
@@ -428,7 +428,7 @@
     "operations": {
       "eyebrow": "The AI Revolution In Operations",
       "title": "Transforming Business Operations with AI + Data Science.",
-      "description": "The shift to AI-native operations means moving away from slow, manual processes. We build custom AI automation, intelligent data pipelines, and bank-grade data security into your business—making it work faster, smarter, and scale effortlessly.",
+      "description": "The shift to AI-native operations means moving away from slow, manual processes. We build custom AI automation, intelligent data pipelines, and bank-grade data security into your business-making it work faster, smarter, and scale effortlessly.",
       "legacyTag": "Legacy Model",
       "legacyStatus": "Slow & Expensive",
       "legacyTitle": "Traditional Manual Business Operations",
@@ -466,10 +466,10 @@
         },
         {
           "label": "Enterprise Data Security",
-          "description": "Bank-grade encryption and location-based compliance keeping client data 100% safe."
+          "description": "Encrypted pipelines and careful data handling keep client data safe."
         },
         {
-          "label": "10x Operational Leverage",
+          "label": "Strong Operational Leverage",
           "description": "Multiply business output and scale revenue without increasing overhead expenses."
         }
       ],
@@ -496,16 +496,28 @@
       "title": "Built for trust, speed, and real business outcomes.",
       "description": "Proven engineering and digital execution designed to scale your revenue worldwide.",
       "accreditations": [
-        "ISO Certified (Quality Standards)",
-        "FBR Approved (Pakistan)",
-        "Registered LLC (United States)"
+        "US Office, Middletown Delaware",
+        "Pakistan HQ, DHA Phase 8 Lahore",
+        "Founded in 2025"
       ],
       "chat": "Let’s chat",
       "metrics": [
-        "Projects Delivered",
-        "Websites Launched",
-        "E-Commerce Stores Scaled",
-        "Built for Pakistan & International Clients"
+        {
+          "value": "24",
+          "label": "Live Demo Websites"
+        },
+        {
+          "value": "6",
+          "label": "Core Services"
+        },
+        {
+          "value": "2",
+          "label": "Offices, US and Pakistan"
+        },
+        {
+          "value": "2025",
+          "label": "Founded"
+        }
       ],
       "pillars": [
         {
@@ -567,7 +579,7 @@
           "service": "Mobile App"
         },
         {
-          "quote": "The new cloud and deployment pipeline is faster, with system uptime at 99.9%.",
+          "quote": "The new cloud and deployment pipeline is faster, with steady uptime.",
           "role": "Cloud platform team",
           "service": "DevOps & Cloud"
         },
@@ -862,37 +874,6 @@
             "Game UX",
             "Interactive"
           ]
-        }
-      ]
-    },
-    "wiki": {
-      "eyebrow": "Featured Website Case Study",
-      "title": "Wiki RG arranged as a complete research collaboration platform with clearer product storytelling.",
-      "screens": [
-        {
-          "title": "Research Group Profile",
-          "label": "Institution Setup",
-          "summary": "A profile view combining institutional details, gallery management, and public group information in one admin layout."
-        },
-        {
-          "title": "Analytics Dashboard",
-          "label": "Platform Analytics",
-          "summary": "A dashboard showing login activity, member counts, project visibility, and platform activity."
-        },
-        {
-          "title": "Publication Detail Workspace",
-          "label": "Research Publishing",
-          "summary": "A publication workspace for research entries, details, metadata, and editing workflows."
-        },
-        {
-          "title": "Event Creation Module",
-          "label": "Event Management",
-          "summary": "An event form for scheduling, registration links, organizer details, and resources."
-        },
-        {
-          "title": "Project Tracking Panel",
-          "label": "Project Management",
-          "summary": "A project card view for assignments, project status, and internal tracking."
         }
       ]
     }

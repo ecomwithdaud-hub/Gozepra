@@ -17,7 +17,7 @@ const disqualifications = [
   {
     title: "No $300 Template Sites",
     description:
-      "We do not install bloated WordPress themes or generic drag-and-drop templates. We engineer bespoke, sub-second web platforms designed to convert high-ticket clients.",
+      "We do not install bloated WordPress themes or generic drag-and-drop templates. We build bespoke, fast web platforms designed to convert visitors into customers.",
   },
   {
     title: "No Uncommitted Spec Work",
@@ -27,16 +27,16 @@ const disqualifications = [
   {
     title: "No Cutting Corners on Speed or Security",
     description:
-      "Every deployment must meet strict international standards: sub-1.2s edge delivery, strict data protection, clean semantic HTML, and zero bloat.",
+      "Every deployment must meet strict standards: fast edge delivery, strict data protection, clean semantic HTML, and zero bloat.",
   },
 ];
 
 const ironcladGuarantees = [
   {
     icon: Zap,
-    title: "Contractual 95+ Core Web Vitals",
+    title: "Fast Load Times, Tested Before Launch",
     description:
-      "Every production website we deploy is guaranteed to achieve a 95+ Google Lighthouse Mobile score, or we optimize it free of charge.",
+      "We test every website for fast load times on mobile before launch.",
   },
   {
     icon: LockKeyhole,

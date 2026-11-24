@@ -46,14 +46,14 @@ export function ContactSection({ showHeader = true }) {
             </span>
             <div className="text-xs sm:text-sm font-medium">
               <strong className="text-emerald-700 font-bold">Engineering Capacity: </strong>
-              <span className="text-slate-700">80% Committed • Accepting only 2 new client deployments for Q2</span>
+              <span className="text-slate-700">Accepting new US small business projects</span>
             </div>
           </div>
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-600">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-600" />
             <span>Strict NDA Protected</span>
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-600" />
-            <span>Sub-2-Hour Direct SLA</span>
+            <span>Response within 24 hours</span>
           </div>
         </div>
 

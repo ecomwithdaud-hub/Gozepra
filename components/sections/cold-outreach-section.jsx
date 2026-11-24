@@ -114,10 +114,10 @@ const intelligenceTools = [
 ];
 
 const metrics = [
-  { value: "+94%", label: "Primary Inbox Deliverability" },
-  { value: "3.8x", label: "Qualified Discovery Meeting Rate" },
-  { value: "100%", label: "Salesforce & CRM Pipeline Sync" },
-  { value: "0% Spam", label: "Strict Compliance & Scrubbed Lists" },
+  { value: "Email", label: "Cold Email Campaigns" },
+  { value: "SMS", label: "Text Outreach" },
+  { value: "Calls", label: "Cold Calling" },
+  { value: "CRM", label: "Salesforce and HubSpot Sync" },
 ];
 
 export function ColdOutreachSection() {
