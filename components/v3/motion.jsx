@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { animate, motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export function FadeUp({ children, className, delay = 0 }) {
   return (
@@ -13,5 +14,35 @@ export function FadeUp({ children, className, delay = 0 }) {
     >
       {children}
     </motion.div>
+  );
+}
+
+export function CountUp({
+  to,
+  prefix = "",
+  suffix = "",
+  duration = 1.2,
+  className,
+}) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, to, {
+      duration,
+      ease: "easeOut",
+      onUpdate: (v) => setValue(Math.round(v)),
+    });
+    return () => controls.stop();
+  }, [inView, to, duration]);
+
+  return (
+    <span ref={ref} className={className}>
+      {prefix}
+      {value.toLocaleString()}
+      {suffix}
+    </span>
   );
 }

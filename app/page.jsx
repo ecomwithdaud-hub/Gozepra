@@ -5,7 +5,7 @@ import { ArrowRight, Search } from "lucide-react";
 import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
 import { FeaturedBuilds } from "@/components/v3/featured-builds";
-import { FadeUp } from "@/components/v3/motion";
+import { CountUp, FadeUp } from "@/components/v3/motion";
 import { PricingCard } from "@/components/v3/pricing";
 import { RoiCalculator } from "@/components/v3/roi-calculator";
 import { FinalCta } from "@/components/v3/shared";
@@ -201,16 +201,27 @@ export default function HomePage() {
       <section className="pb-16 pt-24 sm:pt-32 lg:pb-24 lg:pt-[140px]">
         <div className="wrap grid items-center gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p className="eyebrow animate-fade-up">Zepra Tech, a US-based digital agency</p>
-            <h1 className="h-display mt-5 max-w-2xl animate-fade-up">
+            <p className="eyebrow animate-fade-up" style={{ animationDelay: "0ms" }}>
+              Zepra Tech, a US-based digital agency
+            </p>
+            <h1
+              className="h-display mt-5 max-w-2xl animate-fade-up"
+              style={{ animationDelay: "90ms" }}
+            >
               Build digital systems that{" "}
               <span className="text-[#0066FF]">move your business forward.</span>
             </h1>
-            <p className="body-copy mt-6 max-w-xl animate-fade-up">
+            <p
+              className="body-copy mt-6 max-w-xl animate-fade-up"
+              style={{ animationDelay: "180ms" }}
+            >
               Websites, AI assistants, and marketing for US small businesses. One
               fixed price, live in 2 to 3 weeks.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3 animate-fade-up">
+            <div
+              className="mt-9 flex flex-wrap items-center gap-3 animate-fade-up"
+              style={{ animationDelay: "270ms" }}
+            >
               <Link href="/contact" className="btn-primary">
                 Book a Discovery Call
                 <ArrowRight className="h-4 w-4" />
@@ -222,28 +233,47 @@ export default function HomePage() {
                 Explore Live Demos
               </Link>
             </div>
-            <p className="mt-6 text-sm text-[#55524B]">
+            <p
+              className="mt-6 text-sm text-[#55524B] animate-fade-up"
+              style={{ animationDelay: "360ms" }}
+            >
               {siteMeta.tagline} Delaware, USA · Engineering Studio in Lahore ·
               Fixed-Price Delivery.
             </p>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-6 text-[15px] text-[#55524B]">
+            <div
+              className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-6 text-[15px] text-[#55524B] animate-fade-up"
+              style={{ animationDelay: "450ms" }}
+            >
               <span>
-                <span className="font-semibold text-[#111111]">24</span> live demo
-                websites
+                <CountUp
+                  to={24}
+                  className="font-semibold text-[#111111]"
+                />{" "}
+                live demo websites
               </span>
               <span>
-                <span className="font-semibold text-[#111111]">$1,500</span> fixed
-                price to start
+                <CountUp
+                  to={1500}
+                  prefix="$"
+                  className="font-semibold text-[#111111]"
+                />{" "}
+                fixed price to start
               </span>
               <span>
-                <span className="font-semibold text-[#111111]">24 hours</span>{" "}
-                reply time
+                <CountUp
+                  to={24}
+                  className="font-semibold text-[#111111]"
+                />{" "}
+                hours reply time
               </span>
             </div>
           </div>
 
           {/* Hero visual: real PopShop screenshot in a phone frame */}
-          <div className="mx-auto w-full animate-fade-up lg:col-span-5">
+          <div
+            className="mx-auto w-full animate-fade-up lg:col-span-5"
+            style={{ animationDelay: "300ms" }}
+          >
             <div className="mx-auto w-full max-w-[340px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
               <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-3">
                 <span className="text-[13px] font-medium text-[#55524B]">
@@ -264,7 +294,10 @@ export default function HomePage() {
             </div>
             {/* Proof chips sit below the phone frame in clear space, never on top of the screenshot */}
             <div className="mt-5 flex flex-wrap items-stretch justify-center gap-2.5">
-              <div className="rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
+              <div
+                className="animate-float-soft rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]"
+                style={{ animationDelay: "0s" }}
+              >
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
                   AI assistant
                 </p>
@@ -272,7 +305,10 @@ export default function HomePage() {
                   Lead booked at 11:42 PM
                 </p>
               </div>
-              <div className="rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
+              <div
+                className="animate-float-soft rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]"
+                style={{ animationDelay: "1.4s" }}
+              >
                 <p className="text-2xl font-semibold leading-none tracking-tight text-[#111111]">
                   #1
                 </p>
