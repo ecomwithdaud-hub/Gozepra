@@ -26,21 +26,88 @@ const steps = [
     number: "01",
     title: "Free 15 minute call",
     body: "Tell us what your business does and what the website must do. No jargon, no pressure.",
+    visual: (
+      <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4">
+        <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#55524B]">
+          Today
+        </p>
+        <div className="mt-3 space-y-2">
+          <p className="rounded-lg bg-[#F6F3EE] px-3 py-2 text-sm text-[#55524B]">
+            10:00 AM, booked
+          </p>
+          <p className="rounded-lg bg-[#0066FF] px-3 py-2 text-sm font-semibold text-white">
+            2:30 PM, 15 min, free call
+          </p>
+          <p className="rounded-lg bg-[#F6F3EE] px-3 py-2 text-sm text-[#55524B]">
+            4:00 PM, open
+          </p>
+        </div>
+      </div>
+    ),
   },
   {
     number: "02",
     title: "Plan and design",
     body: "We map your pages and design the look. You approve the design before we build anything.",
+    visual: (
+      <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4">
+        <div className="h-2.5 w-full rounded-full bg-[#111111]" />
+        <div className="mt-3 h-16 rounded-xl bg-[#F6F3EE]" />
+        <div className="mt-3 grid grid-cols-3 gap-2">
+          <div className="h-10 rounded-lg bg-[#F6F3EE]" />
+          <div className="h-10 rounded-lg bg-[#F6F3EE]" />
+          <div className="h-10 rounded-lg bg-[#0066FF]/15" />
+        </div>
+        <p className="mt-3 text-xs font-medium text-[#55524B]">
+          Wireframe preview, approved by you first
+        </p>
+      </div>
+    ),
   },
   {
     number: "03",
     title: "Build and test",
     body: "We build the site, connect your email and booking, and test it on phones and desktops.",
+    visual: (
+      <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4">
+        <ul className="space-y-2.5 text-sm text-[#111111]">
+          <li className="flex items-center gap-2">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#0066FF] text-[11px] font-bold text-white">
+              ✓
+            </span>
+            Mobile and desktop tested
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#0066FF] text-[11px] font-bold text-white">
+              ✓
+            </span>
+            Forms and booking connected
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#0066FF] text-[11px] font-bold text-white">
+              ✓
+            </span>
+            Speed check passed
+          </li>
+        </ul>
+      </div>
+    ),
   },
   {
     number: "04",
     title: "Launch and support",
     body: "We launch, show you how to update it, and stay on call for changes.",
+    visual: (
+      <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4">
+        <p className="inline-flex rounded-full bg-[#0066FF] px-3.5 py-1.5 text-xs font-bold text-white">
+          Live + Handover
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-[#55524B]">
+          Your site is live, your logins are yours, and we stay on call for
+          changes.
+        </p>
+      </div>
+    ),
   },
 ];
 
@@ -500,10 +567,13 @@ export default function HomePage() {
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => (
-              <article key={step.number} className="border-t-2 border-[#0066FF] pt-6">
-                <p className="text-sm font-semibold text-[#0066FF]">{step.number}</p>
-                <h3 className="mt-3 text-xl font-semibold text-[#111111]">{step.title}</h3>
-                <p className="mt-2 text-base leading-relaxed text-[#55524B]">{step.body}</p>
+              <article key={step.number} className="flex flex-col">
+                <div className="border-t-2 border-[#0066FF] pt-6">
+                  <p className="font-mono text-sm font-semibold text-[#0066FF]">{step.number}</p>
+                  <h3 className="mt-3 text-xl font-semibold text-[#111111]">{step.title}</h3>
+                  <p className="mt-2 text-base leading-relaxed text-[#55524B]">{step.body}</p>
+                </div>
+                <div className="mt-5">{step.visual}</div>
               </article>
             ))}
           </div>
