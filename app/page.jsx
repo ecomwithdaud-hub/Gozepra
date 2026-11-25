@@ -23,21 +23,6 @@ const industryPills = ["Home Services", "Clinics", "E-Commerce", "Auto", "SaaS"]
   "WrenchWay Auto Repair",
 ];
 
-const problemRows = [
-  {
-    usual: "Weeks of meetings before any work starts.",
-    zepra: "One call, then a fixed price in writing.",
-  },
-  {
-    usual: "Hourly billing that keeps growing.",
-    zepra: "You pay the quoted price, nothing more.",
-  },
-  {
-    usual: "A website that looks good and sells nothing.",
-    zepra: "Built to turn visits into calls and bookings.",
-  },
-];
-
 const whatWeDo = [
   {
     title: "Websites",
@@ -329,36 +314,91 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Problem vs Zepra */}
+      {/* 3. Before vs After */}
       <section className="section">
         <div className="wrap">
           <h2 className="h-section max-w-xl">Most agencies slow you down.</h2>
+          <p className="body-copy mt-4 max-w-xl">
+            Same business, two ways of running it. One leaks leads, the other
+            books them.
+          </p>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="rounded-[24px] border border-[#E2E8F0] p-7 sm:p-8">
-              <p className="eyebrow !text-[#55524B]">Most agencies</p>
-              <ul className="mt-5 space-y-4">
-                {problemRows.map((row) => (
-                  <li
-                    key={row.usual}
-                    className="border-b border-[#E2E8F0] pb-4 text-lg leading-relaxed text-[#55524B] last:border-0 last:pb-0"
-                  >
-                    {row.usual}
-                  </li>
-                ))}
-              </ul>
+            <div className="rounded-[24px] border border-[#E2E8F0] bg-[#EDEAE3] p-7 sm:p-8">
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#55524B]">
+                Before: manual ops
+              </p>
+              <div className="mt-6 space-y-3">
+                <div className="rounded-2xl bg-white/70 p-4">
+                  <p className="font-semibold text-[#111111]">
+                    Missed call, 11:42 PM
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
+                    A customer needed a plumber. Nobody answered, so they
+                    called the next listing.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white/70 p-4">
+                  <p className="font-semibold text-[#111111]">
+                    6-week delay, then a new invoice
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
+                    Hourly billing that keeps growing, with no launch date in
+                    writing.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white/70 p-4">
+                  <p className="font-semibold text-[#111111]">
+                    Five tools, none of them connected
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
+                    Website, bookings, reviews, and ads all live in separate
+                    places.
+                  </p>
+                </div>
+              </div>
+              <p className="mt-6 text-[13px] text-[#55524B]">
+                Illustrative example of typical agency problems.
+              </p>
             </div>
-            <div className="rounded-[24px] border border-[#0066FF]/25 bg-white p-7 sm:p-8">
-              <p className="eyebrow">Zepra Tech</p>
-              <ul className="mt-5 space-y-4">
-                {problemRows.map((row) => (
-                  <li
-                    key={row.zepra}
-                    className="border-b border-[#E2E8F0] pb-4 text-lg font-medium leading-relaxed text-[#111111] last:border-0 last:pb-0"
-                  >
-                    {row.zepra}
-                  </li>
-                ))}
-              </ul>
+            <div className="rounded-[24px] border border-[#0066FF]/25 bg-white p-7 shadow-[0_24px_64px_-32px_rgba(17,17,17,0.25)] sm:p-8">
+              <p className="eyebrow">After: the Zepra system</p>
+              <div className="mt-6 space-y-3">
+                <div className="rounded-2xl border border-[#E2E8F0] bg-[#F6F3EE] p-4">
+                  <p className="font-semibold text-[#111111]">
+                    Fast mobile site, built to book
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
+                    Tap to call, instant quote, and a booking form that takes
+                    30 seconds.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="font-semibold text-[#111111]">
+                      Lead booked at 11:42 PM
+                    </p>
+                    <span className="shrink-0 rounded-full bg-[#0066FF]/10 px-2.5 py-1 text-xs font-semibold text-[#0066FF]">
+                      AI assistant
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
+                    The assistant answered, quoted, and booked the visit while
+                    the shop was closed.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4">
+                  <p className="font-semibold text-[#111111]">
+                    Fixed milestones, live in 14-21 days
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
+                    One fixed price in writing, with a launch date you can
+                    plan around.
+                  </p>
+                </div>
+              </div>
+              <p className="mt-6 text-[13px] text-[#55524B]">
+                Illustrative example of a Zepra build, not a client result.
+              </p>
             </div>
           </div>
         </div>
