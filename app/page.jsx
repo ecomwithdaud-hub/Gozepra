@@ -198,8 +198,8 @@ export default function HomePage() {
       />
 
       {/* 1. Hero: 7/5 Bento split */}
-      <section className="pb-16 pt-24 sm:pt-32 lg:pb-24 lg:pt-[140px]">
-        <div className="wrap grid items-center gap-14 lg:grid-cols-12">
+      <section className="pb-16 pt-24 sm:pt-32 lg:pb-12 lg:pt-12">
+        <div className="wrap grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="eyebrow animate-fade-up" style={{ animationDelay: "0ms" }}>
               Zepra Tech, a US-based digital agency
@@ -241,7 +241,7 @@ export default function HomePage() {
               Fixed-Price Delivery.
             </p>
             <div
-              className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-6 text-[15px] text-[#55524B] animate-fade-up"
+              className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-5 text-[15px] text-[#55524B] animate-fade-up"
               style={{ animationDelay: "450ms" }}
             >
               <span>
@@ -274,8 +274,8 @@ export default function HomePage() {
             className="mx-auto w-full animate-fade-up lg:col-span-5"
             style={{ animationDelay: "300ms" }}
           >
-            <div className="mx-auto w-full max-w-[340px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
-              <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-3">
+            <div className="mx-auto w-full max-w-[300px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
+              <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-2.5">
                 <span className="text-[13px] font-medium text-[#55524B]">
                   PopShop Collective
                 </span>
@@ -293,9 +293,9 @@ export default function HomePage() {
               />
             </div>
             {/* Proof chips sit below the phone frame in clear space, never on top of the screenshot */}
-            <div className="mt-5 flex flex-wrap items-stretch justify-center gap-2.5">
+            <div className="mt-4 flex flex-wrap items-stretch justify-center gap-2.5">
               <div
-                className="animate-float-soft rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]"
+                className="animate-float-soft rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-2.5 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]"
                 style={{ animationDelay: "0s" }}
               >
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
@@ -306,7 +306,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div
-                className="animate-float-soft rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]"
+                className="animate-float-soft rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-2.5 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]"
                 style={{ animationDelay: "1.4s" }}
               >
                 <p className="text-2xl font-semibold leading-none tracking-tight text-[#111111]">
