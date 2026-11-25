@@ -7,7 +7,7 @@ import { usaClientDemoWebsites } from "@/lib/site";
 export const metadata = {
   title: "Website Development",
   description:
-    "Custom websites and online stores for US small businesses. Mobile first, fast, and built to take calls and bookings. Fixed prices from $2,500.",
+    "Custom websites and online stores for US small businesses. Mobile-first, fast, and built to take calls and bookings. Fixed prices from $2,500.",
 };
 
 const featuredIds = [1, 3];
@@ -20,7 +20,7 @@ export default function WebsiteDevelopmentPage() {
       <PageHero
         eyebrow="Web development"
         title="Websites that turn visits into calls."
-        intro="Custom websites and online stores for US small businesses. Mobile first, fast, and built to take calls and bookings."
+        intro="Custom websites and online stores for US small businesses. Mobile-first, fast, and built to take calls and bookings."
       />
 
       <section className="section pt-12">
@@ -29,7 +29,7 @@ export default function WebsiteDevelopmentPage() {
             <div className="card">
               <h2 className="text-xl font-semibold text-[#111111]">Built for phones first</h2>
               <p className="mt-3 text-base leading-relaxed text-[#55524B]">
-                Most of your customers visit on a phone. Tap to call, directions,
+                Most of your customers visit on a phone. Tap-to-call, directions,
                 and booking work from the first screen.
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function WebsiteDevelopmentPage() {
               <h2 className="text-xl font-semibold text-[#111111]">You own everything</h2>
               <p className="mt-3 text-base leading-relaxed text-[#55524B]">
                 Your code, your domain, your accounts, your data. 100%
-                ownership, no lock in.
+                ownership, no lock-in.
               </p>
             </div>
           </div>

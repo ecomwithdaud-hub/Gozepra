@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
 const steps = [
   {
     number: "01",
-    title: "Free 15 minute call",
+    title: "Free 15-minute call",
     body: "Tell us what your business does and what the service must do.",
   },
   {

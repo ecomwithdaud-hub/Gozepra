@@ -35,7 +35,7 @@ const studioStandards = [
   {
     number: "03",
     title: "You own everything",
-    body: "Code, domain, accounts, and data. 100% yours, with no lock in.",
+    body: "Code, domain, accounts, and data. 100% yours, with no lock-in.",
   },
   {
     number: "04",
@@ -60,7 +60,7 @@ const featuredDemos = featuredDemoIds
 const steps = [
   {
     number: "01",
-    title: "Free 15 minute call",
+    title: "Free 15-minute call",
     body: "Tell us what you do, and what the site must do. No jargon.",
     visual: (
       <div className="rounded-2xl border border-zinc-200/80 bg-white p-4">
@@ -160,7 +160,7 @@ const faqs = [
   {
     question: "Do I own my website, code, and accounts?",
     answer:
-      "Yes. You own 100% of the code, the domain, the hosting account, and your data. No lock in, no monthly fee to keep your own website.",
+      "Yes. You own 100% of the code, the domain, the hosting account, and your data. No lock-in, no monthly fee to keep your own website.",
   },
   {
     question: "What is an AI agent, and do I need one?",
@@ -175,7 +175,7 @@ const faqs = [
   {
     question: "How do we start?",
     answer:
-      "Book a free 15 minute consultation, or call +1 (302) 469-4003. We talk, then send a written quote with a fixed price and a launch date.",
+      "Book a free 15-minute consultation, or call +1 (302) 469-4003. We talk, then send a written quote with a fixed price and a launch date.",
   },
 ];
 
@@ -201,7 +201,7 @@ export default function HomePage() {
       <section className="pb-16 pt-24 sm:pt-32 lg:pb-24 lg:pt-[140px]">
         <div className="wrap grid items-center gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p className="eyebrow animate-fade-up">Zepra Tech, a US based digital agency</p>
+            <p className="eyebrow animate-fade-up">Zepra Tech, a US-based digital agency</p>
             <h1 className="h-display mt-5 max-w-2xl animate-fade-up">
               Build digital systems that{" "}
               <span className="text-[#0066FF]">move your business forward.</span>
@@ -334,7 +334,7 @@ export default function HomePage() {
                       Fast mobile site, built to book
                     </p>
                     <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
-                      Tap to call, instant quote, booking in 30 seconds.
+                      Tap-to-call, instant quote, booking in 30 seconds.
                     </p>
                   </div>
                   <div className="rounded-2xl border border-zinc-200/80 bg-white p-4">
@@ -434,7 +434,7 @@ export default function HomePage() {
                       Web Engineering
                     </h3>
                     <p className="mt-3 text-base leading-relaxed text-[#55524B]">
-                      Custom sites and stores. Mobile first, fast, built to book.
+                      Custom sites and stores. Mobile-first, fast, built to book.
                     </p>
                     <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]">
                       Learn more
@@ -654,8 +654,8 @@ export default function HomePage() {
                 ))}
             </div>
             <p className="mt-8 text-center text-[15px] text-[#55524B]">
-              Enterprise, $25,000+, scoped per project for multi location and
-              multi market businesses.{" "}
+              Enterprise, $25,000+, scoped per project for multi-location and
+              multi-market businesses.{" "}
               <Link href="/pricing" className="font-semibold text-[#0066FF]">
                 See all pricing
               </Link>

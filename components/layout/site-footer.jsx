@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div className="max-w-sm">
             <Logo dark />
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-              {siteMeta.tagline} A US based digital agency building websites,
+              {siteMeta.tagline} A US-based digital agency building websites,
               AI assistants, and growth marketing for small businesses.
             </p>
           </div>
