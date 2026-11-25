@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Search } from "lucide-react";
 
 import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
@@ -727,6 +727,17 @@ export default function HomePage() {
                     <p className="mt-3 text-base leading-relaxed text-[#55524B]">
                       {member.bio}
                     </p>
+                    {member.linkedin ? (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]"
+                      >
+                        LinkedIn profile
+                        <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                    ) : null}
                   </div>
                 </article>
               ))}

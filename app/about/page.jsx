@@ -26,8 +26,19 @@ export default function AboutPage() {
               <p className="mt-3 text-base leading-relaxed text-[#55524B]">
                 CEO and founder. Every project is reviewed by Daud before
                 launch. You talk to the people building your site, not a sales
-                desk.
+                desk. Entrepreneur and younger CEO alongside hands-on digital
+                marketer, and a Computer Science undergrad at Lahore Garrison
+                University. He writes on SEO and AI.
               </p>
+              <a
+                href="https://www.linkedin.com/in/muhammad-daud-ali-lashari-1302a5337/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]"
+              >
+                Daud on LinkedIn
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
             <div className="card">
               <p className="eyebrow">Two offices</p>
