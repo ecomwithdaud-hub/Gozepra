@@ -23,24 +23,6 @@ const industryPills = ["Home Services", "Clinics", "E-Commerce", "Auto", "SaaS"]
   "WrenchWay Auto Repair",
 ];
 
-const whatWeDo = [
-  {
-    title: "Websites",
-    body: "Custom websites and online stores for US small businesses. Mobile first, fast, and built to take calls and bookings.",
-    href: "/services/web-development",
-  },
-  {
-    title: "AI assistants",
-    body: "AI assistants trained on your services and prices. They answer questions and book leads around the clock.",
-    href: "/services/ai-agents-bots",
-  },
-  {
-    title: "Growth marketing",
-    body: "Local SEO, Google Maps, and Meta ads that put your business in front of nearby buyers.",
-    href: "/services/digital-marketing",
-  },
-];
-
 const steps = [
   {
     number: "01",
@@ -413,20 +395,100 @@ export default function HomePage() {
             fixed price plan.
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {whatWeDo.map((service) => (
-              <Link key={service.title} href={service.href} className="card group block">
-                <h3 className="text-[22px] font-semibold text-[#111111]">
-                  {service.title}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-[#55524B]">
-                  {service.body}
-                </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]">
-                  Learn more
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </span>
-              </Link>
-            ))}
+            <Link href="/services/web-development" className="card group block">
+              <div className="rounded-2xl border border-[#E2E8F0] bg-[#F6F3EE] p-4">
+                <div className="mx-auto w-full max-w-[220px] rounded-[16px] border border-[#E2E8F0] bg-white p-3">
+                  <div className="h-2.5 w-3/4 rounded-full bg-[#111111]" />
+                  <div className="mt-2 h-2 w-full rounded-full bg-[#E2E8F0]" />
+                  <div className="mt-1.5 h-2 w-2/3 rounded-full bg-[#E2E8F0]" />
+                  <span className="mt-3 block rounded-full bg-[#0066FF] py-2 text-center text-xs font-semibold text-white">
+                    Book a visit
+                  </span>
+                  <p className="mt-2 text-center text-[11px] font-medium text-[#55524B]">
+                    Tap to call | Open now
+                  </p>
+                </div>
+              </div>
+              <h3 className="mt-6 text-[22px] font-semibold text-[#111111]">
+                Web Engineering
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-[#55524B]">
+                Custom websites and online stores for US small businesses.
+                Mobile first, fast, and built to take calls and bookings.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]">
+                Learn more
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </Link>
+
+            <Link href="/services/ai-agents-bots" className="card group block">
+              <div className="rounded-2xl border border-[#E2E8F0] bg-[#F6F3EE] p-4">
+                <div className="space-y-2.5">
+                  <p className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-white px-3.5 py-2.5 text-sm leading-relaxed text-[#111111] shadow-sm">
+                    Do you fix leaking water heaters?
+                  </p>
+                  <p className="w-fit max-w-[85%] rounded-2xl rounded-bl-md bg-[#0066FF] px-3.5 py-2.5 text-sm leading-relaxed text-white">
+                    Yes. A plumber can come tomorrow, 9-11 AM. Shall I book
+                    it?
+                  </p>
+                  <p className="ml-auto w-fit rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#0066FF] shadow-sm">
+                    Booked for tomorrow, 9 AM
+                  </p>
+                </div>
+              </div>
+              <h3 className="mt-6 text-[22px] font-semibold text-[#111111]">
+                AI Agents & Automation
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-[#55524B]">
+                AI assistants trained on your services and prices. They answer
+                questions and book leads around the clock.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]">
+                Learn more
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </Link>
+
+            <Link href="/services/digital-marketing" className="card group block">
+              <div className="rounded-2xl border border-[#E2E8F0] bg-[#F6F3EE] p-4">
+                <div className="rounded-[16px] border border-[#E2E8F0] bg-white p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold text-[#111111]">
+                        PureFlow Plumbing Co.
+                      </p>
+                      <p className="mt-0.5 text-xs text-[#55524B]">
+                        Plumber in Denver, CO
+                      </p>
+                    </div>
+                    <span className="shrink-0 rounded-full bg-[#0066FF] px-2.5 py-1 text-xs font-bold text-white">
+                      #1
+                    </span>
+                  </div>
+                  <div className="mt-3 flex items-center gap-2 rounded-xl bg-[#F6F3EE] px-3 py-2">
+                    <span
+                      aria-hidden="true"
+                      className="inline-block h-2.5 w-2.5 rounded-full bg-[#0066FF]"
+                    />
+                    <p className="text-xs font-medium text-[#55524B]">
+                      Top result on Google Maps
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h3 className="mt-6 text-[22px] font-semibold text-[#111111]">
+                Growth & Local SEO
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-[#55524B]">
+                Local SEO, Google Maps, and Meta ads that put your business in
+                front of nearby buyers.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]">
+                Learn more
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
