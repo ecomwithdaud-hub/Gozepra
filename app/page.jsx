@@ -301,9 +301,9 @@ export default function HomePage() {
                 src="/demos/popshop-mobile.png"
                 alt="PopShop Collective online store on a phone"
                 width={390}
-                height={759}
+                height={636}
                 priority
-                className="aspect-[390/640] w-full object-cover object-top"
+                className="aspect-[390/636] w-full object-cover object-top"
               />
             </div>
             {/* Proof chips sit below the phone frame in clear space, never on top of the screenshot */}
