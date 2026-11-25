@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 export const metadata = {
   alternates: { canonical: "/modern-slavery-act" },
   title: "Modern Slavery Act",
-  description: "Zepra Tech's statement on preventing modern slavery and human trafficking.",
+  description: "Zepra Tech's statement on preventing modern slavery and human trafficking in our business and supply chain.",
 };
 
 export default function ModernSlaveryActPage() {

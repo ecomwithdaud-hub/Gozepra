@@ -1,4 +1,5 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/social-media-marketing" },
@@ -10,6 +11,7 @@ export const metadata = {
 export default function SocialMediaMarketingPage() {
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Social Media Marketing", href: "/social-media-marketing" }]} />
       <PageHero
         eyebrow="Social media marketing"
         title="Marketing that reaches nearby buyers."

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { FinalCta, PageHero } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 import { usaClientDemoWebsites } from "@/lib/site";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function CaseStudiesPage() {
 
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Case Studies", href: "/case-studies" }]} />
       <PageHero
         eyebrow="Case studies"
         title="Selected work."

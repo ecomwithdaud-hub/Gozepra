@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { FinalCta, PageHero } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 import { usaClientDemoWebsites } from "@/lib/site";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function WebsiteDevelopmentPage() {
 
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Website Development", href: "/website-development" }]} />
       <PageHero
         eyebrow="Web development"
         title="Websites that turn visits into calls."

@@ -1,4 +1,5 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/cold-outreaching" },
@@ -10,6 +11,7 @@ export const metadata = {
 export default function ColdOutreachingPage() {
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Cold Outreach", href: "/cold-outreaching" }]} />
       <PageHero
         eyebrow="Cold outreach"
         title="A steady pipeline of real conversations."

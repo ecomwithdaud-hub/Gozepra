@@ -4,7 +4,7 @@
 
 ## About Zepra Tech
 
-Zepra Tech is a digital engineering and marketing agency founded in 2025. Founder and CEO: Muhammad Daud Ali Lashari, an entrepreneur and hands-on digital marketer, and a Computer Science undergrad at Lahore Garrison University. Tagline: Where ideas turn into impact.
+Zepra Tech is a digital engineering and marketing agency founded in 2025. Founder and CEO: Muhammad Daud Ali Lashari. Every project is reviewed by Daud before launch. A hands-on digital marketer and Computer Science undergraduate at Lahore Garrison University. He writes on SEO and AI. Tagline: Where ideas turn into impact.
 
 - US office: Middletown, Delaware.
 - Engineering studio: Lahore, Pakistan.

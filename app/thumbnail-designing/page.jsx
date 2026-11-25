@@ -1,4 +1,5 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/thumbnail-designing" },
@@ -33,6 +34,7 @@ const thumbnails = [
 export default function ThumbnailDesigningPage() {
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Thumbnail Design", href: "/thumbnail-designing" }]} />
       <PageHero
         eyebrow="Thumbnail design"
         title="Thumbnails that earn the click."

@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 export const metadata = {
   alternates: { canonical: "/privacy-policy" },
   title: "Privacy Policy",
-  description: "How Zepra Tech collects, uses, and protects your information.",
+  description: "How Zepra Tech collects, uses, and protects the information you share through our contact form, and the choices you have.",
 };
 
 export default function PrivacyPolicyPage() {

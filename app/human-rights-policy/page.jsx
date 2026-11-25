@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 export const metadata = {
   alternates: { canonical: "/human-rights-policy" },
   title: "Human Rights Policy",
-  description: "Zepra Tech's commitment to respecting human rights in how it works.",
+  description: "How Zepra Tech respects human rights across its team, freelancers, suppliers, and the clients it works with.",
 };
 
 export default function HumanRightsPolicyPage() {

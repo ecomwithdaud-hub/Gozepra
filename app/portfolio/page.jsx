@@ -5,7 +5,7 @@ import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/portfolio" },
-  title: "Work | Websites, Apps & AI for US Small Business",
+  title: "Work | Websites, Apps & AI for US Business",
   description:
     "24 working demos built for US small businesses: home services, clinics, auto, beauty, restaurants, retail, and services. Open any demo and try it.",
 };
