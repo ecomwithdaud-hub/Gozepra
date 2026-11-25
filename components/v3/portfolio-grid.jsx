@@ -70,7 +70,9 @@ export function PortfolioGrid({ demos, categories }) {
               <motion.span
                 layoutId="portfolio-pill"
                 className="absolute inset-0 rounded-full bg-[#0066FF]"
-                transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                // Fast tween, not a spring: same lag/clip fix as the AI Lab
+                // pill. The pill must track the tab text, not trail it.
+                transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
               />
             ) : null}
             <span className="relative">

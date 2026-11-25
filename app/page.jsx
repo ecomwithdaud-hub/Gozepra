@@ -215,25 +215,25 @@ export default function HomePage() {
       <section className="pb-16 pt-24 sm:pt-32 lg:pb-12 lg:pt-8">
         <div className="wrap grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p className="eyebrow animate-fade-up" style={{ animationDelay: "0ms" }}>
+            <p className="eyebrow animate-rise" style={{ animationDelay: "0ms" }}>
               Zepra Tech, a US-based digital agency
             </p>
             <h1
-              className="h-display mt-5 max-w-2xl animate-fade-up"
+              className="h-display mt-5 max-w-2xl animate-rise"
               style={{ animationDelay: "90ms" }}
             >
               Build digital systems that{" "}
               <span className="text-[#0066FF]">move your business forward.</span>
             </h1>
             <p
-              className="body-copy mt-6 max-w-xl animate-fade-up"
+              className="body-copy mt-6 max-w-xl animate-rise"
               style={{ animationDelay: "180ms" }}
             >
               Websites, AI assistants, and marketing for US small businesses. Fixed
               quote in writing, live in 2 to 3 weeks.
             </p>
             <div
-              className="mt-9 flex flex-wrap items-center gap-3 animate-fade-up"
+              className="mt-9 flex flex-wrap items-center gap-3 animate-rise"
               style={{ animationDelay: "270ms" }}
             >
               <Link href="/contact" className="btn-primary">
@@ -248,14 +248,14 @@ export default function HomePage() {
               </Link>
             </div>
             <p
-              className="mt-6 text-sm text-[#55524B] animate-fade-up"
+              className="mt-6 text-sm text-[#55524B] animate-rise"
               style={{ animationDelay: "360ms" }}
             >
               {siteMeta.tagline} Middletown, Delaware, USA · Engineering studio,
               DHA Phase 8, Lahore · Fixed-Price Delivery.
             </p>
             <div
-              className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-5 text-[15px] text-[#55524B] animate-fade-up"
+              className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-5 text-[15px] text-[#55524B] animate-rise"
               style={{ animationDelay: "450ms" }}
             >
               <span>
@@ -285,7 +285,7 @@ export default function HomePage() {
 
           {/* Hero visual: real PopShop screenshot in a phone frame */}
           <div
-            className="mx-auto w-full animate-fade-up lg:col-span-5"
+            className="mx-auto w-full animate-rise lg:col-span-5"
             style={{ animationDelay: "300ms" }}
           >
             <div className="mx-auto w-full max-w-[290px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">

@@ -151,7 +151,10 @@ export function AiSandbox() {
                 <motion.span
                   layoutId="sandbox-pill"
                   className="absolute inset-0 rounded-full bg-[#0066FF]"
-                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                  // Fast tween, not a spring: a spring overshoots and lags
+                  // behind the tab text mid-transition, so the pill looked
+                  // clipped while it caught up. The tween glides in 0.25s.
+                  transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
                 />
               ) : null}
               <span className="relative">{item.label}</span>

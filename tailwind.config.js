@@ -60,9 +60,17 @@ module.exports = {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        // Rise keeps full opacity from the first paint: the hero must never
+        // flash blank on load or on back-navigation. Only a small vertical
+        // shift animates, so the content is visible throughout.
+        rise: {
+          "0%": { opacity: "1", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "fade-up": "fadeUp 0.7s ease-out both",
+        rise: "rise 0.5s ease-out both",
       },
     },
   },

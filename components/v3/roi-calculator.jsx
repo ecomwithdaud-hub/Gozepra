@@ -44,7 +44,7 @@ export function RoiCalculator() {
               step={1}
               value={missedPerWeek}
               onChange={(e) => setMissedPerWeek(Number(e.target.value))}
-              className="mt-3 w-full accent-[#0066FF]"
+              className="mt-3 h-6 w-full cursor-pointer touch-none accent-[#0066FF]"
             />
             <div className="mt-1 flex justify-between text-xs text-[#55524B]">
               <span>0</span>
@@ -69,7 +69,7 @@ export function RoiCalculator() {
               step={50}
               value={jobValue}
               onChange={(e) => setJobValue(Number(e.target.value))}
-              className="mt-3 w-full accent-[#0066FF]"
+              className="mt-3 h-6 w-full cursor-pointer touch-none accent-[#0066FF]"
             />
             <div className="mt-1 flex justify-between text-xs text-[#55524B]">
               <span>$50</span>

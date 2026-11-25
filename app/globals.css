@@ -118,7 +118,8 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
   .animate-float-soft,
-  .animate-fade-up {
+  .animate-fade-up,
+  .animate-rise {
     animation: none !important;
   }
 
