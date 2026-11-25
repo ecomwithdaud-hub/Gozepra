@@ -263,8 +263,8 @@ export default function HomePage() {
           </div>
 
           {/* Hero visual: real SharpLine screenshot in a phone frame */}
-          <div className="mx-auto w-full max-w-[340px] animate-fade-up lg:col-span-5">
-            <div className="overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
+          <div className="mx-auto w-full animate-fade-up lg:col-span-5">
+            <div className="mx-auto w-full max-w-[340px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
               <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-3">
                 <span className="text-[13px] font-medium text-[#55524B]">
                   SharpLine Barbershop
@@ -283,8 +283,8 @@ export default function HomePage() {
               />
             </div>
             {/* Proof chips sit below the phone frame in clear space, never on top of the screenshot */}
-            <div className="mt-5 flex flex-wrap items-stretch justify-center gap-3">
-              <div className="rounded-2xl border border-zinc-200/80 bg-white px-4 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
+            <div className="mt-5 flex flex-wrap items-stretch justify-center gap-2.5">
+              <div className="rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
                   AI assistant
                 </p>
@@ -292,7 +292,7 @@ export default function HomePage() {
                   Lead booked at 11:42 PM
                 </p>
               </div>
-              <div className="rounded-2xl border border-zinc-200/80 bg-white px-4 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
+              <div className="rounded-2xl border border-zinc-200/80 bg-white px-3.5 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
                 <p className="text-2xl font-semibold leading-none tracking-tight text-[#111111]">
                   #1
                 </p>
