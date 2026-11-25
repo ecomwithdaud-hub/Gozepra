@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 import { Logo } from "@/components/shared/logo";
 import { cn } from "@/lib/utils";
+import { services } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Home" },
@@ -16,44 +17,30 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
-const megaMenu = [
+// The dropdown lists exactly the 12 real services, 1:1 with /services.
+// It is built from the services data so the count and links can never drift.
+const menuGroups = [
   {
-    heading: "Web Engineering",
-    items: [
-      { href: "/services/web-development", label: "Web Development" },
-      { href: "/services/ecommerce-solutions", label: "Ecommerce Solutions" },
-      { href: "/services/graphic-design", label: "Graphic Design" },
-      { href: "/services/video-editing", label: "Video Editing" },
-    ],
+    heading: "Build",
+    slugs: ["web-development", "ecommerce-solutions", "graphic-design", "video-editing"],
   },
   {
-    heading: "AI Agents & Automation",
-    items: [
-      { href: "/services/ai-agents-bots", label: "AI Agents / Bots" },
-      { href: "/services/ai-agents-bots", label: "Booking Agent" },
-      { href: "/services/ai-agents-bots", label: "WhatsApp Sales Bot" },
-      { href: "/services/ai-agents-bots", label: "Quote Estimator" },
-    ],
+    heading: "Automate & Rank",
+    slugs: ["ai-agents-bots", "seo-geo-aeo", "google-my-business", "google-adsense"],
   },
   {
-    heading: "Growth & Local SEO",
-    items: [
-      { href: "/services/digital-marketing", label: "Digital Marketing" },
-      { href: "/services/seo-geo-aeo", label: "SEO / GEO / AEO" },
-      { href: "/services/google-my-business", label: "Google My Business" },
-      { href: "/services/google-adsense", label: "Google AdSense" },
-    ],
-  },
-  {
-    heading: "E-Commerce & Outbound",
-    items: [
-      { href: "/services/ecommerce-solutions", label: "Online Stores" },
-      { href: "/services/cold-outreach", label: "Cold Outreaching" },
-      { href: "/services/content-writing-blogging", label: "Content & Blogging" },
-      { href: "/services/customer-support-service", label: "Customer Support" },
-    ],
+    heading: "Grow & Outreach",
+    slugs: ["digital-marketing", "content-writing-blogging", "cold-outreach", "customer-support-service"],
   },
 ];
+
+const megaMenu = menuGroups.map((group) => ({
+  heading: group.heading,
+  items: group.slugs.map((slug) => {
+    const service = services.find((item) => item.slug === slug);
+    return { href: service.href, label: service.title };
+  }),
+}));
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -121,7 +108,7 @@ export function SiteHeader() {
             </button>
             {menuOpen ? (
               <div className="absolute left-1/2 top-[calc(100%+14px)] w-[760px] -translate-x-1/2 rounded-[24px] border border-[#E2E8F0] bg-white p-6 shadow-[0_24px_64px_-24px_rgba(17,17,17,0.25)]">
-                <div className="grid grid-cols-4 gap-6">
+                <div className="grid grid-cols-3 gap-6">
                   {megaMenu.map((group) => (
                     <div key={group.heading}>
                       <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">

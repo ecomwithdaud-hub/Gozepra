@@ -14,9 +14,16 @@ export function LegalPage({ title, intro, sections = [], href }) {
                 <h2 className="text-2xl font-semibold text-[#111111]">
                   {section.heading}
                 </h2>
-                <p className="mt-3 text-base leading-relaxed text-[#55524B]">
-                  {section.body}
-                </p>
+                {(Array.isArray(section.body) ? section.body : [section.body]).map(
+                  (paragraph, index) => (
+                    <p
+                      key={index}
+                      className="mt-3 text-base leading-relaxed text-[#55524B]"
+                    >
+                      {paragraph}
+                    </p>
+                  ),
+                )}
               </div>
             ))}
           </div>
