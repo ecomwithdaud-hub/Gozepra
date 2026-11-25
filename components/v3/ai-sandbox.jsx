@@ -10,6 +10,7 @@ const niches = [
     id: "home-services",
     label: "Home Services",
     business: "Example: a plumbing business",
+    confirmation: "Lead booked, added to the calendar",
     prompts: [
       {
         question: "My water heater is leaking. Can someone come today?",
@@ -37,6 +38,7 @@ const niches = [
     id: "clinics",
     label: "Clinics",
     business: "Example: a dental clinic",
+    confirmation: "Appointment booked, added to the calendar",
     prompts: [
       {
         question: "Do you have an appointment this week?",
@@ -53,12 +55,18 @@ const niches = [
         answer:
           "A cleaning and exam is $120. We will confirm your exact cost before the visit, in writing.",
       },
+      {
+        question: "What should I bring to my first visit?",
+        answer:
+          "Bring your ID and insurance card. Arrive 10 minutes early for the paperwork.",
+      },
     ],
   },
   {
     id: "ecommerce",
     label: "E-Commerce",
     business: "Example: an online store",
+    confirmation: "Order update sent to your phone",
     prompts: [
       {
         question: "Where is my order?",
@@ -75,12 +83,18 @@ const niches = [
         answer:
           "Yes, returns are free within 30 days. I can start the return for you now.",
       },
+      {
+        question: "How long does delivery take?",
+        answer:
+          "Standard delivery is 3 to 5 business days. Express arrives in 2.",
+      },
     ],
   },
   {
     id: "b2b",
     label: "B2B",
     business: "Example: a growing company",
+    confirmation: "Discovery call booked, invite sent",
     prompts: [
       {
         question: "Can you build us a website in 3 weeks?",
@@ -96,6 +110,11 @@ const niches = [
         question: "What does it cost?",
         answer:
           "Launch starts at $2,500, fixed in writing. Your exact quote comes after the free call.",
+      },
+      {
+        question: "Do you sign NDAs?",
+        answer:
+          "Yes, we sign NDAs before the first call. Your idea stays yours.",
       },
     ],
   },
@@ -178,7 +197,7 @@ export function AiSandbox() {
               {prompt.answer}
             </p>
             <p className="w-fit rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#0066FF] shadow-sm">
-              Lead booked, added to the calendar
+              {niche.confirmation}
             </p>
           </div>
         </div>

@@ -78,8 +78,7 @@ export function RoiCalculator() {
           </div>
 
           <p className="mt-7 text-xs leading-relaxed text-[#55524B]">
-            Formula: missed leads x average job value x 4.3 weeks. Your own
-            numbers, your own math. We do not guess a conversion rate.
+            Formula: missed leads × avg. job value × 4.3 weeks.
           </p>
         </div>
 
