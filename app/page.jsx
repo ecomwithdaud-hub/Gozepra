@@ -263,7 +263,7 @@ export default function HomePage() {
           </div>
 
           {/* Hero visual: real SharpLine screenshot in a phone frame */}
-          <div className="relative mx-auto w-full max-w-[340px] animate-fade-up lg:col-span-5">
+          <div className="mx-auto w-full max-w-[340px] animate-fade-up lg:col-span-5">
             <div className="overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
               <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-3">
                 <span className="text-[13px] font-medium text-[#55524B]">
@@ -277,22 +277,29 @@ export default function HomePage() {
                 src="/demos/sharpline-mobile.png"
                 alt="SharpLine Barbershop booking website on a phone"
                 width={390}
-                height={844}
+                height={758}
                 priority
                 className="aspect-[390/640] w-full object-cover object-top"
               />
             </div>
-            <div className="absolute -left-4 top-24 rounded-2xl border border-zinc-200/80 bg-white p-4 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)] sm:-left-10">
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
-                AI assistant
-              </p>
-              <p className="mt-1.5 text-sm font-semibold leading-snug text-[#111111]">
-                Lead booked at 11:42 PM
-              </p>
-            </div>
-            <div className="absolute -right-3 bottom-16 rounded-2xl border border-zinc-200/80 bg-white px-4 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)] sm:-right-8">
-              <p className="text-2xl font-semibold tracking-tight text-[#111111]">#1</p>
-              <p className="text-xs font-medium text-[#55524B]">on Google Maps</p>
+            {/* Proof chips sit below the phone frame in clear space, never on top of the screenshot */}
+            <div className="mt-5 flex flex-wrap items-stretch justify-center gap-3">
+              <div className="rounded-2xl border border-zinc-200/80 bg-white px-4 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
+                <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
+                  AI assistant
+                </p>
+                <p className="mt-1 text-sm font-semibold leading-snug text-[#111111]">
+                  Lead booked at 11:42 PM
+                </p>
+              </div>
+              <div className="rounded-2xl border border-zinc-200/80 bg-white px-4 py-3 shadow-[0_16px_40px_-20px_rgba(17,17,17,0.35)]">
+                <p className="text-2xl font-semibold leading-none tracking-tight text-[#111111]">
+                  #1
+                </p>
+                <p className="mt-1 text-xs font-medium text-[#55524B]">
+                  on Google Maps
+                </p>
+              </div>
             </div>
           </div>
         </div>
