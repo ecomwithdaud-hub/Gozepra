@@ -10,8 +10,8 @@ export function RoiCalculator() {
 
   const monthlyLost = Math.round(missedPerWeek * jobValue * WEEKS_PER_MONTH);
   const weeklyLost = missedPerWeek * jobValue;
-  const paybackLaunch = weeklyLost > 0 ? (2500 / weeklyLost).toFixed(1) : "0";
-  const paybackGrowth = weeklyLost > 0 ? (5000 / weeklyLost).toFixed(1) : "0";
+  const paybackLaunch = weeklyLost > 0 ? (1500 / weeklyLost).toFixed(1) : "0";
+  const paybackGrowth = weeklyLost > 0 ? (3000 / weeklyLost).toFixed(1) : "0";
 
   return (
     <div className="overflow-hidden rounded-[24px] border border-[#E2E8F0] bg-white">
@@ -93,12 +93,12 @@ export function RoiCalculator() {
           </div>
           <div className="space-y-3 border-t border-white/15 pt-5 text-[15px] leading-relaxed text-white/80">
             <p>
-              A $2,500 Launch build pays for itself in{" "}
+              A $1,500 Launch build pays for itself in{" "}
               <span className="font-semibold text-white">{paybackLaunch} weeks</span>{" "}
               of recovered leads.
             </p>
             <p>
-              A $5,000 Growth build with an AI assistant pays for itself in{" "}
+              A $3,000 Growth build with an AI assistant pays for itself in{" "}
               <span className="font-semibold text-white">{paybackGrowth} weeks</span>.
             </p>
           </div>

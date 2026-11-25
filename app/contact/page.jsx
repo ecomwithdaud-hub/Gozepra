@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 const planBudgets = {
-  launch: "$2,500 - $5,000 (Small Business Launch)",
-  growth: "$5,000 - $12,000 (Growth + AI)",
-  scale: "$12,000 - $25,000 (Custom Platform)",
-  enterprise: "$25,000+ (Enterprise)",
+  launch: "$1,500 - $3,000 (Small Business Launch)",
+  growth: "$3,000 - $8,000 (Growth + AI)",
+  scale: "$8,000 - $18,000 (Custom Platform)",
+  enterprise: "$18,000+ (Enterprise)",
 };
 
 const planLabels = {

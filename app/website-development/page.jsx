@@ -7,7 +7,7 @@ import { usaClientDemoWebsites } from "@/lib/site";
 export const metadata = {
   title: "Website Development",
   description:
-    "Custom websites and online stores for US small businesses. Mobile-first, fast, and built to take calls and bookings. Fixed prices from $2,500.",
+    "Custom websites and online stores for US small businesses. Mobile-first, fast, and built to take calls and bookings. Fixed prices from $1,500.",
 };
 
 const featuredIds = [1, 3];
@@ -79,7 +79,7 @@ export default function WebsiteDevelopmentPage() {
             ))}
           </div>
           <p className="mt-8 text-[15px] text-[#55524B]">
-            Launch from $2,500. Most small business websites launch in 2 to 3
+            Launch from $1,500. Most small business websites launch in 2 to 3
             weeks.
           </p>
           <Link

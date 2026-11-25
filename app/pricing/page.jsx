@@ -4,7 +4,7 @@ import { PricingGrid } from "@/components/v3/pricing";
 export const metadata = {
   title: "Pricing",
   description:
-    "Fixed prices for US small businesses: Launch from $2,500, Growth $5,000 to $12,000, Scale $12,000 to $25,000, Enterprise $25,000+. Agreed in writing before we start.",
+    "Fixed prices for US small businesses: Launch from $1,500, Growth $3,000 to $8,000, Scale $8,000 to $18,000, Enterprise $18,000+. Agreed in writing before we start.",
 };
 
 export default function PricingPage() {

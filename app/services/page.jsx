@@ -8,7 +8,7 @@ import { services } from "@/lib/site";
 export const metadata = {
   title: "Services",
   description:
-    "Websites, AI assistants, and growth marketing for US small businesses. Fixed prices from $2,500, agreed in writing before we start.",
+    "Websites, AI assistants, and growth marketing for US small businesses. Fixed prices from $1,500, agreed in writing before we start.",
 };
 
 export default function ServicesPage() {

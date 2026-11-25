@@ -90,7 +90,7 @@ const organizationJsonLd = {
       url: "https://gozepra.tech",
       email: "info@gozepra.tech",
       telephone: "+1-302-469-4003",
-      priceRange: "$2,500 - $25,000+",
+      priceRange: "$1,500 - $18,000+",
       areaServed: {
         "@type": "Country",
         name: "United States",

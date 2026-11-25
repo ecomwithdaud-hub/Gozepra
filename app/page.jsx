@@ -150,7 +150,7 @@ const faqs = [
   {
     question: "How much does a small business website cost?",
     answer:
-      "Launch starts at $2,500 for up to 5 pages. Most sites with an AI assistant land in Growth, $5,000 to $12,000. Your quote is fixed in writing.",
+      "Launch starts at $1,500 for up to 5 pages. Most sites with an AI assistant land in Growth, $3,000 to $8,000. Your quote is fixed in writing.",
   },
   {
     question: "How long until my website is live?",
@@ -232,7 +232,7 @@ export default function HomePage() {
                 websites
               </span>
               <span>
-                <span className="font-semibold text-[#111111]">$2,500</span> fixed
+                <span className="font-semibold text-[#111111]">$1,500</span> fixed
                 price to start
               </span>
               <span>
@@ -654,7 +654,7 @@ export default function HomePage() {
                 ))}
             </div>
             <p className="mt-8 text-center text-[15px] text-[#55524B]">
-              Enterprise, $25,000+, scoped per project for multi-location and
+              Enterprise, $18,000+, scoped per project for multi-location and
               multi-market businesses.{" "}
               <Link href="/pricing" className="font-semibold text-[#0066FF]">
                 See all pricing

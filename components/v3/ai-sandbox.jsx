@@ -109,7 +109,7 @@ const niches = [
       {
         question: "What does it cost?",
         answer:
-          "Launch starts at $2,500, fixed in writing. Your exact quote comes after the free call.",
+          "Launch starts at $1,500, fixed in writing. Your exact quote comes after the free call.",
       },
       {
         question: "Do you sign NDAs?",
