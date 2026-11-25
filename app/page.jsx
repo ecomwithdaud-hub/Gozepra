@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
+import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
 import { FinalCta } from "@/components/v3/shared";
 import { siteMeta, usaClientDemoWebsites } from "@/lib/site";
@@ -650,6 +651,20 @@ export default function HomePage() {
               View All 24 Live Builds
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6b. Interactive AI sandbox */}
+      <section className="section border-t border-[#E2E8F0]">
+        <div className="wrap">
+          <h2 className="h-section max-w-2xl">Test the AI assistant.</h2>
+          <p className="body-copy mt-4 max-w-xl">
+            Pick a business type, tap a customer question, and watch the
+            assistant answer and book.
+          </p>
+          <div className="mt-12">
+            <AiSandbox />
           </div>
         </div>
       </section>
