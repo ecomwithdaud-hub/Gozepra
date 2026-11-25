@@ -1,12 +1,18 @@
-import { Inter } from "next/font/google";
+import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { SiteShell } from "@/components/layout/site-shell";
 import { siteMeta } from "@/lib/site";
 
 import "./globals.css";
 
-const sans = Inter({
+const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -102,7 +108,7 @@ const organizationJsonLd = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en-US" className="scroll-smooth">
-      <body className={`${sans.variable} font-sans`}>
+      <body className={`${sans.variable} ${mono.variable} font-sans`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
