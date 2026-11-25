@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 
 import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
@@ -381,15 +381,50 @@ export default function HomePage() {
                 className="card group block lg:col-span-2"
               >
                 <div className="grid gap-6 sm:grid-cols-2 sm:items-center">
-                  <div className="overflow-hidden rounded-2xl border border-zinc-200/80">
-                    <Image
-                      src="/demos/popshop-desktop.png"
-                      alt="PopShop Collective online store screenshot"
-                      width={1440}
-                      height={900}
-                      loading="lazy"
-                      className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
+                  <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white">
+                    <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-3">
+                      <span className="text-sm font-semibold text-[#111111]">
+                        PopShop Collective
+                      </span>
+                      <span className="shrink-0 rounded-full bg-[#F6F3EE] px-2.5 py-1 text-xs font-semibold text-[#55524B]">
+                        Cart (2)
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3 p-4">
+                      <div>
+                        <div className="h-16 rounded-xl bg-[#EDEAE3]" />
+                        <p className="mt-2 text-sm font-semibold text-[#111111]">
+                          Linen Shirt
+                        </p>
+                        <p className="text-xs text-[#55524B]">$48.00</p>
+                      </div>
+                      <div>
+                        <div className="h-16 rounded-xl bg-[#0066FF]/10" />
+                        <p className="mt-2 text-sm font-semibold text-[#111111]">
+                          Canvas Tote
+                        </p>
+                        <p className="text-xs text-[#55524B]">$32.00</p>
+                      </div>
+                      <div>
+                        <div className="h-16 rounded-xl bg-[#F6F3EE]" />
+                        <p className="mt-2 text-sm font-semibold text-[#111111]">
+                          Ceramic Mug
+                        </p>
+                        <p className="text-xs text-[#55524B]">$18.00</p>
+                      </div>
+                      <div>
+                        <div className="h-16 rounded-xl bg-[#EDEAE3]" />
+                        <p className="mt-2 text-sm font-semibold text-[#111111]">
+                          Wool Scarf
+                        </p>
+                        <p className="text-xs text-[#55524B]">$56.00</p>
+                      </div>
+                    </div>
+                    <div className="px-4 pb-4">
+                      <span className="block rounded-full bg-[#0066FF] py-2.5 text-center text-sm font-semibold text-white">
+                        Checkout, $80.00
+                      </span>
+                    </div>
                   </div>
                   <div>
                     <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
@@ -410,15 +445,26 @@ export default function HomePage() {
               </Link>
 
               <Link href="/services/ai-agents-bots" className="card group block">
-                <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-2xl border border-zinc-200/80">
-                  <Image
-                    src="/demos/easeaway-mobile.png"
-                    alt="EaseAway massage booking website on a phone"
-                    width={390}
-                    height={844}
-                    loading="lazy"
-                    className="aspect-[390/560] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
+                <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-[#F6F3EE]">
+                  <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 bg-white px-4 py-3">
+                    <span className="text-sm font-semibold text-[#111111]">
+                      AI Assistant
+                    </span>
+                    <span className="shrink-0 rounded-full bg-[#0066FF]/10 px-2.5 py-1 text-xs font-semibold text-[#0066FF]">
+                      Online
+                    </span>
+                  </div>
+                  <div className="space-y-2.5 p-4">
+                    <p className="ml-auto w-fit max-w-[90%] rounded-2xl rounded-br-md bg-white px-3.5 py-2.5 text-sm leading-relaxed text-[#111111] shadow-sm">
+                      Can I book a haircut for Saturday at 11 AM?
+                    </p>
+                    <p className="w-fit max-w-[90%] rounded-2xl rounded-bl-md bg-[#0066FF] px-3.5 py-2.5 text-sm leading-relaxed text-white">
+                      Saturday 11 AM is open. Booked for you, see you then.
+                    </p>
+                    <p className="w-fit rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#0066FF] shadow-sm">
+                      Booking confirmed, added to the calendar
+                    </p>
+                  </div>
                 </div>
                 <h3 className="mt-6 text-[22px] font-semibold text-[#111111]">
                   AI Agents & Automation
@@ -437,15 +483,44 @@ export default function HomePage() {
                 className="card group block lg:col-span-2"
               >
                 <div className="grid gap-6 sm:grid-cols-2 sm:items-center">
-                  <div className="overflow-hidden rounded-2xl border border-zinc-200/80">
-                    <Image
-                      src="/demos/glamcraft-desktop.png"
-                      alt="GlamCraft Artistry website screenshot"
-                      width={1440}
-                      height={900}
-                      loading="lazy"
-                      className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
+                  <div className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white">
+                    <div className="flex items-center gap-2.5 border-b border-zinc-200/80 px-4 py-3">
+                      <Search className="h-4 w-4 shrink-0 text-[#55524B]" />
+                      <span className="text-sm text-[#55524B]">
+                        barbershops near me
+                      </span>
+                    </div>
+                    <div className="space-y-2.5 p-4">
+                      <div className="rounded-xl border-2 border-[#0066FF] bg-[#0066FF]/5 p-3.5">
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="text-sm font-semibold text-[#111111]">
+                            1. SharpLine Barbershop
+                          </p>
+                          <span className="shrink-0 rounded-full bg-[#0066FF] px-2 py-0.5 text-xs font-bold text-white">
+                            #1
+                          </span>
+                        </div>
+                        <p className="mt-1 text-xs leading-relaxed text-[#55524B]">
+                          4.9 stars, 212 reviews, open now, 0.3 mi
+                        </p>
+                      </div>
+                      <div className="rounded-xl border border-zinc-200/80 p-3.5">
+                        <p className="text-sm font-semibold text-[#111111]">
+                          2. City Cuts
+                        </p>
+                        <p className="mt-1 text-xs leading-relaxed text-[#55524B]">
+                          4.6 stars, 148 reviews, 0.8 mi
+                        </p>
+                      </div>
+                      <div className="rounded-xl border border-zinc-200/80 p-3.5">
+                        <p className="text-sm font-semibold text-[#111111]">
+                          3. Main Street Barbers
+                        </p>
+                        <p className="mt-1 text-xs leading-relaxed text-[#55524B]">
+                          4.5 stars, 96 reviews, 1.2 mi
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   <div>
                     <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
