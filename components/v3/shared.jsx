@@ -14,19 +14,19 @@ export function PageHero({ eyebrow, title, intro }) {
 
 export function FinalCta() {
   return (
-    <section className="bg-[#0B0B0F] py-24 lg:py-[120px]">
+    <section className="bg-[#0B0B0F] py-12 lg:py-14">
       <div className="wrap">
-        <div className="rounded-[24px] border border-white/10 bg-white/[0.04] px-6 py-16 text-center sm:px-12">
+        <div className="rounded-[24px] border border-white/10 bg-white/[0.04] px-6 py-9 text-center sm:px-10 sm:py-10">
           <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#7FB3FF]">
             06 // Start
           </p>
-          <h2 className="mx-auto mt-4 max-w-xl text-4xl font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-5xl">
+          <h2 className="mx-auto mt-3 max-w-xl text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-4xl">
             Start with a free call.
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-base leading-[1.6] text-white/70 sm:text-lg">
+          <p className="mx-auto mt-3 max-w-md text-base leading-[1.6] text-white/70">
             Tell us about your business. We reply within 24 hours.
           </p>
-          <Link href="/contact" className="btn-primary mt-8">
+          <Link href="/contact" className="btn-primary mt-6">
             Book a Discovery Call
           </Link>
         </div>

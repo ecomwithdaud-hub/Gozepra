@@ -7,8 +7,8 @@ import { legalLinks, siteMeta, socialLinks } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="bg-[#0B0B0F] text-white">
-      <div className="wrap py-14">
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+      <div className="wrap py-9">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <Logo dark />
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
@@ -58,7 +58,7 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-5 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Zepra Tech. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             {legalLinks.map((link) => (
