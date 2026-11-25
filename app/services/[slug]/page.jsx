@@ -71,7 +71,7 @@ export default async function ServiceDetailPage({ params }) {
           <p className="body-copy mt-5 max-w-2xl">{service.fullDescription}</p>
           <div className="mt-8">
             <Link href="/contact" className="btn-primary">
-              Book a free consultation
+              Book a Discovery Call
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

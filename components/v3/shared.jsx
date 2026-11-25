@@ -27,7 +27,7 @@ export function FinalCta() {
             Tell us about your business. We reply within 24 hours.
           </p>
           <Link href="/contact" className="btn-primary mt-8">
-            Book a free consultation
+            Book a Discovery Call
           </Link>
         </div>
       </div>

@@ -169,7 +169,7 @@ export function SiteHeader() {
             href="/contact"
             className="hidden rounded-full bg-[#0066FF] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0052CC] sm:inline-flex"
           >
-            Book a free consultation
+            Book a Discovery Call
           </Link>
           <button
             type="button"
@@ -227,7 +227,7 @@ export function SiteHeader() {
               onClick={() => setIsOpen(false)}
               className="mt-2 rounded-full bg-[#0066FF] px-5 py-3 text-center text-base font-semibold text-white"
             >
-              Book a free consultation
+              Book a Discovery Call
             </Link>
           </div>
         </nav>

@@ -46,7 +46,7 @@ export function Logo({ className = "", textClassName = "", dark = false }) {
             dark ? "text-slate-400" : "text-[#55524B]",
           )}
         >
-          Digital agency
+          Digital Agency
         </div>
       </div>
     </div>

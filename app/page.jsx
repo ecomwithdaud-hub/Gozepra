@@ -223,8 +223,8 @@ export default function HomePage() {
               </Link>
             </div>
             <p className="mt-6 text-sm text-[#55524B]">
-              {siteMeta.tagline} US office in Middletown, Delaware. Engineering
-              team in Lahore.
+              {siteMeta.tagline} Delaware, USA · Engineering Studio in Lahore ·
+              Fixed-Price Delivery.
             </p>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-6 text-[15px] text-[#55524B]">
               <span>
@@ -373,7 +373,7 @@ export default function HomePage() {
           <FadeUp>
             <h2 className="h-section">What we do</h2>
             <p className="body-copy mt-4 max-w-xl">
-              Three services. One team. One fixed price.
+              Core systems. One accountable team.
             </p>
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               <Link
