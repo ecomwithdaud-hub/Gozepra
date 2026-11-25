@@ -121,13 +121,6 @@ const steps = [
   },
 ];
 
-const results = [
-  { value: "24", label: "live demo websites" },
-  { value: "$2,500", label: "fixed price to start" },
-  { value: "2-3 weeks", label: "from call to launch" },
-  { value: "24 hours", label: "reply time" },
-];
-
 const faqs = [
   {
     question: "How much does a small business website cost?",
@@ -315,10 +308,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <p className="mt-4 text-center text-[13px] text-[#55524B]">
-              Illustrative example of a website and AI assistant we build. Not
-              a real client result.
-            </p>
           </div>
 
           {/* Trust bar */}
@@ -412,9 +401,6 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <p className="mt-6 text-[13px] text-[#55524B]">
-                Illustrative example of typical agency problems.
-              </p>
             </div>
             <div className="rounded-[24px] border border-[#0066FF]/25 bg-white p-7 shadow-[0_24px_64px_-32px_rgba(17,17,17,0.25)] sm:p-8">
               <p className="eyebrow">After: the Zepra system</p>
@@ -452,9 +438,6 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <p className="mt-6 text-[13px] text-[#55524B]">
-                Illustrative example of a Zepra build, not a client result.
-              </p>
             </div>
           </div>
         </div>
@@ -593,7 +576,7 @@ export default function HomePage() {
       {/* 6. Featured live builds */}
       <section className="section border-t border-[#E2E8F0]">
         <div className="wrap">
-          <h2 className="h-section max-w-2xl">Real software, shipped.</h2>
+          <h2 className="h-section max-w-2xl">Built to inspect. Ready to launch.</h2>
           <p className="body-copy mt-4 max-w-xl">
             Six featured builds from our 24 live demo websites. Open any of
             them and use it like a customer would.
@@ -686,16 +669,6 @@ export default function HomePage() {
             No hourly billing. No surprise invoices. The price is agreed in
             writing before we start.
           </p>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {results.map((result) => (
-              <div key={result.label} className="border-t border-[#E2E8F0] pt-6">
-                <p className="text-4xl font-semibold tracking-tight text-[#111111]">
-                  {result.value}
-                </p>
-                <p className="mt-2 text-[15px] text-[#55524B]">{result.label}</p>
-              </div>
-            ))}
-          </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {pricingTiers
               .filter((tier) => tier.name !== "Enterprise")

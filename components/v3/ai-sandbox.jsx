@@ -177,10 +177,6 @@ export function AiSandbox() {
           </div>
         </div>
       </div>
-
-      <p className="border-t border-[#E2E8F0] px-5 py-3.5 text-[13px] text-[#55524B] sm:px-6">
-        This is a scripted demo of a booking flow, not a live AI conversation.
-      </p>
     </div>
   );
 }
