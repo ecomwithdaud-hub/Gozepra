@@ -1,14 +1,13 @@
-import { ArrowUpRight } from "lucide-react";
-
 import { FinalCta, PageHero } from "@/components/v3/shared";
-import { usaClientDemoWebsites } from "@/lib/site";
+import { PortfolioGrid } from "@/components/v3/portfolio-grid";
+import { usaClientDemoWebsites, usaDemoCategories } from "@/lib/site";
 import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/portfolio" },
-  title: "Work: 24 Live Demo Websites for US Business",
+  title: "Work | Websites, Apps & AI for US Small Business",
   description:
-    "24 live demo websites built by Zepra Tech for US small businesses: plumbers, roofers, electricians, HVAC, auto, health, food, and more.",
+    "24 working demos built for US small businesses: home services, clinics, auto, beauty, restaurants, retail, and services. Open any demo and try it.",
 };
 
 // Verified live on 25 Nov 2026. These four demo links return 404, so they
@@ -21,70 +20,50 @@ const OFFLINE_DEMOS = new Set([
 ]);
 
 export default function PortfolioPage() {
-  const liveDemos = usaClientDemoWebsites.filter((demo) => !OFFLINE_DEMOS.has(demo.href));
-  const offlineDemos = usaClientDemoWebsites.filter((demo) => OFFLINE_DEMOS.has(demo.href));
+  const liveDemos = usaClientDemoWebsites.filter(
+    (demo) => !OFFLINE_DEMOS.has(demo.href),
+  );
+  const offlineDemos = usaClientDemoWebsites.filter((demo) =>
+    OFFLINE_DEMOS.has(demo.href),
+  );
+  // PopShop leads: the brightest, most complete demo.
+  const ordered = [
+    ...liveDemos.filter((demo) => demo.id === 19),
+    ...liveDemos.filter((demo) => demo.id !== 19),
+  ];
 
   return (
     <>
       <BreadcrumbsJsonLd items={[{ name: "Work", href: "/portfolio" }]} />
       <PageHero
         eyebrow="Work"
-        title="Live demo websites."
-        intro="24 live demo websites we built to show our work. Open any of them and use it like a customer would."
+        title="Open them. Try them. Ask us to rebuild yours."
+        intro="Every demo below is live and working. These are sample builds for US industries, not our clients. Click any one, tap the buttons, and see how fast a local business site should feel."
       />
 
       <section className="section pt-12">
         <div className="wrap">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {liveDemos.map((demo) => (
-              <a
-                key={demo.id}
-                href={demo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card group block"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
-                  Live demo
-                </p>
-                <h2 className="mt-3 text-[22px] font-semibold text-[#111111]">
-                  {demo.name}
-                </h2>
-                <p className="mt-1 text-sm text-[#55524B]">
-                  {demo.trade} | {demo.city}
-                </p>
-                <p className="mt-3 text-base leading-relaxed text-[#55524B]">
-                  {demo.headline}
-                </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]">
-                  Open live demo
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </span>
-              </a>
-            ))}
-          </div>
+          <PortfolioGrid demos={ordered} categories={usaDemoCategories} />
 
-          {offlineDemos.length > 0 ? (
-            <div className="mt-12">
-              <h2 className="text-xl font-semibold text-[#111111]">
-                Demo websites currently offline
-              </h2>
-              <p className="mt-2 text-[15px] text-[#55524B]">
-                These demo websites are being rebuilt and have no live link
-                right now.
-              </p>
-              <ul className="mt-5 flex flex-wrap gap-3">
-                {offlineDemos.map((demo) => (
-                  <li
-                    key={demo.id}
-                    className="rounded-full border border-[#E2E8F0] bg-white px-4 py-2 text-sm font-medium text-[#55524B]"
-                  >
-                    {demo.name} | {demo.city}
-                  </li>
-                ))}
-              </ul>
+          <div className="mt-16">
+            <h2 className="text-2xl font-semibold text-[#111111]">
+              Demos being rebuilt
+            </h2>
+            <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-[#55524B]">
+              These four are offline while we rebuild them. No dead links
+              here.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {offlineDemos.map((demo) => (
+                <span
+                  key={demo.id}
+                  className="rounded-full border border-[#E2E8F0] bg-white px-4 py-2 text-sm text-[#55524B]"
+                >
+                  {demo.name} — Demo offline
+                </span>
+              ))}
             </div>
-          ) : null}
+          </div>
         </div>
       </section>
 
