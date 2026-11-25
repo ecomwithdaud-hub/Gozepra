@@ -4,7 +4,8 @@ import { FinalCta, PageHero } from "@/components/v3/shared";
 import { usaClientDemoWebsites } from "@/lib/site";
 
 export const metadata = {
-  title: "Work | Live Demo Websites",
+  alternates: { canonical: "/portfolio" },
+  title: "Work: 24 Live Demo Websites for US Business",
   description:
     "24 live demo websites built by Zepra Tech for US small businesses: plumbers, roofers, electricians, HVAC, auto, health, food, and more.",
 };

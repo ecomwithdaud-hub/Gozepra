@@ -1,7 +1,8 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
 
 export const metadata = {
-  title: "Cold Outreach",
+  alternates: { canonical: "/cold-outreaching" },
+  title: "Cold Outreach: Email, SMS and Calls for US B2B",
   description:
     "Email, SMS, and calling campaigns to verified US businesses. Built to book calls, not just send messages.",
 };

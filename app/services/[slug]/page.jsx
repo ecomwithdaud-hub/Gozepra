@@ -17,6 +17,12 @@ export async function generateMetadata({ params }) {
     ? {
         title: service.title,
         description: service.shortDescription,
+        alternates: {
+          canonical:
+            service.slug === "cold-outreach"
+              ? "/cold-outreaching"
+              : `/services/${service.slug}`,
+        },
       }
     : {};
 }

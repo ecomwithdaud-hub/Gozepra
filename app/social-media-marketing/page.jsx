@@ -1,7 +1,8 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
 
 export const metadata = {
-  title: "Social Media Marketing",
+  alternates: { canonical: "/social-media-marketing" },
+  title: "Social Media Marketing for US Local Business",
   description:
     "Local SEO, Google Maps, and Meta ads that put your business in front of nearby buyers.",
 };

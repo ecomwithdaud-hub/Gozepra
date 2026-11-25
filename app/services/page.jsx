@@ -6,7 +6,8 @@ import { PricingGrid } from "@/components/v3/pricing";
 import { services } from "@/lib/site";
 
 export const metadata = {
-  title: "Services",
+  alternates: { canonical: "/services" },
+  title: "Services: Web, AI and Marketing for US Business",
   description:
     "Websites, AI assistants, and growth marketing for US small businesses. Fixed prices from $1,500, agreed in writing before we start.",
 };

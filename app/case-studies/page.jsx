@@ -5,7 +5,8 @@ import { FinalCta, PageHero } from "@/components/v3/shared";
 import { usaClientDemoWebsites } from "@/lib/site";
 
 export const metadata = {
-  title: "Case Studies | Selected Work",
+  alternates: { canonical: "/case-studies" },
+  title: "Case Studies: Live Demos for US Small Business",
   description:
     "Selected work from Zepra Tech, shown through live demo websites you can open and use.",
 };

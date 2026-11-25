@@ -5,7 +5,8 @@ import { FinalCta, PageHero } from "@/components/v3/shared";
 import { usaClientDemoWebsites } from "@/lib/site";
 
 export const metadata = {
-  title: "Website Development",
+  alternates: { canonical: "/website-development" },
+  title: "Website Development for US Small Business",
   description:
     "Custom websites and online stores for US small businesses. Mobile-first, fast, and built to take calls and bookings. Fixed prices from $1,500.",
 };

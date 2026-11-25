@@ -41,17 +41,34 @@ export const metadata = {
     siteName: siteMeta.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Zepra Tech, a US-based digital agency. Where ideas turn into impact.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteMeta.title,
     description: siteMeta.description,
+    images: ["/og-image.png"],
   },
 };
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://gozepra.tech/#website",
+      url: "https://gozepra.tech",
+      name: "Zepra Tech",
+      inLanguage: "en-US",
+      publisher: { "@id": "https://gozepra.tech/#organization" },
+    },
     {
       "@type": "Organization",
       "@id": "https://gozepra.tech/#organization",

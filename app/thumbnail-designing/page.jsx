@@ -1,7 +1,8 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
 
 export const metadata = {
-  title: "Thumbnail Design",
+  alternates: { canonical: "/thumbnail-designing" },
+  title: "YouTube Thumbnail Design for Creators",
   description:
     "Bold YouTube thumbnails built around your title and your audience.",
 };

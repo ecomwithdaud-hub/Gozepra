@@ -1,6 +1,7 @@
 import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata = {
+  alternates: { canonical: "/terms-of-use" },
   title: "Terms of Use",
   description: "The terms that apply when you use the Zepra Tech website and services.",
 };

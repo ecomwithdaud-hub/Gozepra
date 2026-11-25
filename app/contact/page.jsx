@@ -5,7 +5,8 @@ import { PageHero } from "@/components/v3/shared";
 import { siteMeta } from "@/lib/site";
 
 export const metadata = {
-  title: "Contact",
+  alternates: { canonical: "/contact" },
+  title: "Contact Zepra Tech | Free 15-Minute Call",
   description:
     "Start a conversation with Zepra Tech. Tell us about your business and what the website must do. We reply within 24 hours.",
 };

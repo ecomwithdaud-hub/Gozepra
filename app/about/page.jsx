@@ -1,6 +1,7 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
 
 export const metadata = {
+  alternates: { canonical: "/about" },
   title: "About Zepra Tech",
   description:
     "Zepra Tech is a US-based digital agency founded in 2025. A small team building websites, AI assistants, and growth marketing for US small businesses.",
