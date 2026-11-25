@@ -13,6 +13,8 @@ import { TeamPhoto } from "@/components/v3/team-photo";
 import { TechStrip } from "@/components/v3/tech-strip";
 import { VideoStrip } from "@/components/v3/video-strip";
 import {
+  SHOW_REVIEWS,
+  SHOW_VIDEOS,
   pricingTiers,
   siteMeta,
   teamMembers,
@@ -573,7 +575,7 @@ export default function HomePage() {
         <div className="wrap">
           <FadeUp>
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#7FB3FF]">
-              02 // AI Lab
+              01 // AI Lab
             </p>
             <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-5xl">
               Test the AI assistant.
@@ -675,61 +677,38 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-12 rounded-[24px] border border-zinc-200/80 bg-white p-7 sm:p-8">
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
-                What clients say
-              </p>
-              <h3 className="mt-3 text-[22px] font-semibold text-[#111111]">
-                Reviews from recent launches.
-              </h3>
-              <p className="mt-2 max-w-xl text-base leading-relaxed text-[#55524B]">
-                We ask every client for a short review after launch. New reviews
-                are added here as they come in.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 border-t border-[#E2E8F0] pt-10 sm:grid-cols-3">
-              <div>
-                <p className="text-lg font-semibold text-[#111111]">
-                  100% code ownership
+            {SHOW_REVIEWS && (
+              <div className="mt-12 rounded-[24px] border border-zinc-200/80 bg-white p-7 sm:p-8">
+                <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
+                  What clients say
                 </p>
-                <p className="mt-1.5 text-[15px] leading-relaxed text-[#55524B]">
-                  Your code, your domain, your accounts. No lock in.
+                <h3 className="mt-3 text-[22px] font-semibold text-[#111111]">
+                  Reviews from recent launches.
+                </h3>
+                <p className="mt-2 max-w-xl text-base leading-relaxed text-[#55524B]">
+                  We ask every client for a short review after launch. New reviews
+                  are added here as they come in.
                 </p>
               </div>
-              <div>
-                <p className="text-lg font-semibold text-[#111111]">
-                  Fixed written quote
-                </p>
-                <p className="mt-1.5 text-[15px] leading-relaxed text-[#55524B]">
-                  The price is agreed in writing before we start.
-                </p>
-              </div>
-              <div>
-                <p className="text-lg font-semibold text-[#111111]">
-                  Direct engineer access
-                </p>
-                <p className="mt-1.5 text-[15px] leading-relaxed text-[#55524B]">
-                  You talk to the team building your site, not a sales desk.
-                </p>
-              </div>
-            </div>
+            )}
           </FadeUp>
         </div>
       </section>
 
-      {/* 7c. Video strip */}
-      <section className="section border-t border-[#E2E8F0] bg-[#FAFAFA]">
-        <div className="wrap">
-          <FadeUp>
-            <h2 className="h-section max-w-2xl">See the work in 60 seconds.</h2>
-            <p className="body-copy mt-4 max-w-xl">
-              The founder, and two walkthroughs. No sales talk.
-            </p>
-            <VideoStrip />
-          </FadeUp>
-        </div>
-      </section>
+      {/* 7c. Video strip: hidden until real videos exist (SHOW_VIDEOS) */}
+      {SHOW_VIDEOS && (
+        <section className="section border-t border-[#E2E8F0] bg-[#FAFAFA]">
+          <div className="wrap">
+            <FadeUp>
+              <h2 className="h-section max-w-2xl">See the work in 60 seconds.</h2>
+              <p className="body-copy mt-4 max-w-xl">
+                The founder, and two walkthroughs. No sales talk.
+              </p>
+              <VideoStrip />
+            </FadeUp>
+          </div>
+        </section>
+      )}
 
       {/* 8. FAQ */}
       <section className="section border-t border-[#E2E8F0]">
