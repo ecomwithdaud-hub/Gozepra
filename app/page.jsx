@@ -5,13 +5,36 @@ import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
 import { PricingCard } from "@/components/v3/pricing";
 import { FinalCta } from "@/components/v3/shared";
+import { TeamPhoto } from "@/components/v3/team-photo";
 import {
-  departmentSummaries,
   pricingTiers,
   siteMeta,
   teamMembers,
   usaClientDemoWebsites,
 } from "@/lib/site";
+
+const studioStandards = [
+  {
+    number: "01",
+    title: "Senior team only",
+    body: "Every project is led by senior engineers. Nothing is handed to juniors or outsourced.",
+  },
+  {
+    number: "02",
+    title: "Fixed price in writing",
+    body: "Your quote is agreed in writing before we start. The price does not move unless the scope does.",
+  },
+  {
+    number: "03",
+    title: "You own everything",
+    body: "Code, domain, accounts, and data. 100% yours, with no lock in.",
+  },
+  {
+    number: "04",
+    title: "Reply within 24 hours",
+    body: "A real answer from the team within one business day, every time.",
+  },
+];
 
 const featuredDemoIds = [1, 14, 19, 8, 17, 15];
 const featuredIndustries = {
@@ -729,39 +752,52 @@ export default function HomePage() {
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {teamMembers.map((member) => (
-              <article
-                key={member.name}
-                className="card flex flex-col"
-              >
-                <span
-                  aria-hidden="true"
-                  className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0066FF] text-xl font-bold text-white"
-                >
-                  DL
-                </span>
-                <h3 className="mt-5 text-[22px] font-semibold text-[#111111]">
-                  {member.name}
-                </h3>
-                <p className="mt-1 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
-                  {member.role}
-                </p>
-                <p className="mt-3 text-base leading-relaxed text-[#55524B]">
-                  {member.bio}
-                </p>
+              <article key={member.name} className="card flex gap-6">
+                <TeamPhoto
+                  src="/team/muhammad-daud-ali-lashari.jpg"
+                  name={member.name}
+                />
+                <div>
+                  <h3 className="text-[22px] font-semibold leading-snug text-[#111111]">
+                    {member.name}
+                  </h3>
+                  <p className="mt-1 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
+                    {member.role}
+                  </p>
+                  <p className="mt-3 text-base leading-relaxed text-[#55524B]">
+                    {member.bio}
+                  </p>
+                </div>
               </article>
             ))}
             <div className="grid gap-6 sm:grid-cols-2">
-              {departmentSummaries.map((department) => (
-                <article key={department.title} className="card">
-                  <h3 className="text-lg font-semibold text-[#111111]">
-                    {department.title}
+              {studioStandards.map((standard) => (
+                <article key={standard.number} className="card">
+                  <p className="font-mono text-sm font-semibold text-[#0066FF]">
+                    {standard.number}
+                  </p>
+                  <h3 className="mt-3 text-lg font-semibold text-[#111111]">
+                    {standard.title}
                   </h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-[#55524B]">
-                    {department.description}
+                    {standard.body}
                   </p>
                 </article>
               ))}
             </div>
+          </div>
+
+          <div className="mt-12 rounded-[24px] border border-[#E2E8F0] bg-white p-7 sm:p-8">
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
+              What clients say
+            </p>
+            <h3 className="mt-3 text-[22px] font-semibold text-[#111111]">
+              Reviews from recent launches.
+            </h3>
+            <p className="mt-2 max-w-xl text-base leading-relaxed text-[#55524B]">
+              We ask every client for a short review after launch. New reviews
+              are added here as they come in.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-6 border-t border-[#E2E8F0] pt-10 sm:grid-cols-3">
