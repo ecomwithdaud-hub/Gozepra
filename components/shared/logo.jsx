@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 
 // Original Zepra Tech logo from gozepra.tech (main branch), restored exactly.
-// The "Since 2025" compact variant was removed on purpose and must not come back.
 export function Logo({ className = "", textClassName = "", dark = false }) {
   return (
     <div className={cn("inline-flex items-center gap-3", className)}>
