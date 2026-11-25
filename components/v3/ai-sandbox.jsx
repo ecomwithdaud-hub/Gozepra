@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
@@ -107,8 +108,8 @@ export function AiSandbox() {
   const prompt = niche.prompts[selected];
 
   return (
-    <div className="overflow-hidden rounded-[24px] border border-[#E2E8F0] bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.25)]">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E2E8F0] px-5 py-4 sm:px-6">
+    <div className="overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] shadow-[0_24px_64px_-32px_rgba(0,0,0,0.8)]">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-5 py-4 sm:px-6">
         <div className="flex flex-wrap gap-2" role="tablist" aria-label="Business types">
           {niches.map((item) => (
             <button
@@ -121,27 +122,32 @@ export function AiSandbox() {
                 setSelected(0);
               }}
               className={cn(
-                "rounded-full px-4 py-2 text-sm font-semibold transition-colors",
-                activeTab === item.id
-                  ? "bg-[#0066FF] text-white"
-                  : "bg-[#F6F3EE] text-[#55524B] hover:text-[#111111]",
+                "relative rounded-full px-4 py-2 text-sm font-semibold transition-colors",
+                activeTab === item.id ? "text-white" : "text-white/60 hover:text-white",
               )}
             >
-              {item.label}
+              {activeTab === item.id ? (
+                <motion.span
+                  layoutId="sandbox-pill"
+                  className="absolute inset-0 rounded-full bg-[#0066FF]"
+                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                />
+              ) : null}
+              <span className="relative">{item.label}</span>
             </button>
           ))}
         </div>
-        <span className="rounded-full bg-[#0066FF]/10 px-3 py-1.5 text-xs font-semibold text-[#0066FF]">
-          Simulated demo
+        <span className="rounded-full bg-[#0066FF]/20 px-3 py-1.5 text-xs font-semibold text-[#7FB3FF]">
+          Interactive Preview
         </span>
       </div>
 
       <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[1fr_1.2fr]">
         <div>
-          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#55524B]">
+          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-white/50">
             {niche.business}
           </p>
-          <p className="mt-3 text-base font-semibold text-[#111111]">
+          <p className="mt-3 text-base font-semibold text-white">
             Try a sample booking flow.
           </p>
           <div className="mt-4 space-y-2.5">
@@ -153,8 +159,8 @@ export function AiSandbox() {
                 className={cn(
                   "block w-full rounded-2xl border px-4 py-3 text-left text-[15px] leading-relaxed transition-colors",
                   selected === index
-                    ? "border-[#0066FF] bg-[#0066FF]/5 font-medium text-[#111111]"
-                    : "border-[#E2E8F0] bg-white text-[#55524B] hover:border-[#0066FF]/50 hover:text-[#111111]",
+                    ? "border-[#0066FF] bg-[#0066FF]/15 font-medium text-white"
+                    : "border-white/10 bg-white/[0.03] text-white/70 hover:border-white/25 hover:text-white",
                 )}
               >
                 {item.question}
@@ -163,7 +169,7 @@ export function AiSandbox() {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-[#F6F3EE] p-5">
+        <div className="rounded-2xl bg-white/[0.05] p-5">
           <div className="space-y-3">
             <p className="ml-auto w-fit max-w-[90%] rounded-2xl rounded-br-md bg-white px-4 py-3 text-[15px] leading-relaxed text-[#111111] shadow-sm">
               {prompt.question}

@@ -14,11 +14,16 @@ export function PageHero({ eyebrow, title, intro }) {
 
 export function FinalCta() {
   return (
-    <section className="section">
+    <section className="bg-[#0B0B0F] py-24 lg:py-[120px]">
       <div className="wrap">
-        <div className="rounded-[24px] border border-[#E2E8F0] bg-white px-6 py-16 text-center sm:px-12">
-          <h2 className="h-section mx-auto max-w-xl">Start with a free call.</h2>
-          <p className="body-copy mx-auto mt-4 max-w-md">
+        <div className="rounded-[24px] border border-white/10 bg-white/[0.04] px-6 py-16 text-center sm:px-12">
+          <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#7FB3FF]">
+            03 // Start
+          </p>
+          <h2 className="mx-auto mt-4 max-w-xl text-4xl font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-5xl">
+            Start with a free call.
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-base leading-[1.6] text-white/70 sm:text-lg">
             Tell us about your business. We reply within 24 hours.
           </p>
           <Link href="/contact" className="btn-primary mt-8">
