@@ -198,7 +198,7 @@ export default function HomePage() {
       />
 
       {/* 1. Hero: 7/5 Bento split */}
-      <section className="pb-16 pt-24 sm:pt-32 lg:pb-12 lg:pt-12">
+      <section className="pb-16 pt-24 sm:pt-32 lg:pb-12 lg:pt-8">
         <div className="wrap grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="eyebrow animate-fade-up" style={{ animationDelay: "0ms" }}>
@@ -274,7 +274,7 @@ export default function HomePage() {
             className="mx-auto w-full animate-fade-up lg:col-span-5"
             style={{ animationDelay: "300ms" }}
           >
-            <div className="mx-auto w-full max-w-[300px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
+            <div className="mx-auto w-full max-w-[290px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
               <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-2.5">
                 <span className="text-[13px] font-medium text-[#55524B]">
                   PopShop Collective
