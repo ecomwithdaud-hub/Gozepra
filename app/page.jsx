@@ -57,26 +57,6 @@ const featuredDemos = featuredDemoIds
   .map((id) => usaClientDemoWebsites.find((demo) => demo.id === id))
   .filter(Boolean);
 
-const industryPills = [
-  "Home Services",
-  "Clinic & MedSpa",
-  "E-Commerce",
-  "Auto",
-  "Restaurant & Hospitality",
-  "Fitness & Coaching",
-];
-
-const logoWall = [
-  "PureFlow Plumbing",
-  "EaseAway Massage",
-  "PopShop Collective",
-  "WrenchWay Auto",
-  "GatherRound Catering",
-  "ForgeFit Training",
-  "SharpLine Barbershop",
-  "GlamCraft Artistry",
-];
-
 const steps = [
   {
     number: "01",
@@ -305,38 +285,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Live industry builds */}
-      <section id="builds" className="border-y border-[#E2E8F0] bg-[#FAFAFA] py-16 sm:py-20">
-        <div className="wrap text-center">
-          <FadeUp>
-            <h2 className="h-section">24+ Live Industry Builds</h2>
-            <p className="body-copy mx-auto mt-4 max-w-xl">
-              Test before you hire. Open any build and use it like a customer
-              would.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5">
-              {industryPills.map((pill) => (
-                <span
-                  key={pill}
-                  className="rounded-full border border-[#E2E8F0] bg-white px-4 py-2 text-sm font-medium text-[#111111]"
-                >
-                  {pill}
-                </span>
-              ))}
-            </div>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-              {logoWall.map((name) => (
-                <span
-                  key={name}
-                  className="text-lg font-semibold tracking-tight text-[#9A978F]"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
-          </FadeUp>
-        </div>
-      </section>
+      {/* 2. Tech & Integrations trust bar (nas.com style) */}
+      <TechStrip />
 
       {/* 3. Before vs After */}
       <section className="section">
@@ -542,7 +492,8 @@ export default function HomePage() {
       <section className="section border-t border-[#E2E8F0]">
         <div className="wrap">
           <FadeUp>
-            <h2 className="h-section">From first call to launch</h2>
+            <p className="eyebrow">01 // Process</p>
+            <h2 className="h-section mt-4">From first call to launch</h2>
             <p className="body-copy mt-4 max-w-xl">
               You run your business. We handle the rest.
             </p>
@@ -563,10 +514,11 @@ export default function HomePage() {
       </section>
 
       {/* 6. Featured live builds */}
-      <section className="section border-t border-[#E2E8F0] bg-[#FAFAFA]">
+      <section id="builds" className="section border-t border-[#E2E8F0] bg-[#FAFAFA]">
         <div className="wrap">
           <FadeUp>
-            <h2 className="h-section max-w-2xl">Built to inspect. Ready to launch.</h2>
+            <p className="eyebrow">02 // Portfolio</p>
+            <h2 className="h-section mt-4 max-w-2xl">Built to inspect. Ready to launch.</h2>
             <p className="body-copy mt-4 max-w-xl">
               Six of 24 live builds. Open one. Use it like a customer.
             </p>
@@ -575,14 +527,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <TechStrip />
-
       {/* 6b. Interactive AI sandbox: dark anchor section */}
       <section className="bg-[#0B0B0F] py-24 lg:py-[120px]">
         <div className="wrap">
           <FadeUp>
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#7FB3FF]">
-              01 // AI Lab
+              03 // AI Lab
             </p>
             <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-[1.1] tracking-[-0.02em] text-white sm:text-5xl">
               Test the AI assistant.
@@ -616,7 +566,8 @@ export default function HomePage() {
       <section className="section border-t border-[#E2E8F0] bg-[#FAFAFA]">
         <div className="wrap">
           <FadeUp>
-            <h2 className="h-section">Fixed prices. Fast replies.</h2>
+            <p className="eyebrow">05 // Pricing</p>
+            <h2 className="h-section mt-4">Fixed prices. Fast replies.</h2>
             <p className="body-copy mt-4 max-w-xl">
               No hourly billing. No surprises. Price in writing first.
             </p>
