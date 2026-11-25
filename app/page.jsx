@@ -4,7 +4,12 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
 import { FinalCta } from "@/components/v3/shared";
-import { siteMeta, usaClientDemoWebsites } from "@/lib/site";
+import {
+  departmentSummaries,
+  siteMeta,
+  teamMembers,
+  usaClientDemoWebsites,
+} from "@/lib/site";
 
 const featuredDemoIds = [1, 2, 3, 4, 8, 12];
 const featuredDemos = featuredDemoIds
@@ -691,6 +696,83 @@ export default function HomePage() {
             Launch from $2,500. Growth $5,000 to $12,000. Scale $12,000 to
             $25,000. Enterprise $25,000+.
           </p>
+        </div>
+      </section>
+
+      {/* 7b. Team and guarantees */}
+      <section className="section border-t border-[#E2E8F0]">
+        <div className="wrap">
+          <h2 className="h-section max-w-2xl">
+            Built by a senior team.
+          </h2>
+          <p className="body-copy mt-4 max-w-xl">
+            Not anonymous outsourcing. You talk to the people building your
+            site, led by our founder.
+          </p>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {teamMembers.map((member) => (
+              <article
+                key={member.name}
+                className="card flex flex-col"
+              >
+                <span
+                  aria-hidden="true"
+                  className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0066FF] text-xl font-bold text-white"
+                >
+                  DL
+                </span>
+                <h3 className="mt-5 text-[22px] font-semibold text-[#111111]">
+                  {member.name}
+                </h3>
+                <p className="mt-1 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
+                  {member.role}
+                </p>
+                <p className="mt-3 text-base leading-relaxed text-[#55524B]">
+                  {member.bio}
+                </p>
+              </article>
+            ))}
+            <div className="grid gap-6 sm:grid-cols-2">
+              {departmentSummaries.map((department) => (
+                <article key={department.title} className="card">
+                  <h3 className="text-lg font-semibold text-[#111111]">
+                    {department.title}
+                  </h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[#55524B]">
+                    {department.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 border-t border-[#E2E8F0] pt-10 sm:grid-cols-3">
+            <div>
+              <p className="text-lg font-semibold text-[#111111]">
+                100% code ownership
+              </p>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-[#55524B]">
+                Your code, your domain, your accounts. No lock in.
+              </p>
+            </div>
+            <div>
+              <p className="text-lg font-semibold text-[#111111]">
+                Fixed written quote
+              </p>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-[#55524B]">
+                The price is agreed in writing before we start.
+              </p>
+            </div>
+            <div>
+              <p className="text-lg font-semibold text-[#111111]">
+                Direct engineer access
+              </p>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-[#55524B]">
+                You talk to the team building your site, not a sales desk.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
