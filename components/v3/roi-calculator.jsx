@@ -18,7 +18,7 @@ export function RoiCalculator() {
       <div className="grid gap-0 lg:grid-cols-[1.2fr_1fr]">
         <div className="p-7 sm:p-9">
           <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
-            01 // Missed lead calculator
+            02 // ROI Calculator
           </p>
           <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-[#111111]">
             What are missed calls costing you?

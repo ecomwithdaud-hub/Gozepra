@@ -31,7 +31,7 @@ export function VideoStrip() {
               <Play className="h-6 w-6 fill-white text-white" />
             </span>
             <span className="absolute bottom-3 right-3 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white">
-              0:60
+              1:00
             </span>
           </div>
           <div className="p-6">
