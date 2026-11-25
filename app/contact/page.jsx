@@ -48,6 +48,29 @@ export default async function ContactPage({ searchParams }) {
           <div className="grid gap-10 lg:grid-cols-[1fr_340px] lg:items-start">
             <ContactForm initialBudget={initialBudget} />
             <aside className="space-y-6">
+              <div className="rounded-[24px] border border-[#0066FF]/25 bg-white p-7">
+                <h2 className="text-xl font-semibold text-[#111111]">Book a 15-minute call</h2>
+                <p className="mt-2 text-[15px] leading-relaxed text-[#55524B]">
+                  Pick the fastest way to reach us. No calendar link yet, so
+                  call or WhatsApp and we confirm a time within 24 hours.
+                </p>
+                <div className="mt-5 grid gap-3">
+                  <a
+                    href="tel:+13024694003"
+                    className="inline-flex items-center justify-center rounded-full bg-[#0066FF] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0052CC]"
+                  >
+                    Book 15-Min Call
+                  </a>
+                  <a
+                    href="https://wa.me/13024694003"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border border-[#E2E8F0] bg-white px-5 py-3 text-sm font-semibold text-[#111111] transition-colors hover:border-[#0066FF] hover:text-[#0066FF]"
+                  >
+                    WhatsApp us
+                  </a>
+                </div>
+              </div>
               <div className="rounded-[24px] border border-[#E2E8F0] bg-white p-7">
                 <h2 className="text-xl font-semibold text-[#111111]">Reach us directly</h2>
                 <div className="mt-5 space-y-4 text-[15px] leading-relaxed">
