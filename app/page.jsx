@@ -3,14 +3,12 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { Faq } from "@/components/v3/faq";
 import { FinalCta } from "@/components/v3/shared";
-import { siteMeta } from "@/lib/site";
+import { siteMeta, usaClientDemoWebsites } from "@/lib/site";
 
-const proofDemo = {
-  name: "PureFlow Plumbing Co.",
-  trade: "Plumber",
-  city: "Denver, CO",
-  href: "https://pureflow-plumbing-demo.vercel.app/",
-};
+const featuredDemoIds = [1, 2, 3, 4, 8, 12];
+const featuredDemos = featuredDemoIds
+  .map((id) => usaClientDemoWebsites.find((demo) => demo.id === id))
+  .filter(Boolean);
 
 const industryPills = ["Home Services", "Clinics", "E-Commerce", "Auto", "SaaS"];
   "PureFlow Plumbing",
@@ -105,8 +103,8 @@ function BrowserFrame({ href, title, children }) {
           <span className="h-3 w-3 rounded-full bg-[#E2E8F0]" />
           <span className="h-3 w-3 rounded-full bg-[#E2E8F0]" />
         </span>
-        <span className="min-w-0 flex-1 truncate rounded-full bg-[#F6F3EE] px-4 py-1.5 text-center text-[13px] text-[#55524B]">
-          {href.replace("https://", "")}
+        <span className="min-w-0 flex-1 truncate text-center text-[13px] font-medium text-[#55524B]">
+          {title}
         </span>
         <a
           href={href}
@@ -114,12 +112,11 @@ function BrowserFrame({ href, title, children }) {
           rel="noopener noreferrer"
           className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-[#0066FF]"
         >
-          Open live demo
+          Launch Live Demo
           <ArrowUpRight className="h-4 w-4" />
         </a>
       </div>
       {children}
-      <p className="sr-only">{title}</p>
     </div>
   );
 }
@@ -513,36 +510,76 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Proof: one large live demo */}
+      {/* 6. Featured live builds */}
       <section className="section border-t border-[#E2E8F0]">
         <div className="wrap">
-          <h2 className="h-section max-w-2xl">Look at real websites before you decide</h2>
+          <h2 className="h-section max-w-2xl">Real software, shipped.</h2>
           <p className="body-copy mt-4 max-w-xl">
-            One of 24 live demo websites we built. Open it and use it like a
-            customer would.
+            Six featured builds from our 24 live demo websites. Open any of
+            them and use it like a customer would.
           </p>
-          <div className="mt-12">
-            <BrowserFrame href={proofDemo.href} title={proofDemo.name}>
-              <iframe
-                src={proofDemo.href}
-                title={`${proofDemo.name} live demo website`}
-                loading="lazy"
-                className="h-[420px] w-full border-0 bg-white sm:h-[560px]"
-              />
-            </BrowserFrame>
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-              <p className="text-[15px] text-[#55524B]">
-                <span className="font-semibold text-[#111111]">Live demo:</span>{" "}
-                {proofDemo.name}, {proofDemo.trade}, {proofDemo.city}
-              </p>
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#0066FF]"
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featuredDemos.map((demo) => (
+              <article
+                key={demo.id}
+                className="overflow-hidden rounded-[24px] border border-[#E2E8F0] bg-white transition-shadow hover:shadow-[0_16px_40px_-20px_rgba(17,17,17,0.2)]"
               >
-                See all 24 live demos
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+                <div className="border-b border-[#E2E8F0]">
+                  <div className="flex items-center gap-3 px-4 py-3">
+                    <span className="flex gap-1.5" aria-hidden="true">
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#E2E8F0]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#E2E8F0]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#E2E8F0]" />
+                    </span>
+                    <span className="min-w-0 flex-1 truncate text-[13px] font-medium text-[#55524B]">
+                      {demo.name}
+                    </span>
+                  </div>
+                  <iframe
+                    src={demo.href}
+                    title={`${demo.name} live demo website`}
+                    loading="lazy"
+                    className="h-[240px] w-full border-0 bg-white"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
+                    {demo.group}
+                  </p>
+                  <h3 className="mt-2.5 text-[20px] font-semibold text-[#111111]">
+                    {demo.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-[#55524B]">
+                    {demo.trade} | {demo.city}
+                  </p>
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {demo.highlights.slice(0, 2).map((feature) => (
+                      <li
+                        key={feature}
+                        className="rounded-full bg-[#F6F3EE] px-3 py-1.5 text-xs font-medium text-[#55524B]"
+                      >
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={demo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]"
+                  >
+                    Launch Live Demo
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link href="/portfolio" className="btn-primary">
+              View All 24 Live Builds
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>

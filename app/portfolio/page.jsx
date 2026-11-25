@@ -27,7 +27,7 @@ export default function PortfolioPage() {
       <PageHero
         eyebrow="Work"
         title="Live demo websites."
-        intro="24 live demo websites we built to show our work. Open any of them and use it like a customer would. These are examples, not our clients."
+        intro="24 live demo websites we built to show our work. Open any of them and use it like a customer would."
       />
 
       <section className="section pt-12">
