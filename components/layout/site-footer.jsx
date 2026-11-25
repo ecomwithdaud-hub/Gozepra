@@ -49,6 +49,9 @@ export function SiteFooter() {
             <Link href="/about" className="font-medium text-[#111111] hover:text-[#0066FF]">
               About
             </Link>
+            <Link href="/pricing" className="font-medium text-[#111111] hover:text-[#0066FF]">
+              Pricing
+            </Link>
             <Link href="/contact" className="font-medium text-[#111111] hover:text-[#0066FF]">
               Contact
             </Link>

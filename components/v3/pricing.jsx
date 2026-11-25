@@ -36,10 +36,10 @@ export function PricingCard({ tier }) {
       </ul>
       <div className="mt-auto pt-6">
         <Link
-          href="/contact"
+          href={`/contact?plan=${tier.plan}`}
           className="inline-flex w-full items-center justify-center rounded-full bg-[#0066FF] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0052CC]"
         >
-          Book a free consultation
+          {tier.cta}
         </Link>
       </div>
     </article>

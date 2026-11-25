@@ -10,7 +10,26 @@ export const metadata = {
     "Start a conversation with Zepra Tech. Tell us about your business and what the website must do. We reply within 24 hours.",
 };
 
-export default function ContactPage() {
+const planBudgets = {
+  launch: "$2,500 - $5,000 (Small Business Launch)",
+  growth: "$5,000 - $12,000 (Growth + AI)",
+  scale: "$12,000 - $25,000 (Custom Platform)",
+  enterprise: "$25,000+ (Enterprise)",
+};
+
+const planLabels = {
+  launch: "Launch",
+  growth: "Growth",
+  scale: "Scale",
+  enterprise: "Enterprise",
+};
+
+export default async function ContactPage({ searchParams }) {
+  const params = await searchParams;
+  const plan = typeof params?.plan === "string" ? params.plan : "";
+  const initialBudget = planBudgets[plan] ?? "";
+  const planLabel = planLabels[plan] ?? "";
+
   return (
     <>
       <PageHero
@@ -21,8 +40,13 @@ export default function ContactPage() {
 
       <section className="section pt-12">
         <div className="wrap">
+          {planLabel ? (
+            <p className="mb-6 inline-flex rounded-full bg-[#0066FF]/10 px-4 py-2 text-sm font-semibold text-[#0066FF]">
+              {planLabel} plan selected, budget pre-filled below.
+            </p>
+          ) : null}
           <div className="grid gap-10 lg:grid-cols-[1fr_340px] lg:items-start">
-            <ContactForm />
+            <ContactForm initialBudget={initialBudget} />
             <aside className="space-y-6">
               <div className="rounded-[24px] border border-[#E2E8F0] bg-white p-7">
                 <h2 className="text-xl font-semibold text-[#111111]">Reach us directly</h2>

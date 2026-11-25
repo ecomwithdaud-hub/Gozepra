@@ -23,8 +23,8 @@ const initialState = {
 const fieldClass =
   "rounded-2xl border border-[#E2E8F0] bg-white p-3.5 text-[#111111] placeholder:text-[#9A978F] focus:border-[#0066FF] focus:outline-none focus:ring-2 focus:ring-[#0066FF]/20";
 
-export function ContactForm() {
-  const [formData, setFormData] = useState(initialState);
+export function ContactForm({ initialBudget = "" }) {
+  const [formData, setFormData] = useState({ ...initialState, budget: initialBudget });
   const [errors, setErrors] = useState({});
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
