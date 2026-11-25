@@ -20,6 +20,8 @@ const slugs = {
 export function FeaturedBuilds({ demos, industries }) {
   const filters = ["All", ...Object.values(industries)];
   const [active, setActive] = useState("All");
+  const [previewId, setPreviewId] = useState(null);
+  const [loadedIds, setLoadedIds] = useState(() => new Set());
 
   const visible =
     active === "All"
@@ -60,6 +62,7 @@ export function FeaturedBuilds({ demos, industries }) {
             layout
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -4 }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
             className={cn(
               "group overflow-hidden rounded-[24px] border border-zinc-200/80 bg-white transition-shadow hover:shadow-[0_16px_40px_-20px_rgba(17,17,17,0.2)]",
@@ -80,15 +83,47 @@ export function FeaturedBuilds({ demos, industries }) {
                   Live Demo
                 </span>
               </div>
-              <div className="overflow-hidden">
+              <div
+                className="relative aspect-[16/10] w-full cursor-pointer overflow-hidden bg-[#F6F3EE]"
+                onMouseEnter={() => setPreviewId(demo.id)}
+                onMouseLeave={() => setPreviewId(null)}
+                onClick={() =>
+                  setPreviewId(previewId === demo.id ? null : demo.id)
+                }
+                title="Hover or tap to preview the live site"
+              >
                 <Image
                   src={`/demos/${slugs[demo.id]}-desktop.png`}
                   alt={`${demo.name} website screenshot`}
                   width={1440}
                   height={900}
                   loading="lazy"
-                  className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="absolute inset-0 aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
                 />
+                {previewId === demo.id ? (
+                  <iframe
+                    src={demo.href}
+                    title={`${demo.name} live website preview`}
+                    loading="lazy"
+                    onLoad={() =>
+                      setLoadedIds((prev) => new Set(prev).add(demo.id))
+                    }
+                    className={cn(
+                      "absolute inset-0 h-full w-full border-0 bg-white transition-opacity duration-500",
+                      loadedIds.has(demo.id) ? "opacity-100" : "opacity-0",
+                    )}
+                  />
+                ) : null}
+                {previewId === demo.id && !loadedIds.has(demo.id) ? (
+                  <p className="absolute inset-x-0 bottom-3 text-center text-xs font-semibold text-[#55524B]">
+                    Loading live preview…
+                  </p>
+                ) : null}
+                {previewId === demo.id && loadedIds.has(demo.id) ? (
+                  <span className="absolute left-3 top-3 rounded-full bg-[#0066FF] px-2.5 py-1 text-xs font-bold text-white">
+                    Live preview
+                  </span>
+                ) : null}
               </div>
             </div>
             <div className="p-6">

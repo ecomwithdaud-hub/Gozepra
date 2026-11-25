@@ -631,7 +631,8 @@ export default function HomePage() {
             <p className="eyebrow">02 // Portfolio</p>
             <h2 className="h-section mt-4 max-w-2xl">Built to inspect. Ready to launch.</h2>
             <p className="body-copy mt-4 max-w-xl">
-              Six of 24 live builds. Open one. Use it like a customer.
+              Six of 24 live builds. Hover a card to preview the live site,
+              or open one and use it like a customer.
             </p>
             <FeaturedBuilds demos={featuredDemos} industries={featuredIndustries} />
           </FadeUp>
