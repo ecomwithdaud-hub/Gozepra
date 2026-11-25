@@ -1,0 +1,163 @@
+# Zepra Tech
+
+> Zepra Tech is a US-based digital agency building websites, AI assistants, and growth marketing for US small businesses. Founded in 2025. US office in Middletown, Delaware, with an engineering studio in Lahore, Pakistan. Fixed prices from $1,500. Most websites launch in 2 to 3 weeks.
+
+## About Zepra Tech
+
+Zepra Tech is a digital engineering and marketing agency founded in 2025. Founder and CEO: Muhammad Daud Ali Lashari, an entrepreneur and hands-on digital marketer, and a Computer Science undergrad at Lahore Garrison University. Tagline: Where ideas turn into impact.
+
+- US office: Middletown, Delaware.
+- Engineering studio: Lahore, Pakistan.
+- Email: info@gozepra.tech
+- Phone: +1 (302) 469-4003
+- WhatsApp: https://wa.me/13024694003
+- Website: https://gozepra.tech
+- LinkedIn: https://www.linkedin.com/company/zepra-tech-official
+- Instagram: https://www.instagram.com/zepra_tech/
+- Facebook: https://www.facebook.com/profile.php?id=61579472223082
+- X: https://x.com/zepratech
+
+## Services
+
+### Web Development
+
+https://gozepra.tech/services/web-development
+
+Full-stack websites, WordPress builds, Wix experiences, and custom business platforms designed for speed, trust, and conversion. Plan and deliver responsive websites and business platforms that communicate clearly, perform reliably, and support measurable business growth. Covers responsive website and platform development, content management and ecommerce integrations, and performance-focused implementation. Deliverables: a production-ready website, responsive page templates, and launch and handoff support. Technologies: Next.js, React, WordPress, Wix.
+
+### AI Agents / Bots
+
+https://gozepra.tech/services/ai-agents-bots
+
+Strategy, creation, and end-to-end deployment of AI assistants, business bots, and automation flows tailored to real operations. Design AI assistants and automation workflows around real business processes, with practical integrations and clear operational outcomes. Covers AI assistant and chatbot planning, business workflow automation, and integration with existing tools. Deliverables: a configured AI assistant or bot, workflow and integration setup, and testing and deployment support. Technologies: OpenAI, Python, Node.js, APIs.
+
+### Digital Marketing
+
+https://gozepra.tech/services/digital-marketing
+
+Meta Ads, Google Ads, and TikTok Ads campaigns focused on lead quality, sustainable acquisition, and stronger campaign performance. Build and optimize digital campaigns that connect businesses with relevant audiences and support sustainable acquisition. Covers paid campaign planning and setup, audience and creative testing, and performance monitoring and optimization. Deliverables: campaign structure, creative and audience recommendations, and performance reporting. Technologies: Meta Ads, Google Ads, TikTok Ads, Google Analytics.
+
+### Google My Business
+
+https://gozepra.tech/services/google-my-business
+
+Profile setup, optimization, and ongoing management to help local businesses improve visibility, credibility, and customer discovery. Improve local discovery and customer confidence through accurate business profile setup, optimization, and ongoing management. Covers business profile setup and verification guidance, local profile optimization, and ongoing updates and management. Deliverables: an optimized business profile, business information and category review, and local visibility recommendations. Technologies: Google Business Profile, Google Maps, Google Search.
+
+### Google AdSense
+
+https://gozepra.tech/services/google-adsense
+
+AdSense account setup and management with clean implementation, compliance awareness, and revenue-focused placement planning. Set up and manage AdSense placements with a focus on clean implementation, policy awareness, and responsible monetization. Covers account and implementation guidance, ad placement planning, and ongoing management support. Technologies: Google AdSense, Google Analytics, Google Search Console.
+
+### SEO / GEO / AEO
+
+https://gozepra.tech/services/seo-geo-aeo
+
+Search, generative engine, and answer engine optimization designed to strengthen discoverability across modern digital surfaces. Strengthen discoverability across search and emerging answer experiences through technical, content, and optimization work. Covers technical and on-page SEO, search and answer-focused content planning, and ongoing visibility improvements. Deliverables: a prioritized optimization roadmap, page and content recommendations, and progress reporting. Technologies: Google Search Console, Google Analytics, Schema.org, Ahrefs.
+
+### Content Writing & Blogging
+
+https://gozepra.tech/services/content-writing-blogging
+
+High-quality website copy, landing pages, articles, and blog content crafted to support authority, ranking, and conversion. Create clear, audience-focused website and editorial content that supports brand authority, organic discovery, and conversion. Covers website and landing-page copy, blog and article writing, and content structured for search intent. Deliverables: edited and proofread copy, SEO-informed content, and publication-ready drafts. Technologies: WordPress, Google Docs, Google Search Console.
+
+### Ecommerce Solutions
+
+https://gozepra.tech/services/ecommerce-solutions
+
+Shopify, Amazon, eBay, Etsy, and WooCommerce solutions built for clean merchandising, smoother sales, and operational clarity. Build and improve ecommerce storefronts and marketplace experiences with clearer merchandising and smoother customer journeys. Covers store setup and storefront improvements, product catalog and merchandising support, and checkout and sales-flow enhancements. Technologies: Shopify, WooCommerce, Amazon, eBay, Etsy.
+
+### Graphic Design
+
+https://gozepra.tech/services/graphic-design
+
+Branding systems, logo design, and polished visual assets that make businesses look more established and market-ready. Develop polished visual assets and brand systems that help businesses communicate consistently and confidently. Covers brand identity and logo design, campaign and social graphics, and reusable visual systems. Deliverables: final digital design assets, exported production-ready files, and brand usage guidance. Technologies: Figma, Adobe Photoshop, Adobe Illustrator.
+
+### Video Editing
+
+https://gozepra.tech/services/video-editing
+
+Professional editing for marketing, brand storytelling, social content, and campaign assets that need a refined finish. Shape footage into refined video content for marketing, brand storytelling, social channels, and campaigns. Covers footage editing and pacing, titles, transitions, and audio refinement, and social and campaign format adaptation. Deliverables: an edited final video, platform-ready exports, and revision-ready project handoff. Technologies: Adobe Premiere Pro, Adobe After Effects, DaVinci Resolve.
+
+### Customer Support / Service
+
+https://gozepra.tech/services/customer-support-service
+
+Reliable customer support structures and service handling that keep businesses responsive, organized, and client-friendly. Establish organized customer support workflows that help teams respond consistently and deliver dependable service. Covers support workflow planning, customer communication templates, and service process improvement. Deliverables: support workflow documentation, response templates, and operational recommendations. Technologies: helpdesk platforms, email, CRM tools.
+
+### Cold Outreach
+
+https://gozepra.tech/cold-outreaching
+
+Precision B2B cold calling, SMS outreach, and high-deliverability email marketing powered by verified lead scraping and enterprise CRM pipelines. Multi-channel cold outreach that books sales calls. Cold calling, SMS, and email to verified US businesses, tracked in Salesforce and RingCentral. Covers B2B cold calling and qualified discovery calls (RingCentral), high-deliverability cold email marketing and drip sequences (Salesforce), targeted SMS outreach and fast intent-driven follow-ups, precision lead scraping and verification (Apollo, ZoomInfo, Lusha, SignalHire, Scraper.io, Yelp, LinkedIn Sales Navigator), Salesforce CRM pipeline architecture and deal attribution, and strategic market messaging distribution. Deliverables: verified, double-scrubbed B2B lead lists with direct dials and validated emails; high-converting cold email sequences, domain warming and inbox deliverability setup; objection-handling phone scripts, RingCentral dialing workflows and booked sales calls; Salesforce pipeline configuration, lead scoring and automated CRM sync; targeted SMS outreach campaigns with compliance-ready messaging; transparent weekly outreach analytics, response rates and sales conversion reporting.
+
+## Pricing
+
+https://gozepra.tech/pricing
+
+- Launch: from $1,500 one-time. For a small business that needs a sharp website, fast. Custom website, up to 5 pages; mobile-first, tap-to-call; local SEO and Google Maps; contact and quote forms. Launch in 2 to 3 weeks.
+- Growth: $3,000 to $8,000 one-time. For a business that wants the website to also answer and book. Everything in Launch, plus an AI assistant trained on your services; booking, CRM, and lead follow-up; review and referral prompts. Launch in 3 to 4 weeks.
+- Scale: $8,000 to $18,000 one-time. For a growing business that needs a custom platform. Everything in Growth, plus a custom platform or online store; AI workflows across sales and support; payments and dashboards. Launch in 6 to 8 weeks.
+- Enterprise: $18,000+, scoped per project. For multi-location and multi-market businesses. Everything in Scale, plus multi-market and multi-location setup; custom AI systems and data pipelines; dedicated support and SLAs. Timeline agreed in writing.
+- Every quote is fixed in writing before work starts.
+
+## Process
+
+https://gozepra.tech/about
+
+1. Discovery: We understand your business model, priorities, audience, and operational needs before proposing solutions.
+2. Strategy: We define the digital roadmap, scope, messaging, systems, and priorities required for the engagement to succeed.
+3. Design: We shape the user experience, visual language, and content structure to support trust, clarity, and conversion.
+4. Development: We build the website, workflows, or automation systems with a focus on performance, maintainability, and polish.
+5. Launch: We prepare deployment, testing, and quality assurance so the launch feels stable, professional, and client-ready.
+6. Growth / Support: We continue with optimization, support, content, marketing, and improvement cycles after the initial release.
+
+## Frequently asked questions
+
+- How much does a small business website cost? Launch starts at $1,500 for up to 5 pages. Most sites with an AI assistant land in Growth, $3,000 to $8,000. Your quote is fixed in writing.
+- How long until my website is live? Most websites launch in 2 to 3 weeks. Sites with an AI assistant and CRM take 3 to 4 weeks. Custom platforms take 6 to 8 weeks.
+- Do I own my website, code, and accounts? Yes. You own 100% of the code, the domain, the hosting account, and your data. No lock-in, no monthly fee to keep your own website.
+- What is an AI agent, and do I need one? An AI agent answers questions, takes bookings, and collects lead details around the clock, using your own services and prices. It helps if you miss calls or repeat the same answers.
+- Do you work outside the United States? Yes. US small businesses come first, and we also work with businesses in Pakistan and worldwide. Our US office is in Middletown, Delaware.
+- How do we start? Book a free 15-minute consultation, or call +1 (302) 469-4003. We talk, then send a written quote with a fixed price and a launch date.
+- What is included in the Launch package? A custom website of up to 5 pages, mobile-first with tap-to-call, local SEO and Google Maps, and contact and quote forms.
+- What happens after my website launches? We stay on call. Launch includes handoff support, and ongoing work covers optimization, support, content, marketing, and improvement cycles.
+
+## Work
+
+https://gozepra.tech/portfolio
+
+24 live demo websites built for US small businesses, including plumbers, roofers, electricians, HVAC, auto services, health and beauty, food and events. Each demo can be opened and used before hiring. Selected work is also shown at https://gozepra.tech/case-studies.
+
+## All pages
+
+- https://gozepra.tech
+- https://gozepra.tech/services
+- https://gozepra.tech/services/web-development
+- https://gozepra.tech/services/ai-agents-bots
+- https://gozepra.tech/services/digital-marketing
+- https://gozepra.tech/services/google-my-business
+- https://gozepra.tech/services/google-adsense
+- https://gozepra.tech/services/seo-geo-aeo
+- https://gozepra.tech/services/content-writing-blogging
+- https://gozepra.tech/services/ecommerce-solutions
+- https://gozepra.tech/services/graphic-design
+- https://gozepra.tech/services/video-editing
+- https://gozepra.tech/services/customer-support-service
+- https://gozepra.tech/cold-outreaching
+- https://gozepra.tech/portfolio
+- https://gozepra.tech/case-studies
+- https://gozepra.tech/pricing
+- https://gozepra.tech/about
+- https://gozepra.tech/contact
+- https://gozepra.tech/website-development
+- https://gozepra.tech/social-media-marketing
+- https://gozepra.tech/thumbnail-designing
+- https://gozepra.tech/privacy-policy
+- https://gozepra.tech/terms-of-use
+- https://gozepra.tech/human-rights-policy
+- https://gozepra.tech/modern-slavery-act
+
+## Contact
+
+Book a free 15-minute call, or call +1 (302) 469-4003. Email info@gozepra.tech. The agency replies within 24 hours.
