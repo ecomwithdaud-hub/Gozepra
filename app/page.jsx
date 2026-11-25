@@ -3,9 +3,11 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
+import { PricingCard } from "@/components/v3/pricing";
 import { FinalCta } from "@/components/v3/shared";
 import {
   departmentSummaries,
+  pricingTiers,
   siteMeta,
   teamMembers,
   usaClientDemoWebsites,
@@ -692,9 +694,19 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <p className="mt-10 text-[15px] text-[#55524B]">
-            Launch from $2,500. Growth $5,000 to $12,000. Scale $12,000 to
-            $25,000. Enterprise $25,000+.
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {pricingTiers
+              .filter((tier) => tier.name !== "Enterprise")
+              .map((tier) => (
+                <PricingCard key={tier.name} tier={tier} />
+              ))}
+          </div>
+          <p className="mt-8 text-center text-[15px] text-[#55524B]">
+            Enterprise, $25,000+, scoped per project for multi location and
+            multi market businesses.{" "}
+            <Link href="/pricing" className="font-semibold text-[#0066FF]">
+              See all pricing
+            </Link>
           </p>
         </div>
       </section>
