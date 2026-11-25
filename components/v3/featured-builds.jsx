@@ -120,7 +120,7 @@ export function FeaturedBuilds({ demos, industries }) {
                   </p>
                 ) : null}
                 {previewId === demo.id && loadedIds.has(demo.id) ? (
-                  <span className="absolute left-3 top-3 rounded-full bg-[#0066FF] px-2.5 py-1 text-xs font-bold text-white">
+                  <span className="absolute bottom-3 left-3 rounded-full bg-[#0066FF] px-2.5 py-1 text-xs font-bold text-white">
                     Live preview
                   </span>
                 ) : null}
