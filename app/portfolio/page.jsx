@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { FinalCta, PageHero } from "@/components/v3/shared";
 import { usaClientDemoWebsites } from "@/lib/site";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/portfolio" },
@@ -25,6 +26,7 @@ export default function PortfolioPage() {
 
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Work", href: "/portfolio" }]} />
       <PageHero
         eyebrow="Work"
         title="Live demo websites."

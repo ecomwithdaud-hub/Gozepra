@@ -9,6 +9,7 @@ export const metadata = {
 export default function TermsOfUsePage() {
   return (
     <LegalPage
+      href="/terms-of-use"
       title="Terms of Use"
       intro="[Draft placeholder: replace this page with the approved Zepra Tech terms before publishing.]"
       sections={[

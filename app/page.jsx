@@ -177,6 +177,16 @@ const faqs = [
     answer:
       "Book a free 15-minute consultation, or call +1 (302) 469-4003. We talk, then send a written quote with a fixed price and a launch date.",
   },
+  {
+    question: "What is included in the Launch package?",
+    answer:
+      "A custom website of up to 5 pages, mobile-first with tap-to-call, local SEO and Google Maps, and contact and quote forms.",
+  },
+  {
+    question: "What happens after my website launches?",
+    answer:
+      "We stay on call. Launch includes handoff support, and ongoing work covers optimization, support, content, marketing, and improvement cycles.",
+  },
 ];
 
 const faqJsonLd = {

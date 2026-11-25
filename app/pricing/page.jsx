@@ -1,5 +1,6 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
 import { PricingGrid } from "@/components/v3/pricing";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/pricing" },
@@ -11,6 +12,7 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Pricing", href: "/pricing" }]} />
       <PageHero
         eyebrow="Pricing"
         title="Fixed prices, agreed in writing."

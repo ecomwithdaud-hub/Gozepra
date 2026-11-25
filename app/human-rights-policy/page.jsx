@@ -9,6 +9,7 @@ export const metadata = {
 export default function HumanRightsPolicyPage() {
   return (
     <LegalPage
+      href="/human-rights-policy"
       title="Human Rights Policy"
       intro="[Draft placeholder: replace this page with the approved Zepra Tech human rights policy before publishing.]"
       sections={[

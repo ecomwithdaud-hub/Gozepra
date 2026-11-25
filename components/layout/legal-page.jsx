@@ -1,8 +1,10 @@
 import { PageHero } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
-export function LegalPage({ title, intro, sections = [] }) {
+export function LegalPage({ title, intro, sections = [], href }) {
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: title, href }]} />
       <PageHero eyebrow="Zepra Tech" title={title} intro={intro} />
       <section className="section pt-12">
         <div className="wrap">

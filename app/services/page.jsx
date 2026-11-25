@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { FinalCta, PageHero } from "@/components/v3/shared";
 import { PricingGrid } from "@/components/v3/pricing";
 import { services } from "@/lib/site";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/services" },
@@ -15,6 +16,7 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Services", href: "/services" }]} />
       <PageHero
         eyebrow="Services"
         title="What we do"

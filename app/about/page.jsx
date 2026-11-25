@@ -1,4 +1,5 @@
 import { FinalCta, PageHero } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/about" },
@@ -10,6 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "About", href: "/about" }]} />
       <PageHero
         eyebrow="About Zepra Tech"
         title="A small team that builds and ships."

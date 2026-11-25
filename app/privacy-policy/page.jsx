@@ -9,6 +9,7 @@ export const metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <LegalPage
+      href="/privacy-policy"
       title="Privacy Policy"
       intro="[Draft placeholder: replace this page with the approved Zepra Tech privacy policy before publishing.]"
       sections={[

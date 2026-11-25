@@ -9,6 +9,7 @@ export const metadata = {
 export default function ModernSlaveryActPage() {
   return (
     <LegalPage
+      href="/modern-slavery-act"
       title="Modern Slavery Act"
       intro="[Draft placeholder: replace this page with the approved Zepra Tech modern slavery statement before publishing.]"
       sections={[

@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/shared/contact-form";
 import { PageHero } from "@/components/v3/shared";
 import { siteMeta } from "@/lib/site";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/contact" },
@@ -33,6 +34,7 @@ export default async function ContactPage({ searchParams }) {
 
   return (
     <>
+      <BreadcrumbsJsonLd items={[{ name: "Contact", href: "/contact" }]} />
       <PageHero
         eyebrow="Contact"
         title="Start a conversation."

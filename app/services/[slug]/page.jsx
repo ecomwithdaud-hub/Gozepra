@@ -3,6 +3,7 @@ import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { notFound } from "next/navigation";
 
 import { FinalCta } from "@/components/v3/shared";
+import { BreadcrumbsJsonLd } from "@/components/seo/breadcrumbs";
 import { services } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -58,6 +59,12 @@ export default async function ServiceDetailPage({ params }) {
 
   return (
     <>
+      <BreadcrumbsJsonLd
+        items={[
+          { name: "Services", href: "/services" },
+          { name: service.title, href: `/services/${service.slug}` },
+        ]}
+      />
       <section className="pt-28 sm:pt-36">
         <div className="wrap">
           <nav
