@@ -33,9 +33,9 @@ export function SiteFooter() {
               {siteMeta.phone}
             </a>
             <p className="mt-2 text-sm leading-relaxed text-white/60">
-              USA: Middletown, Delaware
+              US office: Middletown, Delaware
               <br />
-              Pakistan HQ: DHA Phase 8, Broadway Commercial, Lahore
+              Engineering studio: DHA Phase 8, Broadway Commercial, Lahore
             </p>
           </div>
 

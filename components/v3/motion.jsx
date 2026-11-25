@@ -1,7 +1,6 @@
 "use client";
 
-import { animate, motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export function FadeUp({ children, className, delay = 0 }) {
   return (
@@ -17,31 +16,14 @@ export function FadeUp({ children, className, delay = 0 }) {
   );
 }
 
-export function CountUp({
-  to,
-  prefix = "",
-  suffix = "",
-  duration = 1.2,
-  className,
-}) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    const controls = animate(0, to, {
-      duration,
-      ease: "easeOut",
-      onUpdate: (v) => setValue(Math.round(v)),
-    });
-    return () => controls.stop();
-  }, [inView, to, duration]);
-
+// Renders the final value immediately. The old count-up animation flashed
+// mid-count numbers (16, $986) in screenshots on load, so the count is gone;
+// the fade-up on the parent still gives the section its entrance motion.
+export function CountUp({ to, prefix = "", suffix = "", className }) {
   return (
-    <span ref={ref} className={className}>
+    <span className={className}>
       {prefix}
-      {value.toLocaleString()}
+      {Number(to).toLocaleString()}
       {suffix}
     </span>
   );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Search } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Coffee, Search, Shirt, ShoppingBag } from "lucide-react";
 
 import { AiSandbox } from "@/components/v3/ai-sandbox";
 import { Faq } from "@/components/v3/faq";
@@ -24,8 +24,8 @@ import {
 const studioStandards = [
   {
     number: "01",
-    title: "Senior team only",
-    body: "Every project is led by senior engineers. Nothing is handed to juniors or outsourced.",
+    title: "Founder-led delivery",
+    body: "Every project is led by the founder with dedicated specialists. Nothing is handed to random freelancers.",
   },
   {
     number: "02",
@@ -44,7 +44,7 @@ const studioStandards = [
   },
 ];
 
-const featuredDemoIds = [1, 14, 19, 8, 17, 15];
+const featuredDemoIds = [19, 14, 1, 8, 17, 15];
 const featuredIndustries = {
   1: "Home Services",
   14: "Clinic & MedSpa",
@@ -229,8 +229,8 @@ export default function HomePage() {
               className="body-copy mt-6 max-w-xl animate-fade-up"
               style={{ animationDelay: "180ms" }}
             >
-              Websites, AI assistants, and marketing for US small businesses. One
-              fixed price, live in 2 to 3 weeks.
+              Websites, AI assistants, and marketing for US small businesses. Fixed
+              quote in writing, live in 2 to 3 weeks.
             </p>
             <div
               className="mt-9 flex flex-wrap items-center gap-3 animate-fade-up"
@@ -251,8 +251,8 @@ export default function HomePage() {
               className="mt-6 text-sm text-[#55524B] animate-fade-up"
               style={{ animationDelay: "360ms" }}
             >
-              {siteMeta.tagline} Delaware, USA · Engineering Studio in Lahore ·
-              Fixed-Price Delivery.
+              {siteMeta.tagline} Middletown, Delaware, USA · Engineering studio,
+              DHA Phase 8, Lahore · Fixed-Price Delivery.
             </p>
             <div
               className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#E2E8F0] pt-5 text-[15px] text-[#55524B] animate-fade-up"
@@ -379,7 +379,7 @@ export default function HomePage() {
               <div className="rounded-[24px] border border-[#0066FF]/25 bg-white p-7 shadow-[0_24px_64px_-32px_rgba(17,17,17,0.25)] sm:p-8">
                 <p className="eyebrow">After: the Zepra system</p>
                 <div className="mt-6 space-y-3">
-                  <div className="rounded-2xl border border-zinc-200/80 bg-[#F6F3EE] p-4">
+                  <div className="rounded-2xl border border-zinc-200/80 bg-white p-4">
                     <p className="font-semibold text-[#111111]">
                       Fast mobile site, built to book
                     </p>
@@ -442,28 +442,42 @@ export default function HomePage() {
                     </div>
                     <div className="grid grid-cols-2 gap-3 p-4">
                       <div>
-                        <div className="h-16 rounded-xl bg-[#EDEAE3]" />
+                        <div className="flex h-16 items-center justify-center rounded-xl bg-[#EDEAE3]">
+                          <Shirt className="h-7 w-7 text-[#55524B]" />
+                        </div>
                         <p className="mt-2 text-sm font-semibold text-[#111111]">
                           Linen Shirt
                         </p>
                         <p className="text-xs text-[#55524B]">$48.00</p>
                       </div>
                       <div>
-                        <div className="h-16 rounded-xl bg-[#0066FF]/10" />
+                        <div className="flex h-16 items-center justify-center rounded-xl bg-[#0066FF]/10">
+                          <ShoppingBag className="h-7 w-7 text-[#0066FF]" />
+                        </div>
                         <p className="mt-2 text-sm font-semibold text-[#111111]">
                           Canvas Tote
                         </p>
                         <p className="text-xs text-[#55524B]">$32.00</p>
                       </div>
                       <div>
-                        <div className="h-16 rounded-xl bg-[#F6F3EE]" />
+                        <div className="flex h-16 items-center justify-center rounded-xl bg-[#F6F3EE]">
+                          <Coffee className="h-7 w-7 text-[#55524B]" />
+                        </div>
                         <p className="mt-2 text-sm font-semibold text-[#111111]">
                           Ceramic Mug
                         </p>
                         <p className="text-xs text-[#55524B]">$18.00</p>
                       </div>
                       <div>
-                        <div className="h-16 rounded-xl bg-[#EDEAE3]" />
+                        <div className="flex h-16 items-center justify-center rounded-xl bg-[#EDEAE3]">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#55524B" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
+                            <path d="M9 2h6v5l-1 1v9a2 2 0 0 1-4 0V8L9 7V2z" />
+                            <path d="M9 7h6" />
+                            <path d="M10 21v-2" />
+                            <path d="M12 21v-2" />
+                            <path d="M14 21v-2" />
+                          </svg>
+                        </div>
                         <p className="mt-2 text-sm font-semibold text-[#111111]">
                           Wool Scarf
                         </p>
@@ -622,15 +636,15 @@ export default function HomePage() {
             <p className="body-copy mt-4 max-w-xl">
               You run your business. We handle the rest.
             </p>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {steps.map((step) => (
-                <article key={step.number} className="flex flex-col">
+                <article key={step.number} className="flex h-full flex-col">
                   <div className="border-t-2 border-[#0066FF] pt-6">
                     <p className="font-mono text-sm font-semibold text-[#0066FF]">{step.number}</p>
                     <h3 className="mt-3 text-xl font-semibold text-[#111111]">{step.title}</h3>
                     <p className="mt-2 text-base leading-relaxed text-[#55524B]">{step.body}</p>
                   </div>
-                  <div className="mt-5">{step.visual}</div>
+                  <div className="mt-auto pt-5">{step.visual}</div>
                 </article>
               ))}
             </div>
@@ -695,7 +709,8 @@ export default function HomePage() {
             <p className="eyebrow">05 // Pricing</p>
             <h2 className="h-section mt-4">Fixed prices. Fast replies.</h2>
             <p className="body-copy mt-4 max-w-xl">
-              No hourly billing. No surprises. Price in writing first.
+              No hourly billing. No surprises. Fixed quote in writing before we
+              start.
             </p>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {pricingTiers
@@ -719,12 +734,13 @@ export default function HomePage() {
       <section className="section border-t border-[#E2E8F0]">
         <div className="wrap">
           <FadeUp>
-            <h2 className="h-section max-w-2xl">Built by a senior team.</h2>
+            <h2 className="h-section max-w-2xl">Founder-led delivery.</h2>
             <p className="body-copy mt-4 max-w-xl">
-              No anonymous outsourcing. Talk to your builders.
+              Every project is led by the founder, with dedicated specialists.
+              Talk to your builders.
             </p>
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="mt-12 grid items-start gap-6 lg:grid-cols-2">
               {teamMembers.map((member) => (
                 <article key={member.name} className="card flex gap-6">
                   <TeamPhoto

@@ -64,10 +64,7 @@ export function FeaturedBuilds({ demos, industries }) {
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -4 }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
-            className={cn(
-              "group overflow-hidden rounded-[24px] border border-zinc-200/80 bg-white transition-shadow hover:shadow-[0_16px_40px_-20px_rgba(17,17,17,0.2)]",
-              index === 0 && "md:col-span-2 lg:col-span-2",
-            )}
+            className="group flex flex-col overflow-hidden rounded-[24px] border border-zinc-200/80 bg-white transition-shadow hover:shadow-[0_16px_40px_-20px_rgba(17,17,17,0.2)]"
           >
             <div className="relative overflow-hidden border-b border-zinc-200/80 bg-[#F6F3EE]">
               <div className="flex items-center gap-3 px-4 py-3">
@@ -126,7 +123,7 @@ export function FeaturedBuilds({ demos, industries }) {
                 ) : null}
               </div>
             </div>
-            <div className="p-6">
+            <div className="flex flex-1 flex-col p-6">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
                 {industries[demo.id] ?? demo.group}
               </p>
@@ -144,15 +141,17 @@ export function FeaturedBuilds({ demos, industries }) {
                   </li>
                 ))}
               </ul>
-              <a
-                href={demo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]"
-              >
-                Launch Live Demo
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
+              <div className="mt-auto pt-5">
+                <a
+                  href={demo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0066FF]"
+                >
+                  Launch Live Demo
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </motion.article>
         ))}

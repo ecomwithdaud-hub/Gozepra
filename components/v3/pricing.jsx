@@ -23,7 +23,7 @@ export function PricingCard({ tier }) {
         {tier.price}
       </p>
       <p className="text-sm text-[#55524B]">{tier.detail}</p>
-      <p className="mt-4 text-[15px] leading-relaxed text-[#55524B]">
+      <p className="mt-4 min-h-[72px] text-[15px] leading-relaxed text-[#55524B]">
         {tier.blurb}
       </p>
       <p className="mt-3 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#111111]">

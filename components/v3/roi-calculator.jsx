@@ -94,12 +94,12 @@ export function RoiCalculator() {
           <div className="space-y-3 border-t border-white/15 pt-5 text-[15px] leading-relaxed text-white/80">
             <p>
               A $1,500 Launch build pays for itself in{" "}
-              <span className="font-semibold text-white">{paybackLaunch} weeks</span>{" "}
+              <span className="font-semibold text-white">{paybackLaunch} {paybackLaunch === "1.0" ? "week" : "weeks"}</span>{" "}
               of recovered leads.
             </p>
             <p>
               A $3,000 Growth build with an AI assistant pays for itself in{" "}
-              <span className="font-semibold text-white">{paybackGrowth} weeks</span>.
+              <span className="font-semibold text-white">{paybackGrowth} {paybackGrowth === "1.0" ? "week" : "weeks"}</span>.
             </p>
           </div>
         </div>

@@ -157,7 +157,7 @@ export function ContactForm({ initialBudget = "" }) {
             ))}
           </select>
         </Field>
-        <Field label="Preferred timeline" error={errors.timeline}>
+        <Field label="Preferred timeline" error={errors.timeline} className="md:col-span-2">
           <select
             name="timeline"
             value={formData.timeline}
@@ -222,9 +222,9 @@ export function ContactForm({ initialBudget = "" }) {
   );
 }
 
-function Field({ label, error, children }) {
+function Field({ label, error, children, className }) {
   return (
-    <label className="block">
+    <label className={`block ${className ?? ""}`}>
       <span className="mb-2 block text-sm font-semibold text-[#111111]">{label}</span>
       {children}
       {error ? <span className="mt-1.5 block text-sm text-red-600">{error}</span> : null}

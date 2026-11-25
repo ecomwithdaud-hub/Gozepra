@@ -121,7 +121,9 @@ const niches = [
 ];
 
 export function AiSandbox() {
-  const [activeTab, setActiveTab] = useState(niches[0].id);
+  // Clinics is the default tab so the AI Lab does not lead with the same
+  // plumbing example the portfolio already features.
+  const [activeTab, setActiveTab] = useState("clinics");
   const [selected, setSelected] = useState(0);
   const niche = niches.find((item) => item.id === activeTab);
   const prompt = niche.prompts[selected];
