@@ -13,22 +13,37 @@ import {
   usaClientDemoWebsites,
 } from "@/lib/site";
 
-const featuredDemoIds = [1, 2, 3, 4, 8, 12];
+const featuredDemoIds = [1, 14, 19, 8, 17, 15];
+const featuredIndustries = {
+  1: "Home Services",
+  14: "Clinic & MedSpa",
+  19: "E-Commerce",
+  8: "Auto",
+  17: "Restaurant & Hospitality",
+  15: "Fitness & Coaching",
+};
 const featuredDemos = featuredDemoIds
   .map((id) => usaClientDemoWebsites.find((demo) => demo.id === id))
   .filter(Boolean);
 
-const industryPills = ["Home Services", "Clinics", "E-Commerce", "Auto", "SaaS"];
+const industryPills = [
+  "Home Services",
+  "Clinic & MedSpa",
+  "E-Commerce",
+  "Auto",
+  "Restaurant & Hospitality",
+  "Fitness & Coaching",
+];
 
 const logoWall = [
   "PureFlow Plumbing",
-  "BrightVolt Electric",
-  "PeakShield Roofing",
-  "AirEase HVAC",
-  "FreshHue Painting",
-  "HandyFix Pros",
-  "GreenScape Lawn Care",
-  "WrenchWay Auto Repair",
+  "EaseAway Massage",
+  "PopShop Collective",
+  "WrenchWay Auto",
+  "GatherRound Catering",
+  "ForgeFit Training",
+  "SharpLine Barbershop",
+  "GlamCraft Artistry",
 ];
 
 const steps = [
@@ -238,7 +253,7 @@ export default function HomePage() {
                   <span className="h-3 w-3 rounded-full bg-[#E2E8F0]" />
                 </span>
                 <span className="min-w-0 flex-1 truncate text-center text-[13px] font-medium text-[#55524B]">
-                  Example: a local plumbing business
+                  Example: a local barbershop
                 </span>
                 <span className="shrink-0 rounded-full bg-[#0066FF]/10 px-3 py-1 text-xs font-semibold text-[#0066FF]">
                   Live preview
@@ -251,17 +266,17 @@ export default function HomePage() {
                     Mobile site
                   </p>
                   <p className="mt-3 text-lg font-semibold leading-tight text-[#111111]">
-                    PureFlow Plumbing Co.
+                    SharpLine Barbershop
                   </p>
                   <p className="mt-1 text-sm text-[#55524B]">
-                    Denver, CO | Emergency calls | Open now
+                    Los Angeles, CA | Walk-ins welcome | Open now
                   </p>
                   <div className="mt-4 rounded-2xl bg-white p-3 shadow-sm">
                     <p className="text-sm font-semibold text-[#111111]">
-                      Book a visit in 30 seconds
+                      Book a chair in 30 seconds
                     </p>
                     <p className="mt-1 text-[13px] leading-relaxed text-[#55524B]">
-                      Pick a time. Get upfront pricing before any work starts.
+                      Pick a time. See the price before you sit down.
                     </p>
                   </div>
                   <span className="mt-4 block rounded-full bg-[#0066FF] py-2.5 text-center text-sm font-semibold text-white">
@@ -283,8 +298,8 @@ export default function HomePage() {
                       New lead booked while the shop was closed.
                     </p>
                     <p className="mt-1.5 text-sm leading-relaxed text-[#55524B]">
-                      "My water heater is leaking. Can someone come tomorrow
-                      morning?" Booked, confirmed, added to the calendar.
+                      "Can I book a fade for Saturday morning?" Booked,
+                      confirmed, added to the calendar.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
@@ -378,8 +393,8 @@ export default function HomePage() {
                     Missed call, 11:42 PM
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-[#55524B]">
-                    A customer needed a plumber. Nobody answered, so they
-                    called the next listing.
+                    A customer needed help after hours. Nobody answered, so
+                    they called the next listing.
                   </p>
                 </div>
                 <div className="rounded-2xl bg-white/70 p-4">
@@ -454,16 +469,31 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <Link href="/services/web-development" className="card group block">
               <div className="rounded-2xl border border-[#E2E8F0] bg-[#F6F3EE] p-4">
-                <div className="mx-auto w-full max-w-[220px] rounded-[16px] border border-[#E2E8F0] bg-white p-3">
-                  <div className="h-2.5 w-3/4 rounded-full bg-[#111111]" />
-                  <div className="mt-2 h-2 w-full rounded-full bg-[#E2E8F0]" />
-                  <div className="mt-1.5 h-2 w-2/3 rounded-full bg-[#E2E8F0]" />
-                  <span className="mt-3 block rounded-full bg-[#0066FF] py-2 text-center text-xs font-semibold text-white">
-                    Book a visit
+                <div className="rounded-[16px] border border-[#E2E8F0] bg-white p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-sm font-semibold text-[#111111]">
+                      PopShop Collective
+                    </p>
+                    <span className="shrink-0 rounded-full bg-[#0066FF]/10 px-2.5 py-1 text-xs font-semibold text-[#0066FF]">
+                      Online store
+                    </span>
+                  </div>
+                  <div className="mt-3 grid grid-cols-3 gap-2">
+                    {["Canvas Tote", "Soy Candle", "Art Print"].map((item) => (
+                      <div key={item} className="rounded-xl bg-[#F6F3EE] p-2.5">
+                        <div className="h-10 rounded-lg bg-white" />
+                        <p className="mt-2 text-[11px] font-semibold leading-tight text-[#111111]">
+                          {item}
+                        </p>
+                        <p className="mt-0.5 text-[11px] font-medium text-[#0066FF]">
+                          Add
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  <span className="mt-3 block rounded-full bg-[#111111] py-2 text-center text-xs font-semibold text-white">
+                    Checkout in 2 steps
                   </span>
-                  <p className="mt-2 text-center text-[11px] font-medium text-[#55524B]">
-                    Tap to call | Open now
-                  </p>
                 </div>
               </div>
               <h3 className="mt-6 text-[22px] font-semibold text-[#111111]">
@@ -483,14 +513,14 @@ export default function HomePage() {
               <div className="rounded-2xl border border-[#E2E8F0] bg-[#F6F3EE] p-4">
                 <div className="space-y-2.5">
                   <p className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-white px-3.5 py-2.5 text-sm leading-relaxed text-[#111111] shadow-sm">
-                    Do you fix leaking water heaters?
+                    Do you have a deep tissue slot this week?
                   </p>
                   <p className="w-fit max-w-[85%] rounded-2xl rounded-bl-md bg-[#0066FF] px-3.5 py-2.5 text-sm leading-relaxed text-white">
-                    Yes. A plumber can come tomorrow, 9-11 AM. Shall I book
-                    it?
+                    Yes, Thursday 2 PM is open in Seattle. Shall I book it
+                    for you?
                   </p>
                   <p className="ml-auto w-fit rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#0066FF] shadow-sm">
-                    Booked for tomorrow, 9 AM
+                    Booked for Thursday, 2 PM
                   </p>
                 </div>
               </div>
@@ -513,10 +543,10 @@ export default function HomePage() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="text-sm font-semibold text-[#111111]">
-                        PureFlow Plumbing Co.
+                        GlamCraft Artistry
                       </p>
                       <p className="mt-0.5 text-xs text-[#55524B]">
-                        Plumber in Denver, CO
+                        Makeup artist in New York, NY
                       </p>
                     </div>
                     <span className="shrink-0 rounded-full bg-[#0066FF] px-2.5 py-1 text-xs font-bold text-white">
@@ -607,7 +637,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0066FF]">
-                    {demo.group}
+                    {featuredIndustries[demo.id] ?? demo.group}
                   </p>
                   <h3 className="mt-2.5 text-[20px] font-semibold text-[#111111]">
                     {demo.name}
