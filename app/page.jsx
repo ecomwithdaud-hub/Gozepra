@@ -242,22 +242,22 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero visual: real SharpLine screenshot in a phone frame */}
+          {/* Hero visual: real PopShop screenshot in a phone frame */}
           <div className="mx-auto w-full animate-fade-up lg:col-span-5">
             <div className="mx-auto w-full max-w-[340px] overflow-hidden rounded-[28px] border border-zinc-200/80 bg-white shadow-[0_24px_64px_-32px_rgba(17,17,17,0.3)]">
               <div className="flex items-center justify-between gap-3 border-b border-zinc-200/80 px-4 py-3">
                 <span className="text-[13px] font-medium text-[#55524B]">
-                  SharpLine Barbershop
+                  PopShop Collective
                 </span>
                 <span className="shrink-0 rounded-full bg-[#0066FF]/10 px-2.5 py-1 text-xs font-semibold text-[#0066FF]">
                   Live preview
                 </span>
               </div>
               <Image
-                src="/demos/sharpline-mobile.png"
-                alt="SharpLine Barbershop booking website on a phone"
+                src="/demos/popshop-mobile.png"
+                alt="PopShop Collective online store on a phone"
                 width={390}
-                height={758}
+                height={759}
                 priority
                 className="aspect-[390/640] w-full object-cover object-top"
               />
