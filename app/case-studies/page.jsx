@@ -54,8 +54,7 @@ export default function CaseStudiesPage() {
             ))}
           </div>
           <p className="mt-10 text-[15px] text-[#55524B]">
-            These are demo websites built to show our work. They are examples,
-            not our clients.
+            These are demo websites built to show our work.
           </p>
           <Link
             href="/portfolio"

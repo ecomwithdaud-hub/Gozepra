@@ -19,6 +19,8 @@ const featuredDemos = featuredDemoIds
   .filter(Boolean);
 
 const industryPills = ["Home Services", "Clinics", "E-Commerce", "Auto", "SaaS"];
+
+const logoWall = [
   "PureFlow Plumbing",
   "BrightVolt Electric",
   "PeakShield Roofing",
