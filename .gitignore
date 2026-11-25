@@ -12,3 +12,8 @@ pnpm-debug.log*
 
 # Internal build brief, never commit
 DESIGN_BRIEF_V3.md
+.vercel
+
+# Internal build briefs, never commit
+ZEP_FIXES.md
+ZEP2_FIXES.md
