@@ -7,7 +7,7 @@ export function MobileCtaBar() {
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[#E2E8F0] bg-white/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur md:hidden">
       <div className="grid grid-cols-2 gap-3">
         <a
-          href="tel:+13024694003"
+          href="/contact"
           className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0066FF] px-4 py-3 text-sm font-semibold text-white"
         >
           <Phone className="h-4 w-4" />
