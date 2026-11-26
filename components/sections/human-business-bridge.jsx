@@ -592,43 +592,46 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         {/* 3-STEP "HOW IT WORKS" ROADMAP (DISPELLING TECH FEAR) */}
         {/* ============================================================== */}
-        <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-24 sm:rounded-3xl sm:p-12">
+        <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-3.5 shadow-sm sm:mt-24 sm:rounded-3xl sm:p-12">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-blue-700">
               <Clock className="h-3.5 w-3.5" />
               Painless Client Journey
             </span>
-            <h3 className="mt-4 font-display text-3xl font-black text-slate-900 sm:text-4xl">
+            <h3 className="mt-4 font-display text-2xl font-black text-slate-900 sm:text-4xl">
               How Easy It Is To Work With Us
             </h3>
-            <p className="mt-3 text-sm text-slate-600 sm:text-base">
+            <p className="mt-2 text-xs text-slate-600 sm:mt-3 sm:text-base">
               No technical expertise needed on your end. We handle the heavy lifting while you keep running your business.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+          {/* 3 Steps in Three Columns One Row (Horizontal Form on Mobile & Desktop) */}
+          <div className="mt-8 grid grid-cols-3 gap-2 sm:mt-12 sm:gap-6 md:grid-cols-3">
             {HOW_IT_WORKS_STEPS.map((s) => {
               const Icon = s.icon;
               return (
                 <div
                   key={s.step}
-                  className="relative rounded-2xl border border-slate-800 bg-[#070f24] p-6 text-white shadow-xl shadow-slate-950/15 backdrop-blur-md transition-all hover:border-cyan-400/50 hover:bg-[#0a1638]"
+                  className="relative flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-[#070f24] p-2.5 text-white shadow-xl shadow-slate-950/15 backdrop-blur-md transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] sm:rounded-2xl sm:p-6"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-950/60 text-cyan-400 border border-cyan-500/30 font-bold">
-                      {s.step}
-                    </span>
-                    <span className="rounded-full bg-slate-900 border border-slate-700 px-2.5 py-1 text-[11px] font-bold text-slate-300">
-                      {s.duration}
-                    </span>
-                  </div>
+                  <div>
+                    <div className="flex items-center justify-between gap-1">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-950/60 text-xs font-bold text-cyan-400 sm:h-10 sm:w-10 sm:rounded-xl sm:text-base">
+                        {s.step}
+                      </span>
+                      <span className="rounded-full border border-slate-700 bg-slate-900 px-1.5 py-0.5 text-[8px] font-bold text-slate-300 sm:px-2.5 sm:py-1 sm:text-[11px]">
+                        {s.duration}
+                      </span>
+                    </div>
 
-                  <h4 className="mt-4 font-display text-lg font-bold text-white">
-                    {s.title}
-                  </h4>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:text-sm">
-                    {s.description}
-                  </p>
+                    <h4 className="mt-2.5 font-display text-xs font-bold leading-tight text-white sm:mt-4 sm:text-lg">
+                      {s.title}
+                    </h4>
+                    <p className="mt-1.5 text-[10px] leading-snug text-slate-300 sm:mt-2 sm:text-sm sm:leading-relaxed">
+                      {s.description}
+                    </p>
+                  </div>
                 </div>
               );
             })}
