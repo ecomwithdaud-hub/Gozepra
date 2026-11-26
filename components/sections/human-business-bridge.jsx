@@ -28,6 +28,7 @@ import {
   Wrench,
   Zap,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { siteMeta } from "@/lib/site";
 
@@ -36,10 +37,11 @@ const INDUSTRY_PROFILES = [
   {
     id: "contractors",
     name: "Contractors & Home Services",
-    shortTitle: "Home Services",
-    microTag: "Roofing, Plumbing, Auto",
-    subtitle: "Roofing, Plumbing, HVAC, Electricians & Auto",
+    shortTitle: "Home Services & Cleaning",
+    microTag: "Roofing, Plumbing, Cleaning",
+    subtitle: "Roofing, Plumbing, HVAC, Cleaning & Auto",
     icon: Wrench,
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
     badge: "Most Popular For Local Leads",
     color: "from-amber-500/20 to-orange-500/20",
     border: "border-amber-500/30",
@@ -66,6 +68,7 @@ const INDUSTRY_PROFILES = [
     microTag: "Dentists, MedSpa, Care",
     subtitle: "Dentists, Aesthetic Clinics, Wellness & Doctors",
     icon: Stethoscope,
+    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80",
     badge: "High Patient Trust",
     color: "from-cyan-500/20 to-blue-500/20",
     border: "border-cyan-500/30",
@@ -87,10 +90,11 @@ const INDUSTRY_PROFILES = [
   {
     id: "textiles-manufacturing",
     name: "Textiles, Manufacturing & Export",
-    shortTitle: "Textile & Export",
+    shortTitle: "Textile & Manufacturing",
     microTag: "Mills, Fabrics, B2B",
     subtitle: "Garments, Fabrics, Mills & B2B Production",
     icon: Scissors,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
     badge: "Built for Wholesale & Exporters",
     color: "from-emerald-500/20 to-teal-500/20",
     border: "border-emerald-500/30",
@@ -112,10 +116,11 @@ const INDUSTRY_PROFILES = [
   {
     id: "retail-ecommerce",
     name: "Retail, Boutiques & E-Commerce",
-    shortTitle: "Retail & E-Com",
+    shortTitle: "Retail & E-Commerce",
     microTag: "Boutiques, Brands, Carts",
     subtitle: "Fashion, Accessories, Jewelry & Consumer Brands",
     icon: ShoppingBag,
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80",
     badge: "Higher Conversion Rates",
     color: "from-pink-500/20 to-rose-500/20",
     border: "border-pink-500/30",
@@ -137,10 +142,11 @@ const INDUSTRY_PROFILES = [
   {
     id: "restaurants-hospitality",
     name: "Restaurants & Hospitality",
-    shortTitle: "Restaurants",
+    shortTitle: "Restaurants & Dining",
     microTag: "Cafes, Menus, Dining",
     subtitle: "Cafes, Fine Dining, Bistros & Event Venues",
     icon: UtensilsCrossed,
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80",
     badge: "Local Foot Traffic",
     color: "from-red-500/20 to-orange-500/20",
     border: "border-red-500/30",
@@ -161,10 +167,11 @@ const INDUSTRY_PROFILES = [
   {
     id: "tech-startups",
     name: "Tech Startups & Modern Brands",
-    shortTitle: "Tech & Startups",
+    shortTitle: "Tech Startups & AI",
     microTag: "SaaS, AI, Platforms",
     subtitle: "SaaS Platforms, AI Tools & Digital Enterprises",
     icon: Zap,
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
     badge: "Advanced Next.js 15 & AI",
     color: "from-indigo-500/20 to-purple-500/20",
     border: "border-indigo-500/30",
@@ -354,8 +361,8 @@ export function HumanBusinessBridge() {
             </span>
           </div>
 
-          {/* Industry Selection Buttons */}
-          <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6">
+          {/* Industry Selection Buttons - Pictorial Form */}
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {INDUSTRY_PROFILES.map((ind) => {
               const Icon = ind.icon;
               const isSelected = selectedIndustry.id === ind.id;
@@ -364,25 +371,55 @@ export function HumanBusinessBridge() {
                   type="button"
                   key={ind.id}
                   onClick={() => setSelectedIndustry(ind)}
-                  className={`group relative flex w-full min-w-0 flex-col items-center justify-center rounded-2xl border p-3 text-center transition-all !whitespace-normal sm:p-4 ${
+                  className={cn(
+                    "group relative flex w-full min-w-0 flex-col items-center rounded-2xl border p-2 text-center transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 sm:p-2.5",
                     isSelected
-                      ? "border-blue-600 bg-blue-50/80 shadow-sm ring-1 ring-blue-500/30"
-                      : "border-slate-200 bg-slate-50/80 hover:border-slate-300 hover:bg-slate-100/70"
-                  }`}
+                      ? "border-blue-600 bg-blue-50/90 shadow-md ring-2 ring-blue-500/40"
+                      : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 hover:shadow-sm"
+                  )}
                 >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-900 shadow-sm">
+                    <img
+                      src={ind.image}
+                      alt={ind.name}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div
+                      className={cn(
+                        "absolute inset-0 bg-gradient-to-t transition-opacity duration-300",
+                        isSelected
+                          ? "from-blue-950/80 via-blue-900/20 to-transparent opacity-90"
+                          : "from-slate-950/70 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-40"
+                      )}
+                    />
+                    <span
+                      className={cn(
+                        "absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-lg backdrop-blur-md transition-all",
+                        isSelected
+                          ? "bg-blue-600 text-white shadow-sm"
+                          : "bg-black/50 text-white/90 group-hover:bg-blue-600 group-hover:text-white"
+                      )}
+                    >
+                      <Icon className="h-3.5 w-3.5" />
+                    </span>
+                    {isSelected && (
+                      <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-blue-600/90 px-2 py-0.5 text-[9px] font-bold text-white shadow-sm backdrop-blur-xs">
+                        <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                        Active
+                      </span>
+                    )}
+                  </div>
+
                   <span
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-colors ${
-                      isSelected
-                        ? "bg-blue-600 text-white shadow-sm"
-                        : "bg-white text-slate-600 group-hover:text-blue-600"
-                    }`}
+                    className={cn(
+                      "mt-2 block w-full !whitespace-normal break-words text-center text-xs font-bold leading-tight transition-colors sm:text-sm",
+                      isSelected ? "text-blue-600 font-extrabold" : "text-slate-900 group-hover:text-blue-600"
+                    )}
                   >
-                    <Icon className="h-5 w-5 shrink-0" />
-                  </span>
-                  <span className="mt-2.5 block w-full !whitespace-normal break-words text-center text-xs font-bold leading-snug text-slate-900 sm:text-sm">
                     {ind.shortTitle || ind.name}
                   </span>
-                  <span className="mt-1 hidden w-full !whitespace-normal text-center text-[10px] font-medium leading-tight text-slate-500 lg:block">
+                  <span className="mt-0.5 hidden w-full !whitespace-normal text-center text-[10px] font-medium leading-tight text-slate-500 sm:block">
                     {ind.microTag}
                   </span>
                 </button>

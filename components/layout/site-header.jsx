@@ -167,16 +167,17 @@ export function SiteHeader() {
 
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-transparent px-3 pt-4 pointer-events-none">
-      <div className="container pointer-events-none">
+    <header className="fixed inset-x-0 top-0 z-50 bg-transparent px-1.5 sm:px-3 pt-2 sm:pt-4 pointer-events-none">
+      <div className="w-full max-w-[1380px] mx-auto px-1 sm:px-4 pointer-events-none">
         <div
+          style={{ backgroundColor: "#070f24" }}
           className={cn(
-            "pointer-events-auto relative mx-auto flex max-w-[1380px] items-center justify-between gap-2 rounded-full border border-slate-800 bg-[#070f24]/95 px-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-xl [backface-visibility:hidden] transition-all duration-300 xl:gap-3 xl:px-5 text-white",
-            scrolled ? "py-2 shadow-2xl border-slate-700/80" : "py-2.5",
+            "pointer-events-auto relative mx-auto flex w-full items-center justify-between gap-1.5 sm:gap-2 rounded-full border border-slate-800 bg-[#070f24] px-2.5 py-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-xl [backface-visibility:hidden] transition-all duration-300 sm:px-4 sm:py-2.5 xl:gap-3 xl:px-5 text-white",
+            scrolled ? "py-1.5 sm:py-2 shadow-2xl border-slate-700/80" : "py-2 sm:py-2.5",
           )}
         >
-          <Link href="/" aria-label="Zepra Tech home" className="shrink-0">
-            <Logo compact dark />
+          <Link href="/" aria-label="Zepra Tech home" className="shrink-0 flex items-center">
+            <Logo compact dark className="gap-2 sm:gap-3 scale-90 sm:scale-100 origin-left" />
           </Link>
 
           <nav
@@ -236,6 +237,7 @@ export function SiteHeader() {
                     </button>
                     <div className="invisible absolute left-0 top-full z-[9999] isolate w-[min(460px,94vw)] translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                       <div className="relative isolate z-[9999] rounded-2xl border border-slate-800 bg-[#070f24] p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.6)] text-white">
+                        
                         {isServicesMenu && (
                           <div className="mb-2.5 flex items-center justify-between rounded-xl border border-slate-800 bg-[#0a1638] px-3.5 py-2">
                             <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400">
@@ -305,7 +307,7 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="flex shrink-0 items-center gap-1.5 xl:gap-2">
+          <div className="flex shrink-0 items-center gap-1 sm:gap-1.5 xl:gap-2">
             <div className="hidden items-center gap-2 lg:flex">
               <Button asChild className="group h-9 shrink-0 whitespace-nowrap bg-blue-600 hover:bg-blue-500 px-3.5 text-xs font-bold text-white shadow-md shadow-blue-500/30 xl:h-10 xl:px-4 xl:text-sm">
                 <Link href="/contact">
@@ -321,7 +323,7 @@ export function SiteHeader() {
 
             <button
               type="button"
-              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-800 bg-[#0a1638] text-slate-200 shadow-sm transition-colors hover:border-cyan-500/40 hover:text-white lg:hidden"
+              className="inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-slate-800 bg-[#0a1638] text-slate-200 shadow-sm transition-colors hover:border-cyan-500/40 hover:text-white lg:hidden"
               onClick={() => setIsOpen((current) => !current)}
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
@@ -346,7 +348,10 @@ export function SiteHeader() {
         </div>
 
         {isOpen ? (
-          <div className="pointer-events-auto mt-3 max-h-[82vh] overflow-y-auto rounded-3xl border border-slate-800 bg-[#070f24]/98 p-4 text-white shadow-2xl backdrop-blur-2xl sm:p-5 lg:hidden">
+          <div
+            style={{ backgroundColor: "#070f24" }}
+            className="pointer-events-auto mt-2 max-h-[82vh] overflow-y-auto rounded-3xl border border-slate-800 bg-[#070f24] p-3.5 text-white shadow-2xl backdrop-blur-2xl sm:p-5 lg:hidden"
+          >
             <nav className="flex flex-col gap-1.5">
               {navItems.map((item) => {
                 const isActive = isItemActive(item, pathname);

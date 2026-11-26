@@ -41,7 +41,7 @@ export function LanguageSwitcher() {
     <div ref={rootRef} className="relative z-50 notranslate">
       <button
         type="button"
-        className="flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-800 bg-[#0a1638] px-3 py-1.5 text-xs font-semibold text-slate-200 shadow-sm transition-all duration-200 hover:border-cyan-500/40 hover:bg-slate-800 hover:text-white"
+        className="flex cursor-pointer items-center gap-1 sm:gap-1.5 rounded-full border border-slate-800 bg-[#0a1638] px-2.5 py-1.5 sm:px-3 sm:py-1.5 text-xs font-semibold text-slate-200 shadow-sm transition-all duration-200 hover:border-cyan-500/40 hover:bg-slate-800 hover:text-white"
         aria-label={`Language: ${activeLanguage.label}`}
         aria-haspopup="menu"
         aria-expanded={isOpen}
@@ -56,7 +56,8 @@ export function LanguageSwitcher() {
         <div
           role="menu"
           aria-label="Select language"
-          className="absolute right-0 z-50 mt-2 flex w-36 flex-col gap-1 rounded-2xl border border-slate-800 bg-[#070f24] p-1.5 shadow-2xl backdrop-blur-xl"
+          style={{ backgroundColor: "#070f24" }}
+          className="absolute right-0 z-50 mt-2 flex w-36 flex-col gap-1 rounded-2xl border border-slate-800 bg-[#070f24] p-1.5 shadow-2xl backdrop-blur-xl text-white"
         >
           {languages.map((language) => (
             <button
