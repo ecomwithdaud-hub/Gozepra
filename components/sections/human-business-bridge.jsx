@@ -531,55 +531,55 @@ export function HumanBusinessBridge() {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
+          <div className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-12 sm:gap-6 md:grid-cols-2">
             {PLAIN_ENGLISH_SOLUTIONS.map((sol, solIdx) => {
               const Icon = sol.icon;
               return (
                 <div key={sol.number} className="h-full">
-                  <TiltCard cursorLabel="VIEW" className="rounded-2xl sm:rounded-3xl">
-                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-5 shadow-xl shadow-slate-950/20 transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 sm:rounded-3xl sm:p-7 text-white">
+                  <TiltCard cursorLabel="VIEW" className="h-full rounded-2xl sm:rounded-3xl">
+                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-3.5 shadow-xl shadow-slate-950/20 transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 sm:rounded-3xl sm:p-7 text-white">
                       <div>
                         <div className="flex items-center justify-between">
-                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400 sm:h-12 sm:w-12 sm:rounded-2xl">
-                            <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-950/50 text-cyan-400 sm:h-12 sm:w-12 sm:rounded-2xl">
+                            <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
                           </span>
-                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-cyan-400/70 sm:text-xs">
+                          <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-cyan-400/70 sm:text-xs sm:tracking-widest">
                             {sol.number} // SERVICE
                           </span>
                         </div>
 
-                        <div className="mt-4 sm:mt-5">
-                          <span className="inline-block rounded-full border border-cyan-500/30 bg-cyan-950/60 px-2.5 py-0.5 text-[10px] font-bold text-cyan-300 sm:px-3 sm:text-[11px]">
+                        <div className="mt-3 sm:mt-5">
+                          <span className="inline-block rounded-full border border-cyan-500/30 bg-cyan-950/60 px-2 py-0.5 text-[9px] font-bold text-cyan-300 sm:px-3 sm:text-[11px]">
                             {sol.badge}
                           </span>
-                          <h4 className="mt-2 font-display text-lg font-bold text-white group-hover:text-cyan-300 sm:text-xl">
+                          <h4 className="mt-1.5 font-display text-xs font-bold leading-tight text-white group-hover:text-cyan-300 sm:mt-2 sm:text-xl">
                             {sol.title}
                           </h4>
-                          <p className="text-xs font-semibold text-slate-400">
+                          <p className="mt-0.5 text-[10px] font-semibold text-slate-400 sm:text-xs">
                             {sol.subtitle}
                           </p>
                         </div>
 
-                        <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:mt-4 sm:text-sm">
+                        <p className="mt-2 text-[11px] leading-snug text-slate-300 line-clamp-3 sm:mt-4 sm:text-sm sm:leading-relaxed sm:line-clamp-none">
                           {sol.description}
                         </p>
 
-                        <ul className="mt-4 space-y-1.5 sm:mt-5 sm:space-y-2">
+                        <ul className="mt-3 space-y-1 sm:mt-5 sm:space-y-2">
                           {sol.bullets.map((b, bIdx) => (
                             <li
                               key={bIdx}
-                              className="flex items-center gap-2 text-xs font-medium text-slate-200"
+                              className="flex items-start gap-1.5 text-[10px] font-medium text-slate-200 sm:gap-2 sm:text-xs"
                             >
-                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                              <span>{b}</span>
+                              <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-emerald-400 sm:h-3.5 sm:w-3.5" />
+                              <span className="leading-tight sm:leading-normal">{b}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="mt-5 border-t border-slate-800 pt-3.5 flex items-center justify-between text-xs font-bold text-cyan-400 sm:mt-6 sm:pt-4">
+                      <div className="mt-3.5 flex items-center justify-between border-t border-slate-800 pt-2.5 text-[10px] font-bold text-cyan-400 sm:mt-6 sm:pt-4 sm:text-xs">
                         <span>100% Done-For-You Delivery</span>
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1 sm:h-4 sm:w-4" />
                       </div>
                     </div>
                   </TiltCard>
