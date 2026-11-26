@@ -195,6 +195,10 @@ export default function ColdOutreachingPage() {
                 <Target className="h-7 w-7" />
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-700 shadow-sm">
+                <Target className="h-3.5 w-3.5 text-blue-600" />
+                <span>High-Velocity B2B Outbound Engine</span>
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold text-blue-700 shadow-sm">
                 <Cpu className="h-3.5 w-3.5" />
                 <span>Engine: Salesforce • RingCentral • Apollo • ZoomInfo</span>
               </span>
@@ -252,6 +256,26 @@ export default function ColdOutreachingPage() {
               <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
                 We believe firmly in this proven principle: <strong>the more systematically and strategically we spread your value proposition to verified decision-makers, the higher your serious client ratio becomes, and the faster your sales conversion compounds.</strong> Outbound volume when paired with clean data and sharp positioning consistently beats passive inbound marketing.
               </p>
+            </div>
+          </div>
+
+          {/* 4 Performance Metric Badges */}
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-sm">
+              <p className="font-display text-2xl font-black text-blue-600 sm:text-3xl">+94%</p>
+              <p className="mt-1 text-[11px] font-semibold text-slate-600 sm:text-xs">Primary Inbox Deliverability</p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-sm">
+              <p className="font-display text-2xl font-black text-blue-600 sm:text-3xl">3.8x</p>
+              <p className="mt-1 text-[11px] font-semibold text-slate-600 sm:text-xs">Qualified Discovery Meeting Rate</p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-sm">
+              <p className="font-display text-2xl font-black text-blue-600 sm:text-3xl">100%</p>
+              <p className="mt-1 text-[11px] font-semibold text-slate-600 sm:text-xs">Salesforce &amp; CRM Pipeline Sync</p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-sm">
+              <p className="font-display text-2xl font-black text-blue-600 sm:text-3xl">0% Spam</p>
+              <p className="mt-1 text-[11px] font-semibold text-slate-600 sm:text-xs">Strict Compliance &amp; Scrubbed Lists</p>
             </div>
           </div>
         </div>

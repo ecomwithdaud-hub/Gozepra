@@ -6,6 +6,7 @@ import { AeoStructuredAnswers } from "@/components/sections/aeo-structured-answe
 import { ContactSection } from "@/components/sections/contact-section";
 import { UsaDemoShowcase } from "@/components/sections/usa-demo-showcase";
 import { InteractiveServiceDemos } from "@/components/sections/interactive-service-demos";
+import { ColdOutreachSection } from "@/components/sections/cold-outreach-section";
 import { serviceIconMap } from "@/components/shared/service-card";
 import { CyberCircuitBackground } from "@/components/ui/CyberCircuitBackground";
 import { TiltCard } from "@/components/ui/TiltCard";
@@ -236,6 +237,10 @@ export default async function ServiceDetailPage({ params }) {
       slug === "ecommerce-solutions" ||
       slug === "social-media-marketing" ? (
         <InteractiveServiceDemos />
+      ) : null}
+
+      {slug === "cold-outreach" ? (
+        <ColdOutreachSection />
       ) : null}
 
       <section className="section-shell bg-white text-slate-900 border-t border-slate-200">

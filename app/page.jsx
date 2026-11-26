@@ -7,7 +7,6 @@ import { InteractiveServiceDemos } from "@/components/sections/interactive-servi
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TheShiftSection } from "@/components/sections/TheShiftSection";
 import { WhyUs } from "@/components/sections/why-us";
-import { ColdOutreachSection } from "@/components/sections/cold-outreach-section";
 import { siteMeta } from "@/lib/site";
 
 export default function HomePage() {
@@ -39,7 +38,6 @@ export default function HomePage() {
       <HumanBusinessBridge />
       <InteractiveServiceDemos />
       <DevCrafterHomeExperience />
-      <ColdOutreachSection />
       <TheShiftSection />
       <WhyUs />
       <TestimonialsSection />
