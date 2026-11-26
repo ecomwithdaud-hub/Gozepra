@@ -361,8 +361,8 @@ export function HumanBusinessBridge() {
             </span>
           </div>
 
-          {/* Industry Selection Buttons - Pictorial Form */}
-          <div className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+          {/* Industry Selection Buttons - Pictorial Form Grid (3 Rows on Mobile, 3 Columns on Tablet, 6 Columns on Desktop) */}
+          <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6 sm:gap-3">
             {INDUSTRY_PROFILES.map((ind) => {
               const Icon = ind.icon;
               const isSelected = selectedIndustry.id === ind.id;
@@ -372,13 +372,13 @@ export function HumanBusinessBridge() {
                   key={ind.id}
                   onClick={() => setSelectedIndustry(ind)}
                   className={cn(
-                    "group relative flex w-full items-center gap-3 rounded-2xl border p-2 text-left transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 sm:flex-col sm:items-center sm:gap-2 sm:p-2.5 sm:text-center",
+                    "group relative flex h-full w-full min-w-0 flex-col items-center justify-between rounded-2xl border p-2 text-center transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 sm:p-2.5",
                     isSelected
                       ? "border-blue-600 bg-blue-50/90 shadow-md ring-2 ring-blue-500/40"
                       : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 hover:shadow-sm"
                   )}
                 >
-                  <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-xl bg-slate-900 shadow-sm sm:h-auto sm:w-full sm:aspect-[4/3]">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-slate-900 shadow-sm">
                     <img
                       src={ind.image}
                       alt={ind.name}
@@ -395,7 +395,7 @@ export function HumanBusinessBridge() {
                     />
                     <span
                       className={cn(
-                        "absolute right-1.5 top-1.5 sm:right-2 sm:top-2 flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-lg backdrop-blur-md transition-all",
+                        "absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-lg backdrop-blur-md transition-all sm:right-2 sm:top-2 sm:h-7 sm:w-7",
                         isSelected
                           ? "bg-blue-600 text-white shadow-sm"
                           : "bg-black/50 text-white/90 group-hover:bg-blue-600 group-hover:text-white"
@@ -403,26 +403,24 @@ export function HumanBusinessBridge() {
                     >
                       <Icon className="h-3.5 w-3.5" />
                     </span>
+                    {isSelected && (
+                      <span className="absolute left-1.5 top-1.5 flex items-center gap-1 rounded-full bg-blue-600 px-1.5 py-0.5 text-[8px] font-bold text-white shadow-sm sm:left-2 sm:top-2 sm:px-2 sm:text-[9px]">
+                        <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                        Active
+                      </span>
+                    )}
                   </div>
 
-                  <div className="flex-1 min-w-0 sm:w-full">
-                    <div className="flex items-center justify-between gap-1.5 sm:justify-center">
-                      <span
-                        className={cn(
-                          "block truncate text-sm font-bold leading-tight transition-colors sm:text-xs lg:text-sm",
-                          isSelected ? "text-blue-600 font-extrabold" : "text-slate-900 group-hover:text-blue-600"
-                        )}
-                      >
-                        {ind.shortTitle || ind.name}
-                      </span>
-                      {isSelected && (
-                        <span className="shrink-0 flex items-center gap-1 rounded-full bg-blue-600 px-2 py-0.5 text-[9px] font-bold text-white shadow-sm sm:hidden">
-                          <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-                          Active
-                        </span>
+                  <div className="mt-2 flex w-full flex-1 flex-col items-center justify-center">
+                    <span
+                      className={cn(
+                        "block w-full !whitespace-normal break-words text-center text-xs font-bold leading-tight transition-colors sm:text-sm",
+                        isSelected ? "text-blue-600 font-extrabold" : "text-slate-900 group-hover:text-blue-600"
                       )}
-                    </div>
-                    <span className="mt-0.5 block text-xs font-medium text-slate-500 sm:text-[10px]">
+                    >
+                      {ind.shortTitle || ind.name}
+                    </span>
+                    <span className="mt-0.5 block w-full !whitespace-normal text-center text-[10px] font-medium leading-tight text-slate-500">
                       {ind.microTag}
                     </span>
                   </div>
