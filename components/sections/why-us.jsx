@@ -44,21 +44,29 @@ export function WhyUs() {
     : [
         {
           title: "Unified Delivery Stack",
+          image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80",
+          tag: "Web • Shopify • AI",
           description:
             "Websites, Shopify e-commerce, AI automation, and graphic design under one roof.",
         },
         {
           title: "Secure & Scalable Infrastructure",
+          image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
+          tag: "ISO Quality • 99.9% Uptime",
           description:
             "ISO-compliant security, robust performance, and zero downtime, built to support your business as it grows.",
         },
         {
           title: "Growth-Focused Execution",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+          tag: "+340% Sales • ROI-Driven",
           description:
             "Digital marketing, conversion rate optimization, and revenue-driven performance focused on measurable progress.",
         },
         {
           title: "Dedicated Client Partnership",
+          image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+          tag: "Direct Dev • 24/7 Support",
           description:
             "Direct developer communication, fast sprint cycles, and 24/7 support keep your team moving with confidence.",
         },
@@ -144,7 +152,7 @@ export function WhyUs() {
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-8 bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-8 bg-gradient-to-l from-white to-transparent" />
 
-          <div className="flex w-max gap-3.5 animate-marquee-left [animation-duration:22s] hover:[animation-play-state:paused] active:[animation-play-state:paused]">
+          <div className="flex w-max gap-3.5 animate-marquee-left [animation-duration:24s] hover:[animation-play-state:paused] active:[animation-play-state:paused]">
             {[...pillarsList, ...pillarsList].map((pillar, index) => {
               const originalIndex = index % pillarsList.length;
               const Icon = pillarsIcons[originalIndex] || Layers3;
@@ -152,23 +160,38 @@ export function WhyUs() {
               return (
                 <article
                   key={`mobile-${index}`}
-                  className="w-[280px] shrink-0 rounded-2xl border border-slate-800 bg-[#070f24] p-4 text-white shadow-lg shadow-slate-950/20 backdrop-blur-xl transition-all"
+                  className="w-[260px] shrink-0 overflow-hidden rounded-2xl border border-slate-800 bg-[#070f24] text-white shadow-lg shadow-slate-950/20 backdrop-blur-xl transition-all"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400">
+                  {/* Pictorial Image Header */}
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-900">
+                    <img
+                      src={pillar.image}
+                      alt={pillar.title}
+                      className="h-full w-full object-cover opacity-85 transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#070f24] via-[#070f24]/40 to-transparent" />
+                    <span className="absolute left-2.5 top-2.5 flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-500/40 bg-[#070f24]/90 text-cyan-400 backdrop-blur-md">
                       <Icon className="h-4 w-4" />
                     </span>
-                    <span className="font-mono text-xs font-semibold tabular-nums text-cyan-400/70">
+                    <span className="absolute right-2.5 top-2.5 rounded-full border border-slate-700 bg-slate-900/90 px-2 py-0.5 font-mono text-[10px] font-bold text-cyan-300">
                       0{originalIndex + 1}
                     </span>
+                    {pillar.tag && (
+                      <span className="absolute bottom-2 left-2.5 rounded-md bg-cyan-950/80 px-2 py-0.5 text-[9px] font-bold text-cyan-300 backdrop-blur-sm border border-cyan-500/30">
+                        {pillar.tag}
+                      </span>
+                    )}
                   </div>
 
-                  <h3 className="mt-3.5 font-display text-base font-semibold leading-snug text-white">
-                    {pillar.title}
-                  </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                    {pillar.description}
-                  </p>
+                  <div className="p-3">
+                    <h3 className="font-display text-sm font-bold leading-tight text-white">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-1 text-[11px] leading-relaxed text-slate-300 line-clamp-2">
+                      {pillar.description}
+                    </p>
+                  </div>
                 </article>
               );
             })}

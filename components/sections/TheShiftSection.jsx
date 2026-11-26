@@ -116,9 +116,23 @@ export function TheShiftSection() {
                 {content?.legacyDescription || "Standard operational setups relying on traditional human hours and fragmented tools."}
               </p>
 
-              <ul className="mt-4 space-y-2.5 text-xs text-slate-300 sm:mt-6 sm:space-y-4 sm:text-sm">
+              {/* Mobile: Visual Summary Badges to reduce scroll */}
+              <div className="mt-3 flex flex-wrap gap-1.5 sm:hidden">
+                <span className="rounded bg-rose-950/70 border border-rose-800/80 px-2 py-0.5 text-[9px] font-semibold text-rose-300">
+                  ✕ Manual Routine Tasks
+                </span>
+                <span className="rounded bg-rose-950/70 border border-rose-800/80 px-2 py-0.5 text-[9px] font-semibold text-rose-300">
+                  ✕ Slow Response (Days)
+                </span>
+                <span className="rounded bg-rose-950/70 border border-rose-800/80 px-2 py-0.5 text-[9px] font-semibold text-rose-300">
+                  ✕ Expanding Payroll Overhead
+                </span>
+              </div>
+
+              {/* Desktop: Detailed list */}
+              <ul className="mt-4 hidden space-y-2.5 text-xs text-slate-300 sm:mt-6 sm:block sm:space-y-4 sm:text-sm">
                 {legacyPointsList.map((point, index) => (
-                  <li key={index} className={`items-start gap-2.5 sm:gap-3 ${index >= 3 ? "hidden sm:flex" : "flex"}`}>
+                  <li key={index} className="flex items-start gap-2.5 sm:gap-3">
                     <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-rose-950/60 text-rose-400 border border-rose-800/80 text-[10px] font-bold sm:h-5 sm:w-5 sm:text-xs">✕</span>
                     <span><strong className="text-white">{point.label}:</strong> {point.description}</span>
                   </li>
@@ -149,9 +163,23 @@ export function TheShiftSection() {
                 {content?.aiDescription || "Modern automated architecture designed to handle complex workflows with 24/7 reliability."}
               </p>
 
-              <ul className="mt-4 space-y-2.5 text-xs text-slate-200 sm:mt-6 sm:space-y-4 sm:text-sm">
+              {/* Mobile: Visual Summary Badges */}
+              <div className="mt-3 flex flex-wrap gap-1.5 sm:hidden">
+                <span className="rounded bg-emerald-950/70 border border-emerald-800/80 px-2 py-0.5 text-[9px] font-semibold text-emerald-300">
+                  ✓ 24/7 AI Automation
+                </span>
+                <span className="rounded bg-emerald-950/70 border border-emerald-800/80 px-2 py-0.5 text-[9px] font-semibold text-emerald-300">
+                  ✓ Bank-Grade Encryption
+                </span>
+                <span className="rounded bg-emerald-950/70 border border-emerald-800/80 px-2 py-0.5 text-[9px] font-semibold text-emerald-300">
+                  ✓ 10x ROI & Output
+                </span>
+              </div>
+
+              {/* Desktop: Detailed list */}
+              <ul className="mt-4 hidden space-y-2.5 text-xs text-slate-200 sm:mt-6 sm:block sm:space-y-4 sm:text-sm">
                 {aiPointsList.map((point, index) => (
-                  <li key={index} className={`items-start gap-2.5 sm:gap-3 ${index >= 3 ? "hidden sm:flex" : "flex"}`}>
+                  <li key={index} className="flex items-start gap-2.5 sm:gap-3">
                     <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-950/60 text-emerald-400 text-[10px] font-bold border border-emerald-800/80 sm:h-5 sm:w-5 sm:text-xs">✓</span>
                     <span><strong className="text-white">{point.label}:</strong> {point.description}</span>
                   </li>
@@ -162,15 +190,21 @@ export function TheShiftSection() {
 
         </div>
 
-        {/* 3 Core AI Value Pillars Below */}
-        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* 3 Core AI Value Pillars Below - 3 Columns Horizontal Grid on Mobile & Desktop */}
+        <div className="mt-6 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {pillarsList.map((pillar, index) => (
-            <CyberCard key={index} className="rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl shadow-slate-950/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400/50 hover:shadow-cyan-950/20 text-white">
-              <span className="inline-block rounded-lg bg-cyan-950/50 px-3 py-1 text-xs font-semibold text-cyan-300 border border-cyan-500/30">
-                {pillar.category}
-              </span>
-              <h4 className="mt-4 text-base font-bold text-white">{pillar.title}</h4>
-              <p className="mt-2 text-xs leading-relaxed text-slate-300">{pillar.description}</p>
+            <CyberCard key={index} className="flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-[#070f24] p-2.5 text-white shadow-xl shadow-slate-950/20 backdrop-blur-md transition-all hover:border-cyan-400/50 sm:rounded-2xl sm:p-6">
+              <div>
+                <span className="inline-block rounded-md border border-cyan-500/30 bg-cyan-950/50 px-1.5 py-0.5 text-[8px] font-bold text-cyan-300 sm:rounded-lg sm:px-3 sm:py-1 sm:text-xs">
+                  {pillar.category}
+                </span>
+                <h4 className="mt-2 font-display text-[11px] font-bold leading-tight text-white sm:mt-4 sm:text-base">
+                  {pillar.title}
+                </h4>
+                <p className="mt-1 text-[9px] leading-snug text-slate-300 line-clamp-3 sm:mt-2 sm:text-xs sm:leading-relaxed sm:line-clamp-none">
+                  {pillar.description}
+                </p>
+              </div>
             </CyberCard>
           ))}
         </div>

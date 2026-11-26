@@ -192,7 +192,7 @@ const INDUSTRY_PROFILES = [
   },
 ];
 
-// Plain English Solutions
+// Plain English Solutions - Pictorial with Visual Images & Pills
 const PLAIN_ENGLISH_SOLUTIONS = [
   {
     number: "01",
@@ -200,6 +200,8 @@ const PLAIN_ENGLISH_SOLUTIONS = [
     subtitle: "Web Development in Plain English",
     icon: Globe2,
     badge: "Credibility & Trust",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+    pills: ["⚡ <1s Speed", "📱 100% Mobile", "🛍️ E-Commerce"],
     description:
       "A fast, beautiful website that looks established, works effortlessly on phones, and gives customers the confidence to pick up the phone or place an order.",
     bullets: [
@@ -214,6 +216,8 @@ const PLAIN_ENGLISH_SOLUTIONS = [
     subtitle: "AI Automation in Plain English",
     icon: Bot,
     badge: "Never Miss A Lead",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+    pills: ["🤖 24/7 AI Bot", "📲 Phone Alerts", "⚡ Instant Quote"],
     description:
       "A smart digital assistant on your website. When customers inquire at midnight, on weekends, or while you're busy on a job, it answers them in 5 seconds and books the lead.",
     bullets: [
@@ -228,6 +232,8 @@ const PLAIN_ENGLISH_SOLUTIONS = [
     subtitle: "SEO & Growth in Plain English",
     icon: Search,
     badge: "More Customers Finding You",
+    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=600&q=80",
+    pills: ["📍 #1 Google Maps", "🎯 Meta/TikTok Ads", "⭐ 5-Star Reviews"],
     description:
       "When local customers search on Google, TikTok, or Instagram for what you sell, your business shows up at the top with great reviews and proof of your work.",
     bullets: [
@@ -242,6 +248,8 @@ const PLAIN_ENGLISH_SOLUTIONS = [
     subtitle: "Managed Care in Plain English",
     icon: ShieldCheck,
     badge: "Peace of Mind",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80",
+    pills: ["🛡️ 100% Managed", "📞 Direct Dev Line", "🔄 Free Updates"],
     description:
       "You run your business. We handle all hosting, domain renewals, security, speed updates, and technical maintenance. You never have to write code or worry about your site crashing.",
     bullets: [
@@ -252,30 +260,33 @@ const PLAIN_ENGLISH_SOLUTIONS = [
   },
 ];
 
-// 3-Step Simple Process
+// 3-Step Simple Process with Visual Imagery
 const HOW_IT_WORKS_STEPS = [
   {
     step: "1",
     title: "15-Minute Friendly Chat",
     duration: "Day 1",
+    image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=500&q=80",
     description:
-      "No tech jargon or confusing buzzwords. Tell us on a call or via inquiry what your business does, who your customers are, and what results you want.",
+      "No tech jargon. Tell us what your business does and the results you want.",
     icon: PhoneCall,
   },
   {
     step: "2",
-    title: "We Build Everything 100% Done-For-You",
+    title: "100% Done-For-You Build",
     duration: "Days 2 - 12",
+    image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=500&q=80",
     description:
-      "Our team writes the text, designs the visuals, tests on all mobile devices, and connects your contact channels and phone. You review progress without any stress.",
+      "We write, design, code, and test on all mobile devices while you relax.",
     icon: Layers,
   },
   {
     step: "3",
-    title: "Hand-off & Ongoing Peace of Mind",
-    duration: "Day 14 & Beyond",
+    title: "Hand-off & Peace of Mind",
+    duration: "Day 14+",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80",
     description:
-      "We launch your site, give you a simple 5-minute video guide, and Mr. Daud Lashari's team stays on standby whenever you need anything updated.",
+      "Live launch + 5-min video guide + 24/7 team standby whenever needed.",
     icon: CheckCircle2,
   },
 ];
@@ -537,48 +548,67 @@ export function HumanBusinessBridge() {
               return (
                 <div key={sol.number} className="h-full">
                   <TiltCard cursorLabel="VIEW" className="h-full rounded-2xl sm:rounded-3xl">
-                    <div className="group flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-3.5 shadow-xl shadow-slate-950/20 transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 sm:rounded-3xl sm:p-7 text-white">
+                    <div className="group flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-slate-800 bg-[#070f24] text-white shadow-xl shadow-slate-950/20 transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 sm:rounded-3xl">
                       <div>
-                        <div className="flex items-center justify-between">
-                          <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-950/50 text-cyan-400 sm:h-12 sm:w-12 sm:rounded-2xl">
-                            <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
+                        {/* Pictorial Image Header with Overlaid Icon */}
+                        <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
+                          <img
+                            src={sol.image}
+                            alt={sol.title}
+                            className="h-full w-full object-cover opacity-85 transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#070f24] via-[#070f24]/30 to-transparent" />
+                          <span className="absolute left-2 top-2 flex h-7 w-7 items-center justify-center rounded-lg border border-cyan-500/30 bg-[#070f24]/90 text-cyan-400 backdrop-blur-md sm:h-11 sm:w-11 sm:rounded-xl">
+                            <Icon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
                           </span>
-                          <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-cyan-400/70 sm:text-xs sm:tracking-widest">
-                            {sol.number} // SERVICE
+                          <span className="absolute right-2 top-2 rounded-full border border-slate-700 bg-slate-900/90 px-1.5 py-0.5 font-mono text-[8px] font-bold text-cyan-300 sm:px-2.5 sm:text-[11px]">
+                            {sol.number}
                           </span>
                         </div>
 
-                        <div className="mt-3 sm:mt-5">
-                          <span className="inline-block rounded-full border border-cyan-500/30 bg-cyan-950/60 px-2 py-0.5 text-[9px] font-bold text-cyan-300 sm:px-3 sm:text-[11px]">
+                        <div className="p-3 sm:p-6">
+                          <span className="inline-block rounded-full border border-cyan-500/30 bg-cyan-950/60 px-1.5 py-0.5 text-[8px] font-bold text-cyan-300 sm:px-3 sm:text-[11px]">
                             {sol.badge}
                           </span>
-                          <h4 className="mt-1.5 font-display text-xs font-bold leading-tight text-white group-hover:text-cyan-300 sm:mt-2 sm:text-xl">
+                          <h4 className="mt-1 font-display text-xs font-bold leading-tight text-white group-hover:text-cyan-300 sm:mt-2 sm:text-xl">
                             {sol.title}
                           </h4>
-                          <p className="mt-0.5 text-[10px] font-semibold text-slate-400 sm:text-xs">
+                          <p className="mt-0.5 text-[9px] font-semibold text-slate-400 sm:text-xs">
                             {sol.subtitle}
                           </p>
+
+                          {/* Mobile: Visual Micro-Pills instead of bulky paragraphs */}
+                          <div className="mt-2 flex flex-wrap gap-1 sm:hidden">
+                            {sol.pills?.map((pill, pIdx) => (
+                              <span key={pIdx} className="rounded bg-slate-900/90 border border-slate-700 px-1.5 py-0.5 text-[8px] font-medium text-cyan-300">
+                                {pill}
+                              </span>
+                            ))}
+                          </div>
+
+                          {/* Desktop: Full text */}
+                          <div className="hidden sm:block">
+                            <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                              {sol.description}
+                            </p>
+                            <ul className="mt-3 space-y-1.5">
+                              {sol.bullets.map((b, bIdx) => (
+                                <li
+                                  key={bIdx}
+                                  className="flex items-start gap-2 text-xs font-medium text-slate-200"
+                                >
+                                  <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-400" />
+                                  <span>{b}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
-
-                        <p className="mt-2 text-[11px] leading-snug text-slate-300 line-clamp-3 sm:mt-4 sm:text-sm sm:leading-relaxed sm:line-clamp-none">
-                          {sol.description}
-                        </p>
-
-                        <ul className="mt-3 space-y-1 sm:mt-5 sm:space-y-2">
-                          {sol.bullets.map((b, bIdx) => (
-                            <li
-                              key={bIdx}
-                              className="flex items-start gap-1.5 text-[10px] font-medium text-slate-200 sm:gap-2 sm:text-xs"
-                            >
-                              <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-emerald-400 sm:h-3.5 sm:w-3.5" />
-                              <span className="leading-tight sm:leading-normal">{b}</span>
-                            </li>
-                          ))}
-                        </ul>
                       </div>
 
-                      <div className="mt-3.5 flex items-center justify-between border-t border-slate-800 pt-2.5 text-[10px] font-bold text-cyan-400 sm:mt-6 sm:pt-4 sm:text-xs">
-                        <span>100% Done-For-You Delivery</span>
+                      <div className="mx-3 mb-2.5 flex items-center justify-between border-t border-slate-800 pt-2 text-[9px] font-bold text-cyan-400 sm:mx-6 sm:mb-5 sm:pt-4 sm:text-xs">
+                        <span>100% Done-For-You</span>
                         <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1 sm:h-4 sm:w-4" />
                       </div>
                     </div>
@@ -606,31 +636,41 @@ export function HumanBusinessBridge() {
             </p>
           </div>
 
-          {/* 3 Steps in Three Columns One Row (Horizontal Form on Mobile & Desktop) */}
+          {/* 3 Steps in Three Columns One Row - Pictorial Form on Mobile & Desktop */}
           <div className="mt-8 grid grid-cols-3 gap-2 sm:mt-12 sm:gap-6 md:grid-cols-3">
             {HOW_IT_WORKS_STEPS.map((s) => {
               const Icon = s.icon;
               return (
                 <div
                   key={s.step}
-                  className="relative flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-[#070f24] p-2.5 text-white shadow-xl shadow-slate-950/15 backdrop-blur-md transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] sm:rounded-2xl sm:p-6"
+                  className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-slate-800 bg-[#070f24] text-white shadow-xl shadow-slate-950/15 backdrop-blur-md transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] sm:rounded-2xl"
                 >
                   <div>
-                    <div className="flex items-center justify-between gap-1">
-                      <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-950/60 text-xs font-bold text-cyan-400 sm:h-10 sm:w-10 sm:rounded-xl sm:text-base">
+                    {/* Pictorial image header */}
+                    <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-900 sm:aspect-[16/8]">
+                      <img
+                        src={s.image}
+                        alt={s.title}
+                        className="h-full w-full object-cover opacity-80"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#070f24] via-[#070f24]/30 to-transparent" />
+                      <span className="absolute left-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-md border border-cyan-500/30 bg-[#070f24]/90 text-xs font-bold text-cyan-400 sm:h-9 sm:w-9 sm:rounded-lg sm:text-sm">
                         {s.step}
                       </span>
-                      <span className="rounded-full border border-slate-700 bg-slate-900 px-1.5 py-0.5 text-[8px] font-bold text-slate-300 sm:px-2.5 sm:py-1 sm:text-[11px]">
+                      <span className="absolute right-1.5 top-1.5 rounded-full border border-slate-700 bg-slate-900/90 px-1 py-0.5 text-[7px] font-bold text-slate-300 sm:px-2 sm:text-[10px]">
                         {s.duration}
                       </span>
                     </div>
 
-                    <h4 className="mt-2.5 font-display text-xs font-bold leading-tight text-white sm:mt-4 sm:text-lg">
-                      {s.title}
-                    </h4>
-                    <p className="mt-1.5 text-[10px] leading-snug text-slate-300 sm:mt-2 sm:text-sm sm:leading-relaxed">
-                      {s.description}
-                    </p>
+                    <div className="p-2 sm:p-4">
+                      <h4 className="font-display text-[11px] font-bold leading-tight text-white sm:text-base">
+                        {s.title}
+                      </h4>
+                      <p className="mt-1 text-[9px] leading-tight text-slate-300 line-clamp-2 sm:text-xs sm:leading-relaxed sm:line-clamp-none">
+                        {s.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               );

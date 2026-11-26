@@ -21,12 +21,13 @@ import { useLanguage } from "@/components/providers/language-provider";
 import { heroHighlights } from "@/lib/site";
 
 const capabilities = [
-  "WEB PLATFORMS",
-  "AI AUTOMATION",
-  "E-COMMERCE",
-  "UI/UX ATELIER",
-  "SEARCH GROWTH",
-  "CLOUD ARCHITECTURE",
+  { name: "Next.js 15 App Router", icon: "⚡", tag: "Frontend" },
+  { name: "Shopify Plus E-Commerce", icon: "🛍️", tag: "Stores" },
+  { name: "Custom 24/7 AI Bots", icon: "🤖", tag: "Automation" },
+  { name: "Salesforce & RingCentral", icon: "☁️", tag: "CRM & Calls" },
+  { name: "Apollo & ZoomInfo Data", icon: "🎯", tag: "Lead Gen" },
+  { name: "Stripe Global Payments", icon: "💳", tag: "Fintech" },
+  { name: "Google Edge & SEO #1", icon: "🚀", tag: "Performance" },
 ];
 
 const highlightIcons = [Layers3, Bot, Sparkles];
@@ -287,32 +288,48 @@ export function HomeHero() {
           </div>
         </div>
 
-        {/* 3 Interactive Hero Highlight Cards Below */}
-        <div className="mt-8 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
+        {/* 3 Interactive Hero Highlight Cards Below - 3 Columns Horizontal on Mobile & Desktop */}
+        <div className="mt-6 grid grid-cols-3 gap-2 sm:mt-14 sm:gap-5 md:grid-cols-3">
           {heroHighlights.map((item, index) => {
             const Icon = highlightIcons[index] || Globe2;
             const translatedItem = translatedHighlights?.[index] ?? item;
+
+            const mobilePills = [
+              "⚡ Next.js • Shopify",
+              "🤖 24/7 AI Bots",
+              "📈 SEO & Growth",
+            ];
 
             return (
               <TiltCard
                 key={item.title}
                 cursorLabel="EXPLORE"
-                className="rounded-3xl"
+                className="h-full rounded-2xl sm:rounded-3xl"
               >
-                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-slate-800 bg-[#070f24] p-5 sm:p-6 shadow-xl shadow-slate-950/20 transition-all duration-300 hover:border-cyan-400/50 hover:shadow-cyan-950/20">
+                <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-slate-800 bg-[#070f24] p-2.5 text-white shadow-xl shadow-slate-950/20 transition-all hover:border-cyan-400/50 sm:rounded-3xl sm:p-6">
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400">
-                        <Icon className="h-5 w-5" />
+                      <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-950/50 text-cyan-400 sm:h-12 sm:w-12 sm:rounded-2xl">
+                        <Icon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
                       </span>
-                      <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-cyan-400/70 group-hover:text-cyan-300">
-                        0{index + 1} // PILLAR
+                      <span className="font-mono text-[8px] font-bold uppercase tracking-wider text-cyan-400/70 sm:text-xs sm:tracking-[0.25em]">
+                        0{index + 1}
                       </span>
                     </div>
-                    <h2 className="mt-5 font-display text-lg font-bold text-white sm:text-xl">
+
+                    <h2 className="mt-2 font-display text-[11px] font-bold leading-tight text-white sm:mt-5 sm:text-xl">
                       {translatedItem.title}
                     </h2>
-                    <p className="mt-2 text-xs leading-6 text-slate-300 sm:text-sm">
+
+                    {/* Mobile: Visual Micro-Pill */}
+                    <div className="mt-1.5 sm:hidden">
+                      <span className="inline-block rounded bg-cyan-950/60 border border-cyan-500/30 px-1 py-0.5 text-[8px] font-bold text-cyan-300">
+                        {mobilePills[index]}
+                      </span>
+                    </div>
+
+                    {/* Desktop: Full text */}
+                    <p className="mt-2 hidden text-xs leading-6 text-slate-300 sm:block sm:text-sm">
                       {translatedItem.description}
                     </p>
                   </div>
@@ -323,16 +340,19 @@ export function HomeHero() {
         </div>
       </div>
 
-      {/* Clean Non-Overlapping Capability Marquee */}
-      <div className="mt-14 w-full overflow-hidden border-y border-slate-200 bg-slate-50/80 py-4 backdrop-blur-md">
+      {/* Pictorial Capability & Tech Stack Marquee */}
+      <div className="mt-8 sm:mt-14 w-full overflow-hidden border-y border-slate-200 bg-slate-50/80 py-3 sm:py-4 backdrop-blur-md">
         <InfiniteMarquee direction="left" speed="28s">
           {capabilities.map((cap, idx) => (
             <span
-              key={cap}
-              className="mx-3 inline-flex shrink-0 items-center gap-3 whitespace-nowrap rounded-full border border-slate-200 bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-slate-700 shadow-sm transition-colors duration-300 hover:border-blue-300 hover:text-blue-600 sm:text-sm"
+              key={cap.name}
+              className="mx-2 sm:mx-3 inline-flex shrink-0 items-center gap-2 sm:gap-2.5 whitespace-nowrap rounded-full border border-slate-200 bg-white px-3.5 py-1.5 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-bold text-slate-800 shadow-sm transition-colors duration-300 hover:border-blue-300 hover:text-blue-600"
             >
-              <span className="h-2 w-2 shrink-0 rotate-45 rounded-sm bg-blue-600" />
-              <span>{translatedCapabilities?.[idx] ?? cap}</span>
+              <span className="text-base sm:text-lg">{cap.icon}</span>
+              <span>{cap.name}</span>
+              <span className="rounded bg-blue-50 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-blue-600 border border-blue-200/60">
+                {cap.tag}
+              </span>
             </span>
           ))}
         </InfiniteMarquee>
