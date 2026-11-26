@@ -98,7 +98,7 @@ export function TheShiftSection() {
         </header>
 
         {/* Legacy vs AI-Native Comparison Grid */}
-        <div className="mt-6 grid gap-5 sm:mt-8 sm:gap-6 lg:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:mt-8 sm:gap-6 lg:grid-cols-2">
           
           {/* Card 1: Legacy Model */}
           <div className="relative flex flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-5 shadow-xl shadow-slate-950/20 backdrop-blur-sm sm:p-6 text-white">
@@ -163,7 +163,7 @@ export function TheShiftSection() {
         </div>
 
         {/* 3 Core AI Value Pillars Below */}
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {pillarsList.map((pillar, index) => (
             <CyberCard key={index} className="rounded-2xl border border-slate-800 bg-[#070f24] p-6 shadow-xl shadow-slate-950/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400/50 hover:shadow-cyan-950/20 text-white">
               <span className="inline-block rounded-lg bg-cyan-950/50 px-3 py-1 text-xs font-semibold text-cyan-300 border border-cyan-500/30">

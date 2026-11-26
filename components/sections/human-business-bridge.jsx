@@ -346,7 +346,7 @@ export function HumanBusinessBridge() {
         {/* ============================================================== */}
         {/* INTERACTIVE INDUSTRY MATCH MAKER */}
         {/* ============================================================== */}
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:mt-16 sm:rounded-3xl sm:p-10">
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-3.5 shadow-sm sm:mt-16 sm:rounded-3xl sm:p-10">
           <div className="flex flex-col items-start justify-between gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">
@@ -362,7 +362,7 @@ export function HumanBusinessBridge() {
           </div>
 
           {/* Industry Selection Buttons - Pictorial Form */}
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             {INDUSTRY_PROFILES.map((ind) => {
               const Icon = ind.icon;
               const isSelected = selectedIndustry.id === ind.id;
@@ -372,13 +372,13 @@ export function HumanBusinessBridge() {
                   key={ind.id}
                   onClick={() => setSelectedIndustry(ind)}
                   className={cn(
-                    "group relative flex w-full min-w-0 flex-col items-center rounded-2xl border p-2 text-center transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 sm:p-2.5",
+                    "group relative flex w-full items-center gap-3 rounded-2xl border p-2 text-left transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 sm:flex-col sm:items-center sm:gap-2 sm:p-2.5 sm:text-center",
                     isSelected
                       ? "border-blue-600 bg-blue-50/90 shadow-md ring-2 ring-blue-500/40"
                       : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 hover:shadow-sm"
                   )}
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-900 shadow-sm">
+                  <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-xl bg-slate-900 shadow-sm sm:h-auto sm:w-full sm:aspect-[4/3]">
                     <img
                       src={ind.image}
                       alt={ind.name}
@@ -395,7 +395,7 @@ export function HumanBusinessBridge() {
                     />
                     <span
                       className={cn(
-                        "absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-lg backdrop-blur-md transition-all",
+                        "absolute right-1.5 top-1.5 sm:right-2 sm:top-2 flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-lg backdrop-blur-md transition-all",
                         isSelected
                           ? "bg-blue-600 text-white shadow-sm"
                           : "bg-black/50 text-white/90 group-hover:bg-blue-600 group-hover:text-white"
@@ -403,32 +403,36 @@ export function HumanBusinessBridge() {
                     >
                       <Icon className="h-3.5 w-3.5" />
                     </span>
-                    {isSelected && (
-                      <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-blue-600/90 px-2 py-0.5 text-[9px] font-bold text-white shadow-sm backdrop-blur-xs">
-                        <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-                        Active
-                      </span>
-                    )}
                   </div>
 
-                  <span
-                    className={cn(
-                      "mt-2 block w-full !whitespace-normal break-words text-center text-xs font-bold leading-tight transition-colors sm:text-sm",
-                      isSelected ? "text-blue-600 font-extrabold" : "text-slate-900 group-hover:text-blue-600"
-                    )}
-                  >
-                    {ind.shortTitle || ind.name}
-                  </span>
-                  <span className="mt-0.5 hidden w-full !whitespace-normal text-center text-[10px] font-medium leading-tight text-slate-500 sm:block">
-                    {ind.microTag}
-                  </span>
+                  <div className="flex-1 min-w-0 sm:w-full">
+                    <div className="flex items-center justify-between gap-1.5 sm:justify-center">
+                      <span
+                        className={cn(
+                          "block truncate text-sm font-bold leading-tight transition-colors sm:text-xs lg:text-sm",
+                          isSelected ? "text-blue-600 font-extrabold" : "text-slate-900 group-hover:text-blue-600"
+                        )}
+                      >
+                        {ind.shortTitle || ind.name}
+                      </span>
+                      {isSelected && (
+                        <span className="shrink-0 flex items-center gap-1 rounded-full bg-blue-600 px-2 py-0.5 text-[9px] font-bold text-white shadow-sm sm:hidden">
+                          <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                          Active
+                        </span>
+                      )}
+                    </div>
+                    <span className="mt-0.5 block text-xs font-medium text-slate-500 sm:text-[10px]">
+                      {ind.microTag}
+                    </span>
+                  </div>
                 </button>
               );
             })}
           </div>
 
           {/* Active Industry Detail Showcase */}
-          <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50/60 p-6 sm:p-8">
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50/60 p-4 sm:p-8">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
               {/* Left Column: Clear Explanation & Deliverables */}
               <div className="lg:col-span-7">
@@ -529,11 +533,11 @@ export function HumanBusinessBridge() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
             {PLAIN_ENGLISH_SOLUTIONS.map((sol, solIdx) => {
               const Icon = sol.icon;
               return (
-                <div key={sol.number} className={solIdx >= 3 ? "hidden md:block" : ""}>
+                <div key={sol.number} className="h-full">
                   <TiltCard cursorLabel="VIEW" className="rounded-2xl sm:rounded-3xl">
                     <div className="group flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-[#070f24] p-5 shadow-xl shadow-slate-950/20 transition-all hover:border-cyan-400/50 hover:bg-[#0a1638] hover:shadow-cyan-950/20 sm:rounded-3xl sm:p-7 text-white">
                       <div>
@@ -566,7 +570,7 @@ export function HumanBusinessBridge() {
                           {sol.bullets.map((b, bIdx) => (
                             <li
                               key={bIdx}
-                              className={`flex items-center gap-2 text-xs font-medium text-slate-200 ${bIdx >= 2 ? "hidden sm:flex" : "flex"}`}
+                              className="flex items-center gap-2 text-xs font-medium text-slate-200"
                             >
                               <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
                               <span>{b}</span>
@@ -604,7 +608,7 @@ export function HumanBusinessBridge() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
             {HOW_IT_WORKS_STEPS.map((s) => {
               const Icon = s.icon;
               return (

@@ -139,7 +139,7 @@ export function WhyUs() {
         </div>
 
         {/* Cards hidden on mobile to compress section; preserved on tablet & desktop */}
-        <div className="hidden sm:grid gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
           {pillarsList.map((pillar, index) => {
             const Icon = pillarsIcons[index] || Layers3;
 
