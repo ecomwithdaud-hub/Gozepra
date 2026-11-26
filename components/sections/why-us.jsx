@@ -138,8 +138,45 @@ export function WhyUs() {
           })}
         </div>
 
-        {/* Cards hidden on mobile to compress section; preserved on tablet & desktop */}
-        <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
+        {/* Mobile View: Continuous horizontal moving motion from right to left */}
+        <div className="relative mt-6 -mx-4 overflow-hidden px-4 sm:hidden group">
+          {/* Subtle edge fades for smooth entry/exit */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-8 bg-gradient-to-r from-white to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-8 bg-gradient-to-l from-white to-transparent" />
+
+          <div className="flex w-max gap-3.5 animate-marquee-left [animation-duration:22s] hover:[animation-play-state:paused] active:[animation-play-state:paused]">
+            {[...pillarsList, ...pillarsList].map((pillar, index) => {
+              const originalIndex = index % pillarsList.length;
+              const Icon = pillarsIcons[originalIndex] || Layers3;
+
+              return (
+                <article
+                  key={`mobile-${index}`}
+                  className="w-[280px] shrink-0 rounded-2xl border border-slate-800 bg-[#070f24] p-4 text-white shadow-lg shadow-slate-950/20 backdrop-blur-xl transition-all"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-950/50 text-cyan-400">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <span className="font-mono text-xs font-semibold tabular-nums text-cyan-400/70">
+                      0{originalIndex + 1}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-3.5 font-display text-base font-semibold leading-snug text-white">
+                    {pillar.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                    {pillar.description}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Tablet & Desktop View: Standard Grid */}
+        <div className="hidden gap-4 pt-6 sm:grid sm:grid-cols-2 xl:grid-cols-4">
           {pillarsList.map((pillar, index) => {
             const Icon = pillarsIcons[index] || Layers3;
 
