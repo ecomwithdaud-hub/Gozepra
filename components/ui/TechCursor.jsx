@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function TechCursor() {
+  const pathname = usePathname();
   const dotRef = useRef(null);
   const ringRef = useRef(null);
 
@@ -12,7 +14,10 @@ export function TechCursor() {
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [cursorLabel, setCursorLabel] = useState("");
 
+  const isVirtualOffice = pathname?.startsWith("/virtual-office");
+
   useEffect(() => {
+    if (isVirtualOffice) return undefined;
     if (typeof window === "undefined") return undefined;
     if (window.matchMedia("(pointer: coarse)").matches) return undefined;
 
@@ -162,7 +167,9 @@ export function TechCursor() {
       document.documentElement.classList.remove("custom-cursor-active");
       if (frameId) window.cancelAnimationFrame(frameId);
     };
-  }, []);
+  }, [isVirtualOffice]);
+
+  if (isVirtualOffice) return null;
 
   return (
     <div
@@ -219,6 +226,8 @@ export function TechCursor() {
             }`}
           >
             <svg
+              width={28}
+              height={28}
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -228,6 +237,10 @@ export function TechCursor() {
                   : "rotate-0 scale-100"
               }`}
               style={{
+                width: 28,
+                height: 28,
+                maxWidth: 28,
+                maxHeight: 28,
                 filter:
                   "drop-shadow(0 0 6px rgba(37,99,235,0.7)) drop-shadow(0 1px 2px rgba(0,0,0,0.3))",
               }}

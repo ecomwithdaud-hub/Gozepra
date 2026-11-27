@@ -7,6 +7,7 @@ import { InteractiveServiceDemos } from "@/components/sections/interactive-servi
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TheShiftSection } from "@/components/sections/TheShiftSection";
 import { WhyUs } from "@/components/sections/why-us";
+import { VirtualOfficeBanner } from "@/components/sections/VirtualOfficeBanner";
 import { siteMeta } from "@/lib/site";
 
 export default function HomePage() {
@@ -39,6 +40,7 @@ export default function HomePage() {
       <InteractiveServiceDemos />
       <DevCrafterHomeExperience />
       <TheShiftSection />
+      <VirtualOfficeBanner />
       <WhyUs />
       <TestimonialsSection />
       <AeoStructuredAnswers

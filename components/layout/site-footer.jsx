@@ -74,6 +74,7 @@ const navigationGroups = [
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
+      { label: "3D Virtual Office", href: "/virtual-office" },
       { label: "Portfolio & Case Studies", href: "/portfolio" },
       { label: "Careers", href: "/contact" },
       { label: "Contact Us", href: "/contact" },

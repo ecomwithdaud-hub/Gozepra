@@ -6,6 +6,11 @@ import { SiteFooter } from "@/components/layout/site-footer";
 
 export function SiteShell({ children }) {
   const pathname = usePathname();
+  const isVirtualOffice = pathname?.startsWith("/virtual-office");
+
+  if (isVirtualOffice) {
+    return <main className="relative min-h-screen w-full bg-[#0B0F17]">{children}</main>;
+  }
 
   return (
     <div className="relative min-h-screen overflow-x-clip">

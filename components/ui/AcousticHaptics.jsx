@@ -2,10 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export function AcousticHaptics() {
+  const pathname = usePathname();
   const [soundEnabled, setSoundEnabled] = useState(false);
   const audioCtxRef = useRef(null);
+
+  const isVirtualOffice = pathname?.startsWith("/virtual-office");
 
   const initAudio = () => {
     if (!audioCtxRef.current && typeof window !== "undefined") {
@@ -62,6 +66,8 @@ export function AcousticHaptics() {
     initAudio();
     setSoundEnabled((prev) => !prev);
   };
+
+  if (isVirtualOffice) return null;
 
   return (
     <div className="fixed bottom-5 left-5 z-[9980] hidden sm:block">

@@ -52,8 +52,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${bodyFont.variable} ${displayFont.variable} font-sans`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${bodyFont.variable} ${displayFont.variable} font-sans`} suppressHydrationWarning>
         <LanguageProvider>
           <TechCursor />
           <AcousticHaptics />
